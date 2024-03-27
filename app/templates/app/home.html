@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../assets/main.css" />
+    <link rel="stylesheet" href="{% static 'app/home.css' %}">
     <title>Learning Made Fun</title>
   </head>
   <body>
     <div class="top">
       <div class="logo">Learning Made Fun</div>
       <div class="nav">
-        <a href="login.html"> Login </a>
-        <a href=""> Register </a>
+        <a href="{% url 'app-login' %}"> Login </a>
+        <a href="{% url 'app-register' %}"> Register </a>
         <a href=""> Contact us </a>
         <a href=""> About us </a>
         <a href=""> </a>

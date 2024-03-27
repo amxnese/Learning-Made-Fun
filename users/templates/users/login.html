@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'users/login.css' %}" />
+  </head>
+  <body>
+    <h1 class="h1"><a href="{% url 'app-home' %}">Learning Made Fun</a></h1>
+    <main>
+      <header>
+        <h4>Login</h4>
+      </header>
+      <form>
+        <div class="form_wrapper">
+          <input id="input" type="text" required />
+          <label for="input">Username</label>
+        </div>
+        <div class="form_wrapper">
+          <input id="password" type="password" required />
+          <label for="password">Password</label>
+        </div>
+        <div class="remember_box">
+          <div class="remember">
+            <input id="rememberCheckBox" type="checkbox" />
+            Remember me
+          </div>
+          <a href="#">Forgot Password ?</a>
+        </div>
+        <button>Login</button>
+        <div class="new_account">
+          Don't have an account ? <a href="{% url 'app-register' %}">Sign up</a>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
