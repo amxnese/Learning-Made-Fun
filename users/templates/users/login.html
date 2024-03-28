@@ -12,13 +12,14 @@
       <header>
         <h4>Login</h4>
       </header>
-      <form>
+      <form method="post">
+        {% csrf_token %}
         <div class="form_wrapper">
-          <input id="input" type="text" required />
+          <input id="input" type="text" required name="username"/>
           <label for="input">Username</label>
         </div>
         <div class="form_wrapper">
-          <input id="password" type="password" required />
+          <input id="password" type="password" required name="password"/>
           <label for="password">Password</label>
         </div>
         <div class="remember_box">

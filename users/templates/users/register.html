@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Login</title>
-    <link rel="stylesheet" href="{% static 'users/login.css' %}" />
+    <link rel="stylesheet" href="{% static 'users/register.css' %}" />
   </head>
   <body>
     <h1 class="h1"><a href="{% url 'app-home' %}">Learning Made Fun</a></h1>
@@ -12,14 +12,19 @@
       <header>
         <h4>Register</h4>
       </header>
-      <form>
+      <form method="post">
+        {% csrf_token %}
         <div class="form_wrapper">
-          <input id="input" type="text" required />
-          <label for="input">Username</label>
+          <input id="username" type="text" required name="username"/>
+          <label for="username">Username</label>
         </div>
         <div class="form_wrapper">
-          <input id="password" type="password" required />
+          <input id="password" type="password" required name="password"/>
           <label for="password">Password</label>
+        </div>
+        <div class="form_wrapper">
+          <input id="confirm" type="password" required name="confirm"/>
+          <label for="confirm">Confirm Password</label>
         </div>
         <div class="remember_box">
           <div class="remember">

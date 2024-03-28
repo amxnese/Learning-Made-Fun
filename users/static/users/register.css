@@ -47,7 +47,8 @@ form {
 }
 
 input[name="username"],
-input[name="password"] {
+input[name="password"],
+input[name="confirm"] {
   padding: 10px;
   border: 2px solid white;
   width: 100%;
