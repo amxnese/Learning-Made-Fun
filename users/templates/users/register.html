@@ -12,7 +12,7 @@
       <header>
         <h4>Register</h4>
       </header>
-      <form method="post">
+      <form method="post" action="{% url 'register' %}">
         {% csrf_token %}
         <div class="form_wrapper">
           <input id="username" type="text" required name="username"/>
