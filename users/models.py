@@ -8,4 +8,4 @@ class Member(models.Model):
   javaScript = models.IntegerField(default=0)
 
   def __str__(self):
-    return username
+    return self.username
