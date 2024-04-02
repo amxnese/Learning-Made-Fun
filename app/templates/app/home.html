@@ -1,27 +1,29 @@
-{% extends 'app/base.html' %}
-{% load static %}
-{% block additional_styles %}
-  <link rel="stylesheet" href="static/base.html">
-{% endblock %}
-{% block content %}
-  <div class="top">
-      <div class="logo">Learning Made Fun</div>
-      <div class="nav">
-        <a href="{% url 'app-login' %}"> Login </a>
-        <a href="{% url 'app-register' %}"> Register </a>
-        <a href=""> Contact us </a>
-        <a href=""> About us </a>
-        <a href=""> </a>
-      </div>
-    </div>
-    <div class="heading">
-      <div class="left">
-        <p>Do you want to learn programming?</p>
-        <h1>Don't Wait</h1>
-        <p>Let's Start Now</p>
+{% extends 'app/base.html' %} {% load static %} {% block additional_styles %}
+<link rel="stylesheet" href="static/base.html" />
+{% endblock %} {% block content %}
+<div class="top">
+  <div class="logo">Learning Made Fun</div>
+  <div class="nav">
+    {% if not user.is_authenticated %}
+      <a href="{% url 'app-login' %}"> Login </a>
+      <a href="{% url 'app-register' %}"> Register </a>
+    {% endif %}
+      <a href=""> Contact us </a>
+      <a href=""> About us </a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'app-logout' %}"> Logout </a>
+    {% endif %}
+    <a href=""> </a>
+  </div>
+</div>
+<div class="heading">
+  <div class="left">
+    <p>Do you want to learn programming?</p>
+    <h1>Don't Wait</h1>
+    <p>Let's Start Now</p>
 
-        <button>SIGN IN AS A GUEST</button>
-      </div>
-      <div class="right" id="academy"></div>
-    </div>
+    <button>SIGN IN AS A GUEST</button>
+  </div>
+  <div class="right" id="academy"></div>
+</div>
 {% endblock %}
