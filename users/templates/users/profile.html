@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'users/profile.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profile</h1>
+      <div class="profile-info">
+        <label for="username">Username:</label>
+        <span id="username">{{user.username}}</span>
+      </div>
+      <div class="profile-info">
+        <label for="firstName">First Name:</label>
+        <span id="firstName">{{user.first_name}}</span>
+      </div>
+      <div class="profile-info">
+        <label for="lastName">Last Name:</label>
+        <span id="lastName">{{user.last_name}}</span>
+      </div>
+      <div class="profile-info">
+        <label for="pythonProgress">Python Progress:</label>
+        <div class="progress-bar">
+          <div
+            id="pythonProgress"
+            class="progress"
+            style="width: {{lvl.python}}%"
+          >
+            {{ lvl.python }}%
+          </div>
+        </div>
+      </div>
+      <div class="profile-info">
+        <label for="javaProgress">Java Progress:</label>
+        <div class="progress-bar">
+          <div id="javaProgress" class="progress" style="width: {{lvl.java}}%">
+            {{ lvl.java }}%
+          </div>
+        </div>
+      </div>
+      <div class="profile-info">
+        <label for="javascriptProgress">JavaScript Progress:</label>
+        <div class="progress-bar">
+          <div
+            id="javascriptProgress"
+            class="progress"
+            style="width: {{lvl.javaScript}}%"
+          >
+            {{ lvl.javaScript }}%
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <div class="edit-button">
+          <button onclick="window.location.href = 'edit/';">
+            Edit Profile
+          </button>
+        </div>
+        <div class="change-button" style="margin-left: 10px" onclick="window.location.href = 'change_password/';">
+          <button>Change Password</button>
+        </div>
+        <div class="delete-button">
+          <form id="delete-form" action="delete/" method="post">
+              {% csrf_token %}
+              <button type="button" onclick="confirmDelete()">Delete Account</button>
+          </form>
+      </div>
+      <script>
+        function confirmDelete() {
+          if (confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
+              document.getElementById("delete-form").submit();
+          }
+        }
+      </script>
+      </div>
+    </div>
+  </body>
+</html>
