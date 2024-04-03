@@ -10,10 +10,10 @@
     {% endif %}
       <a href=""> Contact us </a>
       <a href=""> About us </a>
-      {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
       <a href="{% url 'app-logout' %}"> Logout </a>
+      <a href="{% url 'app-profile' %}"> Profile </a>
     {% endif %}
-    <a href=""> </a>
   </div>
 </div>
 <div class="heading">
