@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.profile-info {
+  margin-bottom: 20px;
+}
+.profile-info label {
+  font-weight: bold;
+}
+.edit-button,
+.change-button,
+.delete-button {
+  text-align: center;
+  margin-top: 20px;
+}
+.edit-button button,
+.change-button button,
+.delete-button button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.edit-button button,
+.change-button button {
+  background-color: #007bff; /* Blue */
+  color: #fff;
+}
+.delete-button button {
+  background-color: #ff0000; /* Red */
+  color: #fff;
+  margin-left: 10px;
+}
+.edit-button button:hover,
+.delete-button button:hover,
+.change-button button:hover {
+  background-color: #bb5ab4;
+}
+
+.progress-bar {
+  background-color: #c8c8c8;
+  border-radius: 5px;
+  height: 20px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  transition: width 0.3s;
+}
