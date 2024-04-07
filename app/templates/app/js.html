@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Enjoy Your JavaScript Roadmap</h1>
+
+      <!-- Introduction Card -->
+      <div class="card mb-4">
+        <div class="card-body text-center">
+          <h3 class="card-title">Introduction to JavaScript</h3>
+          <p class="card-text">
+            This section provides an overview of the JavaScript programming language and
+            terminology.
+          </p>
+          <a href="#" class="btn btn-primary">Start Learning</a>
+        </div>
+      </div>
+      <!-- End Introduction Card -->
+
+      <!-- Level Cards -->
+      <div class="level-container">
+        <!-- Level 1 -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Level 1: Syntax</h3>
+            <p class="card-text">
+              This level covers syntax, data types, variables...
+            </p>
+            <a href="#" class="btn btn-{{levels.lvl1}}">Start Learning</a>
+          </div>
+        </div>
+        <!-- End Level 1 -->
+
+        <!-- Level 2 -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Level 2: Built-in methods</h3>
+            <p class="card-text">
+              This level covers more advanced topics like Built-in methods, arithmetic operators, concatenations
+            </p>
+            <a href="#" class="btn btn-{{levels.lvl2}}">Start Learning</a>
+          </div>
+        </div>
+        <!-- End Level 2 -->
+      </div>
+      <!-- End Level Cards -->
+
+      <!-- Level Cards -->
+      <div class="level-container">
+        <!-- Level 3 -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Level 3: Built-in data structures</h3>
+            <p class="card-text">
+              This level covers the JavaScript's built-in data structures and some built-in methods related to them
+            </p>
+            <a href="#" class="btn btn-{{levels.lvl3}}">Start Learning</a>
+          </div>
+        </div>
+        <!-- end Level 3 -->
+        <!-- Level 4 -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Level 4: Control flow</h3>
+            <p class="card-text">
+              Understanding how to control the flow and relational operators
+            </p>
+            <a href="#" class="btn btn-{{levels.lvl4}}">Start Learning</a>
+          </div>
+        </div>
+        <!-- end Level 4 -->
+      </div>
+      <!-- End Level Cards -->
+
+      <!-- Level Cards -->
+      <div class="level-container">
+        <!-- end Level 5 -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Level 5: Loops</h3>
+            <p class="card-text">
+              Where, When, Why, and How to use Loops
+            </p>
+            <a href="#" class="btn btn-{{levels.lvl5}}">Start Learning</a>
+          </div>
+        </div>
+        <!-- end Level 5 -->
+
+        <!-- Level 6-->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Level 6: Functions</h3>
+            <p class="card-text">
+              Getting Started with the concept of functions
+            </p>
+            <a href="#" class="btn btn-{{levels.lvl6}}">Start Learning</a>
+          </div>
+        </div>
+        <!-- end Level 6 -->
+      </div>
+      <!-- End Level Cards -->
+    </div>
+  </body>
+</html>
