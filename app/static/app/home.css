@@ -1,8 +1,8 @@
 body {
-  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  background: #00BFFF;
   height: 100vh;
 }
-h1 {
+h2 {
   text-align: center;
   color: white;
 }
@@ -45,7 +45,7 @@ a:hover {
 .right {
   width: 440px;
   height: 440px;
-  background-image: url("academy imj");
+  background-image: url("../../static/app/ds.png");
   background-size: cover;
   border-radius: 400px;
   display: flex;
@@ -62,19 +62,17 @@ a:hover {
   padding: 10px;
 }
 .left p:nth-child(1) {
-  color: rgb(238, 54, 241);
+  color: black;
   font-size: 30px;
   letter-spacing: 1px;
-  font-style: italic;
 }
 .left h1 {
   font-size: 90px;
   color: white;
 }
 .left p:nth-child(3) {
-  color: rgb(238, 54, 241);
+  color: black;
   font-size: 30px;
-  font-style: italic;
 }
 .left button {
   width: 190px;
@@ -83,7 +81,14 @@ a:hover {
   border-radius: 20px;
   border: 2px solid white;
   background-color: transparent;
-  color: rgb(238, 54, 241);
+  color: black;
   margin: 20px 0px;
   cursor: pointer;
+}
+
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
