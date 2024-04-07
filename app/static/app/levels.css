@@ -1,0 +1,15 @@
+.level-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+body {
+  background: linear-gradient(272deg, #2980b9, #8e44ad);
+  height: 100vh;
+}
