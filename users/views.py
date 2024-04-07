@@ -50,9 +50,9 @@ def logout(request):
 @login_required
 def profile(request):
   user = request.user
-  python = user.python * 25
-  java = user.java * 25
-  javaScript = user.javaScript * 25
+  python = int(user.python * 50 / 3) +20
+  java = int(user.java * 50 / 3)+2
+  javaScript = int(user.javaScript * 50 / 3)+50
   context = {
     'python' : python,
     'java' : java,
