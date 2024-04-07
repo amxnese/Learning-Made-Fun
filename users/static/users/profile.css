@@ -4,7 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #f0f0f0;
-  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  background: #00BFFF;
 }
 .container {
   max-width: 600px;
@@ -53,21 +53,4 @@ h1 {
 .delete-button button:hover,
 .change-button button:hover {
   background-color: #bb5ab4;
-}
-
-.progress-bar {
-  background-color: #c8c8c8;
-  border-radius: 5px;
-  height: 20px;
-  margin-top: 5px;
-  overflow: hidden;
-}
-
-.progress {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-  transition: width 0.3s;
 }
