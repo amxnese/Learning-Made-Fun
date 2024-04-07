@@ -1,0 +1,36 @@
+level 1:
+  introduction
+  syntax
+  output to screen
+  datatypes and typeof 
+  type coersion
+  variables
+  var, let, const
+
+level 2:
+  built-in methods
+  arithmetic operators
+  concatenation
+
+level 3:
+  data structures and built-in methods
+
+level 4:
+  relational operators
+  logical operators
+  control flow
+  ternary
+  switch
+
+
+level 5:
+  loops
+
+level 6
+functions:
+  return
+  default parameters
+  rest parameters
+  anonymous functions
+  arrow functions
+  scope

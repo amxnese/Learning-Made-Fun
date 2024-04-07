@@ -1,0 +1,32 @@
+level 1:
+  introduction
+  syntax
+  comments
+  data types
+  variables
+  escape
+  type conversion
+  input
+
+level 2:
+  built-in methods
+  arithmetic operators
+  concatenation
+
+level 3:
+  data structures and built-in methods
+
+level 4:
+  comparison
+  control flow
+
+level 5:
+  loops
+
+level 6:
+  functions:
+    return
+    parameters and arguments
+    default parameters
+    scope
+    recursion
