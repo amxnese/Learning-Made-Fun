@@ -1,29 +1,28 @@
-{% extends 'app/base.html' %} {% load static %} {% block additional_styles %}
-<link rel="stylesheet" href="static/base.html" />
-{% endblock %} {% block content %}
+{% extends 'app/base.html' %} {% load static %} {% block content %}
 <div class="top">
   <div class="logo">Learning Made Fun</div>
   <div class="nav">
     {% if not user.is_authenticated %}
-      <a href="{% url 'app-login' %}"> Login </a>
-      <a href="{% url 'app-register' %}"> Register </a>
+    <a href="{% url 'app-login' %}"> Login </a>
+    <a href="{% url 'app-register' %}"> Register </a>
     {% endif %}
-      <a href=""> Contact us </a>
-      <a href=""> About us </a>
+    <a href=""> Contact us </a>
+    <a href=""> About us </a>
     {% if user.is_authenticated %}
-      <a href="{% url 'app-logout' %}"> Logout </a>
-      <a href="{% url 'app-profile' %}"> Profile </a>
+    <a href="{% url 'app-logout' %}"> Logout </a>
+    <a href="{% url 'app-profile' %}"> Profile </a>
     {% endif %}
   </div>
 </div>
 <div class="heading">
   <div class="left">
-    <p>Do you want to learn programming?</p>
-    <h1>Don't Wait</h1>
-    <p>Let's Start Now</p>
+    <p class="oswald-font">Do you want to learn programming?</p>
+    <p class="oswald-font" style="font-size:x-large;">You are in the right place</p>
+    <h2 style="font-size:70px;">Don't Wait</h2>
+    <p class="oswald-font" style="font-size: x-large;">Let's Start Now</p>
 
     <button>SIGN IN AS A GUEST</button>
   </div>
-  <div class="right" id="academy"></div>
+    <img src="{% static 'app/ds.png' %}" alt="" class="right">
 </div>
 {% endblock %}
