@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'users/register.css' %}" />
   </head>
   <body>
+    
     {% if messages %}
       {% for message in messages %}
       <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert">
@@ -16,9 +17,15 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       {% endfor %}
+      <script>
+      
+        let msg = document.getElementsByClassName('alert')[0]
+        setTimeout(()=>{
+          msg.style.display = 'none'
+        } ,3000)
+      </script>
     {% endif %}
     {% block content %}
     {% endblock %}
-
   </body>
 </html>
