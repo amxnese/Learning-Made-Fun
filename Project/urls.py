@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from users import views as user_views
 
 urlpatterns = [
@@ -28,4 +30,4 @@ urlpatterns = [
     path('profile/edit/', user_views.edit, name='app-edit'),
     path('profile/change_password/', user_views.change_password, name='app-passwd'),
     path('profile/delete/', user_views.delete, name='app-delete')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
