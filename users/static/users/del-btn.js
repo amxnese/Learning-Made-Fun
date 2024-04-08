@@ -9,3 +9,7 @@ document.getElementById("closeButton").addEventListener("click", function () {
 document.getElementById("confirmDelete").addEventListener("click", function () {
   window.location.href = "delete/";
 });
+
+function change_color(){
+  document.getElementById("confirmDelete").style.backgroundColor = "#ff4d4f"
+}
