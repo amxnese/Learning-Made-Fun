@@ -45,7 +45,6 @@ a:hover {
 .right {
   width: 440px;
   height: 440px;
-  background-image: url("../../static/app/ds.png");
   background-size: cover;
   border-radius: 400px;
   display: flex;
