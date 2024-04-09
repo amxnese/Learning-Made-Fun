@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate,login as log, logout as out
 from .models import CustomUser
 from django.contrib.auth.decorators import login_required
+from django.core.files.storage import default_storage
 
 def login(request):
   if request.method == "POST":
@@ -50,15 +51,22 @@ def logout(request):
 @login_required
 def profile(request):
   user = request.user
-  python = int(user.python * 50 / 3) +20
-  java = int(user.java * 50 / 3)+2
-  javaScript = int(user.javaScript * 50 / 3)+50
+  if request.method == "POST" and request.FILES['profile_picture']:
+    if user.profile_picture:
+      old_picture_path = user.profile_picture.path
+      if default_storage.exists(old_picture_path):
+        default_storage.delete(old_picture_path)
+    pic = request.FILES.get('profile_picture')
+    user.profile_picture = pic
+    user.save()
+    return redirect('/profile')
   context = {
-    'python' : python,
-    'java' : java,
-    'javaScript' : javaScript
+    'python' : int(user.python * 50 / 3) +20,
+    'java' : int(user.java * 50 / 3)+2,
+    'javaScript' : int(user.javaScript * 50 / 3)+50,
+    'pic' : user.profile_picture.url if user.profile_picture else ""
   }
-  return render(request, 'users/profile.html',{'lvl':context})
+  return render(request, 'users/profile.html',{'info':context})
 
 @login_required
 def edit(request):
