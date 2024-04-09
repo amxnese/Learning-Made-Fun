@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #dbd4d4;
+}
+
+header {
+  background: #00bfff;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #0779e4 3px solid;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+}
+
+h1,
+img {
+  display: inline-block; /* Makes both the h1 and img inline elements, allowing them to be on the same line */
+  vertical-align: middle; /* Aligns them vertically to the middle */
+}
+img {
+  width: 50px;
+  height: 50px;
+}
+pre {
+  background-color: #313131;
+  border: 1px solid #999;
+  overflow: auto;
+  height: 155px;
+  width: 740px;
+}
+code {
+  font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+  color: rgb(250, 149, 7);
+}
