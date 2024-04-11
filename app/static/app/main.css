@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #00bfff;
+  height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar li {
+  padding: 8px 12px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+.content-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.btn {
+  color: white;
+  padding: 15px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.python{
+  background-color: #4584B6;
+}
+.java {
+  background-color: #f89820;
+}
+.js {
+  background-color: #f0db4f;
+}
