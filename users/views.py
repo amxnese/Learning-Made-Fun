@@ -15,8 +15,7 @@ def login(request):
     user = authenticate(request, username=username, password=password)
     if user:
       log(request, user)
-      messages.success(request, "You have successfully logged in")
-      return render(request, 'app/home.html')
+      return redirect('/main')
     else:
       messages.error(request, f"wrong password for {username}")
       return render(request, 'users/login.html')
@@ -46,7 +45,8 @@ def register(request):
 @login_required
 def logout(request):
   out(request)
-  return render(request, 'users/logout.html')
+  messages.success(request, 'You have been logged out')
+  return redirect('../')
 
 @login_required
 def profile(request):
