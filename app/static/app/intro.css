@@ -40,6 +40,7 @@ section {
   margin-bottom: 20px;
   padding: 20px;
   background: #fff;
+  border-radius: 26px;
 }
 
 h1,
@@ -52,13 +53,34 @@ img {
   height: 50px;
 }
 pre {
-  background-color: #313131;
+  font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+  background-color: #2e2e2e;
   border: 1px solid #999;
-  overflow: auto;
-  height: 155px;
+  height: 178px;
   width: 740px;
+  border-radius: 10px;
 }
 code {
   font-family: "Consolas", "Monaco", "Lucida Console", monospace;
-  color: rgb(250, 149, 7);
+}
+.pink {
+  color: #b05279;
+}
+.white {
+  color: #d6d6d6;
+}
+.yellow {
+  color: #e5b567;
+}
+.green {
+  color: #b4d273;
+}
+.orange {
+  color: #e87d3e;
+}
+.purple {
+  color: #9e86c8;
+}
+.blue {
+  color: #6c99bb;
 }
