@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Syntax</title>
+    <link rel="stylesheet" href="{% static 'app/level1.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Getting Familiar With Python's Syntax</h1>
+        <img src="{% static 'app/python.png' %}" alt="" />
+      </header>
+      <main>
+        <section id="syntax">
+          <h2>Python Syntax</h2>
+          <p>
+            Python syntax refers to the set of rules that defines how a Python
+            program is written and interpreted by both the Python interpreter
+            and human readers. Here are some key points about Python syntax
+          </p>
+        </section>
+        <section id="indentation">
+          <h2>Indentation</h2>
+          <p>
+            Python uses indentation to define blocks of code. Unlike many other
+            programming languages that use braces {} to define blocks, Python
+            uses whitespace (tabs or spaces). The standard practice is to use
+            four spaces per indentation level.
+          </p>
+        </section>
+        <section id="variables">
+          <h2>Variables and Assignment</h2>
+          <p>
+            Variables can be assigned values using the = operator, and Python is
+            dynamically typed, which means you don't explicitly declare variable
+            types unlike many programming languages.
+          </p>
+          <pre>
+              <code>
+                <span class="var">x </span><span class="operator">=</span><span class="number"> 10</span>
+                <span class="var">y </span><span class="operator">=</span><span class="string"> "Hello, World!"</span>
+              </code>
+            </pre>
+        </section>
+        <section id="getting-started">
+          <h2>Comments</h2>
+          <p>
+            Python uses the # symbol for comments. Anything after # on a line is
+            ignored by the Python interpreter.
+          </p>
+          <pre>
+            <code>
+              <span class="comment"># This is a comment</span>
+              <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Hello, World!"</span><span class="orange">)</span><span class="comment"># This prints a string</span>
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>Data Types</h2>
+          <p>
+            Python supports various data types, including integers, floats,
+            strings, and booleans, as well as complex data structures like
+            lists, tuples, sets, and dictionaries.
+          </p>
+          <pre>
+            <code>
+                <span class="comment"># List declaration</span>
+                <span class="white">my_list</span> <span class="orange">=</span> <span class="purple">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="purple">]</span>
+                <span class="comment"># Dictionary declaration</span>
+                <span class="white">my_dict</span> <span class="orange">=</span> <span class="purple">{</span><span class="yellow">"a"</span><span class="white">:</span> <span class="purple">1</span><span class="white">,</span> <span class="yellow">"b"</span><span class="white">:</span> <span class="purple">2</span><span class="purple">}</span>
+                <span class="comment"># Tuple declaration</span>
+                <span class="white">my_tuple</span> <span class="orange">=</span> <span class="purple">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="purple">)</span>
+                <span class="comment"># Set declaration</span>
+                <span class="white">my_set</span> <span class="orange">=</span> <span class="purple">{</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="purple">}</span>
+            </code>
+        </pre>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
