@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Styled Page</title>
+    <link rel="stylesheet" href="{% static 'app/main.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="{% url 'app-home' %}">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="{% url 'app-profile' %}">Profile</a></li>
+      </ul>
+      <ul>
+        <li><a href="{% url 'app-logout' %}">Logout</a></li>
+      </ul>
+    </div>
+    <div class="content-buttons">
+      <button onclick="location.href='main/python'" class="btn python">Python </button>
+      <button onclick="location.href='main/java'" class="btn java">Java</button>
+      <button onclick="location.href='main/js'" class="btn js">JavaScript</button>
+    </div>
+  </body>
+</html>
