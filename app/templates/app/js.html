@@ -39,11 +39,9 @@
             ></i>
           </h3>
           <p class="card-text">
-            This section provides an overview of the JavaScript programming language
-            and terminology. JavaScript is a flexible and readable programming
-            language, supporting object-oriented, imperative, and functional
-            paradigms. It's widely used for web development, data analysis, AI,
-            and scientific computing.
+            This section provides an overview of the JavaScript programming
+            language and terminology. Its capabilities, and why would you
+            consider learning the language.
           </p>
           <a href="{% url 'app-pyIntro' %}" class="btn btn-primary"
             >Start Learning</a
@@ -58,7 +56,9 @@
             <p class="card-text">
               This level covers syntax, data types, variables...
             </p>
-            <a href="{% url 'app-jsLevel1' %}" class="btn btn-{{levels.lvl1}}">Start Learning</a>
+            <a href="{% url 'app-jsLevel1' %}" class="btn btn-{{levels.lvl1}}"
+              >Start Learning</a
+            >
           </div>
         </div>
         <!-- Level 2 -->
@@ -66,10 +66,9 @@
           <div class="card-body">
             <h3 class="card-title">Level 2: Built-in methods</h3>
             <p class="card-text">
-              This level covers more advanced topics like Built-in methods,
-              arithmetic operators, concatenations
+              Covering most usable and known built-in functions of the language.
             </p>
-            <a href="#" class="btn btn-{{levels.lvl2}}">Start Learning</a>
+            <a href="{% url 'app-jslevel2' %}" class="btn btn-{{levels.lvl2}}">Start Learning</a>
           </div>
         </div>
         <!-- End Level 2 -->
@@ -83,8 +82,8 @@
           <div class="card-body">
             <h3 class="card-title">Level 3: Built-in data structures</h3>
             <p class="card-text">
-              This level covers the JavaScript's built-in data structures and some
-              built-in methods related to them
+              This level covers the JavaScript's built-in data structures and
+              some built-in methods related to them
             </p>
             <a href="#" class="btn btn-{{levels.lvl3}}">Start Learning</a>
           </div>

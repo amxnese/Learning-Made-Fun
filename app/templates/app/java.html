@@ -40,14 +40,12 @@
           </h3>
           <p class="card-text">
             This section provides an overview of the Java programming language
-            and terminology. Java is a flexible and readable programming
-            language, supporting object-oriented, imperative, and functional
-            paradigms. It's widely used for web development, data analysis, AI,
-            and scientific computing.
+            and terminology, What can you do with the language, and why would
+            you consider learning it.
+            <a href="{% url 'app-javaIntro' %}" class="btn btn-primary"
+              >Start Learning</a
+            >
           </p>
-          <a href="{% url 'app-javaIntro' %}" class="btn btn-primary"
-            >Start Learning</a
-          >
         </div>
       </div>
       <div class="level">
@@ -68,10 +66,9 @@
           <div class="card-body">
             <h3 class="card-title">Level 2: Built-in methods</h3>
             <p class="card-text">
-              This level covers more advanced topics like Built-in methods,
-              arithmetic operators, concatenations
+              Covering most usable and known built-in functions of the language.
             </p>
-            <a href="#" class="btn btn-{{levels.lvl2}}">Start Learning</a>
+            <a href="{% url 'app-javaLevel2' %}" class="btn btn-{{levels.lvl2}}">Start Learning</a>
           </div>
         </div>
         <!-- End Level 2 -->
