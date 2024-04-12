@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>java built-in functions</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Getting Familiar With Python's Syntax</h1>
+        <img src="{% static 'app/java.png' %}" alt="" />
+      </header>
+      <main>
+        <section>
+          <h2>What are built-in functions</h2>
+          <p>
+            In Java, a built-in function typically refers to the methods
+            provided by Java's standard libraries, which are part of the Java
+            API. These methods are readily available for use without the need
+            for the programmer to define them. They serve a wide range of
+            purposes, from mathematical calculations to handling strings, files,
+            and data collections.
+          </p>
+        </section>
+        <section>
+          <h2>What are built-in functions used for</h2>
+          <p>
+            We use built-in functions in programming languages like Java for
+            several important reasons:
+          </p>
+          <ul>
+            <li>
+              <strong>Efficiency:</strong> Built-in functions are often
+              optimized for performance by the language developers. They are
+              implemented in a way that maximizes speed and minimizes resource
+              usage, which can be hard to achieve with custom code.
+            </li>
+            <li>
+              <strong>Reliability:</strong> These functions have been thoroughly
+              tested and are used widely, ensuring that they are reliable and
+              free from common bugs. This reduces the risk of errors in your own
+              code.
+            </li>
+            <li>
+              <strong>Simplicity:</strong> Built-in functions simplify the
+              coding process by providing ready-to-use solutions for routine
+              tasks, allowing developers to accomplish more with less code. This
+              makes the code cleaner and easier to understand.
+            </li>
+            <li>
+              <strong>Portability:</strong> Using built-in functions ensures
+              that your code can run on any platform that supports the Java
+              runtime, without needing any modifications. This is because the
+              functionality of these functions is defined as part of the Java
+              standard.
+            </li>
+            <li>
+              <strong>Productivity:</strong> By reducing the need to write and
+              test custom implementations of common functionalities, built-in
+              functions allow developers to focus more on the specific logic and
+              features unique to their applications.
+            </li>
+            <li>
+              <strong>Standardization:</strong> Built-in functions promote
+              coding standards and best practices. When developers use these
+              functions, it helps maintain a uniformity in coding styles across
+              different projects, which is beneficial for code maintenance and
+              team collaboration.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <title>Common Java Functions</title>
+              <style>
+                pre{
+                  width: 1000px;
+                }
+              </style>
+            </head>
+            <body>
+              <h2>Most Used Built-in Java Functions</h2>
+              <table>
+                <tr>
+                  <th>Class</th>
+                  <th>Function</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>Math</td>
+                  <td>Math.abs()</td>
+                  <td>Returns the absolute value of a number.</td>
+                </tr>
+                <tr>
+                  <td>Math</td>
+                  <td>Math.sqrt()</td>
+                  <td>Returns the square root of a number.</td>
+                </tr>
+                <tr>
+                  <td>Math</td>
+                  <td>Math.pow()</td>
+                  <td>
+                    Returns the value of one number raised to the power of
+                    another.
+                  </td>
+                </tr>
+                <tr>
+                  <td>String</td>
+                  <td>String.length()</td>
+                  <td>Returns the length of the string.</td>
+                </tr>
+                <tr>
+                  <td>String</td>
+                  <td>String.substring()</td>
+                  <td>Returns a substring from the specified string.</td>
+                </tr>
+                <tr>
+                  <td>String</td>
+                  <td>String.equals()</td>
+                  <td>Compares two strings for equality.</td>
+                </tr>
+                <tr>
+                  <td>System</td>
+                  <td>System.out.println()</td>
+                  <td>Prints a message to the standard output.</td>
+                </tr>
+                <tr>
+                  <td>ArrayList</td>
+                  <td>add()</td>
+                  <td>Adds an element to the ArrayList.</td>
+                </tr>
+                <tr>
+                  <td>ArrayList</td>
+                  <td>get()</td>
+                  <td>
+                    Returns the element at a specified position in the
+                    ArrayList.
+                  </td>
+                </tr>
+                <tr>
+                  <td>ArrayList</td>
+                  <td>remove()</td>
+                  <td>Removes the element at the specified position.</td>
+                </tr>
+              </table>
+            </body>
+          </html>
+        </section>
+        <section>
+          <h2>Commonly used examples</h2>
+          <hr>
+          <ul>
+            <li>
+              <h3>1. Math Functions</h3>
+              <hr>
+              <ul>
+                <li>
+                  <h4>Math.abs()</h4>
+                  <pre>
+                    <code>
+                      int a = -20;
+                      System.out.println("Absolute value of -20 is: " + Math.abs(a));
+                    </code>
+                  </pre>
+                </li>
+                <hr>
+                <li>
+                  <h4>Math.sqrt()</h4>
+                  <pre>
+                    <code>
+                      double b = 9.0;
+                      System.out.println("Square root of 9 is: " + Math.sqrt(b));
+                    </code>
+                  </pre>
+                </li>
+                <hr>
+                <li>
+                  <h4>Math.pow()</h4>
+                  <pre>
+                    <code>
+                      double base = 2.0;
+                      double exponent = 3.0;
+                      System.out.println("2 raised to the power of 3 is: " + Math.pow(base, exponent));
+                    </code>
+                  </pre>
+                </li>
+              </ul>
+            </li>
+            <hr>
+            <li>
+              <h3>2. String Functions</h3>
+              <hr>
+              <ul>
+                <li>
+                  <h4>String.length()</h4>
+                  <pre>
+                    <code>
+                      String str = "Hello, world!";
+                      System.out.println("Length of the string is: " + str.length());
+                    </code>
+                  </pre>
+                </li>
+                <hr>
+                <li>
+                  <h4>String.substring()</h4>
+                  <pre>
+                    <code>
+                      String str = "Hello, world!";
+                      System.out.println("Substring from index 7 to 12 is: " + str.substring(7, 12));
+                    </code>
+                  </pre>
+                </li>
+                <hr>
+                <li>
+                  <h4>String.equals()</h4>
+                  <pre>
+                    <code>
+                      String str1 = "Hello";
+                      String str2 = "World";
+                      // Comparing str1 and str2
+                      System.out.print(str1 == str2); // output : false
+                    </code>
+                  </pre>
+                </li>
+                <hr>
+                <li>
+                  <h4>toUpperCase() and toLowerCase()</h4>
+                  <pre>
+                    <code>
+                      String s = "Hello World!";
+                      System.out.println(s.toUpperCase()); // Outputs: "HELLO WORLD!"
+                      System.out.println(s.toLowerCase()); // Outputs: "hello world!"
+                    </code>
+                  </pre>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
