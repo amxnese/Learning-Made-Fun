@@ -83,6 +83,9 @@ h2{
   font-style: normal;
 }
 .cssbuttons-io-button {
+  margin: 20px;
+  margin-top: 30px;
+  margin-left: 250px;
   background-image: linear-gradient(19deg, #00BFFF 0%, #B721FF 100%);
   color: white;
   font-family: inherit;
