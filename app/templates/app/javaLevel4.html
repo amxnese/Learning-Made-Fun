@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java built-in data structures</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Conditional Statements in Java</h1>
+        <img src="{% static 'app/java.png' %}" alt="" />
+      </header>
+      <main>
+        <section>
+          <h2>What are Conditional Statements</h2>
+          <p>
+            <strong>Conditional statements</strong> in Java are used to perform
+            different actions based on different conditions. They allow the code
+            to make decisions and execute certain parts of code only when
+            specific conditions are met. Here are the main types of conditional
+            statements in Java:
+          </p>
+          <ul>
+            <li>
+              <strong>1. if statement: </strong> Checks a condition and executes
+              a block of code if the condition is true.
+              <pre>
+                <code>
+                  if (condition) {
+                    // code to be executed if condition is true
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>2. if-else statement:</strong> Checks a condition and
+              executes the first block of code if the condition is true,
+              otherwise executes another block of code.
+              <pre>
+                <code>
+                  if (condition) {
+                    // code to be executed if condition is true
+                  } else {
+                      // code to be executed if condition is false
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>3. else-if ladder:</strong> A series of conditions to be
+              checked in sequence.
+              <pre>
+                <code>
+                  if (condition1) {
+                    // code to be executed if condition1 is true
+                  } else if (condition2) {
+                      // code to be executed if condition2 is true
+                  } else {
+                      // code to be executed if all previous conditions are false
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>4. switch statement:</strong> Specifies many alternative
+              blocks of code to be executed. The switch statement is often more
+              efficient than a set of nested if statements when dealing with
+              multiple conditions on the same variable.
+              <pre>
+                <code>
+                  switch (expression) {
+                    case value1:
+                        // code to be executed when expression equals value1
+                        break;
+                    case value2:
+                        // code to be executed when expression equals value2
+                        break;
+                    default:
+                        // code to be executed if expression doesn't match any case
+                  }
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>When To Use Conditional Statements</h2>
+          <p>
+            <strong>Conditional statements</strong> are essential in programming
+            for controlling the flow of execution based on specific conditions.
+            Here are some common scenarios when you might use conditional
+            statements:
+          </p>
+          <ul>
+            <li>
+              <strong>Decision Making:</strong> Perform actions based on
+              specific conditions or inputs, such as checking user authorization
+              before accessing features.
+            </li>
+            <li>
+              <strong>Handling Different Cases:</strong> Execute different
+              blocks of code for various cases or scenarios, like calculating
+              discounts based on the quantity purchased.
+            </li>
+            <li>
+              <strong>Input Validation:</strong> Ensure that inputs meet certain
+              criteria before proceeding, such as verifying that values are
+              within an expected range.
+            </li>
+            <li>
+              <strong>Branching Logic:</strong> Direct program execution along
+              different paths based on variable states or user choices, such as
+              selecting operation modes.
+            </li>
+            <li>
+              <strong>Error Handling:</strong> Manage errors or unusual
+              situations gracefully through conditional checks.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Examples of Using Conditional Statements in Java</h2>
+          <ul>
+            <li>
+              <strong>if statement</strong>
+              <pre>
+                <code>
+                  if (score &gt;= 70) {
+                    System.out.println("Passed!");
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>if-else statement</strong>
+              <pre>
+                <code>
+                  if (age &lt; 18) {
+                    System.out.println("You are a minor.");
+                  } else {
+                    System.out.println("You are an adult.");
+                  }               
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>else-if ladder</strong>
+              <pre>
+                <code>
+                  if (grade &gt;= 90) {
+                      System.out.println("Grade A");
+                  } else if (grade &gt;= 80) {
+                      System.out.println("Grade B");
+                  } else if (grade &gt;= 70) {
+                      System.out.println("Grade C");
+                  } else {
+                      System.out.println("Grade F");
+                  }       
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>switch statement</strong>
+              <pre>
+                <code>
+                  switch (day) {
+                    case 1:
+                      System.out.println("Monday");
+                      break;
+                    case 2:
+                      System.out.println("Tuesday");
+                      break;
+                    case 3:
+                      System.out.println("Wednesday");
+                      break;
+                    default:
+                      System.out.println("Another day");
+                  }
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
