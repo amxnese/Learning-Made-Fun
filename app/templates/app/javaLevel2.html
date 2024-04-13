@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
   </head>
   <body>
+    <style>
+      pre {
+        width: 1000px;
+      }
+    </style>
     <div class="container">
       <header>
         <h1>Getting Familiar With Python's Syntax</h1>
@@ -73,94 +78,88 @@
           </ul>
         </section>
         <section>
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <title>Common Java Functions</title>
-              <style>
-                pre{
-                  width: 1000px;
-                }
-              </style>
-            </head>
-            <body>
-              <h2>Most Used Built-in Java Functions</h2>
-              <table>
-                <tr>
-                  <th>Class</th>
-                  <th>Function</th>
-                  <th>Description</th>
-                </tr>
-                <tr>
-                  <td>Math</td>
-                  <td>Math.abs()</td>
-                  <td>Returns the absolute value of a number.</td>
-                </tr>
-                <tr>
-                  <td>Math</td>
-                  <td>Math.sqrt()</td>
-                  <td>Returns the square root of a number.</td>
-                </tr>
-                <tr>
-                  <td>Math</td>
-                  <td>Math.pow()</td>
-                  <td>
-                    Returns the value of one number raised to the power of
-                    another.
-                  </td>
-                </tr>
-                <tr>
-                  <td>String</td>
-                  <td>String.length()</td>
-                  <td>Returns the length of the string.</td>
-                </tr>
-                <tr>
-                  <td>String</td>
-                  <td>String.substring()</td>
-                  <td>Returns a substring from the specified string.</td>
-                </tr>
-                <tr>
-                  <td>String</td>
-                  <td>String.equals()</td>
-                  <td>Compares two strings for equality.</td>
-                </tr>
-                <tr>
-                  <td>System</td>
-                  <td>System.out.println()</td>
-                  <td>Prints a message to the standard output.</td>
-                </tr>
-                <tr>
-                  <td>ArrayList</td>
-                  <td>add()</td>
-                  <td>Adds an element to the ArrayList.</td>
-                </tr>
-                <tr>
-                  <td>ArrayList</td>
-                  <td>get()</td>
-                  <td>
-                    Returns the element at a specified position in the
-                    ArrayList.
-                  </td>
-                </tr>
-                <tr>
-                  <td>ArrayList</td>
-                  <td>remove()</td>
-                  <td>Removes the element at the specified position.</td>
-                </tr>
-              </table>
-            </body>
-          </html>
+          <h2>Most Used Built-in Java Functions</h2>
+          <table>
+            <tr>
+              <th>Class</th>
+              <th>Function</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>Math</td>
+              <td>Math.abs()</td>
+              <td>Returns the absolute value of a number.</td>
+            </tr>
+            <tr>
+              <td>Math</td>
+              <td>Math.sqrt()</td>
+              <td>Returns the square root of a number.</td>
+            </tr>
+            <tr>
+              <td>Math</td>
+              <td>Math.pow()</td>
+              <td>
+                Returns the value of one number raised to the power of another.
+              </td>
+            </tr>
+            <tr>
+              <td>String</td>
+              <td>String.length()</td>
+              <td>Returns the length of the string.</td>
+            </tr>
+            <tr>
+              <td>String</td>
+              <td>String.substring()</td>
+              <td>Returns a substring from the specified string.</td>
+            </tr>
+            <tr>
+              <td>String</td>
+              <td>String.equals()</td>
+              <td>Compares two strings for equality.</td>
+            </tr>
+            <tr>
+              <td>System</td>
+              <td>System.out.println()</td>
+              <td>Prints a message to the standard output.</td>
+            </tr>
+            <tr>
+              <td>ArrayList</td>
+              <td>add()</td>
+              <td>Adds an element to the ArrayList.</td>
+            </tr>
+            <tr>
+              <td>ArrayList</td>
+              <td>get()</td>
+              <td>
+                Returns the element at a specified position in the ArrayList.
+              </td>
+            </tr>
+            <tr>
+              <td>ArrayList</td>
+              <td>remove()</td>
+              <td>Removes the element at the specified position.</td>
+            </tr>
+          </table>
         </section>
         <section>
           <h2>Commonly used examples</h2>
-          <hr>
+          <hr />
           <ul>
             <li>
               <h3>1. Math Functions</h3>
-              <hr>
+              <hr />
               <ul>
                 <li>
                   <h4>Math.abs()</h4>
+                  <p>
+                    This Java code snippet declares an integer variable
+                    <code>a</code> with a value of -20. It then prints the
+                    absolute value of <code>a</code> using the
+                    <strong>Math.abs()</strong> method. The output will be
+                    "Absolute value of -20 is: 20", as
+                    <strong>Math.abs()</strong> converts any negative number to
+                    its positive equivalent.
+                  </p>
                   <pre>
                     <code>
                       int a = -20;
@@ -168,9 +167,18 @@
                     </code>
                   </pre>
                 </li>
-                <hr>
+                <hr />
                 <li>
                   <h4>Math.sqrt()</h4>
+                  <p>
+                    This Java code snippet declares a double variable
+                    <code>b</code> with a value of 9.0. It then prints the
+                    square root of <code>b</code> using the
+                    <strong>Math.sqrt()</strong> method. The output will be
+                    "Square root of 9 is: 3.0", as
+                    <strong>Math.sqrt()</strong> calculates the square root of
+                    the provided number.
+                  </p>
                   <pre>
                     <code>
                       double b = 9.0;
@@ -178,9 +186,20 @@
                     </code>
                   </pre>
                 </li>
-                <hr>
+                <hr />
                 <li>
                   <h4>Math.pow()</h4>
+                  <p>
+                    This Java code snippet declares two double variables
+                    <code>base</code> with a value of 2.0 and
+                    <code>exponent</code> with a value of 3.0. It then prints
+                    the result of raising <code>base</code> to the power of
+                    <code>exponent</code> using the
+                    <strong>Math.pow()</strong> method. The output will be "2
+                    raised to the power of 3 is: 8.0", as
+                    <strong>Math.pow()</strong> calculates the power of the base
+                    raised to the given exponent.
+                  </p>
                   <pre>
                     <code>
                       double base = 2.0;
@@ -191,13 +210,22 @@
                 </li>
               </ul>
             </li>
-            <hr>
+            <hr />
             <li>
               <h3>2. String Functions</h3>
-              <hr>
+              <hr />
               <ul>
                 <li>
                   <h4>String.length()</h4>
+                  <p>
+                    This Java code snippet initializes a
+                    <code>String</code> variable <code>str</code> with the value
+                    "Hello, world!". It then prints the length of the string
+                    using the <strong>length()</strong> method of the
+                    <code>String</code> class. The output will be "Length of the
+                    string is: 13", as <strong>length()</strong> returns the
+                    number of characters in the string.
+                  </p>
                   <pre>
                     <code>
                       String str = "Hello, world!";
@@ -205,9 +233,21 @@
                     </code>
                   </pre>
                 </li>
-                <hr>
+                <hr />
                 <li>
                   <h4>String.substring()</h4>
+                  <p>
+                    This Java code snippet initializes a
+                    <code>String</code> variable <code>str</code> with the value
+                    "Hello, world!". It then prints a substring of
+                    <code>str</code> from index 7 to index 12 using the
+                    <strong>substring()</strong> method of the
+                    <code>String</code> class. The output will be "Substring
+                    from index 7 to 12 is: world", as
+                    <strong>substring()</strong> extracts characters starting at
+                    the first specified index up to, but not including, the
+                    second specified index.
+                  </p>
                   <pre>
                     <code>
                       String str = "Hello, world!";
@@ -215,9 +255,22 @@
                     </code>
                   </pre>
                 </li>
-                <hr>
+                <hr />
                 <li>
                   <h4>String.equals()</h4>
+                  <p>
+                    This Java code snippet initializes two
+                    <code>String</code> variables <code>str1</code> with the
+                    value "Hello" and <code>str2</code> with the value "World".
+                    It then compares these two strings using the
+                    <strong>==</strong> operator, which checks for reference
+                    equality rather than value equality. Since
+                    <code>str1</code> and <code>str2</code> refer to different
+                    objects, the output is <code>false</code>. The
+                    <strong>==</strong> operator in Java checks if both
+                    references point to the exact same object, not if their
+                    contents are the same.
+                  </p>
                   <pre>
                     <code>
                       String str1 = "Hello";
@@ -227,9 +280,24 @@
                     </code>
                   </pre>
                 </li>
-                <hr>
+                <hr />
                 <li>
                   <h4>toUpperCase() and toLowerCase()</h4>
+                  <p>
+                    This Java code snippet initializes a
+                    <code>String</code> variable <code>s</code> with the value
+                    "Hello World!". It then utilizes two methods from the
+                    <code>String</code> class to manipulate the case of the
+                    string: - <strong>toUpperCase()</strong> is called to
+                    convert all characters in <code>s</code> to uppercase,
+                    resulting in the output "HELLO WORLD!". -
+                    <strong>toLowerCase()</strong> is called to convert all
+                    characters in <code>s</code> to lowercase, resulting in the
+                    output "hello world!".
+                  </p>
+                  These methods are useful for standardizing the case of
+                  strings, especially in scenarios where case-insensitive
+                  comparisons are necessary.
                   <pre>
                     <code>
                       String s = "Hello World!";
