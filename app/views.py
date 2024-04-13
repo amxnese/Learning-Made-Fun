@@ -117,10 +117,10 @@ def jsLevel3(request):
   return render(request, 'app/jsLevel3.html')
 @login_required
 def jsLevel4(request):
-  return render(request, 'app/pyLevel4.html')
+  return render(request, 'app/jsLevel4.html')
 @login_required
 def jsLevel5(request):
-  return render(request, 'app/pyLevel5.html')
+  return render(request, 'app/jsLevel5.html')
 @login_required
 def jsLevel6(request):
   return render(request, 'app/jsLevel6.html')
