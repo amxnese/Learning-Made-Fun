@@ -1,0 +1,351 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>python loops</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Functions in Python</h1>
+        <img src="{% static 'app/python.png' %}" alt="" />
+      </header>
+      <main>
+        <section>
+          <h2>Functions in Python</h2>
+          <p>
+            Functions in Python are named blocks of code designed to do one
+            specific job. They allow you to write reusable pieces of code that
+            can be executed multiple times throughout your program. Functions
+            can take in parameters, which are additional pieces of data that
+            customize the function for a particular need, and return a result.
+          </p>
+
+          <h3>Benefits of Using Functions:</h3>
+          <ul>
+            <li>
+              <strong>Reusability:</strong> Write the code once and use it
+              multiple times throughout your program.
+            </li>
+            <li>
+              <strong>Modularity:</strong> Break down complex processes into
+              smaller, manageable pieces.
+            </li>
+            <li>
+              <strong>Scalability:</strong> Make a program easier to expand and
+              maintain.
+            </li>
+            <li>
+              <strong>Debugging:</strong> Easier to isolate and fix bugs in
+              smaller blocks of code.
+            </li>
+          </ul>
+          <h3>How to Define a Function</h3>
+          <p>Here is how you can define a simple function in Python:</p>
+          <pre>
+            <code>
+              def greet_user(username):
+                <span class="comment">#Display a simple greeting message.</span>
+                print(f"Hello, {username}!")
+            </code>
+          </pre>
+          <h3>Calling a Function</h3>
+          <p>
+            Once a function is defined, you can 'call' it by using its name
+            followed by parentheses (including any necessary arguments). Here's
+            how you can call the <code>greet_user</code> function:
+          </p>
+          <pre>
+            <code>
+              greet_user('Alice')
+            </code>
+          </pre>
+
+          <p>
+            This function call results in the output: <em>Hello, Alice!</em>
+          </p>
+        </section>
+        <section>
+          <h2>Keywords Related to Functions in Python</h2>
+          <p>
+            Here are some important keywords in Python that are related to
+            functions:
+          </p>
+          <ul>
+            <li><strong>def:</strong> Used to define a new function.</li>
+            <li>
+              <strong>return:</strong> Exits the function and returns a value to
+              the caller.
+            </li>
+            <li>
+              <strong>lambda:</strong> Used to create small anonymous functions
+              composed of a single expression.
+            </li>
+            <li>
+              <strong>global:</strong> Used inside a function to refer to a
+              variable defined in the global scope.
+            </li>
+            <li>
+              <strong>nonlocal:</strong> Used to refer to variables defined in
+              the nearest enclosing scope that is not global.
+            </li>
+            <li>
+              <strong>yield:</strong> Used to turn a function into a generator.
+              This keyword returns a value and pauses the function's execution,
+              resuming from there the next time the function is called.
+            </li>
+            <li>
+              <strong>async:</strong> Declares an asynchronous function, which
+              allows it to perform asynchronous operations using
+              <code>await</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why Use Functions in Python?</h2>
+          <p>
+            Functions are a fundamental aspect of Python programming, serving
+            several critical purposes that enhance the efficiency and
+            readability of code. Here's why functions are essential:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Modularity:</strong> Functions allow you to break down
+              complex processes into smaller, manageable parts. This helps in
+              isolating functionality, which makes the program easier to
+              understand and maintain.
+            </li>
+            <li>
+              <strong>Reusability:</strong> Once a function is written, it can
+              be used repeatedly throughout a program. This avoids duplication
+              of code, reduces errors, and saves time.
+            </li>
+            <li>
+              <strong>Scoping:</strong> Functions help in defining a variable's
+              scope, which means that variables declared inside a function are
+              not accessible from outside the function. This helps in preventing
+              variables from interfering with each other.
+            </li>
+            <li>
+              <strong>Abstraction:</strong> By using functions, you can abstract
+              away the details of complex operations. Users of your functions do
+              not need to understand the inner workings of those functions to
+              benefit from them.
+            </li>
+            <li>
+              <strong>Maintainability:</strong> Functions make the code more
+              organized and manageable. When a change needs to be made, you can
+              usually make it in one place rather than in many different places.
+            </li>
+            <li>
+              <strong>Testing:</strong> Functions can be individually tested,
+              which makes debugging easier. This compartmentalization helps in
+              identifying and fixing bugs more efficiently.
+            </li>
+          </ul>
+          <p>
+            Here's an example of defining and calling a simple function in
+            Python:
+          </p>
+          <pre>
+            <code>
+              def calculate_area(width, height):
+                  <span class="comment">#Calculate the area of a rectangle.</span>
+                  return width * height
+
+              <span class="commment"># Call the function with width=5 and height=10</span>
+              area = calculate_area(5, 10)
+              print("Area of the rectangle:", area)
+            </code>
+          </pre>
+
+          <p>
+            This function, <code>calculate_area</code>, calculates the area of a
+            rectangle, demonstrating the practical use of functions to perform
+            specific tasks.
+          </p>
+        </section>
+        <section>
+          <h2>When to Use Functions in Python</h2>
+          <p>
+            Functions in Python are used to encapsulate code that performs a
+            specific task into a single unit that can be used repeatedly. Here
+            are some scenarios when you might want to use functions:
+          </p>
+          <ul>
+            <li>
+              <strong>Code Reusability:</strong> When you have code that you
+              need to use multiple times in your program, you can define it once
+              in a function and call that function whenever you need to perform
+              that task.
+            </li>
+            <li>
+              <strong>Organizing Code:</strong> Functions can help to break down
+              a large program into smaller, manageable, and organized segments.
+              Each function can be responsible for a specific functionality.
+            </li>
+            <li>
+              <strong>Modularity:</strong> Using functions allows you to write
+              more modular code. This means you can develop independent
+              functions that are not dependent on the inner details of other
+              functions, making it easier to update and maintain your code.
+            </li>
+            <li>
+              <strong>Parameterization:</strong> Functions allow you to
+              parameterize your code, making it more general and flexible. You
+              can pass parameters (inputs) to a function to produce different
+              outputs based on those inputs.
+            </li>
+            <li>
+              <strong>Debugging:</strong> Debugging becomes easier when using
+              functions, as you can isolate parts of your program and check them
+              independently for errors.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Examples of Using Functions in Python</h2>
+          <p>
+            Functions in Python are defined using the <code>def</code> keyword
+            followed by the function name and parentheses. Here are some
+            practical examples to illustrate their use:
+          </p>
+          <ul>
+            <li>
+              <strong>Basic Function:</strong>
+              <pre>
+                <code>
+                  def greet(name):
+                    print(f"Hello, {name}!")
+                  greet('Alice')
+                </code>
+              </pre>
+              <p>
+                This function takes a name as a parameter and prints a greeting
+                message.
+              </p>
+            </li>
+            <li>
+              <strong>Function with Return Value:</strong>
+              <pre>
+                <code>
+                  def add(a, b):
+                    return a + b
+                  result = add(5, 3)
+                  print(result)
+                </code>
+              </pre>
+              <p>This function adds two numbers and returns the result.</p>
+            </li>
+            <li>
+              <strong>Function with Default Parameters:</strong>
+              <pre>
+                <code>
+                  def info(article, price=50):
+                    print(f"Article: {article}, Price: {price}")
+                  info('Notebook')
+                  info('Pen', 10)
+                </code>
+              </pre>
+              <p>
+                This function has a default parameter for price. If no price is
+                provided, it defaults to 50.
+              </p>
+            </li>
+            <li>
+              <strong>Function with Variable-length Arguments:</strong>
+              <pre>
+                <code>
+                  def print_scores(student, *scores):
+                    print(f"Scores for {student}:")
+                    for score in scores:
+                      print(score)
+                  print_scores('John', 92, 85, 88)
+                </code>
+              </pre>
+              <p>
+                This function accepts a variable number of scores and prints
+                each one of them. Useful for situations where the number of
+                arguments is not known in advance.
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Recursion in Python</h2>
+          <p>
+            Recursion is a programming technique where a function calls itself
+            in order to solve smaller instances of the same problem. It's
+            commonly used in Python to handle problems that can be broken down
+            into simpler, repetitive tasks. Here are some key points and an
+            example to illustrate recursion in Python:
+          </p>
+
+          <p>Recursion involves:</p>
+          <ul>
+            <li>
+              <strong>Base Case:</strong> The condition under which the
+              recursion stops. This prevents the function from calling itself
+              infinitely.
+            </li>
+            <li>
+              <strong>Recursive Case:</strong> The part of the function that
+              calls itself to continue the recursion.
+            </li>
+          </ul>
+
+          <h3>Example: Calculating Factorials Using Recursion</h3>
+          <p>
+            The factorial of a non-negative integer n is the product of all
+            positive integers less than or equal to n. It is denoted by n!.
+          </p>
+          <pre>
+            <code>
+              def factorial(n):
+                <span class="comment"># Base case: if n is 0 or 1</span>
+                if n in (0, 1):
+                  return 1
+                <span class="comment"># Recursive case: n times the factorial of n-1</span>
+                else:
+                  return n * factorial(n - 1)
+            
+                <span class="comment"># Example usage</span>
+                print(factorial(5))  <span class="comment"># Outputs: 120</span>
+            </code>
+          </pre>
+
+          <h3>Example: Fibonacci Sequence Using Recursion</h3>
+          <p>
+            The Fibonacci sequence is a series of numbers where the next number
+            is found by adding up the two numbers before it. The sequence
+            commonly starts with 0 and 1.
+          </p>
+          <pre>
+            <code>
+              def fibonacci(n):
+                <span class="comment"># Base cases: if n is 0 or 1</span>
+                if n in (0, 1):
+                  return n
+                <span class="comment"># Recursive case: sum of the two preceding numbers</span>
+                else:
+                  return fibonacci(n - 1) + fibonacci(n - 2)
+            
+              <span class="comment"># Example usage</span>
+              print(fibonacci(6))  <span class="comment"># Outputs: 8</span>
+            </code>
+          </pre>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

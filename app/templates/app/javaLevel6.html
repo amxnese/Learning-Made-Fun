@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions in Java</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Functions in Java</h1>
+        <img src="{% static 'app/java.png' %}" alt="" />
+      </header>
+      <main>
+        <section>
+          <h2>Functions in Java</h2>
+          <p>
+            In Java, functions are referred to as methods. Methods in Java are
+            used to define the behavior of an object and are a fundamental part
+            of classes. Each method in Java encapsulates a sequence of
+            statements to perform a specific task. Here are key points about
+            methods in Java:
+          </p>
+          <ul>
+            <li>
+              <strong>Method Declaration:</strong> A method in Java must be
+              declared within a class. It is defined with a return type, a name,
+              parentheses that may include parameters, and a body enclosed in
+              braces.
+            </li>
+            <li>
+              <strong>Return Type:</strong> The return type of a method
+              indicates the type of value that the method will return. Methods
+              in Java can return a primitive data type, an object, or be void if
+              no value is returned.
+            </li>
+            <li>
+              <strong>Parameters:</strong> Methods can take parameters, which
+              are specified within the parentheses in the method declaration.
+              These parameters allow the passing of information to methods.
+            </li>
+            <li>
+              <strong>Method Call:</strong> To execute a method, you call it
+              from another method or from within the same class.
+            </li>
+            <li>
+              <strong>Access Modifiers:</strong> Java methods can have access
+              modifiers (like <code>public</code>, <code>private</code>, etc.)
+              that determine where the method can be accessed from.
+            </li>
+            <li>
+              <strong>Static and Instance Methods:</strong> Methods can be
+              static, meaning they can be called without creating an instance of
+              the class, or instance methods, which require an object of the
+              class to be called.
+            </li>
+          </ul>
+          <p>Example of a simple method in Java:</p>
+          <pre>
+            <code>
+              public class Calculator {
+              <span class="comment">// Method to add two numbers</span>
+                public int add(int a, int b) {
+                    return a + b;
+                }
+              }</code>
+          </pre>
+          <p>
+            This example defines a <code>Calculator</code> class with a method
+            <code>add</code> that takes two integers as parameters and returns
+            their sum.
+          </p>
+        </section>
+        <section>
+          <h2>Keywords Related to Functions in Java</h2>
+          <p>
+            Here are some important keywords in Java that are related to
+            functions (methods):
+          </p>
+          <ul>
+            <li>
+              <strong>void:</strong> Specifies that a method does not return a
+              value.
+            </li>
+            <li>
+              <strong>return:</strong> Used to exit a method and optionally
+              return a value.
+            </li>
+            <li>
+              <strong>static:</strong> Indicates that the method belongs to the
+              class, rather than instances of the class.
+            </li>
+            <li>
+              <strong>final:</strong> Used to indicate that a method cannot be
+              overridden by subclasses.
+            </li>
+            <li>
+              <strong>abstract:</strong> Declares a method that must be
+              implemented by subclasses of an abstract class.
+            </li>
+            <li>
+              <strong>synchronized:</strong> Indicates that a method can only be
+              accessed by one thread at a time.
+            </li>
+            <li>
+              <strong>public, private, protected:</strong> Visibility modifiers
+              that control where a method can be accessed from.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why We Use Functions in Java</h2>
+          <p>
+            Functions, also known as methods in Java, are important for several
+            reasons:
+          </p>
+          <ul>
+            <li>
+              <strong>Modularity:</strong> Methods allow you to break down
+              complex problems into smaller, more manageable parts.
+            </li>
+            <li>
+              <strong>Reusability:</strong> Once a method is written, it can be
+              called multiple times from different parts of the program or even
+              in different programs, which avoids redundancy and improves
+              maintainability.
+            </li>
+            <li>
+              <strong>Scalability:</strong> Using methods makes it easier to
+              scale the program as needs grow or change. You can add
+              functionality by adding new methods or modifying existing ones
+              without affecting the rest of the program.
+            </li>
+            <li>
+              <strong>Readability:</strong> Well-named methods can make the
+              program more understandable by acting as a form of documentation.
+              They help others (and yourself) understand what a particular block
+              of code is supposed to do.
+            </li>
+            <li>
+              <strong>Debugging:</strong> Methods help isolate problems by
+              confining functionality to discrete chunks. Debugging is often
+              easier when you can pinpoint issues within small, self-contained
+              methods.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>When to Use Functions in Java</h2>
+          <p>
+            Functions, or methods, should be used in Java in the following
+            scenarios:
+          </p>
+          <ul>
+            <li>
+              <strong>Code Reuse:</strong> Whenever you need to perform the same
+              action multiple times in your program, encapsulate the action in a
+              method to avoid code duplication.
+            </li>
+            <li>
+              <strong>Organization:</strong> Methods can be used to organize
+              code into logical blocks. This makes the code easier to manage,
+              read, and debug.
+            </li>
+            <li>
+              <strong>Managing Complexity:</strong> As applications grow more
+              complex, methods help manage complexity by hiding implementation
+              details and exposing only necessary parts of the code.
+            </li>
+            <li>
+              <strong>Parameterization:</strong> If you have a block of code
+              that performs similar operations with slightly different values,
+              methods can be parameterized to operate with different inputs,
+              enhancing flexibility and functionality.
+            </li>
+            <li>
+              <strong>Testing:</strong> Methods allow for easier testing because
+              each method can be tested independently from the rest of the code.
+              This modularity is key for unit testing.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Examples of Using Functions in Java</h2>
+          <p>
+            Here are some practical examples of how functions (methods) can be
+            used in Java:
+          </p>
+          <ul>
+            <li>
+              <strong>Example 1: Basic Function</strong>
+              <pre>
+                <code>
+                  public class Main {
+                    <span class="comment">Declaring and Defining the function</span>
+                    public static void printMessage() {
+                        System.out.println("Hello, World!");
+                    }
+                
+                    public static void main(String[] args) {
+                        printMessage();  // Calling the function
+                    }
+                }</code>
+              </pre>
+            </li>
+            <li>
+              <strong>Example 2: Function with Return Value</strong>
+              <pre>
+                <code>
+                  public class Calculator {
+                    <span class="comment">Defining the function</span>
+                    public static int sum(int a, int b) {
+                      return a + b;
+                    }
+                
+                    public static void main(String[] args) {
+                        int result = sum(5, 3); <span class="comment">Calling the function</span>
+                        System.out.println("Sum is: " + result);
+                    }
+                }</code>
+              </pre>
+            </li>
+            <li>
+              <strong>Example 3: Function with Parameters</strong>
+              <pre>
+                <code>
+                  public class Main {
+                    public static void displayUser(String name, int age) {
+                        System.out.println("Name: " + name + ", Age: " + age);
+                    }
+                
+                    public static void main(String[] args) {
+                        displayUser("Alice", 30);
+                    }
+                }</code>
+              </pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Recursion in Java</h2>
+            <p>
+              Recursion in Java is a process where a method calls itself
+              continuously. A method that uses this technique is referred to as
+              a recursive method. To prevent a recursive method from running
+              indefinitely, a condition is typically used to end the method
+              calls.
+            </p>
+            <h3>Key Concepts of Recursion</h3>
+            <ul>
+              <li>
+                <strong>Base Case:</strong> This is the condition under which
+                the recursion stops. Without a base case, the recursion would
+                continue indefinitely, likely causing a stack overflow error.
+              </li>
+              <li>
+                <strong>Recursive Case:</strong> This is the part of the method
+                where the recursion occurs, meaning the method calls itself with
+                modified parameters.
+              </li>
+            </ul>
+            <h3>Example of Recursion in Java</h3>
+            <p>
+              Here is a simple example of a recursive method in Java that
+              calculates the factorial of a number:
+            </p>
+            <pre>
+              <code>
+                public class Factorial {
+                    public static int factorial(int n) {
+                        if (n == 0) { // Base case
+                            return 1;
+                        } else { // Recursive case
+                            return n * factorial(n - 1);
+                        }
+                    }
+                    
+                    public static void main(String[] args) {
+                        int result = factorial(5);
+                        System.out.println("Factorial of 5 is: " + result);
+                    }
+                }</code>
+            </pre>
+            <p>
+              This method uses a base case where if <code>n</code> is 0, it
+              returns 1 (since 0! = 1). Otherwise, it calls itself with
+              <code>n - 1</code>, multiplying the result by <code>n</code> each
+              time.
+            </p>
+          </section>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
