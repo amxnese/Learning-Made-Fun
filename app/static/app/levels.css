@@ -19,6 +19,10 @@ header h1 {
   margin: 0;
 }
 
+h1,h2,h3,h4,h5,h6,strong{
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -61,6 +65,8 @@ pre {
   border-radius: 10px;
 }
 code {
+  font-size: 105%;
+  color: crimson;
   font-family: "Consolas", "Monaco", "Lucida Console", monospace;
 }
 .var {
@@ -153,9 +159,6 @@ code {
 .test:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
-}
-code {
-  color: #993800;
 }
 table {
   width: 100%;

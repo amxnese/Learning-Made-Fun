@@ -62,19 +62,27 @@ a:hover {
 }
 .left p:nth-child(1) {
   color: black;
-  font-size: 30px;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+.left p:nth-child(2) {
+  color: black;
+  font-size: 25px;
+  /* letter-spacing: 1px; */
+}
+.left p:nth-child(3) {
+  color: black;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 .left h1 {
   font-size: 90px;
   color: white;
 }
-.left p:nth-child(3) {
-  color: black;
-  font-size: 30px;
-}
 h2{
   font-size: 70px;
+  position: relative;
+  top: -4px;
 }
 .oswald-font {
   font-family: "Oswald", sans-serif;
@@ -85,7 +93,7 @@ h2{
 .cssbuttons-io-button {
   margin: 20px;
   margin-top: 30px;
-  margin-left: 250px;
+  margin-left: 256px;
   background-image: linear-gradient(19deg, #00BFFF 0%, #B721FF 100%);
   color: white;
   font-family: inherit;
@@ -140,12 +148,6 @@ h2{
   transform: scale(0.9);
 }
 
-
-
-
-
-
-
 .Btn {
   margin-left: 28px;
   margin-top: 34px;
@@ -164,7 +166,6 @@ h2{
   background-color: rgb(255, 65, 65);
 }
 
-/* plus sign */
 .sign {
   width: 100%;
   transition-duration: .3s;
