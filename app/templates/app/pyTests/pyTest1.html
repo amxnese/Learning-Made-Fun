@@ -1,0 +1,251 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
+    <title>Python Syntax and Data Types Quiz</title>
+  </head>
+  <body>
+    <div id="quiz-container">
+      <h1>Python Syntax and Data Types Quiz</h1>
+      <form id="quiz-form" action="{% url 'app-pyTest1' %}" method="post">
+        {% csrf_token %}
+        <div class="question">
+          <h2>
+            1. What data type would you use to store a number without decimals?
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q1-a1" name="q1" value="int" />
+            <label for="q1-a1">int</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q1-a2" name="q1" value="float" />
+            <label for="q1-a2">float</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q1-a3" name="q1" value="string" />
+            <label for="q1-a3">string</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            2. What is the correct way to declare a variable 'x' with the value
+            10.5 in Python?
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q2-a1" name="q2" value="int x = 10.5" />
+            <label for="q2-a1">int x = 10.5</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q2-a2" name="q2" value="x = 10.5" />
+            <label for="q2-a2">x = 10.5</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q2-a3" name="q2" value="float x = 10.5" />
+            <label for="q2-a3">float x = 10.5</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>3. How do you create a string in Python?</h2>
+          <div class="pad">
+            <input
+              type="radio"
+              id="q3-a1"
+              name="q3"
+              value="string x = 'Hello'"
+            />
+            <label for="q3-a1">string x = 'Hello'</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q3-a2" name="q3" value="x = 'Hello'" />
+            <label for="q3-a2">x = 'Hello'</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q3-a3" name="q3" value="'Hello'" />
+            <label for="q3-a3">'Hello'</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>4. What is the output of this Python code:</h2>
+          <pre>
+              <code>
+                <span class="blue">print</span><span class="yellow">(</span><span class="blue">type</span><span class="purple">(</span><span class="purple">True</span><span class="purple">)</span><span class="yellow">)</span></code>
+            </pre>
+          <p>
+            Note: <code style="color: crimson">type(x)</code> functions returns
+            the data type of <code style="color: crimson">x</code>
+          </p>
+          <div class="pad">
+            <input type="radio" id="q4-a1" name="q4" value="int" />
+            <label for="q4-a1">int</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a2" name="q4" value="bool" />
+            <label for="q4-a2">bool</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a3" name="q4" value="string" />
+            <label for="q4-a3">string</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            5. What is the correct way to denote the end of a line in Python?
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q4-a1" name="q5" value="semicolon" />
+            <label for="q5-a1"
+              >Use a semicolon <code style="color: crimson">;</code></label
+            >
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a2" name="q5" value="comma" />
+            <label for="q5-a2"
+              >Use a comma <code style="color: crimson">,</code></label
+            >
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a3" name="q5" value="linebreak" />
+            <label for="q5-a3">Line breaks are sufficient</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>6. Which of the following is a valid variable name in Python?</h2>
+          <div class="pad">
+            <input type="radio" id="q6-a1" name="q6" value="1var" />
+            <label for="q6-a1">1_variable</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a2" name="q6" value="var1" />
+            <label for="q6-a2">variable_1</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a3" name="q6" value="var!" />
+            <label for="q6-a3">variable!</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            7. What character is used to indicate a single-line comment in
+            Python?
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q7-a1" name="q7" value="#" />
+            <label for="q7-a1">#</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a2" name="q7" value="//" />
+            <label for="q7-a2">//</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a3" name="q7" value="%" />
+            <label for="q7-a3">%</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>8. Which of the following is NOT a valid data type in Python?</h2>
+          <div class="pad">
+            <input type="radio" id="q8-a1" name="q8" value="int" />
+            <label for="q8-a1">int</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a2" name="q8" value="double" />
+            <label for="q8-a2">double</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a3" name="q8" value="string" />
+            <label for="q8-a3">string</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            9. What will be the value of x after executing the following code in
+            Python?
+          </h2>
+          <pre>
+            <code>
+              x <span class="pink">=</span> <span class="purple">10</span>
+              x <span class="pink">+=</span> <span class="purple">5</span>
+              x <span class="pink">*=</span> <span class="purple">2</span></code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q9-a1" name="q9" value="20" />
+            <label for="q9-a1">20</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q9-a2" name="q9" value="30" />
+            <label for="q9-a2">30</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q9-a3" name="q9" value="40" />
+            <label for="q9-a3">40</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            10. What happens if proper indentation is not followed in Python?
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q-a1" name="q" value="error" />
+            <label for="q-a1">The code will not run.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q-a2" name="q" value="unexpected" />
+            <label for="q-a2"
+              >The code will run, but it will not produce the desired
+              output.</label
+            >
+          </div>
+          <div class="pad">
+            <input type="radio" id="q-a3" name="q" value="nothing" />
+            <label for="q-a3">Python ignores indentation.</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            Which data type is used to represent true/false values in Python?
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q-a1" name="q" value="int" />
+            <label for="q-a1">int</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q-a2" name="q" value="float" />
+            <label for="q-a2">float</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q-a3" name="q" value="bool" />
+            <label for="q-a3">bool</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            What will be the result of the following expression in Python?
+          </h2>
+          <pre>
+            <code>
+              x <span class="pink">=</span> <span class="purple">10</span>
+              y <span class="pink">=</span> <span class="purple">3</span>
+              result <span class="pink">=</span> x <span class="pink">/</span> y</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q-a1" name="q" value="3.333" />
+            <label for="q-a1">3.333</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q-a2" name="q" value="" />
+            <label for="q-a2">3</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q-a3" name="q" value="" />
+            <label for="q-a3">3.0</label>
+          </div>
+        </div>
+        <button type="submit">Submit Answers</button>
+      </form>
+    </div>
+  </body>
+</html>
