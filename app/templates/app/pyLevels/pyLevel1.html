@@ -1,0 +1,246 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Syntax</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Getting Familiar With Python's Syntax</h1>
+        <img src="{% static 'app/python.png' %}" alt="" />
+      </header>
+      <main>
+        <section id="syntax">
+          <h2>Python Syntax</h2>
+          <p>
+            Python syntax refers to the set of rules that defines how a Python
+            program is written and interpreted by both the Python interpreter
+            and human readers. Here are some key points about Python syntax
+          </p>
+        </section>
+        <section id="indentation">
+          <h2>Indentation</h2>
+          <p>
+            Python uses indentation to define blocks of code. Unlike many other
+            programming languages that use braces {} to define blocks, Python
+            uses whitespace (tabs or spaces). The standard practice is to use
+            four spaces per indentation level.
+          </p>
+        </section>
+        <section id="variables">
+          <h2>Variables and Assignment</h2>
+          <p>
+            Variables can be assigned values using the = operator, and Python is
+            dynamically typed, which means you don't explicitly declare variable
+            types unlike many programming languages.
+          </p>
+          <pre>
+              <code>
+                <span class="white">x </span><span class="pink">=</span><span class="number"> 10</span>
+                <span class="white">y </span><span class="pink">=</span><span class="yellow"> "Hello, World!"</span></code>
+            </pre>
+          <h3>Invalid Variable Names</h3>
+          <p>
+            Improper variable names in Python are typically those that violate
+            the naming conventions or rules enforced by the language. Here are
+            some examples:
+          </p>
+
+          <ul>
+            <li>
+              Starting with a number: Variable names cannot start with a number.
+              <pre>
+                <code>
+                  <span class="white">1variable</span> = <span class="purple">10</span> <span class="comment"># Incorrect</span></code>
+              </pre>
+            </li>
+            <li>
+              Containing special characters: Variables can only contain letters,
+              numbers, and underscores.
+              <pre>
+                <code>
+                  <span class="white">my-variable</span> = <span class="purple">10</span> <span class="comment"># Incorrect</span></code>
+              </pre>
+            </li>
+            <li>
+              Reserved keywords: Python has reserved keywords that cannot be
+              used as variable names.
+              <pre>
+                <code>
+                  <span class="white">class</span> = <span class="yellow">"Hello"</span> <span class="comment"># Incorrect</span></code>
+              </pre>
+            </li>
+            Using spaces: Spaces are not allowed in variable names.
+            <pre>
+              <code>
+                <span class="white">my variable</span> = <span class="purple">20</span> <span class="comment"># Incorrect</span></code>
+            </pre>
+          </ul>
+        </section>
+        <section id="getting-started">
+          <h2>Comments</h2>
+          <p>
+            Python uses the # symbol for comments. Anything after # on a line is
+            ignored by the Python interpreter.
+          </p>
+          <pre>
+            <code>
+              <span class="comment"># This is a comment</span>
+              <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Hello, World!"</span><span class="orange">)</span><span class="comment"># This prints a string</span></code>
+          </pre>
+        </section>
+        <section>
+          <h1>Data Types in Python</h1>
+          <p>
+            Python has several built-in data types that are commonly used in
+            various programming scenarios. Understanding these types is crucial
+            for effective programming in Python.
+          </p>
+
+          <h2>Basic Data Types</h2>
+          <p>
+            <span class="keyword">Integer</span> (<span
+              class="keyword"
+              style="color: #66d9ef"
+              >int</span
+            >): Represents positive or negative whole numbers without a decimal
+            point.
+          </p>
+          <pre>
+            <code>
+              <span class="comment"># Integer declaration</span>
+              <span class="white">my_int</span> <span class="pink">=</span> <span class="purple">10</span></code>
+          </pre>
+
+          <p>
+            <span class="keyword">Floating Point</span> (<span
+              class="keyword"
+              style="color: #66d9ef"
+              >float</span
+            >): Represents real numbers and can include a fractional part.
+          </p>
+          <pre>
+            <code>
+              <span class="comment"># Float declaration</span>
+              <span class="white">my_float</span> <span class="pink">=</span> <span class="purple">20.5</span></code>
+          </pre>
+
+          <p>
+            <span class="keyword">String</span> (<span
+              class="keyword"
+              style="color: #66d9ef"
+              >str</span
+            >): Used to represent text data in Python. A string is a sequence of
+            Unicode characters.
+          </p>
+          <pre>
+            <code>
+              <span class="comment"># String declaration</span>
+              <span class="white">my_string</span> <span class="pink">=</span>  <span class="yellow">"Hello Python"</span>
+            </code>
+          </pre>
+
+          <p>
+            <span class="keyword">Boolean</span> (<span
+              class="keyword"
+              style="color: #66d9ef"
+              >bool</span
+            >): Can hold one of two values:
+            <span class="keyword purple">True</span> or
+            <span class="keyword purple">False</span>.
+          </p>
+          <pre>
+            <code>
+              <span class="comment"># Boolean declaration</span>
+              <span class="white">my_bool</span> <span class="pink">=</span> <span class="purple">True</span></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Operators</h2>
+          <p>
+            In Python, operators are special symbols that carry out arithmetic
+            or logical computation. The value that the operator operates on is
+            called the operand. Here's an overview of the different strons of
+            operators available in Python:
+          </p>
+          <h3>Arithmetic Operators</h3>
+          <ul>
+            <li><strong>'+'</strong> Addition: Adds two operands.</li>
+            <li>
+              <strong>'-'</strong> Subtraction: Subtracts the second operand
+              from the first.
+            </li>
+            <li>
+              <strong>'*'</strong> Multiplication: Multiplies two operands.
+            </li>
+            <li>
+              <strong>'/'</strong> Division: Divides the first operand by the
+              second operand.
+            </li>
+            <li>
+              <strong>'%'</strong> Modulus: Returns the remainder when the first
+              operand is divided by the second.
+            </li>
+            <li>
+              <strong>'**'</strong> Exponentiation: Raises the first operand to
+              the power of the second operand.
+            </li>
+            <li>
+              <strong>'//'</strong> Floor division: Divides the first operand by
+              the second operand, rounding down to the nearest whole number.
+            </li>
+          </ul>
+          <h3>Assignment Operators</h3>
+          <p>Used to assign values to variables.</p>
+          <li>
+            <strong>'='</strong> Assigns values from right side operands to left
+            side operand.
+          </li>
+          <li>
+            <strong>'+='</strong> Adds right operand to the left operand and
+            assigns the result to the left operand.
+          </li>
+          <li>
+            <strong>'-='</strong> Subtracts the right operand from the left
+            operand and assigns the result to the left operand.
+          </li>
+          <li>
+            <strong>'*='</strong> Multiplies right operand with the left operand
+            and assigns the result to the left operand.
+          </li>
+          <li>
+            <strong>'/='</strong> Divides left operand by the right operand and
+            assigns the result to the left operand.
+          </li>
+          <li>
+            <strong>'%='</strong> Takes modulus using two operands and assigns
+            the result to the left operand.
+          </li>
+          <li>
+            <strong>'**/'</strong> Performs exponential (power) calculation on
+            operators and assigns value to the left operand.
+          </li>
+          <li>
+            <strong>'//='</strong> Performs floor division on operators and
+            assigns value to the left operand.
+          </li>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test1/'"
+          >
+            Take a Test
+          </button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>python built-in functions</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Python's Built-in Functions</h1>
+        <img src="{% static 'app/python.png' %}" alt="" />
+      </header>
+      <main>
+        <section>
+          <h2>What are built-in functions</h2>
+          <p>
+            Built-in functions are pre-defined functions provided by a
+            programming language's standard library, allowing you to perform
+            common tasks without having to implement the functionality yourself.
+            These functions are "built into" the language, meaning they are
+            always available and can be used without any additional imports or
+            definitions.
+          </p>
+        </section>
+        <section>
+          <h2>Why we use built-in functions</h2>
+          <ul>
+            <li>
+              <strong>Efficiency:</strong> These functions are generally
+              optimized for performance and are faster than equivalent functions
+              you might write on your own.
+            </li>
+            <li>
+              <strong>Convenience:</strong> They simplify common tasks like
+              mathematical operations, input/output processing, and data
+              manipulation.
+            </li>
+            <li>
+              <strong>Reliability:</strong> Built-in functions are thoroughly
+              tested as part of the language's development, ensuring that they
+              work correctly in all expected scenarios.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Most used functions</h2>
+          <table>
+            <tr>
+              <th>Function</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>print()</td>
+              <td>
+                Displays the specified message to the screen, or other standard
+                output device.
+              </td>
+            </tr>
+            <tr>
+              <td>len()</td>
+              <td>Returns the number of items in an object.</td>
+            </tr>
+            <tr>
+              <td>type()</td>
+              <td>Returns the type of the specified object.</td>
+            </tr>
+            <tr>
+              <td>int(), str(), float()</td>
+              <td>
+                Convert objects to integer, string, or float types respectively.
+              </td>
+            </tr>
+            <tr>
+              <td>input()</td>
+              <td>Allows user input.</td>
+            </tr>
+            <tr>
+              <td>range()</td>
+              <td>Generates a sequence of numbers, often used in for loops.</td>
+            </tr>
+            <tr>
+              <td>append()</td>
+              <td>Adds an item to the end of a list.</td>
+            </tr>
+            <tr>
+              <td>sorted()</td>
+              <td>Returns a sorted list from the provided iterable.</td>
+            </tr>
+            <tr>
+              <td>sum()</td>
+              <td>Sums the items of an iterator.</td>
+            </tr>
+            <tr>
+              <td>max(), min()</td>
+              <td>Return the largest or smallest item in an iterable.</td>
+            </tr>
+            <tr>
+              <td>map()</td>
+              <td>
+                Applies a given function to each item of an iterable and returns
+                a list of the results.
+              </td>
+            </tr>
+            <tr>
+              <td>filter()</td>
+              <td>
+                Constructs an iterator from elements of an iterable for which a
+                function returns true.
+              </td>
+            </tr>
+            <tr>
+              <td>zip()</td>
+              <td>
+                Returns an iterator of tuples, where the i-th tuple contains the
+                i-th element from each of the argument sequences or iterables.
+              </td>
+            </tr>
+            <tr>
+              <td>enumerate()</td>
+              <td>
+                Adds a counter to an iterable and returns it in a form of
+                enumerating object.
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>Commmon Examples</h2>
+          <ul>
+            <li>
+              <h3>1. 'print()' Function</h3>
+              <p>
+                The <strong>'print()'</strong> function is used to output text
+                or variables to the console. It's one of the most frequently
+                used functions in Python, especially for debugging purposes.
+              </p>
+              <pre>
+              <code>
+                <span class="comment"># Example of using print() to display a message</span>
+                print(<span class="yellow">"Hello, world!"</span>)
+              </code>
+              </pre>
+            </li>
+            <hr />
+            <li>
+              <h3>2. 'len()' Function</h3>
+              <p>
+                The <strong>'len()'</strong> function returns the number of
+                items in a container. This function is useful when you need to
+                know the size of a list, string, or any other collection.
+              </p>
+              <pre>
+                <code>
+                  <span class="comment"># Example of using len() to get the length of a list</span>
+                  my_list = [10, 20, 30, 40, 50]
+                  print("The length of the list is:", len(my_list))
+                </code>
+              </pre>
+            </li>
+            <hr />
+            <li>
+              <h3>3. 'type()' Function</h3>
+              <p>
+                The <strong>'type()'</strong> function returns the type of the
+                specified object. This can be helpful for debugging or when
+                you're working with data and need to know what kind of variable
+                you're dealing with.
+              </p>
+              <pre>
+                <code>
+                  <span class="comment"># Example of using type() to get the type of a variable</span>
+                  my_variable = 3.14
+                  print("The type of my_variable is:", type(my_variable))
+                </code>
+              </pre>
+            </li>
+            <hr />
+            <li>
+              <h3>4. 'int()' Function</h3>
+              <p>
+                The int() function is used to convert a compatible value into an
+                integer. This is very useful when you need to ensure that
+                numerical data is in integer form for calculations or indexing.
+              </p>
+              <pre>
+                <code>
+                  # Example of using int() to convert a string to an integer
+                  number_string = "123"
+                  converted_number = int(number_string)
+                  print("Converted number:", converted_number)
+                </code>
+              </pre>
+            </li>
+            <hr />
+            <li>
+              <h3>5. input() Function</h3>
+              <p>
+                The input() function allows you to take user input from the
+                console. It is useful for interactive programs where you need
+                input from the user.
+              </p>
+              <pre>
+                <code>
+                  # Example of using input() to get user input
+                  user_name = input("Enter your name: ")
+                  print("Hello, " + user_name + "!")
+                </code>
+              </pre>
+            </li>
+            <hr />
+            <li>
+              <h3>6. The 'sum()' Function</h3>
+              <p>
+                The <strong>'sum()'</strong> function in Python is used to add
+                up all the numbers in an iterable, such as a list or tuple, and
+                return the total. Here's a simple example that demonstrates how
+                to use the <strong>sum()</strong>
+                function:
+              </p>
+              <pre style="width: 920px; height: 160px">
+                <code >
+                  <span class="comment"># Example of using sum() to calculate the total of numbers in a list</span>
+                  <span class="white">numbers</span> = [5, 10, 15, 20, 25]
+                  <span class="white">total</span> = sum(numbers)
+                  <span class="white">print</span>("The total sum of the numbers is:", total)
+                </code>
+              </pre>
+              <p>
+                In this example, sum() takes the list numbers as its argument
+                and returns the sum of its elements, which is then printed out.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
