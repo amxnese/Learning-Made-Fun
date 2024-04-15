@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Syntax</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Getting Familiar With JavaScript's Syntax</h1>
+        <img src="{% static 'app/js.png' %}" alt="" />
+      </header>
+      <main>
+        <section id="syntax">
+          <h2>JavaScript Syntax</h2>
+          <p>
+            In JavaScript, syntax is the set of rules that defines how to write
+            JavaScript code. JavaScript syntax borrows heavily from C and Java,
+            but it's also influenced by Awk, Perl, and Python. Here's an
+            overview of the basic syntax
+          </p>
+        </section>
+        <section id="variables">
+          <h2>Variables</h2>
+          <p>Variables can be declared using var, let, or const.</p>
+          <pre style="height: 130px">
+            <code>
+              <span class="pink">let</span> <span class="green";>name</span> <span class="white">=</span> <span class="yellow">"John"</span><span class="white">;</span>
+              <span class="pink">const</span> <span class="green";>age</span> <span class="white">=</span> <span class="purple">30</span><span class="white">;</span>
+              <span class="pink">var</span> <span class="green";>height</span> <span class="white">=</span> <span class="purple">180</span><span class="white">;</span>
+            </code>
+          </pre>
+        </section>
+        <section id="data-types">
+          <h2>Data Types</h2>
+          <p>
+            JavaScript is a loosely typed language, which means you don't have
+            to declare the data type of a variable explicitly. The main data
+            types are:
+          </p>
+          <ul>
+            <li>Number</li>
+            <li>String</li>
+            <li>Boolean</li>
+            <li>Object</li>
+            <li>Function</li>
+            <li>Array</li>
+            <li>Undefined</li>
+            <li>Null</li>
+          </ul>
+        </section>
+        <section id="operators">
+          <h2>Operators</h2>
+          <p>
+            In JavaScript, operators are used to perform operations on variables
+            and values. JavaScript supports several types of operators, each
+            serving different purposes:
+          </p>
+          <h3>Arithmetic Operators</h3>
+          <p>
+            These operators are used for performing
+            mathematical calculations:
+          </p>
+          <ul>
+            <li>'+' (Addition): Adds two operands. </li>
+            <li>'-' (Subtraction): Subtracts one operand from another. </li>
+            <li>'*' (Multiplication): Multiplies two operands. </li>
+            <li>'/' (Division): Divides the first operand by the second.  </li>
+            <li>'%' (Modulus): Returns the remainder of a division. </li>
+            <li>'++' (Increment): Increases an integer value by one. </li>
+            <li>'--' (Decrement):Decreases an integer value by one </li>
+          </ul>
+          <h3>Assignment Operators</h3>
+          <p>
+          These operators are used to assign values to JavaScript variables:
+          </p>
+          <ul>
+            <li><strong>'='</strong> (Assignment): Assigns a value to a variable. </li>
+            <li><strong>'+='</strong> (Add and assign): Adds a value to a variable and assigns the result to that variable. </li>
+            <li><strong>'-='</strong> (Subtract and assign): Subtracts a value from a variable and assigns the result to that variable. </li>
+            <li><strong>'*='</strong> (Multiply and assign): Multiplies a variable by a value and assigns the result to that variable. </li>
+            <li><strong>'/='</strong> (Divide and assign): Divides a variable by a value and assigns the result to the variable. </li>
+            <li><strong>'%='</strong> (Modulus and assign): Takes modulus using two operands and assigns the result to the variable. </li>
+          </ul>
+          <h3>String Operators</h3>
+          <p>The <strong>'+'</strong> operator can also be used to concatenate strings:</p>
+          <strong>'+'</strong> (Concatenation): Combines two string values to create a new string.
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

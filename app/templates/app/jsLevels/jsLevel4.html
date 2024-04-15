@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript built-in data structures</title>
+    <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Conditional Statements in JavaScript</h1>
+        <img src="{% static 'app/js.png' %}" alt="" />
+      </header>
+      <main>
+        <section>
+          <h2>What Are Conditional Statements</h2>
+          <p>
+            <strong>Conditional statements</strong> in JavaScript are used to
+            perform different actions based on different conditions. These
+            statements allow your script to make decisions and execute certain
+            code blocks when certain conditions are met. Here are the main types
+            of conditional statements in JavaScript:
+          </p>
+          <ul>
+            <li>
+              <strong>if statement:</strong>
+              Executes a block of code if the specified condition is true.
+              <pre>
+                <code>
+                  if (condition) {
+                    // code to be executed if condition is true
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>if-else statement:</strong> Executes a block of code if
+              the condition is true; otherwise, it executes another block of
+              code.
+            </li>
+            <pre><code>if (condition) {
+              // code to be executed if condition is true
+          } else {
+              // code to be executed if condition is false
+          }
+          </code></pre>
+            <li>
+              else-if ladder: Provides a way to decide among several blocks of
+              code to be executed.
+              <pre><code>if (condition1) {
+              // code to be executed if condition1 is true
+          } else if (condition2) {
+              // code to be executed if condition2 is true
+          } else {
+              // code to be executed if both condition1 and condition2 are false
+          }
+          </code></pre>
+            </li>
+            <li>
+              switch statement: Executes one code block from many choices.
+              Unlike if statements that evaluate conditions, the switch
+              statement selects execution paths based on an expression's value.
+              <pre><code>switch (expression) {
+            case x:
+                // code block
+                break;
+            case y:
+                // code block
+                break;
+            default:
+                // default code block
+        }
+        </code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>When to Use Conditional Statements in JavaScript</h2>
+          <p>
+            <strong>Conditional statements</strong> are fundamental to
+            programming, allowing you to make decisions in your code based on
+            conditions. Here are common scenarios where conditional statements
+            are used in JavaScript:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>Decision Making:</strong> Use conditional statements to
+                execute different code based on various conditions. This is
+                helpful in scenarios such as displaying different messages based
+                on user input or deciding which action to take next.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Form Validations:</strong> Before submitting form data
+                to a server, you might want to ensure that the data is correct.
+                Conditional statements can check things like whether an email
+                address is in the correct format, or whether all required fields
+                are filled out.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Feature Access Control:</strong> Conditional statements
+                can control access to certain parts of your application, such as
+                enabling or disabling features based on user roles or
+                subscription levels.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Handling Different Scenarios:</strong> In real-world
+                applications, you often need to handle various scenarios that
+                depend on external data. For example, displaying different
+                content on a website based on the time of day, or showing
+                different interfaces to users based on the device they are
+                using.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Error Handling:</strong> Use conditional statements to
+                check for potential errors in your code, such as checking if an
+                object exists before accessing its properties to avoid runtime
+                errors.
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Keywords Related to Conditional Statements in JavaScript</h2>
+          <p>
+            Conditional statements are crucial in JavaScript for decision-making
+            processes. Here are some important keywords and operators related to
+            conditional statements:
+          </p>
+          <ul>
+            <li>
+              <code>if</code> - Executes a block of code if a specified
+              condition is true.
+            </li>
+            <li>
+              <code>else</code> - Executes a block of code if the condition in
+              the <code>if</code> statement is false.
+            </li>
+            <li>
+              <code>else if</code> - Specifies a new condition to test, if the
+              first condition is false.
+            </li>
+            <li>
+              <code>switch</code> - Allows a block of code to be executed among
+              many alternatives. Uses <code>case</code> statements to compare
+              the given value.
+            </li>
+            <li>
+              <code>case</code> - Specifies a block of code to run if it matches
+              the value in the <code>switch</code> statement.
+            </li>
+            <li>
+              <code>default</code> - Specifies the code to run if there is no
+              case match in a <code>switch</code> statement.
+            </li>
+            <li>
+              <code>?:</code> (ternary operator) - Provides a shorthand way of
+              writing an <code>if-else</code> statement. It takes three operands
+              and evaluates to a value based on the first condition being true
+              or false.
+            </li>
+            <li>
+              <code>break</code> - Terminates the current loop, switch, or label
+              statement and transfers program control to the statement following
+              the terminated statement.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Examples of Using Conditional Statements in JavaScript</h2>
+          <p>
+            <strong>Conditional statements</strong> control the flow of
+            execution based on conditions. Below are examples of how these
+            statements can be used:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>Using if statement:</strong> A basic example to display
+                a message based on the age.
+              </p>
+              <pre>
+                <code>
+                  // Check if someone is old enough to vote
+                  var age = 20;
+                  if (age >= 18) {
+                    console.log("You are eligible to vote.");
+                  } else {
+                    console.log("You are not eligible to vote.");
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <p>
+                <strong>Using else-if ladder:</strong> Multiple conditions to
+                handle different ranges of grades.
+              </p>
+              <pre>
+                <code>
+                  // Determine the grade of a student based on their score
+                  var score = 85;
+                  if (score >= 90) {
+                    console.log("Grade A");
+                  } else if (score >= 80) {
+                    console.log("Grade B");
+                  } else if (score >= 70) {
+                    console.log("Grade C");
+                  } else if (score >= 60) {
+                    console.log("Grade D");
+                  } else {
+                    console.log("Grade F");
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <p>
+                <strong>Using switch-case:</strong> Different cases for handling
+                specific user commands.
+              </p>
+              <pre>
+                <code>
+                  // Respond to a user command
+                  var command = 'start';
+                  switch (command) {
+                    case 'start':
+                      console.log("Starting the engine...");
+                      break;
+                    case 'stop':
+                      console.log("Stopping the engine...");
+                      break;
+                    default:
+                      console.log("Command not recognized.");
+                  }
+                </code>
+              </pre>
+            </li>
+            <li>
+              <p>
+                <strong>Nested if statements:</strong> Checking multiple
+                conditions within a condition.
+              </p>
+              <pre>
+                <code>
+                  // Check login status and user role
+                  var loggedIn = true;
+                  var userRole = 'admin';
+                  if (loggedIn) {
+                    if (userRole === 'admin') {
+                      console.log("Access granted to admin panel.");
+                    } else {
+                      console.log("Access granted. Limited permissions.");
+                    }
+                  } else {
+                    console.log("Please log in to continue.");
+                  }
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <div class="center">
+          <button class="test" role="button">Take a Test</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
