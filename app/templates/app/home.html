@@ -3,13 +3,12 @@
   <div class="logo">Learning Made Fun</div>
   <div class="nav">
     {% if not user.is_authenticated %}
-    <a href="{% url 'app-login' %}"> Login </a>
-    <a href="{% url 'app-register' %}"> Register </a>
+    <a href="{% url 'user-login' %}"> Login </a>
+    <a href="{% url 'user-register' %}"> Register </a>
     {% endif %}
     <a href=""> Contact us </a>
     <a href=""> About us </a>
     {% if user.is_authenticated %}
-    <!-- <a href="{% url 'app-logout' %}"> Logout </a> -->
     <button class="Btn" onclick="location.href='/logout'">
       <div class="sign">
         <svg viewBox="0 0 512 512">

@@ -25,27 +25,22 @@ def python(request):
   }
   return render(request, 'app/python.html',{'levels':lvl})
 
-@login_required
 def pyIntro(request):
-  return render(request, 'app/pyIntro.html')
-@login_required
+  return render(request, 'app/pyLevels/pyIntro.html')
 def pyLevel1(request):
-  return render(request, 'app/pyLevel1.html')
-@login_required
+  return render(request, 'app/pyLevels/pyLevel1.html')
 def pyLevel2(request):
-  return render(request, 'app/pyLevel2.html')
-@login_required
+  return render(request, 'app/pyLevels/pyLevel2.html')
 def pyLevel3(request):
-  return render(request, 'app/pyLevel3.html')
-@login_required
+  return render(request, 'app/pyLevels/pyLevel3.html')
 def pyLevel4(request):
-  return render(request, 'app/pyLevel4.html')
-@login_required
+  return render(request, 'app/pyLevels/pyLevel4.html')
 def pyLevel5(request):
-  return render(request, 'app/pyLevel5.html')
-@login_required
+  return render(request, 'app/pyLevels/pyLevel5.html')
 def pyLevel6(request):
-  return render(request, 'app/pyLevel6.html')
+  return render(request, 'app/pyLevels/pyLevel6.html')
+def pyTest1(request):
+  return render(request, 'app/pyTests/pyTest1.html')
 
 @login_required
 def java(request):
@@ -66,25 +61,25 @@ def java(request):
 
 @login_required
 def javaIntro(request):
-  return render(request, 'app/javaIntro.html')
+  return render(request, 'app/javaLevels/javaIntro.html')
 @login_required
 def javaLevel1(request):
-  return render(request, 'app/javaLevel1.html')
+  return render(request, 'app/javaLevels/javaLevel1.html')
 @login_required
 def javaLevel2(request):
-  return render(request, 'app/javaLevel2.html')
+  return render(request, 'app/javaLevels/javaLevel2.html')
 @login_required
 def javaLevel3(request):
-  return render(request, 'app/javaLevel3.html')
+  return render(request, 'app/javaLevels/javaLevel3.html')
 @login_required
 def javaLevel4(request):
-  return render(request, 'app/javaLevel4.html')
+  return render(request, 'app/javaLevels/javaLevel4.html')
 @login_required
 def javaLevel5(request):
-  return render(request, 'app/javaLevel5.html')
+  return render(request, 'app/javaLevels/javaLevel5.html')
 @login_required
 def javaLevel6(request):
-  return render(request, 'app/javaLevel6.html')
+  return render(request, 'app/javaLevels/javaLevel6.html')
 
 @login_required
 def js(request):
@@ -105,22 +100,22 @@ def js(request):
 
 @login_required
 def jsIntro(request):
-  return render(request, 'app/jsIntro.html')
+  return render(request, 'app/jsLevels/jsIntro.html')
 @login_required
 def jsLevel1(request):
-  return render(request, 'app/jsLevel1.html')
+  return render(request, 'app/jsLevels/jsLevel1.html')
 @login_required
 def jsLevel2(request):
-  return render(request, 'app/jsLevel2.html')
+  return render(request, 'app/jsLevels/jsLevel2.html')
 @login_required
 def jsLevel3(request):
-  return render(request, 'app/jsLevel3.html')
+  return render(request, 'app/jsLevels/jsLevel3.html')
 @login_required
 def jsLevel4(request):
-  return render(request, 'app/jsLevel4.html')
+  return render(request, 'app/jsLevels/jsLevel4.html')
 @login_required
 def jsLevel5(request):
-  return render(request, 'app/jsLevel5.html')
+  return render(request, 'app/jsLevels/jsLevel5.html')
 @login_required
 def jsLevel6(request):
-  return render(request, 'app/jsLevel6.html')
+  return render(request, 'app/jsLevels/jsLevel6.html')

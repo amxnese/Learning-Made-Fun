@@ -1,131 +1,110 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Java</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="{% static 'app/levelsJava.css' %}" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="{% url 'app-home' %}">Home</a></li>
-          <li><a href="">Quiz</a></li>
-          <li><a href="">Language</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section class="content">
-      <div class="card">
-        <div class="card-body text-center">
-          <h3 class="card-title">
-            Introduction to Java
-            <img src="{% static 'app/java.png' %}" alt="" /><i
-              class="ri-image-add-line"
-            ></i>
-          </h3>
-          <p class="card-text">
-            This section provides an overview of the Java programming language
-            and terminology, What can you do with the language, and why would
-            you consider learning it.
-            <a href="{% url 'app-javaIntro' %}" class="btn btn-primary"
-              >Start Learning</a
-            >
-          </p>
-        </div>
+{% extends 'app/navbar.html' %} {% load static %} {% block additional_styles %}
+<link rel="stylesheet" href="{% static 'app/levelsJava.css' %}" />
+{% endblock %} {% block content %}
+<section class="content">
+  <div class="card">
+    <div class="card-body text-center">
+      <h3 class="card-title">
+        Introduction to Java
+        <img src="{% static 'app/java.png' %}" alt="" /><i
+          class="ri-image-add-line"
+        ></i>
+      </h3>
+      <p class="card-text">
+        This section provides an overview of the Java programming language and
+        terminology, What can you do with the language, and why would you
+        consider learning it.
+        <a href="{% url 'app-javaIntro' %}" class="btn btn-primary"
+          >Start Learning</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="level">
+    <!-- Level 1 -->
+    <div class="carte">
+      <div class="card-body">
+        <h3 class="card-title">Level 1: Syntax</h3>
+        <p class="card-text">
+          This level covers syntax, data types, variables...
+        </p>
+        <a href="{% url 'app-javaLevel1' %}" class="btn btn-{{levels.lvl1}}"
+          >Start Learning</a
+        >
       </div>
-      <div class="level">
-        <!-- Level 1 -->
-        <div class="carte">
-          <div class="card-body">
-            <h3 class="card-title">Level 1: Syntax</h3>
-            <p class="card-text">
-              This level covers syntax, data types, variables...
-            </p>
-            <a href="{% url 'app-javaLevel1' %}" class="btn btn-{{levels.lvl1}}"
-              >Start Learning</a
-            >
-          </div>
-        </div>
-        <!-- Level 2 -->
-        <div class="carte">
-          <div class="card-body">
-            <h3 class="card-title">Level 2: Built-in methods</h3>
-            <p class="card-text">
-              Covering most usable and known built-in functions of the language.
-            </p>
-            <a href="{% url 'app-javaLevel2' %}" class="btn btn-{{levels.lvl2}}">Start Learning</a>
-          </div>
-        </div>
-        <!-- End Level 2 -->
+    </div>
+    <!-- Level 2 -->
+    <div class="carte">
+      <div class="card-body">
+        <h3 class="card-title">Level 2: Built-in methods</h3>
+        <p class="card-text">
+          Covering most usable and known built-in functions of the language.
+        </p>
+        <a href="{% url 'app-javaLevel2' %}" class="btn btn-{{levels.lvl2}}"
+          >Start Learning</a
+        >
       </div>
-      <!-- End Level Cards -->
+    </div>
+    <!-- End Level 2 -->
+  </div>
+  <!-- End Level Cards -->
 
-      <!-- Level Cards -->
-      <div class="level-container">
-        <!-- Level 3 -->
-        <div class="carte">
-          <div class="card-body">
-            <h3 class="card-title">Level 3: Built-in data structures</h3>
-            <p class="card-text">
-              This level covers the Java's built-in data structures and some
-              built-in methods related to them
-            </p>
-            <a href="{% url 'app-javaLevel3' %}" class="btn btn-{{levels.lvl3}}">Start Learning</a>
-          </div>
-        </div>
-        <!-- end Level 3 -->
-        <!-- Level 4 -->
-        <div class="carte">
-          <div class="card-body">
-            <h3 class="card-title">Level 4: Conditional Statements</h3>
-            <p class="card-text">
-              Understanding Conditional Statements and relational operators
-            </p>
-            <a href="{% url 'app-javaLevel4' %}" class="btn btn-{{levels.lvl4}}">Start Learning</a>
-          </div>
-        </div>
-        <!-- end Level 4 -->
+  <!-- Level Cards -->
+  <div class="level-container">
+    <!-- Level 3 -->
+    <div class="carte">
+      <div class="card-body">
+        <h3 class="card-title">Level 3: Built-in data structures</h3>
+        <p class="card-text">
+          This level covers the Java's built-in data structures and some
+          built-in methods related to them
+        </p>
+        <a href="{% url 'app-javaLevel3' %}" class="btn btn-{{levels.lvl3}}"
+          >Start Learning</a
+        >
       </div>
-      <!-- End Level Cards -->
-
-      <!-- Level Cards -->
-      <div class="level-container">
-        <!-- end Level 5 -->
-        <div class="carte">
-          <div class="card-body">
-            <h3 class="card-title">Level 5: Loops</h3>
-            <p class="card-text">Where, When, Why, and How to use Loops</p>
-            <a href="{% url 'app-javaLevel5' %}" class="btn btn-{{levels.lvl5}}">Start Learning</a>
-          </div>
-        </div>
-        <!-- end Level 5 -->
-
-        <!-- Level 6-->
-        <div class="carte">
-          <div class="card-body">
-            <h3 class="card-title">Level 6: Functions</h3>
-            <p class="card-text">
-              Getting Started with the concept of functions
-            </p>
-            <a href="{% url 'app-javaLevel6' %}" class="btn btn-{{levels.lvl6}}">Start Learning</a>
-          </div>
-        </div>
+    </div>
+    <!-- end Level 3 -->
+    <!-- Level 4 -->
+    <div class="carte">
+      <div class="card-body">
+        <h3 class="card-title">Level 4: Conditional Statements</h3>
+        <p class="card-text">
+          Understanding Conditional Statements and relational operators
+        </p>
+        <a href="{% url 'app-javaLevel4' %}" class="btn btn-{{levels.lvl4}}"
+          >Start Learning</a
+        >
       </div>
-    </section>
-  </body>
-</html>
+    </div>
+    <!-- end Level 4 -->
+  </div>
+  <!-- End Level Cards -->
+
+  <!-- Level Cards -->
+  <div class="level-container">
+    <!-- end Level 5 -->
+    <div class="carte">
+      <div class="card-body">
+        <h3 class="card-title">Level 5: Loops</h3>
+        <p class="card-text">Where, When, Why, and How to use Loops</p>
+        <a href="{% url 'app-javaLevel5' %}" class="btn btn-{{levels.lvl5}}"
+          >Start Learning</a
+        >
+      </div>
+    </div>
+    <!-- end Level 5 -->
+
+    <!-- Level 6-->
+    <div class="carte">
+      <div class="card-body">
+        <h3 class="card-title">Level 6: Functions</h3>
+        <p class="card-text">Getting Started with the concept of functions</p>
+        <a href="{% url 'app-javaLevel6' %}" class="btn btn-{{levels.lvl6}}"
+          >Start Learning</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -21,7 +21,7 @@
     {% endif %}
     <div class="container">
       <h2>Change Password</h2>
-      <form method="post" action="{% url 'app-passwd' %}">
+      <form method="post" action="{% url 'user-passwd' %}">
         {% csrf_token %}
         <div class="form-group">
           <label for="old">Old password:</label>

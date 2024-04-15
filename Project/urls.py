@@ -23,11 +23,11 @@ from users import views as user_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
-    path('login/', user_views.login, name='app-login'),
-    path('register/', user_views.register, name='app-register'),
-    path('logout/', user_views.logout, name='app-logout'),
-    path('profile/', user_views.profile, name='app-profile'),
-    path('profile/edit/', user_views.edit, name='app-edit'),
-    path('profile/change_password/', user_views.change_password, name='app-passwd'),
-    path('profile/delete/', user_views.delete, name='app-delete')
+    path('login/', user_views.login, name='user-login'),
+    path('register/', user_views.register, name='user-register'),
+    path('logout/', user_views.logout, name='user-logout'),
+    path('profile/', user_views.profile, name='user-profile'),
+    path('profile/edit/', user_views.edit, name='user-edit'),
+    path('profile/change_password/', user_views.change_password, name='user-passwd'),
+    path('profile/delete/', user_views.delete, name='user-delete')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

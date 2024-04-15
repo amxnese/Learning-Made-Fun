@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <h2>Edit Profile</h2>
-      <form method="post" action="{% url 'app-edit' %}">
+      <form method="post" action="{% url 'user-edit' %}">
         {% csrf_token %}
         <div class="form-group">
           <label for="username">Username:</label>

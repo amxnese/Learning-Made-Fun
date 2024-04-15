@@ -5,21 +5,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Styled Page</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'app/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'app/main.css' %}" />
   </head>
   <body>
-    <div class="navbar">
-      <ul>
-        <li><a href="{% url 'app-home' %}">Home</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="{% url 'app-profile' %}">Profile</a></li>
-      </ul>
-      <ul>
-        <li><a href="{% url 'app-logout' %}">Logout</a></li>
-      </ul>
-    </div>
+    <header>
+      <div class="nav-bar">
+        <nav>
+          <ul>
+            <li><a href="{% url 'app-home' %}">Home</a></li>
+            <li><a href="">Tests</a></li>
+            <li><a href="{% url 'user-profile' %}">Profile</a></li>
+            <li class="right"><a href="{% url 'user-logout' %}">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="content-buttons">
-      <button onclick="location.href='python/'" class="btn python">Python </button>
+      <button onclick="location.href='python/'" class="btn python">
+        Python
+      </button>
       <button onclick="location.href='java/'" class="btn java">Java</button>
       <button onclick="location.href='js/'" class="btn js">JavaScript</button>
     </div>

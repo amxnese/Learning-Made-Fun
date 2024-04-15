@@ -1,5 +1,6 @@
 body {
-  font-family: "Bebas Neue";
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
   line-height: 1.6;
   margin: auto;
   padding: 0;
@@ -64,7 +65,7 @@ pre {
   width: 740px;
   border-radius: 10px;
 }
-code {
+code, .keyword {
   font-size: 105%;
   color: crimson;
   font-family: "Consolas", "Monaco", "Lucida Console", monospace;

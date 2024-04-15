@@ -6,7 +6,7 @@
       <header>
         <h4>Register</h4>
       </header>
-      <form method="post" action="{% url 'app-register' %}">
+      <form method="post" action="{% url 'user-register' %}">
         {% csrf_token %}
         <div class="form_wrapper">
           <input id="username" type="text" required name="username"/>
@@ -28,7 +28,7 @@
         </div> -->
         <button>Sign up</button>
         <div class="new_account">
-          Already have an account ? <a href="{% url 'app-login' %}">Sign in</a>
+          Already have an account ? <a href="{% url 'user-login' %}">Sign in</a>
         </div>
       </form>
     </main>

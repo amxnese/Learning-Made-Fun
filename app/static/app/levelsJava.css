@@ -11,33 +11,6 @@ body {
   font-weight: 500;
 }
 
-header nav ul {
-  list-style-type: none;
-  display: flex;
-  background-color: #4b8bbe;
-}
-
-header nav ul li {
-  margin: 10px;
-  transition: transform 0.3s ease;
-}
-
-header nav ul li:hover {
-  transform: scale(1.1);
-  background-color: #555;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-  color: rgb(251, 251, 255);
-}
-header nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 15px;
-  border-radius: 5px;
-}
 .card {
   background-color: #4b8bbe;
   color: #f5f5f5;
