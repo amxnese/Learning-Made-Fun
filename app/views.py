@@ -25,22 +25,45 @@ def python(request):
   }
   return render(request, 'app/python.html',{'levels':lvl})
 
+@login_required
 def pyIntro(request):
   return render(request, 'app/pyLevels/pyIntro.html')
+@login_required
 def pyLevel1(request):
   return render(request, 'app/pyLevels/pyLevel1.html')
+@login_required
 def pyLevel2(request):
   return render(request, 'app/pyLevels/pyLevel2.html')
+@login_required
 def pyLevel3(request):
   return render(request, 'app/pyLevels/pyLevel3.html')
+@login_required
 def pyLevel4(request):
   return render(request, 'app/pyLevels/pyLevel4.html')
+@login_required
 def pyLevel5(request):
   return render(request, 'app/pyLevels/pyLevel5.html')
+@login_required
 def pyLevel6(request):
   return render(request, 'app/pyLevels/pyLevel6.html')
+@login_required
 def pyTest1(request):
   return render(request, 'app/pyTests/pyTest1.html')
+@login_required
+def pyTest2(request):
+  return render(request, 'app/pyTests/pyTest2.html')
+@login_required
+def pyTest3(request):
+  return render(request, 'app/pyTests/pyTest3.html')
+@login_required
+def pyTest4(request):
+  return render(request, 'app/pyTests/pyTest4.html')
+@login_required
+def pyTest5(request):
+  return render(request, 'app/pyTests/pyTest5.html')
+@login_required
+def pyTest6(request):
+  return render(request, 'app/pyTests/pyTest6.html')
 
 @login_required
 def java(request):
@@ -80,6 +103,24 @@ def javaLevel5(request):
 @login_required
 def javaLevel6(request):
   return render(request, 'app/javaLevels/javaLevel6.html')
+@login_required
+def javaTest1(request):
+  return render(request, 'app/javaTests/javaTest1.html')
+@login_required
+def javaTest2(request):
+  return render(request, 'app/javaTests/javaTest2.html')
+@login_required
+def javaTest3(request):
+  return render(request, 'app/javaTests/javaTest3.html')
+@login_required
+def javaTest4(request):
+  return render(request, 'app/javaTests/javaTest4.html')
+@login_required
+def javaTest5(request):
+  return render(request, 'app/javaTests/javaTest5.html')
+@login_required
+def javaTest6(request):
+  return render(request, 'app/javaTests/javaTest6.html')
 
 @login_required
 def js(request):
@@ -119,3 +160,21 @@ def jsLevel5(request):
 @login_required
 def jsLevel6(request):
   return render(request, 'app/jsLevels/jsLevel6.html')
+@login_required
+def jsTest1(request):
+  return render(request, 'app/jsTests/jsTest1.html')
+@login_required
+def jsTest2(request):
+  return render(request, 'app/jsTests/jsTest2.html')
+@login_required
+def jsTest3(request):
+  return render(request, 'app/jsTests/jsTest3.html')
+@login_required
+def jsTest4(request):
+  return render(request, 'app/jsTests/jsTest4.html')
+@login_required
+def jsTest5(request):
+  return render(request, 'app/jsTests/jsTest5.html')
+@login_required
+def jsTest6(request):
+  return render(request, 'app/jsTests/jsTest6.html')
