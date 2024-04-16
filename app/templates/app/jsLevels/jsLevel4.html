@@ -31,8 +31,7 @@
                 <code>
                   if (condition) {
                     // code to be executed if condition is true
-                  }
-                </code>
+                  }</code>
               </pre>
             </li>
             <li>
@@ -40,39 +39,45 @@
               the condition is true; otherwise, it executes another block of
               code.
             </li>
-            <pre><code>if (condition) {
-              // code to be executed if condition is true
-          } else {
-              // code to be executed if condition is false
-          }
-          </code></pre>
+            <pre>
+              <code>
+                if (condition) {
+                    // code to be executed if condition is true
+                } else {
+                    // code to be executed if condition is false
+                }</code>
+            </pre>
             <li>
               else-if ladder: Provides a way to decide among several blocks of
               code to be executed.
-              <pre><code>if (condition1) {
-              // code to be executed if condition1 is true
-          } else if (condition2) {
-              // code to be executed if condition2 is true
-          } else {
-              // code to be executed if both condition1 and condition2 are false
-          }
-          </code></pre>
+              <pre>
+                <code>
+                  if (condition1) {
+                      // code to be executed if condition1 is true
+                  } else if (condition2) {
+                      // code to be executed if condition2 is true
+                  } else {
+                      // code to be executed if both condition1 and condition2 are false
+                  }</code>
+              </pre>
             </li>
             <li>
               switch statement: Executes one code block from many choices.
               Unlike if statements that evaluate conditions, the switch
               statement selects execution paths based on an expression's value.
-              <pre><code>switch (expression) {
-            case x:
-                // code block
-                break;
-            case y:
-                // code block
-                break;
-            default:
-                // default code block
-        }
-        </code></pre>
+              <pre>
+                <code>
+                  switch (expression) {
+                    case x:
+                        // code block
+                        break;
+                    case y:
+                        // code block
+                        break;
+                    default:
+                        // default code block
+                  }</code>
+              </pre>
             </li>
           </ul>
         </section>
@@ -187,7 +192,7 @@
           <ul>
             <li>
               <p>
-                <strong>Using if statement:</strong> A basic example to display
+                <h3>Using if statement:</h3> A basic example to display
                 a message based on the age.
               </p>
               <pre>
@@ -198,13 +203,12 @@
                     console.log("You are eligible to vote.");
                   } else {
                     console.log("You are not eligible to vote.");
-                  }
-                </code>
+                  }</code>
               </pre>
             </li>
             <li>
               <p>
-                <strong>Using else-if ladder:</strong> Multiple conditions to
+                <h3>Using else-if ladder:</h3> Multiple conditions to
                 handle different ranges of grades.
               </p>
               <pre>
@@ -221,13 +225,12 @@
                     console.log("Grade D");
                   } else {
                     console.log("Grade F");
-                  }
-                </code>
+                  }</code>
               </pre>
             </li>
             <li>
               <p>
-                <strong>Using switch-case:</strong> Different cases for handling
+                <h3>Using switch-case:</h3> Different cases for handling
                 specific user commands.
               </p>
               <pre>
@@ -243,13 +246,12 @@
                       break;
                     default:
                       console.log("Command not recognized.");
-                  }
-                </code>
+                  }</code>
               </pre>
             </li>
             <li>
               <p>
-                <strong>Nested if statements:</strong> Checking multiple
+                <h3>Nested if statements:</h3> Checking multiple
                 conditions within a condition.
               </p>
               <pre>
@@ -265,8 +267,7 @@
                     }
                   } else {
                     console.log("Please log in to continue.");
-                  }
-                </code>
+                  }</code>
               </pre>
             </li>
           </ul>
@@ -274,7 +275,13 @@
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test4/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>

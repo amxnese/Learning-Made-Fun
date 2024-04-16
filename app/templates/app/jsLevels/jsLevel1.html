@@ -30,8 +30,7 @@
             <code>
               <span class="pink">let</span> <span class="green";>name</span> <span class="white">=</span> <span class="yellow">"John"</span><span class="white">;</span>
               <span class="pink">const</span> <span class="green";>age</span> <span class="white">=</span> <span class="purple">30</span><span class="white">;</span>
-              <span class="pink">var</span> <span class="green";>height</span> <span class="white">=</span> <span class="purple">180</span><span class="white">;</span>
-            </code>
+              <span class="pink">var</span> <span class="green";>height</span> <span class="white">=</span> <span class="purple">180</span><span class="white">;</span></code>
           </pre>
         </section>
         <section id="data-types">
@@ -52,6 +51,51 @@
             <li>Null</li>
           </ul>
         </section>
+        <section id="data-types-examples">
+          <h2>Examples on some data types</h2>
+          <ul>
+            <li>
+              <p>
+                <strong>Number:</strong> In JavaScript, a "Number" is a
+                primitive data type used to represent numerical values,
+                including integers and floating-point numbers. It is used for
+                mathematical operations and can store both positive and negative
+                values, as well as decimal fractions.
+              </p>
+              <pre>
+              <code>
+                <span class="pink">let</span> <span class="green";>num</span> <span class="white">=</span> <span class="purple">10</span><span class="white">;</span></code>
+            </pre>
+            </li>
+            <li>
+              <p>
+                <strong>String:</strong> In JavaScript, a "String" is a sequence
+                of characters enclosed within single quotes ('') or double
+                quotes (""). It is a primitive data type used to represent text
+                data. Strings can contain letters, numbers, symbols, and
+                whitespace. They are widely used for storing and manipulating
+                textual information in JavaScript programs
+              </p>
+              <pre>
+              <code>
+                <span class="pink">let</span> <span class="green";>message</span> <span class="white">=</span> <span class="yellow">"Hello"</span><span class="white">;</span></code>
+            </pre>
+            </li>
+            <li>
+              <p>
+                <strong>Boolean:</strong> A "Boolean" in JavaScript is a
+                primitive data type that represents a logical value. It can have
+                one of two possible values: true or false. Booleans are commonly
+                used for making decisions in code, controlling the flow of
+                execution, and performing conditional operations.
+              </p>
+              <pre>
+              <code>
+                <span class="pink">let</span> <span class="green";>status</span> <span class="white">=</span> <span class="purple">true</span><span class="white">;</span></code>
+            </pre>
+            </li>
+          </ul>
+        </section>
         <section id="operators">
           <h2>Operators</h2>
           <p>
@@ -61,38 +105,64 @@
           </p>
           <h3>Arithmetic Operators</h3>
           <p>
-            These operators are used for performing
-            mathematical calculations:
+            These operators are used for performing mathematical calculations:
           </p>
           <ul>
-            <li>'+' (Addition): Adds two operands. </li>
-            <li>'-' (Subtraction): Subtracts one operand from another. </li>
-            <li>'*' (Multiplication): Multiplies two operands. </li>
-            <li>'/' (Division): Divides the first operand by the second.  </li>
-            <li>'%' (Modulus): Returns the remainder of a division. </li>
-            <li>'++' (Increment): Increases an integer value by one. </li>
-            <li>'--' (Decrement):Decreases an integer value by one </li>
+            <li>'+' (Addition): Adds two operands.</li>
+            <li>'-' (Subtraction): Subtracts one operand from another.</li>
+            <li>'*' (Multiplication): Multiplies two operands.</li>
+            <li>'/' (Division): Divides the first operand by the second.</li>
+            <li>'%' (Modulus): Returns the remainder of a division.</li>
+            <li>'++' (Increment): Increases an integer value by one.</li>
+            <li>'--' (Decrement):Decreases an integer value by one</li>
           </ul>
           <h3>Assignment Operators</h3>
           <p>
-          These operators are used to assign values to JavaScript variables:
+            These operators are used to assign values to JavaScript variables:
           </p>
           <ul>
-            <li><strong>'='</strong> (Assignment): Assigns a value to a variable. </li>
-            <li><strong>'+='</strong> (Add and assign): Adds a value to a variable and assigns the result to that variable. </li>
-            <li><strong>'-='</strong> (Subtract and assign): Subtracts a value from a variable and assigns the result to that variable. </li>
-            <li><strong>'*='</strong> (Multiply and assign): Multiplies a variable by a value and assigns the result to that variable. </li>
-            <li><strong>'/='</strong> (Divide and assign): Divides a variable by a value and assigns the result to the variable. </li>
-            <li><strong>'%='</strong> (Modulus and assign): Takes modulus using two operands and assigns the result to the variable. </li>
+            <li>
+              <strong>'='</strong> (Assignment): Assigns a value to a variable.
+            </li>
+            <li>
+              <strong>'+='</strong> (Add and assign): Adds a value to a variable
+              and assigns the result to that variable.
+            </li>
+            <li>
+              <strong>'-='</strong> (Subtract and assign): Subtracts a value
+              from a variable and assigns the result to that variable.
+            </li>
+            <li>
+              <strong>'*='</strong> (Multiply and assign): Multiplies a variable
+              by a value and assigns the result to that variable.
+            </li>
+            <li>
+              <strong>'/='</strong> (Divide and assign): Divides a variable by a
+              value and assigns the result to the variable.
+            </li>
+            <li>
+              <strong>'%='</strong> (Modulus and assign): Takes modulus using
+              two operands and assigns the result to the variable.
+            </li>
           </ul>
           <h3>String Operators</h3>
-          <p>The <strong>'+'</strong> operator can also be used to concatenate strings:</p>
-          <strong>'+'</strong> (Concatenation): Combines two string values to create a new string.
+          <p>
+            The <strong>'+'</strong> operator can also be used to concatenate
+            strings:
+          </p>
+          <strong>'+'</strong> (Concatenation): Combines two string values to
+          create a new string.
         </section>
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test1/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>

@@ -61,15 +61,15 @@
           </ul>
         </section>
         <section>
-          <h3>Available Data Structures in JavaScript</h3>
-          <p><strong>1. Array:</strong></p>
+          <h2>Available Data Structures in JavaScript</h2>
+          <h3>1. Array:</h3>
           <ul>
             <li>
               An Array is a dynamic list-like object that can hold elements of
               any data type.
             </li>
             <li>
-              Use Array when you need to store a collection of elements and
+              We Use Array when you need to store a collection of elements and
               access them by index.
             </li>
             <li>Example:</li>
@@ -77,12 +77,11 @@
           <pre>
             <code>
               let arr = ["Apple", "Banana"];
-              arr.push("Orange"); // Adding element to the end
-              let fruit = arr[0]; // Accessing element by index
-            </code>
+              arr.push("Orange"); <span class="comment">// Adding element to the end</span>
+              let fruit = arr[0]; <span class="comment">// Accessing element by index</span></code>
           </pre>
 
-          <p><strong>2. Set:</strong></p>
+          <h3>2. Set:</h3>
           <ul>
             <li>Set is a collection of unique values.</li>
             <li>
@@ -96,11 +95,10 @@
               let set = new Set();
               set.add("Apple");
               set.add("Banana");
-              let containsApple = set.has("Apple"); // Checking if set contains an element
-            </code>
+              let containsApple = set.has("Apple"); <span class="comment">// Checking if set contains an element</span></code>
           </pre>
 
-          <p><strong>3. Map:</strong></p>
+          <h3>3. Map:</h3>
           <ul>
             <li>
               Map is a collection of key-value pairs where each key is unique.
@@ -116,11 +114,10 @@
               let map = new Map();
               map.set("apple", 10);
               map.set("banana", 5);
-              let quantity = map.get("apple"); // Retrieving value by key
-            </code>
+              let quantity = map.get("apple"); <span class="comment">// Retrieving value by key</span></code>
           </pre>
 
-          <p><strong>4. Object:</strong></p>
+          <h3>4. Object:</h3>
           <ul>
             <li>
               Object is a collection of key-value pairs where keys are strings.
@@ -129,7 +126,7 @@
               Use Object when you need to create a custom data structure with
               properties and methods.
             </li>
-            <li>Example:</li>
+            <li><strong>Example:</strong></li>
           </ul>
           <pre>
             <code>
@@ -137,13 +134,12 @@
                 name: "John",
                 age: 30
               };
-              let name = obj.name; // Accessing property by key
-            </code>
+              let name = obj.name; <span class="comment">// Accessing property by key</span></code>
           </pre>
         </section>
         <section>
-          <h3>Available Data Structures in Python</h3>
-          <h2>Arrays</h2>
+          <h2>Some Built-in Functions Related To Built-in Datastrures</h2>
+          <h3>Arrays</h3>
           <ul>
             <li>
               <strong>length</strong>: Returns the number of elements in an
@@ -166,21 +162,20 @@
           <pre>
             <code>
               let myArray = [3, 1, 4, 1, 5, 9, 2, 6, 5];
-              console.log(myArray.length);  // Output: 9
+              console.log(myArray.length);  <span class="comment">// Output: 9</span>
 
               myArray.push(7);
-              console.log(myArray);  // Output: [3, 1, 4, 1, 5, 9, 2, 6, 5, 7]
+              console.log(myArray);  <span class="comment">// Output: [3, 1, 4, 1, 5, 9, 2, 6, 5, 7]</span>
 
               let poppedItem = myArray.pop();
-              console.log(poppedItem);  // Output: 7
-              console.log(myArray);  // Output: [3, 1, 4, 1, 5, 9, 2, 6, 5]
+              console.log(poppedItem);  <span class="comment">// Output: 7</span>
+              console.log(myArray);  <span class="comment">// Output: [3, 1, 4, 1, 5, 9, 2, 6, 5]</span>
 
               myArray.sort();
-              console.log(myArray);  // Output: [1, 1, 2, 3, 5, 5, 6, 9]
-            </code>
+              console.log(myArray);  <span class="comment">// Output: [1, 1, 2, 3, 5, 5, 6, 9]</span></code>
           </pre>
 
-          <h2>Objects</h2>
+          <h3>Objects</h3>
           <ul>
             <li>
               <strong>Object.keys()</strong>: Returns an array of a given
@@ -210,11 +205,10 @@
               console.log(Object.entries(myObject));  // Output: [["a", 1], ["b", 2], ["c", 3]]
 
               let copiedObject = Object.assign({}, myObject);
-              console.log(copiedObject);  // Output: {a: 1, b: 2, c: 3}
-            </code>
+              console.log(copiedObject);  // Output: {a: 1, b: 2, c: 3}</code>
           </pre>
 
-          <h2>Sets</h2>
+          <h3>Sets</h3>
           <ul>
             <li><strong>add()</strong>: Adds a new element to the set.</li>
             <li>
@@ -248,14 +242,19 @@
               // Output:
               // 2
               // 6
-              // 8
-            </code>
+              // 8</code>
           </pre>
         </section>
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test3/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>

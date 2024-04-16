@@ -15,7 +15,7 @@
     </style>
     <div class="container">
       <header>
-        <h1>Getting Familiar With Python's Syntax</h1>
+        <h1>Built-in Functions in JavaScript</h1>
         <img src="{% static 'app/js.png' %}" alt="" />
       </header>
       <main>
@@ -171,8 +171,7 @@
               <pre style="width: 800px;">
               <code>
                 <span class="comment">// Example of using alert() to show a greeting</span>
-                alert(<span class="yellow">"Hello, world!"</span>)
-              </code>
+                alert(<span class="yellow">"Hello, world!"</span>)</code>
               </pre>
             </li>
             <hr />
@@ -191,8 +190,7 @@
                 <span class="comment">// Example of using console.log() to display a message and a variable</span>
                 var message = <span class="yellow">"The value is:"</span>;
                 var value = 10;
-                console.log(message, value);
-              </code>
+                console.log(message, value);</code>
               </pre>
               <p>
                 This example illustrates how console.log() can be used to log
@@ -216,8 +214,7 @@
               <code>
                 <span class="comment">// Example of using document.getElementById() to change text content</span>
                 var myElement = document.getElementById(<span class="yellow">"demo"</span>);
-                myElement.textContent = <span class="yellow">"Hello, JavaScript!"</span>;
-              </code>
+                myElement.textContent = <span class="yellow">"Hello, JavaScript!"</span>;</code>
               </pre>
               <p>
                 This example demonstrates how to select an HTML element with the
@@ -241,8 +238,7 @@
               <code>
                 <span class="comment">// Example of using document.querySelector() to find and style a button</span>
                 var button = document.querySelector(<span class="yellow">"button.primary"</span>);
-                button.style.backgroundColor = <span class="yellow">"blue"</span>;
-              </code>
+                button.style.backgroundColor = <span class="yellow">"blue"</span>;</code>
               </pre>
               <p>
                 This example shows how to select the first button element with a
@@ -267,8 +263,7 @@
                 <span class="comment">// Example of using document.createElement() to create a new div and add it to the body</span>
                 var newDiv = document.createElement(<span class="yellow">"div"</span>);
                 newDiv.innerHTML = <span class="yellow">"Hello, dynamic world!"</span>;
-                document.body.appendChild(newDiv);
-              </code>
+                document.body.appendChild(newDiv);</code>
               </pre>
               <p>
                 In this example, a new &lt;div&gt; element is created, its inner
@@ -294,8 +289,7 @@
                 var btn = document.querySelector(<span class="yellow">"button"</span>);
                 btn.addEventListener(<span class="yellow">"click"</span>, function() {
                   alert(<span class="yellow">"Button was clicked!"</span>);
-                });
-              </code>
+                });</code>
               </pre>
               <p>
                 This example demonstrates how to attach a click event listener
@@ -320,8 +314,7 @@
                 <span class="comment">// Example of using setTimeout() to execute a function after a 3-second delay</span>
                 setTimeout(function() {
                   console.log(<span class="yellow">"This message appears after 3 seconds"</span>);
-                }, 3000);
-              </code>
+                }, 3000);</code>
               </pre>
               <p>
                 This example shows how to use setTimeout() to log a message to
@@ -353,8 +346,7 @@
                     clearInterval(intervalId); // Stop the interval after 5 iterations
                     console.log(<span class="yellow">"Interval stopped."</span>);
                   }
-                }, 1000);
-              </code>
+                }, 1000);</code>
               </pre>
               <p>
                 This example demonstrates how to use setInterval() to create a
@@ -370,7 +362,13 @@
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test2/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>
