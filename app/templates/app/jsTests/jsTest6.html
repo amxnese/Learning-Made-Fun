@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div id="quiz-container">
+      <h1></h1>
+      <form id="quiz-form" action="{% url 'app-' %}" method="post">
+        {% csrf_token %}
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q1-a1" name="q1" value="" />
+            <label for="q1-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q1-a2" name="q1" value="" />
+            <label for="q1-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q1-a3" name="q1" value="" />
+            <label for="q1-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q2-a1" name="q2" value="" />
+            <label for="q2-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q2-a2" name="q2" value="" />
+            <label for="q2-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q2-a3" name="q2" value="" />
+            <label for="q2-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q3-a1" name="q3" value="" />
+            <label for="q3-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q3-a2" name="q3" value="" />
+            <label for="q3-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q3-a3" name="q3" value="" />
+            <label for="q3-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q4-a1" name="q4" value="" />
+            <label for="q4-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a2" name="q4" value="" />
+            <label for="q4-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a3" name="q4" value="" />
+            <label for="q4-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q5-a1" name="q5" value="" />
+            <label for="q5-a1"> </label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q5-a2" name="q5" value="" />
+            <label for="q5-a2"> </label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q5-a3" name="q5" value="" />
+            <label for="q5-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q6-a1" name="q6" value="" />
+            <label for="q6-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a2" name="q6" value="" />
+            <label for="q6-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a3" name="q6" value="" />
+            <label for="q6-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q7-a1" name="q7" value="" />
+            <label for="q7-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a2" name="q7" value="" />
+            <label for="q7-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a3" name="q7" value="" />
+            <label for="q7-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q8-a1" name="q8" value="" />
+            <label for="q8-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a2" name="q8" value="" />
+            <label for="q8-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a3" name="q8" value="" />
+            <label for="q8-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q9-a1" name="q9" value="" />
+            <label for="q9-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q9-a2" name="q9" value="" />
+            <label for="q9-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q9-a3" name="q9" value="" />
+            <label for="q9-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2></h2>
+          <div class="pad">
+            <input type="radio" id="q10-a1" name="q10" value="" />
+            <label for="q10-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q10-a2" name="q10" value="" />
+            <label for="q10-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q10-a3" name="q10" value="" />
+            <label for="q10-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q11-a1" name="q11" value="" />
+            <label for="q11-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q11-a2" name="q11" value="" />
+            <label for="q11-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q11-a3" name="q11" value="" />
+            <label for="q11-a3"></label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+          </h2>
+          <div class="pad">
+            <input type="radio" id="q12-a1" name="q12" value="" />
+            <label for="q12-a1"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q12-a2" name="q12" value="" />
+            <label for="q12-a2"></label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q12-a3" name="q12" value="" />
+            <label for="q12-a3"></label>
+          </div>
+        </div>
+        <button type="submit">Submit Answers</button>
+      </form>
+    </div>
+  </body>
+</html>
