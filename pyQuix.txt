@@ -1,0 +1,687 @@
+level1 : done
+
+level2:
+Python Quiz: Built-in Functions
+Question 1
+What is the output of the following code?
+
+
+print(len("Hello World"))
+a) 10
+b) 11
+c) Hello World
+
+Answer: b) 11
+
+Question 2
+What does the following code return?
+
+
+print(type(12.6))
+a) <class 'float'>
+b) <class 'int'>
+c) <class 'str'>
+
+Answer: a) <class 'float'>
+
+Question 3
+What will this code output?
+
+
+print(int(5.7))
+a) 5.7
+b) 5
+c) 6
+
+Answer: b) 5
+
+Question 4
+What does the following code display?
+
+
+print(str(250))
+a) "250"
+b) 250
+c) '250'
+
+Answer: a) "250"
+
+Question 5
+What is the result of this code?
+
+
+numbers = [1, 2, 3, 4, 5]
+print(sum(numbers))
+a) 15
+b) 5
+c) [1, 2, 3, 4, 5]
+
+Answer: a) 15
+
+Question 6
+What will this code snippet output?
+
+
+print(max(1, 3, 2, 5, 4))
+a) 1
+b) 5
+c) 3
+
+Answer: b) 5
+
+Question 7
+What does the following line output?
+
+
+print(min("apple", "banana", "cherry"))
+a) apple
+b) banana
+c) cherry
+
+Answer: a) apple
+
+Question 8
+What will the following code output?
+
+
+print(float(20))
+a) 20
+b) "20"
+c) 20.0
+
+Answer: c) 20.0
+
+Question 9
+What will happen when you run the following code?
+
+
+print(len(12345))
+a) 5
+b) Error
+c) "12345"
+
+Answer: b) Error
+
+Question 10
+What does the following code display?
+
+
+print(sum([1.1, 2.2, 3.3]))
+a) 6.6
+b) 6
+c) [1.1, 2.2, 3.3]
+
+Answer: a) 6.6
+
+Question 11
+Given the following code, what is the output?
+
+
+print(type(True))
+a) <class 'int'>
+b) <class 'bool'>
+c) <class 'str'>
+
+Answer: b) <class 'bool'>
+
+Question 12
+What does this line of code output?
+
+
+print(int("100"))
+a) 100
+b) "100"
+c) Error
+
+Answer: a) 100
+Question 13
+Why are built-in functions in Python advantageous to use?
+
+a) They perform operations faster than user-defined functions.
+b) They require explicit imports from external libraries.
+c) They can only be used with specific data types.
+
+Answer: a) They perform operations faster than user-defined functions.
+
+Question 14
+What is the primary purpose of the type() function in Python?
+
+a) To convert one data type into another.
+b) To determine the data type of the given variable or value.
+c) To print the type of Python version installed.
+
+Answer: b) To determine the data type of the given variable or value.
+
+Question 15
+Which statement is true regarding the sum() function?
+
+a) It can only sum up integer values.
+b) It sums up elements of an iterable, like a list or tuple.
+c) It is used to concatenate strings together.
+
+Answer: b) It sums up elements of an iterable, like a list or tuple.
+
+Question 16
+What is a significant feature of the max() function when used with strings?
+
+a) It finds the string with the maximum length.
+b) It returns the string that comes last in alphabetical order.
+c) It compares the ASCII values of characters to determine the 'maximum' string.
+
+Answer: c) It compares the ASCII values of characters to determine the 'maximum' string.
+
+Question 17
+What would be a typical use case for the float() function?
+
+a) To convert a compatible value into a floating-point number.
+b) To round a floating-point number to the nearest integer.
+c) To print out the system's maximum float value.
+
+Answer: a) To convert a compatible value into a floating-point number.
+
+Question 18
+What does the min() function do when applied to a list of numbers?
+
+a) Returns the smallest number in the list.
+b) Calculates the average of the numbers.
+c) Multiplies all the numbers together.
+
+Answer: a) Returns the smallest number in the list.
+
+LEVEL3:
+Python Quiz: Built-in Data Structures
+Question 1: Practical
+What will be the output of the following code?
+
+
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)
+a) [1, 2, 3]
+b) [1, 2, 3, 4]
+c) SyntaxError
+
+Answer: b) [1, 2, 3, 4]
+
+Question 2: Theoretical
+Why are tuples used in Python?
+
+a) Because they can be modified after creation.
+b) For faster processing compared to lists when storing immutable data.
+c) They are the only iterable data type in Python.
+
+Answer: b) For faster processing compared to lists when storing immutable data.
+
+Question 3: Practical
+Which code snippet correctly shows how to access all the keys from a dictionary?
+
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+a) print(my_dict.keys())
+b) print(my_dict.values())
+c) print(my_dict.items())
+
+Answer: a) print(my_dict.keys())
+
+Question 4: Practical
+What does the following code do?
+
+
+my_set = {1, 2, 3}
+my_set.add(4)
+print(my_set)
+a) {1, 2, 3}
+b) {1, 2, 3, 4}
+c) {4}
+
+Answer: b) {1, 2, 3, 4}
+
+Question 5: Theoretical
+What is the main reason to use dictionaries in Python?
+
+a) To maintain order of insertion.
+b) To ensure data is mutable.
+c) For storing data in key-value pairs allowing fast retrieval.
+
+Answer: c) For storing data in key-value pairs allowing fast retrieval.
+
+Question 6: Practical
+How can you remove an item from a set in Python?
+
+
+my_set = {'apple', 'banana', 'cherry'}
+a) my_set.remove('banana')
+b) my_set.pop('banana')
+c) my_set.delete('banana')
+
+Answer: a) my_set.remove('banana')
+
+Question 7: Practical
+What will this code output?
+
+
+fruits = ['apple', 'banana', 'cherry']
+fruits.sort(reverse=True)
+print(fruits)
+a) ['cherry', 'banana', 'apple']
+b) ['apple', 'banana', 'cherry']
+c) ['banana', 'cherry', 'apple']
+
+Answer: a) ['cherry', 'banana', 'apple']
+
+Question 8: Theoretical
+Why are sets used in Python?
+
+a) To store data which can be indexed.
+b) To store unordered collection of unique items.
+c) To store data that needs to be accessed via keys.
+
+Answer: b) To store unordered collection of unique items.
+
+Question 9: Practical
+How can you find the union of two sets in Python?
+
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+a) print(set1 + set2)
+b) print(set1.union(set2))
+c) print(set1 & set2)
+
+Answer: b) print(set1.union(set2))
+
+Question 10: Practical
+What is the output of the following code?
+
+
+info = {'name': 'John', 'age': 28}
+print(info.get('name'))
+a) John
+b) {name}
+c) 28
+
+Answer: a) John
+
+Question 11: Practical
+What will be the result of the following Python line?
+
+
+print(len({'a': 1, 'b': 2, 'c': 3}))
+a) 3
+b) {1, 2, 3}
+c) {a, b, c}
+
+Answer: a) 3
+
+Question 12: Practical
+Consider the following list operations:
+
+
+numbers = [5, 2, 9, 1]
+numbers.pop(2)
+print(numbers)
+a) [5, 2, 1]
+b) [5, 2, 9]
+c) [2, 9, 1]
+
+Answer: a) [5, 2, 1]
+
+
+
+LEVEL4:
+Python Quiz: Conditional Statements
+Question 1: Practical
+What will be the output of the following code?
+
+
+x = 10
+if x > 5:
+    print("Greater than five.")
+if x < 10:
+    print("Less than ten.")
+else:
+    print("Else block.")
+a) Greater than five.
+b) Less than ten.
+c) Greater than five.\nElse block.
+
+Answer: c) Greater than five.\nElse block.
+
+Question 2: Theoretical
+When should you use conditional statements in Python?
+
+a) When you need to repeat a block of code a certain number of times.
+b) When you want to execute a block of code based on some condition.
+c) When you want to store multiple items in a single variable.
+
+Answer: b) When you want to execute a block of code based on some condition.
+
+Question 3: Practical
+Consider the following code snippet. What is its output?
+
+
+age = 18
+if age >= 18:
+    if age <= 30:
+        print("Young adult")
+    else:
+        print("Adult")
+else:
+    print("Youth")
+a) Youth
+b) Young adult
+c) Adult
+
+Answer: b) Young adult
+
+Question 4: Practical
+What will the following code print?
+
+
+a = 5
+b = 10
+if a > 10:
+    print("a is greater")
+elif a < b:
+    print("b is greater")
+else:
+    print("Both are equal")
+a) a is greater
+b) b is greater
+c) Both are equal
+
+Answer: b) b is greater
+
+Question 5: Theoretical
+What are the keywords related to conditional statements in Python?
+
+a) if, for, else
+b) try, except, finally
+c) if, elif, else
+
+Answer: c) if, elif, else
+
+Question 6: Practical
+Which option correctly shows a nested conditional statement?
+
+
+score = 85
+a)
+
+
+if score > 90:
+    print("Grade A")
+elif score > 80:
+    print("Grade B")
+else:
+    print("Grade C")
+b)
+
+
+if score > 70:
+    if score > 80:
+        print("Grade B")
+    else:
+        print("Grade C")
+else:
+    print("Grade D")
+c)
+
+
+if score > 60:
+    print("Pass")
+else:
+    print("Fail")
+    if score < 50:
+        print("Try again")
+Answer: b) Shows nested conditions where inner if conditions are used to further classify the score.
+
+Question 7: Practical
+What output does the following Python code produce?
+
+
+temperature = 20
+if temperature > 30:
+    print("It's hot today.")
+elif temperature > 20:
+    print("Nice weather.")
+else:
+    print("It's a bit cold.")
+a) It's hot today.
+b) Nice weather.
+c) It's a bit cold.
+
+Answer: c) It's a bit cold.
+
+Question 8: Practical
+Given the following code, what will be printed?
+
+
+number = 15
+if number % 5 == 0:
+    print("Fizz")
+    if number % 3 == 0:
+        print("Buzz")
+a) Fizz
+b) Buzz
+c) Fizz\nBuzz
+
+Answer: c) Fizz\nBuzz
+
+
+LEVEL5:
+Python Quiz: Loops
+Question 1: Practical
+What will be the output of the following code?
+
+
+for i in [1, 2, 3]:
+    print(i)
+a) 1 2 3
+b) [1, 2, 3]
+c) 123
+
+Answer: a) 1 2 3
+
+Question 2: Theoretical
+Why are loops used in programming?
+
+a) To execute a block of code a specific number of times based on a condition.
+b) To check the validity of data types only.
+c) To handle exceptions and errors.
+
+Answer: a) To execute a block of code a specific number of times based on a condition.
+
+Question 3: Practical
+What does the following while loop do?
+
+
+x = 5
+while x > 0:
+    print(x)
+    x -= 1
+a) Prints numbers from 5 to 1.
+b) Creates an infinite loop.
+c) Prints the number 5 five times.
+
+Answer: a) Prints numbers from 5 to 1.
+
+Question 4: Practical
+Consider the following loop using range:
+
+
+for num in range(3, 8):
+    print(num)
+What is the output?
+a) 3 4 5 6 7 8
+b) 3 4 5 6 7
+c) 4 5 6 7
+
+Answer: b) 3 4 5 6 7
+
+Question 5: Theoretical
+What are the common keywords associated with loops in Python?
+
+a) if, elif, else
+b) try, except, finally
+c) for, while, break, continue
+
+Answer: c) for, while, break, continue
+
+Question 6: Practical
+What will the following nested loops output?
+
+
+for i in range(2):
+    for j in range(3):
+        print(f"({i}, {j})", end=' ')
+    print()
+a) (0, 0) (0, 1) (0, 2) (1, 0) (1, 1) (1, 2)
+b) (0, 0) (0, 1) (0, 2)
+(1, 0) (1, 1) (1, 2)
+c) (1, 1) (1, 2) (1, 3) (2, 1) (2, 2) (2, 3)
+
+Answer: b) (0, 0) (0, 1) (0, 2)
+(1, 0) (1, 1) (1, 2)
+
+Question 7: Practical
+How will the following code behave?
+
+
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+a) Prints 1 2 4 5
+b) Prints 1 2 3 4 5
+c) Prints 1 2
+
+Answer: a) Prints 1 2 4 5
+
+Question 8: Practical
+What will this for loop output?
+
+
+for i in range(1, 10, 2):
+    print(i)
+a) 1 2 3 4 5 6 7 8 9
+b) 1 3 5 7 9
+c) 2 4 6 8
+
+Answer: b) 1 3 5 7 9
+
+
+LEVEL6:
+Python Quiz: Functions
+Question 1: Practical
+What will the following function do when called?
+
+
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")
+a) Prints "Hello, Alice!"
+b) Returns "Hello, Alice!"
+c) Causes a syntax error
+
+Answer: a) Prints "Hello, Alice!"
+
+Question 2: Theoretical
+Why do programmers use functions in their code?
+
+a) To enhance the speed of the program.
+b) To organize code into manageable parts and avoid code redundancy.
+c) To increase the number of lines of code.
+
+Answer: b) To organize code into manageable parts and avoid code redundancy.
+
+Question 3: Practical
+Consider the following function. What does it return?
+
+
+def sum(a, b):
+    return a + b
+
+result = sum(5, 7)
+print(result)
+a) 12
+b) "5 + 7"
+c) None
+
+Answer: a) 12
+
+Question 4: Practical
+What does the following function demonstrate?
+
+
+def make_full_name(first_name, last_name="Smith"):
+    return f"{first_name} {last_name}"
+
+print(make_full_name("John"))
+print(make_full_name("John", "Doe"))
+a) Function with default parameters
+b) Function with variable-length arguments
+c) Recursive function
+
+Answer: a) Function with default parameters
+
+Question 5: Practical
+How do you call a function that has variable-length arguments in Python?
+
+
+def list_numbers(*args):
+    for number in args:
+        print(number)
+
+list_numbers(1, 2, 3, 4)
+a) By using the *args syntax in the function call.
+b) By passing multiple parameters separated by commas.
+c) By defining each argument in the function body.
+
+Answer: b) By passing multiple parameters separated by commas.
+
+Question 6: Theoretical
+What is recursion in Python?
+
+a) A function calling another function.
+b) A function calling itself to solve smaller instances of the same problem.
+c) Repeating the execution of a loop several times.
+
+Answer: b) A function calling itself to solve smaller instances of the same problem.
+
+Question 7: Practical
+Consider the following recursive function. What is its purpose?
+
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+a) Calculates the sum of numbers up to n.
+b) Calculates the factorial of n.
+c) Prints numbers from 1 to n.
+
+Answer: b) Calculates the factorial of n.
+
+Question 8: Practical
+What will the following recursive function output?
+
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+print(fibonacci(7))
+a) 13
+b) 8
+c) 21
+
+Answer: a) 13

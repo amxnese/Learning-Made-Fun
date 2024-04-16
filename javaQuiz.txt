@@ -1,0 +1,738 @@
+LEVEL1:
+Java Quiz: Basics
+Question 1: Practical
+What is the output of the following Java code?
+
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 5;
+        System.out.println(a + b);
+    }
+}
+a) 15
+b) "10 + 5"
+c) 10
+
+Answer: a) 15
+
+Question 2: Theoretical
+Why is it important to use comments in Java code?
+
+a) To modify the way code executes
+b) To leave notes and explanations for other developers or for future reference
+c) To prevent certain code from compiling
+
+Answer: b) To leave notes and explanations for other developers or for future reference
+
+Question 3: Practical
+Which of the following data types would be most appropriate for storing a person's age?
+
+a) byte
+b) double
+c) boolean
+
+Answer: a) byte
+
+Question 4: Practical
+How do you declare a variable that holds a single character in Java?
+
+
+char myChar = 'A';
+a) String myChar = 'A';
+b) char myChar = "A";
+c) char myChar = 'A';
+
+Answer: c) char myChar = 'A';
+
+Question 5: Theoretical
+What is the purpose of the assignment operator in Java?
+
+a) To compare two values
+b) To assign a value to a variable
+c) To perform mathematical calculations
+
+Answer: b) To assign a value to a variable
+
+Question 6: Practical
+What will the following Java code snippet output?
+
+
+int num = 50;
+num *= 2;
+System.out.println(num);
+a) 50
+b) 100
+c) 25
+
+Answer: b) 100
+
+Question 7: Practical
+Which data type would you use to store a precise decimal in Java?
+
+a) int
+b) double
+c) boolean
+
+Answer: b) double
+
+Question 8: Practical
+What does the following Java code output?
+
+
+boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun && isFishTasty);
+a) true
+b) false
+c) Compilation error
+
+Answer: b) false
+
+Question 9: Practical
+What is the result of the following operation in Java?
+
+
+int result = 21 % 6;
+System.out.println(result);
+a) 3
+b) 3.5
+c) 4
+
+Answer: a) 3
+
+Question 10: Practical
+How would you declare a string variable in Java?
+
+a) string name = "John Doe";
+b) String name = "John Doe";
+c) char name = "John Doe";
+
+Answer: b) String name = "John Doe";
+
+
+
+
+LEVEL2:
+Java Quiz: Built-in Functions and Methods
+Question 1: Practical
+What does the following Java code output?
+
+
+System.out.println(Math.abs(-10));
+a) -10
+b) 10
+c) 0
+
+Answer: b) 10
+
+Question 2: Theoretical
+Why do programmers use built-in functions in Java?
+
+a) To write less code and improve readability by using pre-tested methods that perform common tasks.
+b) To interface with the operating system.
+c) To enhance the speed of the compiler.
+
+Answer: a) To write less code and improve readability by using pre-tested methods that perform common tasks.
+
+Question 3: Practical
+Which Math function is used to calculate the square root and what will be the output for 16?
+
+
+System.out.println(Math.sqrt(16));
+a) Math.pow, 4
+b) Math.sqrt, 16
+c) Math.sqrt, 4
+
+Answer: c) Math.sqrt, 4
+
+Question 4: Practical
+Consider the following code snippet. What does it do?
+
+
+String phrase = "Hello World";
+System.out.println(phrase.substring(6, 11));
+a) Prints "World"
+b) Prints "Hello"
+c) Prints "Hello World"
+
+Answer: a) Prints "World"
+
+Question 5: Practical
+How do you check if two string variables are exactly the same in Java?
+
+
+String a = "hello";
+String b = "Hello";
+System.out.println(a.equals(b));
+a) true
+b) false
+c) Error
+
+Answer: b) false
+
+Question 6: Practical
+What will the following Java method return?
+
+
+System.out.println("Java".toUpperCase());
+a) "java"
+b) "JAVA"
+c) "Java"
+
+Answer: b) "JAVA"
+
+Question 7: Practical
+What does the toLowerCase() method do with the following string?
+
+
+System.out.println("Hello World".toLowerCase());
+a) Converts "Hello World" to "hello world"
+b) Keeps the string as "Hello World"
+c) Converts "Hello World" to "HELLO WORLD"
+
+Answer: a) Converts "Hello World" to "hello world"
+
+Question 8: Practical
+What is the result of the following code?
+
+
+System.out.println(Math.pow(2, 3));
+a) 6
+b) 8
+c) 9
+
+Answer: b) 8
+
+Question 9: Theoretical
+What is the primary purpose of the String.length() method in Java?
+
+a) To modify the string length by trimming or adding spaces.
+b) To return the number of characters in the string.
+c) To compare the length of two strings.
+
+Answer: b) To return the number of characters in the string.
+
+Question 10: Practical
+How can you compare two strings for equality, ignoring case sensitivity in Java?
+
+
+String text1 = "java";
+String text2 = "Java";
+System.out.println(text1.equalsIgnoreCase(text2));
+a) true
+b) false
+c) Compilation error
+
+Answer: a) true
+
+
+
+
+LEVEL3:
+Java Quiz: Built-in Data Structures
+Question 1: Practical
+What will the following Java code output?
+
+
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+System.out.println(numbers.size());
+a) 2
+b) 3
+c) 4
+
+Answer: b) 3
+
+Question 2: Theoretical
+Why are built-in data structures such as ArrayList and HashMap crucial in Java?
+
+a) They provide a way to organize data that allows for efficient processing and manipulation.
+b) They allow Java programs to execute faster than using native arrays or primitives alone.
+c) They reduce the memory usage of applications.
+
+Answer: a) They provide a way to organize data that allows for efficient processing and manipulation.
+
+Question 3: Practical
+How do you remove an element from an ArrayList by index? What will the following code output?
+
+
+ArrayList<String> colors = new ArrayList<>();
+colors.add("Red");
+colors.add("Blue");
+colors.add("Green");
+colors.remove(1);
+System.out.println(colors);
+a) [Red, Blue, Green]
+b) [Red, Green]
+c) [Blue, Green]
+
+Answer: b) [Red, Green]
+
+Question 4: Practical
+What does the following HashMap operation do and what will it output?
+
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("key1", 100);
+map.put("key2", 200);
+System.out.println(map.get("key2"));
+a) Outputs 100
+b) Outputs 200
+c) Outputs null
+
+Answer: b) Outputs 200
+
+Question 5: Practical
+What will the following HashSet operations result in?
+
+
+HashSet<String> set = new HashSet<>();
+set.add("Apple");
+set.add("Banana");
+set.add("Cherry");
+System.out.println(set.contains("Banana"));
+a) true
+b) false
+c) Error
+
+Answer: a) true
+
+Question 6: Practical
+Consider using a TreeMap. After the following operations, what will be the first key-value pair if printed?
+
+
+TreeMap<Integer, String> treeMap = new TreeMap<>();
+treeMap.put(3, "Three");
+treeMap.put(1, "One");
+treeMap.put(2, "Two");
+System.out.println(treeMap.firstEntry());
+a) 1=One
+b) 2=Two
+c) 3=Three
+
+Answer: a) 1=One
+
+Question 7: Practical
+How do you check the number of elements in a HashSet? What does the following code output?
+
+
+HashSet<Integer> mySet = new HashSet<>();
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+System.out.println(mySet.size());
+a) 2
+b) 3
+c) 4
+
+Answer: b) 3
+
+Question 8: Practical
+How can you remove a specific key-value pair from a HashMap based on its key? What will the following output?
+
+
+HashMap<String, String> capitals = new HashMap<>();
+capitals.put("USA", "Washington D.C.");
+capitals.put("Japan", "Tokyo");
+capitals.remove("Japan");
+System.out.println(capitals.containsKey("Japan"));
+a) true
+b) false
+
+Answer: b) false
+
+Question 9: Practical
+What is the correct way to add an element at the end of an ArrayList?
+
+
+ArrayList<Integer> list = new ArrayList<>();
+list.add(10);
+list.add(20);
+list.add(30);
+System.out.println(list);
+a) [10, 20, 30]
+b) [30, 20, 10]
+c) [20, 10, 30]
+
+Answer: a) [10, 20, 30]
+
+Question 10: Theoretical
+What is the primary difference between HashSet and TreeMap in Java?
+
+a) HashSet organizes elements in insertion order, while TreeMap organizes keys based on their natural ordering.
+b) HashSet allows duplicate elements, while TreeMap does not allow duplicate keys.
+c) HashSet is a collection of unique items, while TreeMap is a map that maintains an order of keys according to their natural ordering or by a comparator.
+
+Answer: c) HashSet is a collection of unique items, while TreeMap is a map that maintains an order of keys according to their natural ordering or by a comparator.
+
+This quiz ensures a robust understanding of Java’s built-in data structures and their methods, focusing on how to manipulate collections efficiently and effectively for different programming needs.
+
+
+
+
+LEVEL4:
+Java Quiz: Conditional Statements
+Question 1: Practical
+What will the following Java code output?
+
+
+int a = 10;
+if (a > 5) {
+    System.out.println("Greater than five.");
+} else {
+    System.out.println("Five or less.");
+}
+a) Greater than five.
+b) Five or less.
+c) No output
+
+Answer: a) Greater than five.
+
+Question 2: Theoretical
+When are conditional statements used in Java?
+
+a) To repeat a block of code multiple times.
+b) To execute a block of code based on a condition.
+c) To declare and initialize variables.
+
+Answer: b) To execute a block of code based on a condition.
+
+Question 3: Practical
+Consider the following else-if ladder. What is its output if score is 75?
+
+
+int score = 75;
+if (score >= 90) {
+    System.out.println("Grade A");
+} else if (score >= 80) {
+    System.out.println("Grade B");
+} else if (score >= 70) {
+    System.out.println("Grade C");
+} else {
+    System.out.println("Grade D");
+}
+a) Grade A
+b) Grade B
+c) Grade C
+d) Grade D
+
+Answer: c) Grade C
+
+Question 4: Practical
+What will the following switch statement output?
+
+
+int number = 2;
+switch (number) {
+    case 1:
+        System.out.println("One");
+        break;
+    case 2:
+        System.out.println("Two");
+        break;
+    case 3:
+        System.out.println("Three");
+        break;
+    default:
+        System.out.println("Invalid number");
+}
+a) One
+b) Two
+c) Three
+d) Invalid number
+
+Answer: b) Two
+
+Question 5: Theoretical
+What are the main keywords related to conditional statements in Java?
+
+a) if, else, for, while
+b) if, else, switch, case
+c) true, false, null
+
+Answer: b) if, else, switch, case
+
+Question 6: Practical
+How does Java handle the following nested if statement?
+
+
+int temp = 25;
+if (temp > 20) {
+    if (temp < 30) {
+        System.out.println("Comfortable");
+    } else {
+        System.out.println("Hot");
+    }
+} else {
+    System.out.println("Cold");
+}
+a) Comfortable
+b) Hot
+c) Cold
+
+Answer: a) Comfortable
+
+Question 7: Practical
+What is the correct way to use a switch statement with string inputs in Java?
+
+
+String day = "MONDAY";
+switch (day) {
+    case "MONDAY":
+        System.out.println("Start of the work week");
+        break;
+    case "FRIDAY":
+        System.out.println("Almost the weekend");
+        break;
+    default:
+        System.out.println("Midweek days");
+}
+a) Start of the work week
+b) Almost the weekend
+c) Midweek days
+
+Answer: a) Start of the work week
+
+Question 8: Practical
+Which if statement syntax is correct for checking equality in Java?
+
+
+int x = 10;
+if (x == 10) {
+    System.out.println("x is 10");
+}
+a) if (x = 10) { ... }
+b) if (x == 10) { ... }
+c) if (x != 10) { ... }
+
+Answer: b) if (x == 10) { ... }
+
+
+
+
+
+LEVEL5:
+Java Quiz: Loops
+Question 1: Practical
+What will the following Java for loop output?
+
+
+for (int i = 0; i < 3; i++) {
+    System.out.println(i);
+}
+a) 0 1 2
+b) 0 1 2 3
+c) 1 2 3
+
+Answer: a) 0 1 2
+
+Question 2: Theoretical
+Why are loops used in programming?
+
+a) To execute a block of code multiple times based on a condition.
+b) To define variables only once and use them throughout the program.
+c) To check the correctness of other statements in the code.
+
+Answer: a) To execute a block of code multiple times based on a condition.
+
+Question 3: Practical
+How does a for-each loop work in Java? What does the following code print?
+
+
+int[] numbers = {1, 2, 3};
+for (int number : numbers) {
+    System.out.println(number);
+}
+a) 1 2 3
+b) [1, 2, 3]
+c) Error
+
+Answer: a) 1 2 3
+
+Question 4: Practical
+What does the following while loop do?
+
+
+int x = 5;
+while (x > 0) {
+    System.out.println(x);
+    x--;
+}
+a) Prints the numbers from 5 down to 1.
+b) Creates an infinite loop.
+c) Prints the number 5 once.
+
+Answer: a) Prints the numbers from 5 down to 1.
+
+Question 5: Practical
+Consider the following do-while loop. What is its output?
+
+
+int count = 0;
+do {
+    System.out.println("Count: " + count);
+    count++;
+} while (count < 3);
+a) "Count: 0" "Count: 1" "Count: 2"
+b) "Count: 0" "Count: 1" "Count: 2" "Count: 3"
+c) "Count: 0"
+
+Answer: a) "Count: 0" "Count: 1" "Count: 2"
+
+Question 6: Theoretical
+What are the key keywords associated with loops in Java?
+
+a) if, else, return
+b) for, while, do
+c) break, continue, array
+
+Answer: b) for, while, do
+
+Question 7: Practical
+How can you use a while loop to execute until a certain condition is no longer true? What will the following output?
+
+
+int num = 10;
+while (num > 7) {
+    System.out.println("In loop: " + num);
+    num--;
+}
+a) "In loop: 10" "In loop: 9" "In loop: 8" "In loop: 7"
+b) "In loop: 10" "In loop: 9" "In loop: 8"
+c) "In loop: 10"
+
+Answer: b) "In loop: 10" "In loop: 9" "In loop: 8"
+
+Question 8: Practical
+What is the correct way to write a do-while loop in Java that prints numbers from 1 to 5?
+
+
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+a) This is the correct way.
+b) There is a syntax error in the loop.
+c) The loop will cause an infinite print of 1.
+
+Answer: a) This is the correct way.
+
+
+
+
+LEVEL6:
+Java Quiz: Functions
+Question 1: Practical
+What will the following Java function do?
+
+
+public static void printHello() {
+    System.out.println("Hello, world!");
+}
+a) Prints "Hello, world!" to the console
+b) Returns "Hello, world!"
+c) Compiles with an error
+
+Answer: a) Prints "Hello, world!" to the console
+
+Question 2: Theoretical
+Why are functions important in Java programming?
+
+a) They allow code to be executed multiple times without rewriting it.
+b) They organize code into manageable parts, making the program easier to maintain and reuse.
+c) They enhance the performance of the program by using less memory.
+
+Answer: b) They organize code into manageable parts, making the program easier to maintain and reuse.
+
+Question 3: Practical
+What does the following Java method return?
+
+
+public static int addNumbers(int a, int b) {
+    return a + b;
+}
+a) The sum of a and b
+b) Prints the sum of a and b
+c) There is no return value
+
+Answer: a) The sum of a and b
+
+Question 4: Practical
+How do you define a function in Java that takes a parameter?
+
+
+public static void greet(String name) {
+    System.out.println("Hello, " + name);
+}
+a) This function does not compile because it lacks a return type.
+b) Correctly defines a function that takes a String parameter and prints a greeting.
+c) It defines a function that returns a String.
+
+Answer: b) Correctly defines a function that takes a String parameter and prints a greeting.
+
+Question 5: Theoretical
+When should you use a function that returns a value in Java?
+
+a) When you need to execute a block of code several times without returning a result.
+b) When you need to perform a calculation or operation and provide the result to the caller.
+c) Only when interacting with databases or external files.
+
+Answer: b) When you need to perform a calculation or operation and provide the result to the caller.
+
+Question 6: Practical
+Consider the following recursive function for calculating the factorial of a number. What does it do?
+
+
+public static int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+a) Calculates the factorial of n.
+b) Calculates the sum of numbers from 1 to n.
+c) Returns the constant value 1 for any n.
+
+Answer: a) Calculates the factorial of n.
+
+Question 7: Practical
+What is the output of the following function when called as factorial(5)?
+
+
+public static int factorial(int n) {
+    if (n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+a) 120
+b) 24
+c) 5
+
+Answer: a) 120
+
+Question 8: Practical
+How can you modify the factorial function to include error checking for negative inputs?
+
+
+public static int factorial(int n) {
+    if (n < 0) {
+        throw new IllegalArgumentException("Negative numbers are not allowed");
+    }
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+a) Add a condition to check for negative values and throw an exception if true.
+b) The function already handles all types of inputs without issues.
+c) Modify the base case to return 0 instead of 1.
+
+Answer: a) Add a condition to check for negative values and throw an exception if true.

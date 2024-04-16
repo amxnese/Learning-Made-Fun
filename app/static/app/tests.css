@@ -11,6 +11,7 @@ body {
   color: #333;
 }
 #quiz-container {
+  margin: 12px;
   width: 700px;
   background: white;
   padding: 20px;
