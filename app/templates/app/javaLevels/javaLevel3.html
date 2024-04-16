@@ -32,6 +32,7 @@
           </p>
         </section>
         <section>
+          <h2>Why we use built-in Datastrures</h2>
           <p>
             There are several reasons why built-in data structures in Java are
             commonly used:
@@ -65,7 +66,7 @@
           </ul>
         </section>
         <section>
-          <h3>Available Data Structures in Java</h3>
+          <h2>Available Data Structures in Java</h2>
           <p><strong>1. ArrayList:</strong></p>
           <ul>
             <li>
@@ -82,8 +83,7 @@
             ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
             list.add("Apple");
             list.add("Banana");
-            String fruit = list.get(0); // Accessing element by index
-            </code>
+            String fruit = list.get(0); <span class="comment">// Accessing element by index</span></code>
             </pre>
           <p><strong>2. LinkedList:</strong></p>
           <ul>
@@ -98,9 +98,8 @@
             <code>
             LinkedList&lt;Integer&gt; list = new LinkedList&lt;&gt;();
             list.add(10);
-            list.addFirst(5); // Inserting at the beginning
-            int firstElement = list.getFirst(); // Retrieving the first element
-            </code>
+            list.addFirst(5); <span class="comment">// Inserting at the beginning</span>
+            int firstElement = list.getFirst(); <span class="comment">// Retrieving the first element</span></code>
             </pre>
           <p><strong>3. HashMap:</strong></p>
           <ul>
@@ -113,8 +112,7 @@
             HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
             map.put("apple", 10);
             map.put("banana", 5);
-            int quantity = map.get("apple"); // Retrieving value by key
-            </code>
+            int quantity = map.get("apple"); <span class="comment">// Retrieving value by key</span></code>
             </pre>
           <p><strong>4. HashSet:</strong></p>
           <ul>
@@ -129,8 +127,7 @@
             HashSet&lt;String&gt; set = new HashSet&lt;&gt;();
             set.add("apple");
             set.add("banana");
-            boolean containsApple = set.contains("apple"); // Checking if set contains an element
-            </code>
+            boolean containsApple = set.contains("apple"); <span class="comment">// Checking if set contains an element</span></code>
             </pre>
           <p><strong>5. TreeMap:</strong></p>
           <ul>
@@ -146,12 +143,11 @@
             TreeMap&lt;String, Integer&gt; map = new TreeMap&lt;&gt;();
             map.put("apple", 10);
             map.put("banana", 5);
-            String firstKey = map.firstKey(); // Retrieving the first key
-            </code>
+            String firstKey = map.firstKey(); <span class="comment">// Retrieving the first key</span></code>
             </pre>
         </section>
         <section>
-          <h1>Java Collections Framework: Common Data Structures methods</h1>
+          <h1>Common Methods Related to Built-in Datastrures</h1>
           <h2>ArrayList</h2>
           <ul>
             <li>
@@ -181,11 +177,10 @@
               myList.add(1);
               myList.add(4);
 
-              System.out.println(myList.size());  // Output: 3
-              System.out.println(myList.get(1));  // Output: 1
+              System.out.println(myList.size());  <span class="comment">// Output: 3</span>
+              System.out.println(myList.get(1));  <span class="comment">// Output: 1</span>
               myList.remove(1);
-              System.out.println(myList);  // Output: [3, 4]
-            </code>
+              System.out.println(myList);  <span class="comment">// Output: [3, 4]</span></code>
           </pre>
 
           <h2>HashMap</h2>
@@ -218,11 +213,10 @@
             myMap.put("b", 2);
             myMap.put("c", 3);
 
-            System.out.println(myMap.size());  // Output: 3
-            System.out.println(myMap.get("b"));  // Output: 2
+            System.out.println(myMap.size());  <span class="comment">// Output: 3</span>
+            System.out.println(myMap.get("b"));  <span class="comment">// Output: 2</span>
             myMap.remove("a");
-            System.out.println(myMap);  // Output: {b=2, c=3}
-          </code>
+            System.out.println(myMap);  <span class="comment">// Output: {b=2, c=3}</span></code>
           </pre>
 
           <h2>HashSet</h2>
@@ -254,17 +248,22 @@
               mySet.add(2);
               mySet.add(3);
 
-              System.out.println(mySet.size());  // Output: 3
-              System.out.println(mySet.contains(2));  // Output: true
+              System.out.println(mySet.size()); <span class="comment"> // Output: 3</span>
+              System.out.println(mySet.contains(2));  <span class="comment">// Output: true</span>
               mySet.remove(1);
-              System.out.println(mySet);  // Output: [2, 3]
-            </code>
+              System.out.println(mySet);  <span class="comment">// Output: [2, 3]</span></code>
           </pre>
         </section>
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test3/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>

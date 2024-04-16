@@ -33,9 +33,7 @@
           <pre style="height: 107px">
             <code>
               <span class="comment">// This is a single-line comment.</span>
-              <span class="blue">int</span> <span class="white">number</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span>  <span class="comment">// This comment follows a code statement.</span>
-
-            </code>
+              <span class="blue">int</span> <span class="white">number</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span><span class="comment">// This comment follows a code statement.</span></code>
           </pre>
         </section>
         <section id="structure">
@@ -51,8 +49,7 @@
                 <span class="pink">public static</span> <span class="blue">void</span> <span class="green">main</span><span class="purple">(</span><span class="green">String</span><span class="blue">[]</span> <span class="orange">args</span><span class="purple">){</span>
                   <span class="green">System</span><span class="white">.out.</span><span class="green">println</span><span class="blue">(</span><span class="yellow">"Hello, world!"</span><span class="blue">)</span><span class="white">;</span>
                 <span class="purple">}</span>
-              <span class="orange">}</span>
-            </code>
+              <span class="orange">}</span></code>
           </pre>
           <ul>
             <li>
@@ -72,19 +69,121 @@
             </li>
           </ul>
         </section>
-        <section id="variables">
-          <h2>Variables and Data Types</h2>
+        <section>
+          <h2>Variables</h2>
           <p>
-            Java is statically-typed, meaning variables must be declared before
-            they can be used. Here's how you can declare variables:
+            In Java, a variable is a piece of memory that can contain data which
+            may be modified during program execution. Variables are basic units
+            of storage in a Java program. Each variable has a specific type,
+            which determines the size and layout of the variable's memory, the
+            range of values that can be stored within that memory, and the set
+            of operations that can be applied to the variable.
           </p>
-          <pre style="height: 126px">
-            <code>
-              <span class="blue">int</span> <span class="white"></span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span>
-              <span class="blue">boolean</span> <span class="white">myBoolean</span> <span class="pink">=</span> <span class="purple">false</span><span class="white">;</span>
-              <span class="green">String</span> <span class="white"></span> <span class="pink">=</span> <span class="yellow">"Hello world!"</span><span class="white">;</span>
-            </code>
-          </pre>
+          <p>Here are some key points about variables in Java:</p>
+          <ul>
+            <li>
+              <strong>Type:</strong> Java is a statically typed language,
+              meaning that every variable must be declared with a type before it
+              can be used. The type can be a primitive type like
+              <code>int</code>, <code>double</code>, <code>char</code>, or
+              <code>boolean</code>, or it can be an object type (including
+              <code>arrays</code> and <code>strings</code>).
+            </li>
+            <li>
+              <strong>Declaration:</strong> Declaring a variable involves
+              specifying the type and giving the variable a name. For example:
+              <pre>
+                <code>
+                  <span class="blue">int</span> <span class="white">age;</span>
+                  <span class="green">String</span> <span class="white">name;</span></code>
+              </pre>
+            </li>
+            <li>
+              <strong>Initialization:</strong> You can initialize a variable at
+              the time of declaration by assigning it a value:
+              <pre>
+                <code>
+                  <span class="blue">int</span> <span class="white">age</span> <span class="pink">=</span> <span class="purple">30</span><span class="white">;</span></code>
+              </pre>
+            </li>
+          </ul>
+        </section>
+        <section id="data-types">
+          <h2>Data Types</h2>
+          <p>
+            Java, a strongly-typed programming language, has a variety of data
+            types that are categorized mainly into two groups: primitive data
+            types and reference data types. Here's a brief overview of some:
+          </p>
+          <h3>Primitive Data Types:</h3>
+          <p>
+            Primitive data types are predefined by the language
+            and named by a reserved keyword. They represent the most basic types
+            of data Java can handle directly.
+          </p>
+          <h4>Numeric Types:</h4>
+          <ul>
+            <li>Integer Types</li>
+            <ul>
+              <li><code>byte:</code> 8-bit signed integer (-128 to 127)</li>
+              <li>
+                <code>short:</code> 16-bit signed integer (-32,768 to 32,767)
+              </li>
+              <li><code>int:</code> 32-bit signed integer (-2^31 to 2^31-1)</li>
+              <li>
+                <code>long:</code> 64-bit signed integer (-2^63 to 2^63-1)
+              </li>
+              <pre>
+                <code>
+                  <span class="blue">byte</span> <span class="white">my_byte</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
+                  <span class="blue">short</span> <span class="white">my_short</span> <span class="pink">=</span> <span class="purple">120</span><span class="white">;</span>
+                  <span class="blue">int</span> <span class="white">my_int</span> <span class="pink">=</span> <span class="purple">5500</span><span class="white">;</span>
+                  <span class="blue">long</span> <span class="white">my_long</span> <span class="pink">=</span> <span class="purple">12000</span><span class="white">;</span></code>
+              </pre>
+            </ul>
+            <li>Floating Point Types</li>
+            <ul>
+              <li>
+                <code>float:</code> 32-bit floating-point (single precision)
+              </li>
+              <li>
+                <code>double:</code> 64-bit floating-point (double precision)
+              </li>
+              <pre>
+                <code>
+                  <span class="blue">float</span> <span class="white">my_float</span> <span class="pink">=</span> <span class="purple">2.71</span><span class="white">;</span>
+                  <span class="blue">double</span> <span class="white">my_double</span> <span class="pink">=</span> <span class="purple">3.14</span><span class="white">;</span></code>
+              </pre>
+            </ul>
+          </ul>
+          <h4>Character Type</h4>
+          <ul>
+            <li><code>char:</code> 16-bit Unicode character (0 to 65,535)</li>
+            <pre>
+              <code>
+                <span class="blue">char</span> <span class="white">my_char</span> <span class="pink">=</span> <span class="yellow">'A'</span><span class="white">;</span></code>
+            </pre>
+          </ul>
+          <h4>Boolean Type</h4>
+          <ul>
+            <li><code>boolean:</code> Represents true/false values</li>
+            <pre>
+              <code>
+              <span class="blue">boolean</span> <span class="white">myBoolean</span> <span class="pink">=</span> <span class="purple">false</span><span class="white">;</span></code>
+            </pre>
+          </ul>
+          <h3>Special Mention: String</h3>
+          <ul>
+            <li>
+              <code>String:</code> Although String is technically a class, it
+              has some characteristics that make it unique in Java, such as
+              being immutable and having operators like + for concatenation.
+              <pre>
+                <code>
+                  <span class="green">String</span> <span class="white"></span> <span class="pink">=</span> <span class="yellow">"Hello world!"</span><span class="white">;</span></code>
+              </pre>
+            </li>
+          </ul>
         </section>
         <section>
           <h2>Operators</h2>
@@ -95,32 +194,74 @@
             into several groups:
           </p>
           <h3>Arithmetic Operators</h3>
-          <p>These operators are used for performing basic mathematical operations:</p>
+          <p>
+            These operators are used for performing basic mathematical
+            operations:
+          </p>
           <ul>
-            <li><strong>'+'</strong> (Addition): Adds two values together. </li>
-            <li><strong>'-'</strong> (Subtraction): Subtracts one value from another. </li>
-            <li><strong>'*'</strong> (Multiplication): Multiplies two values. </li>
-            <li><strong>'/'</strong> (Division): Divides one value by another. </li>
-            <li><strong>'%'</strong> (Modulus): Returns the remainder of a division operation. </li>
+            <li><strong>'+'</strong> (Addition): Adds two values together.</li>
+            <li>
+              <strong>'-'</strong> (Subtraction): Subtracts one value from
+              another.
+            </li>
+            <li>
+              <strong>'*'</strong> (Multiplication): Multiplies two values.
+            </li>
+            <li>
+              <strong>'/'</strong> (Division): Divides one value by another.
+            </li>
+            <li>
+              <strong>'%'</strong> (Modulus): Returns the remainder of a
+              division operation.
+            </li>
           </ul>
           <h3>Assignment Operators</h3>
-          <p>
-            Used to assign values to variables.
-          </p>
-          <li><strong>'='</strong> Assigns values from right side operands to left side operand. </li>
-          <li><strong>'+='</strong> Adds right operand to the left operand and assigns the result to the left operand. </li>
-          <li><strong>'-='</strong> Subtracts the right operand from the left operand and assigns the result to the left operand. </li>
-          <li><strong>'*='</strong> Multiplies right operand with the left operand and assigns the result to the left operand. </li>
-          <li><strong>'/='</strong> Divides left operand by the right operand and assigns the result to the left operand. </li>
-          <li><strong>'%='</strong> Takes modulus using two operands and assigns the result to the left operand. </li>
-          <li><strong>'**/'</strong> Performs exponential (power) calculation on operators and assigns value to the left operand. </li>
-          <li><strong>'//='</strong> Performs floor division on operators and assigns value to the left operand. </li>
-        </section>
+          <p>Used to assign values to variables.</p>
+          <ul>
+            <li>
+              <strong>'='</strong> Assigns values from right side operands to left
+              side operand.
+            </li>
+            <li>
+              <strong>'+='</strong> Adds right operand to the left operand and
+              assigns the result to the left operand.
+            </li>
+            <li>
+              <strong>'-='</strong> Subtracts the right operand from the left
+              operand and assigns the result to the left operand.
+            </li>
+            <li>
+              <strong>'*='</strong> Multiplies right operand with the left operand
+              and assigns the result to the left operand.
+            </li>
+            <li>
+              <strong>'/='</strong> Divides left operand by the right operand and
+              assigns the result to the left operand.
+            </li>
+            <li>
+              <strong>'%='</strong> Takes modulus using two operands and assigns
+              the result to the left operand.
+            </li>
+            <li>
+              <strong>'**/'</strong> Performs exponential (power) calculation on
+              operators and assigns value to the left operand.
+            </li>
+            <li>
+              <strong>'//='</strong> Performs floor division on operators and
+              assigns value to the left operand.
+            </li>
+          </ul>
         </section>
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test1/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>

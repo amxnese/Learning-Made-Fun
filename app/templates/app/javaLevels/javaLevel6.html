@@ -200,7 +200,7 @@
                     }
                 
                     public static void main(String[] args) {
-                        printMessage();  // Calling the function
+                        printMessage();  <span class="comment">// Calling the function</span>
                     }
                 }</code>
               </pre>
@@ -271,9 +271,9 @@
               <code>
                 public class Factorial {
                     public static int factorial(int n) {
-                        if (n == 0) { // Base case
+                        if (n == 0) { <span class="comment">// Base case</span>
                             return 1;
-                        } else { // Recursive case
+                        } else { <span class="comment">// Recursive case</span>
                             return n * factorial(n - 1);
                         }
                     }
@@ -295,7 +295,13 @@
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test6/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>
