@@ -10,189 +10,177 @@
   </head>
   <body>
     <div id="quiz-container">
-      <h1></h1>
-      <form id="quiz-form" action="{% url 'app-' %}" method="post">
+      <h1>Python Test: Functions</h1>
+      <form id="quiz-form" action="{% url 'app-pyTest6' %}" method="post">
         {% csrf_token %}
         <div class="question">
-          <h2></h2>
+          <h2>What will the following function do when called?</h2>
+          <pre>
+            <code>
+              def greet(name):
+                print(f"Hello, {name}!")
+              greet("Alice")</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="" />
-            <label for="q1-a1"></label>
+            <input type="radio" id="q1-a1" name="q1" value="1" />
+            <label for="q1-a1">Prints "Hello, Alice!"</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="" />
-            <label for="q1-a2"></label>
+            <input type="radio" id="q1-a2" name="q1" value="2" />
+            <label for="q1-a2">Returns "Hello, Alice!"</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="" />
-            <label for="q1-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="" />
-            <label for="q2-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="" />
-            <label for="q2-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="" />
-            <label for="q2-a3"></label>
+            <input type="radio" id="q1-a3" name="q1" value="3" />
+            <label for="q1-a3">Causes a syntax error</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>Why do programmers use functions in their code?</h2>
           <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="" />
-            <label for="q3-a1"></label>
+            <input type="radio" id="q2-a1" name="q2" value="1" />
+            <label for="q2-a1">To enhance the speed of the program.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="" />
-            <label for="q3-a2"></label>
+            <input type="radio" id="q2-a2" name="q2" value="2" />
+            <label for="q2-a2">To organize code into manageable parts and avoid code redundancy.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="" />
-            <label for="q3-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="" />
-            <label for="q4-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="" />
-            <label for="q4-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="" />
-            <label for="q4-a3"></label>
+            <input type="radio" id="q2-a3" name="q2" value="3" />
+            <label for="q2-a3">To increase the number of lines of code.</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>Consider the following function. What does it return?</h2>
+          <pre>
+            <code>
+              def sum(a, b):
+                  return a + b
+
+              result = sum(5, 7)
+              print(result)</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="" />
-            <label for="q5-a1"> </label>
+            <input type="radio" id="q3-a1" name="q3" value="1" />
+            <label for="q3-a1">12</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="" />
-            <label for="q5-a2"> </label>
+            <input type="radio" id="q3-a2" name="q3" value="2" />
+            <label for="q3-a2">"5 + 7"</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="" />
-            <label for="q5-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="" />
-            <label for="q6-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="" />
-            <label for="q6-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="" />
-            <label for="q6-a3"></label>
+            <input type="radio" id="q3-a3" name="q3" value="3" />
+            <label for="q3-a3">None</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>What does the following function demonstrate?</h2>
+          <pre>
+            <code>
+              def make_full_name(first_name, last_name="Smith"):
+                  return f"{first_name} {last_name}"
+
+              print(make_full_name("John"))
+              print(make_full_name("John", "Doe"))</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="" />
-            <label for="q7-a1"></label>
+            <input type="radio" id="q4-a1" name="q4" value="1" />
+            <label for="q4-a1">Function with default parameters</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="" />
-            <label for="q7-a2"></label>
+            <input type="radio" id="q4-a2" name="q4" value="2" />
+            <label for="q4-a2">Function with variable-length arguments</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="" />
-            <label for="q7-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="" />
-            <label for="q8-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="" />
-            <label for="q8-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="" />
-            <label for="q8-a3"></label>
+            <input type="radio" id="q4-a3" name="q4" value="3" />
+            <label for="q4-a3">Recursive function</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>How do you call a function that has variable-length arguments in Python?</h2>
+          <pre>
+            <code>
+              def list_numbers(*args):
+                  for number in args:
+                      print(number)
+
+              list_numbers(1, 2, 3, 4)</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q9-a1" name="q9" value="" />
-            <label for="q9-a1"></label>
+            <input type="radio" id="q5-a1" name="q5" value="1" />
+            <label for="q5-a1">By using the *args syntax in the function call.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q9-a2" name="q9" value="" />
-            <label for="q9-a2"></label>
+            <input type="radio" id="q5-a2" name="q5" value="2" />
+            <label for="q5-a2">By passing multiple parameters separated by commas.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q9-a3" name="q9" value="" />
-            <label for="q9-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q10-a1" name="q10" value="" />
-            <label for="q10-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a2" name="q10" value="" />
-            <label for="q10-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a3" name="q10" value="" />
-            <label for="q10-a3"></label>
+            <input type="radio" id="q5-a3" name="q5" value="3" />
+            <label for="q5-a3">By defining each argument in the function body.</label>
           </div>
         </div>
         <div class="question">
-          <h2>
-          </h2>
+          <h2>What is recursion in Python?</h2>
           <div class="pad">
-            <input type="radio" id="q11-a1" name="q11" value="" />
-            <label for="q11-a1"></label>
+            <input type="radio" id="q6-a1" name="q6" value="1" />
+            <label for="q6-a1">A function calling another function.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a2" name="q11" value="" />
-            <label for="q11-a2"></label>
+            <input type="radio" id="q6-a2" name="q6" value="2" />
+            <label for="q6-a2">A function calling itself to solve smaller instances of the same problem.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a3" name="q11" value="" />
-            <label for="q11-a3"></label>
+            <input type="radio" id="q6-a3" name="q6" value="3" />
+            <label for="q6-a3">Repeating the execution of a loop several times.</label>
           </div>
         </div>
         <div class="question">
-          <h2>
-          </h2>
+          <h2>Consider the following recursive function. What is its purpose?</h2>
+          <pre>
+            <code>
+              def factorial(n):
+                  if n == 1:
+                      return 1
+                  else:
+                      return n * factorial(n - 1)
+
+              print(factorial(5))</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q12-a1" name="q12" value="" />
-            <label for="q12-a1"></label>
+            <input type="radio" id="q7-a1" name="q7" value="1" />
+            <label for="q7-a1">Calculates the sum of numbers up to n.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a2" name="q12" value="" />
-            <label for="q12-a2"></label>
+            <input type="radio" id="q7-a2" name="q7" value="2" />
+            <label for="q7-a2">Calculates the factorial of n.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a3" name="q12" value="" />
-            <label for="q12-a3"></label>
+            <input type="radio" id="q7-a3" name="q7" value="3" />
+            <label for="q7-a3">Prints numbers from 1 to n.</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What will the following recursive function output?</h2>
+          <pre>
+            <code>
+              def fibonacci(n):
+                  if n &lt;= 1:
+                      return n
+                  else:
+                      return fibonacci(n-1) + fibonacci(n-2)
+
+              print(fibonacci(7))</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q8-a1" name="q8" value="1" />
+            <label for="q8-a1">13</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a2" name="q8" value="2" />
+            <label for="q8-a2">8</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a3" name="q8" value="3" />
+            <label for="q8-a3">21</label>
           </div>
         </div>
         <button type="submit">Submit Answers</button>

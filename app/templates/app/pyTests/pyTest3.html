@@ -10,189 +10,246 @@
   </head>
   <body>
     <div id="quiz-container">
-      <h1></h1>
-      <form id="quiz-form" action="{% url 'app-' %}" method="post">
+      <h1>Python Test: Built-in Data Structures</h1>
+      <form id="quiz-form" action="{% url 'app-pyTest3' %}" method="post">
         {% csrf_token %}
         <div class="question">
-          <h2></h2>
+          <h2>What will be the output of the following code?</h2>
+          <pre>
+            <code>
+              my_list = [1, 2, 3]
+              my_list.append(4)
+              print(my_list)</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="" />
-            <label for="q1-a1"></label>
+            <input type="radio" id="q1-a1" name="q1" value="3" />
+            <label for="q1-a1">[1, 2, 3]</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="" />
-            <label for="q1-a2"></label>
+            <input type="radio" id="q1-a2" name="q1" value="4" />
+            <label for="q1-a2">[1, 2, 3, 4]</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="" />
-            <label for="q1-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="" />
-            <label for="q2-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="" />
-            <label for="q2-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="" />
-            <label for="q2-a3"></label>
+            <input type="radio" id="q1-a3" name="q1" value="error" />
+            <label for="q1-a3">SyntaxError</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>Why are tuples used in Python?</h2>
           <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="" />
-            <label for="q3-a1"></label>
+            <input type="radio" id="q2-a1" name="q2" value="modified" />
+            <label for="q2-a1"
+              >Because they can be modified after creation.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="" />
-            <label for="q3-a2"></label>
+            <input type="radio" id="q2-a2" name="q2" value="faster" />
+            <label for="q2-a2"
+              >For faster processing compared to lists when storing immutable
+              data.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="" />
-            <label for="q3-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="" />
-            <label for="q4-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="" />
-            <label for="q4-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="" />
-            <label for="q4-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="" />
-            <label for="q5-a1"> </label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="" />
-            <label for="q5-a2"> </label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="" />
-            <label for="q5-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="" />
-            <label for="q6-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="" />
-            <label for="q6-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="" />
-            <label for="q6-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="" />
-            <label for="q7-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="" />
-            <label for="q7-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="" />
-            <label for="q7-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="" />
-            <label for="q8-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="" />
-            <label for="q8-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="" />
-            <label for="q8-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q9-a1" name="q9" value="" />
-            <label for="q9-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a2" name="q9" value="" />
-            <label for="q9-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a3" name="q9" value="" />
-            <label for="q9-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q10-a1" name="q10" value="" />
-            <label for="q10-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a2" name="q10" value="" />
-            <label for="q10-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a3" name="q10" value="" />
-            <label for="q10-a3"></label>
+            <input type="radio" id="q2-a3" name="q2" value="only" />
+            <label for="q2-a3"
+              >They are the only iterable data type in Python.</label
+            >
           </div>
         </div>
         <div class="question">
           <h2>
+            Which code snippet correctly shows how to access all the keys from a
+            dictionary?
           </h2>
           <div class="pad">
-            <input type="radio" id="q11-a1" name="q11" value="" />
-            <label for="q11-a1"></label>
+            <input type="radio" id="q3-a1" name="q3" value="keys" />
+            <label for="q3-a1">print(my_dict.keys())</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a2" name="q11" value="" />
-            <label for="q11-a2"></label>
+            <input type="radio" id="q3-a2" name="q3" value="values" />
+            <label for="q3-a2">print(my_dict.values())</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a3" name="q11" value="" />
-            <label for="q11-a3"></label>
+            <input type="radio" id="q3-a3" name="q3" value="items" />
+            <label for="q3-a3">print(my_dict.items())</label>
           </div>
         </div>
         <div class="question">
-          <h2>
-          </h2>
+          <h2>What does the following code do?</h2>
+          <pre>
+            <code>
+              my_set = {1, 2, 3}
+              my_set.add(4)
+              print(my_set)</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q12-a1" name="q12" value="" />
-            <label for="q12-a1"></label>
+            <input type="radio" id="q4-a1" name="q4" value="3" />
+            <label for="q4-a1">{1, 2, 3}</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a2" name="q12" value="" />
-            <label for="q12-a2"></label>
+            <input type="radio" id="q4-a2" name="q4" value="4" />
+            <label for="q4-a2">{1, 2, 3, 4}</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a3" name="q12" value="" />
-            <label for="q12-a3"></label>
+            <input type="radio" id="q4-a3" name="q4" value="1" />
+            <label for="q4-a3">{4}</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What is the main reason to use dictionaries in Python?</h2>
+          <div class="pad">
+            <input type="radio" id="q5-a1" name="q5" value="order" />
+            <label for="q5-a1">To maintain order of insertion.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q5-a2" name="q5" value="mutable" />
+            <label for="q5-a2">To ensure data is mutable.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q5-a3" name="q5" value="storing" />
+            <label for="q5-a3"
+              >For storing data in key-value pairs allowing fast
+              retrieval.</label
+            >
+          </div>
+        </div>
+        <div class="question">
+          <h2>How can you remove an item from a set in Python?</h2>
+          <pre>
+            <code>
+              my_set = {'apple', 'banana', 'cherry'}</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q6-a1" name="q6" value="remove" />
+            <label for="q6-a1">my_set.remove('banana')</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a2" name="q6" value="pop" />
+            <label for="q6-a2">my_set.pop('banana')</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a3" name="q6" value="delete" />
+            <label for="q6-a3">my_set.delete('banana')</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What will this code output?</h2>
+          <pre>
+            <code>
+              fruits = ['apple', 'banana', 'cherry']
+              fruits.sort(reverse=True)
+              print(fruits)</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q7-a1" name="q7" value="cba" />
+            <label for="q7-a1">['cherry', 'banana', 'apple']</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a2" name="q7" value="abc" />
+            <label for="q7-a2">['apple', 'banana', 'cherry']</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a3" name="q7" value="bca" />
+            <label for="q7-a3">['banana', 'cherry', 'apple']</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>Why are sets used in Python?</h2>
+          <div class="pad">
+            <input type="radio" id="q8-a1" name="q8" value="indexed" />
+            <label for="q8-a1">To store data which can be indexed.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a2" name="q8" value="items" />
+            <label for="q8-a2"
+              >To store unordered collection of unique items.</label
+            >
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a3" name="q8" value="keys" />
+            <label for="q8-a3"
+              >To store data that needs to be accessed via keys.</label
+            >
+          </div>
+        </div>
+        <div class="question">
+          <h2>How can you find the union of two sets in Python?</h2>
+          <pre>
+            <code>
+              set1 = {1, 2, 3}
+              set2 = {3, 4, 5}</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q9-a1" name="q9" value="+" />
+            <label for="q9-a1">print(set1 + set2)</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q9-a2" name="q9" value="union" />
+            <label for="q9-a2">print(set1.union(set2))</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q9-a3" name="q9" value="&" />
+            <label for="q9-a3">print(set1 & set2)</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What is the output of the following code?</h2>
+          <pre>
+            <code>
+              info = {'name': 'John', 'age': 28}
+              print(info.get('name'))</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q10-a1" name="q10" value="John" />
+            <label for="q10-a1">John</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q10-a2" name="q10" value="{name}" />
+            <label for="q10-a2">{name}</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q10-a3" name="q10" value="28" />
+            <label for="q10-a3">28</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What will be the result of the following Python line?</h2>
+          <pre>
+            <code>
+              print(len({'a': 1, 'b': 2, 'c': 3}))</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q11-a1" name="q11" value="3" />
+            <label for="q11-a1">3</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q11-a2" name="q11" value="123" />
+            <label for="q11-a2">{1, 2, 3}</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q11-a3" name="q11" value="abc" />
+            <label for="q11-a3">{a, b, c}</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>Consider the following list operations:</h2>
+          <pre>
+            <code>
+              numbers = [5, 2, 9, 1]
+              numbers.pop(2)
+              print(numbers)</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q12-a1" name="q12" value="521" />
+            <label for="q12-a1">[5, 2, 1]</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q12-a2" name="q12" value="529" />
+            <label for="q12-a2">[5, 2, 9]</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q12-a3" name="q12" value="291" />
+            <label for="q12-a3">[2, 9, 1]</label>
           </div>
         </div>
         <button type="submit">Submit Answers</button>
