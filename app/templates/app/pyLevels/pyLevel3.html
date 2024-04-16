@@ -80,8 +80,8 @@
           </ul>
         </section>
         <section>
-          <h3>Available Data Structures in Python</h3>
-          <h2>1. Lists:</h2>
+          <h2>Available Data Structures in Python</h2>
+          <h3>1. Lists:</h3>
           <p>
             Lists are ordered collections of items that can be of different data
             types. They are mutable, meaning their elements can be changed after
@@ -94,10 +94,9 @@
           </p>
           <pre>
             <code>
-              my_list = ['apple', 'banana', 'cherry']
-            </code>
+              my_list = ['apple', 'banana', 'cherry']</code>
           </pre>
-          <h2>2. Tuples:</h2>
+          <h3>2. Tuples:</h2>
           <p>
             Tuples are similar to lists, but they are immutable, meaning their
             elements cannot be changed after creation. They are often used to
@@ -111,10 +110,9 @@
           </p>
           <pre>
             <code>
-              my_tuple = ('apple', 'banana', 'cherry')
-            </code>
+              my_tuple = ('apple', 'banana', 'cherry')</code>
           </pre>
-          <h2>3. Sets:</h2>
+          <h3>3. Sets:</h2>
           <p>
             Sets are unordered collections of unique elements. They do not allow
             duplicate items. Sets are mutable, meaning you can add or remove
@@ -127,10 +125,9 @@
           </p>
           <pre>
             <code>
-              my_set = {'apple', 'banana', 'cherry'}
-            </code>
+              my_set = {'apple', 'banana', 'cherry'}</code>
           </pre>
-          <h2>4. Dictionaries:</h2>
+          <h3>4. Dictionaries:</h3>
           <p>
             Dictionaries are collections of key-value pairs. They are unordered,
             mutable, and can store any data type as values. Keys must be unique.
@@ -142,8 +139,7 @@
           </p>
           <pre>
             <code>
-              my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
-            </code>
+              my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}</code>
           </pre>
         </section>
         <section>
@@ -179,8 +175,7 @@
             print(my_list)  # Output: [3, 1, 1, 5, 9, 2, 6, 5, 7]
 
             my_list.sort()
-            print(my_list)  # Output: [1, 1, 2, 3, 5, 5, 6, 7, 9]
-            </code>
+            print(my_list)  # Output: [1, 1, 2, 3, 5, 5, 6, 7, 9]</code>
           </pre>
 
           <h2>Dictionaries</h2>
@@ -213,8 +208,7 @@
             print(my_dict.items())  # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
 
             print(my_dict.get('a'))  # Output: 1
-            print(my_dict.get('d', 'Key not found'))  # Output: Key not found
-            </code>
+            print(my_dict.get('d', 'Key not found'))  # Output: Key not found</code>
           </pre>
           <h2>Sets</h2>
           <ul>
@@ -242,20 +236,25 @@
             print(my_set1)  # Output: {1, 2, 3, 4}
 
             my_set1.remove(2)
-            print(my_set1)  # Output: {1, 3, 4}
+            print(my_set1)  <span class="comment"># Output: {1, 3, 4}</span>
 
             union_set = my_set1.union(my_set2)
-            print(union_set)  # Output: {1, 3, 4, 5}
+            print(union_set)  <span class="comment"># Output: {1, 3, 4, 5}</span>
 
             intersection_set = my_set1.intersection(my_set2)
-            print(intersection_set)  # Output: {3}
-            </code>
+            print(intersection_set)  <span class="comment"># Output: {3}</span></code>
           </pre>
         </section>
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test3/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>

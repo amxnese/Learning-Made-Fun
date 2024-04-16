@@ -138,10 +138,8 @@
                 used functions in Python, especially for debugging purposes.
               </p>
               <pre>
-              <code>
-                <span class="comment"># Example of using print() to display a message</span>
-                print(<span class="yellow">"Hello, world!"</span>)
-              </code>
+                <code>
+                  <span class="blue">print</span><span class="white">(</span><span class="yellow">"Hello, world!"</span><span class="white">)</span></code>
               </pre>
             </li>
             <hr />
@@ -155,9 +153,8 @@
               <pre>
                 <code>
                   <span class="comment"># Example of using len() to get the length of a list</span>
-                  my_list = [10, 20, 30, 40, 50]
-                  print("The length of the list is:", len(my_list))
-                </code>
+                  <span class="white">my_list </span><span class="pink">=</span><span class="white"> [</span><span class="number">10</span><span class="white">, </span><span class="number">20</span><span class="white">, </span><span class="number">30</span><span class="white">, </span><span class="number">40</span><span class="white">, </span><span class="number">50</span><span class="white">]</span>
+                  <span class="blue">print</span><span class="white">(</span><span class="yellow">"The length of the list is:"</span><span class="white">, </span><span class="blue">len</span><span class="white">(</span><span class="white">my_list</span><span class="white">))</span></code>
               </pre>
             </li>
             <hr />
@@ -171,10 +168,9 @@
               </p>
               <pre>
                 <code>
-                  <span class="comment"># Example of using type() to get the type of a variable</span>
-                  my_variable = 3.14
-                  print("The type of my_variable is:", type(my_variable))
-                </code>
+              <span class="comment"># Example of using type() to get the type of a variable</span>
+              <span class="white">my_variable </span><span class="pink">=</span><span class="number"> 3.14</span>
+              <span class="blue">print</span><span class="white">(</span><span class="yellow">"The type of my_variable is:"</span><span class="white">, </span><span class="blue">type</span><span class="white">(</span><span class="white">my_variable</span><span class="white">))</span></code>
               </pre>
             </li>
             <hr />
@@ -187,11 +183,10 @@
               </p>
               <pre>
                 <code>
-                  # Example of using int() to convert a string to an integer
-                  number_string = "123"
-                  converted_number = int(number_string)
-                  print("Converted number:", converted_number)
-                </code>
+                <span class="comment"># Example of using int() to convert a string to an integer</span>
+                <span class="white">number_string </span><span class="pink">=</span><span class="yellow"> "123"</span>
+                <span class="white">converted_number </span><span class="pink">=</span><span class="white"> int</span><span class="white">(number_string)</span>
+                <span class="blue">print</span><span class="white">(</span><span class="yellow">"Converted number:"</span><span class="white">, converted_number</span><span class="white">)</span></code>
               </pre>
             </li>
             <hr />
@@ -204,10 +199,9 @@
               </p>
               <pre>
                 <code>
-                  # Example of using input() to get user input
-                  user_name = input("Enter your name: ")
-                  print("Hello, " + user_name + "!")
-                </code>
+                  <span class="comment"># Example of using input() to get user input</span>
+                  <span class="white">user_name </span><span class="pink">=</span><span class="white"> input</span><span class="white">(</span><span class="yellow">"Enter your name: "</span><span class="white">)</span>
+                  <span class="blue">print</span><span class="white">(</span><span class="yellow">"Hello, "</span><span class="white"> + </span><span class="white">user_name </span><span class="white">+ </span><span class="yellow">"!"</span><span class="white">)</span></code>
               </pre>
             </li>
             <hr />
@@ -220,13 +214,12 @@
                 to use the <strong>sum()</strong>
                 function:
               </p>
-              <pre style="width: 920px; height: 160px">
+              <pre>
                 <code >
-                  <span class="comment"># Example of using sum() to calculate the total of numbers in a list</span>
-                  <span class="white">numbers</span> = [5, 10, 15, 20, 25]
-                  <span class="white">total</span> = sum(numbers)
-                  <span class="white">print</span>("The total sum of the numbers is:", total)
-                </code>
+          <span class="comment"># Example of using sum() to calculate the total of numbers in a list</span>
+          <span class="white">numbers </span><span class="pink">=</span><span class="white"> [</span><span class="number">5</span><span class="white">, </span><span class="number">10</span><span class="white">, </span><span class="number">15</span><span class="white">, </span><span class="number">20</span><span class="white">, </span><span class="number">25</span><span class="white">]</span>
+          <span class="white">total </span><span class="pink">=</span><span class="white"> sum</span><span class="white">(numbers)</span>
+          <span class="white">print</span><span class="white">(</span><span class="yellow">"The total sum of the numbers is:"</span><span class="white">, total</span><span class="white">)</span></code>
               </pre>
               <p>
                 In this example, sum() takes the list numbers as its argument
@@ -238,7 +231,13 @@
       </main>
       <footer>
         <div class="center">
-          <button class="test" role="button">Take a Test</button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='../test2/'"
+          >
+            Take a Test
+          </button>
         </div>
       </footer>
     </div>
