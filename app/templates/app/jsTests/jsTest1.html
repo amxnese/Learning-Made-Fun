@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
     <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Quiz</title>
+    <title>Level 1</title>
   </head>
   <body>
     <div id="quiz-container">
-      <h1>JavaScript TEst: Basic Concepts</h1>
+      <h1>JavaScript Test: Basic Concepts</h1>
       <form id="quiz-form" action="{% url 'app-jsTest1' %}" method="post">
         {% csrf_token %}
         <div class="question">
