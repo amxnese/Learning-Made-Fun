@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
     <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Level 5 test</title>
+    <title>Level 5</title>
   </head>
   <body>
     <div id="quiz-container">
       <h1>Python Test: Loops</h1>
-      <form id="quiz-form" action="{% url 'app-pyTest5' %}" method="post">
+      <form id="quiz-form" action="{% url 'app-pyTest5' %}" method="post" onsubmit="return false">
         {% csrf_token %}
         <div class="question">
           <h2>What will be the output of the following code?</h2>

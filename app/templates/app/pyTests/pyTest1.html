@@ -6,27 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
     <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Python Syntax and Data Types Quiz</title>
+    <title>Level 1</title>
   </head>
   <body>
     <div id="quiz-container">
       <h1>Python Syntax and Data Types Quiz</h1>
-      <form id="quiz-form" action="{% url 'app-pyTest1' %}" method="post">
+      {% if messages %} {% for message in messages %}
+      <h1>hi</h1>
+      <script>
+        alert('Please make sure you answered all questions ')
+      </script>
+      {% endfor %}
+      {% endif %}
+      <form
+        id="quiz-form"
+        action="{% url 'app-pyTest1' %}"
+        method="post"
+        onsubmit="return check_if_selected()"
+      >
         {% csrf_token %}
         <div class="question">
           <h2>
             1. What data type would you use to store a number without decimals?
           </h2>
           <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="int" />
+            <input type="radio" id="q1-a1" name="q1" value="1" />
             <label for="q1-a1">int</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="float" />
+            <input type="radio" id="q1-a2" name="q1" value="2" />
             <label for="q1-a2">float</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="string" />
+            <input type="radio" id="q1-a3" name="q1" value="3" />
             <label for="q1-a3">string</label>
           </div>
         </div>
@@ -36,35 +48,30 @@
             10.5 in Python?
           </h2>
           <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="int" />
+            <input type="radio" id="q2-a1" name="q2" value="1" />
             <label for="q2-a1">int x = 10.5</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="x" />
+            <input type="radio" id="q2-a2" name="q2" value="2" />
             <label for="q2-a2">x = 10.5</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="float" />
+            <input type="radio" id="q2-a3" name="q2" value="3" />
             <label for="q2-a3">float x = 10.5</label>
           </div>
         </div>
         <div class="question">
           <h2>3. How do you create a string in Python?</h2>
           <div class="pad">
-            <input
-              type="radio"
-              id="q3-a1"
-              name="q3"
-              value="string"
-            />
+            <input type="radio" id="q3-a1" name="q3" value="1" />
             <label for="q3-a1">string x = 'Hello'</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="x" />
+            <input type="radio" id="q3-a2" name="q3" value="2" />
             <label for="q3-a2">x = 'Hello'</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="hello" />
+            <input type="radio" id="q3-a3" name="q3" value="3" />
             <label for="q3-a3">'Hello'</label>
           </div>
         </div>
@@ -79,15 +86,15 @@
             the data type of <code style="color: crimson">x</code>
           </p>
           <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="int" />
+            <input type="radio" id="q4-a1" name="q4" value="1" />
             <label for="q4-a1">int</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="bool" />
+            <input type="radio" id="q4-a2" name="q4" value="2" />
             <label for="q4-a2">bool</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="string" />
+            <input type="radio" id="q4-a3" name="q4" value="3" />
             <label for="q4-a3">string</label>
           </div>
         </div>
@@ -96,34 +103,34 @@
             5. What is the correct way to denote the end of a line in Python?
           </h2>
           <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="semicolon" />
+            <input type="radio" id="q5-a1" name="q5" value="1" />
             <label for="q5-a1"
               >Use a semicolon <code style="color: crimson">;</code></label
             >
           </div>
           <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="comma" />
+            <input type="radio" id="q5-a2" name="q5" value="2" />
             <label for="q5-a2"
               >Use a comma <code style="color: crimson">,</code></label
             >
           </div>
           <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="linebreak" />
+            <input type="radio" id="q5-a3" name="q5" value="3" />
             <label for="q5-a3">Line breaks are sufficient</label>
           </div>
         </div>
         <div class="question">
           <h2>6. Which of the following is a valid variable name in Python?</h2>
           <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="1var" />
+            <input type="radio" id="q6-a1" name="q6" value="1" />
             <label for="q6-a1">1_variable</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="var1" />
+            <input type="radio" id="q6-a2" name="q6" value="2" />
             <label for="q6-a2">variable_1</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="var!" />
+            <input type="radio" id="q6-a3" name="q6" value="3" />
             <label for="q6-a3">variable!</label>
           </div>
         </div>
@@ -133,37 +140,38 @@
             Python?
           </h2>
           <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="#" />
+            <input type="radio" id="q7-a1" name="q7" value="1" />
             <label for="q7-a1">#</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="//" />
+            <input type="radio" id="q7-a2" name="q7" value="2" />
             <label for="q7-a2">//</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="%" />
+            <input type="radio" id="q7-a3" name="q7" value="3" />
             <label for="q7-a3">%</label>
           </div>
         </div>
         <div class="question">
           <h2>8. Which of the following is NOT a valid data type in Python?</h2>
           <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="int" />
+            <input type="radio" id="q8-a1" name="q8" value="1" />
             <label for="q8-a1">int</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="double" />
+            <input type="radio" id="q8-a2" name="q8" value="2" />
             <label for="q8-a2">double</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="string" />
+            <input type="radio" id="q8-a3" name="q8" value="3" />
             <label for="q8-a3">string</label>
           </div>
         </div>
         <div class="question">
           <h2>
-            9. What will be the value of <code style="color: crimson;">x</code> after executing the following code in
-            Python?
+            9. What will be the value of
+            <code style="color: crimson">x</code> after executing the following
+            code in Python?
           </h2>
           <pre>
             <code>
@@ -172,15 +180,15 @@
               x <span class="pink">*=</span> <span class="purple">2</span></code>
           </pre>
           <div class="pad">
-            <input type="radio" id="q9-a1" name="q9" value="20" />
+            <input type="radio" id="q9-a1" name="q9" value="1" />
             <label for="q9-a1">20</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q9-a2" name="q9" value="30" />
+            <input type="radio" id="q9-a2" name="q9" value="2" />
             <label for="q9-a2">30</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q9-a3" name="q9" value="40" />
+            <input type="radio" id="q9-a3" name="q9" value="3" />
             <label for="q9-a3">40</label>
           </div>
         </div>
@@ -189,35 +197,37 @@
             10. What happens if proper indentation is not followed in Python?
           </h2>
           <div class="pad">
-            <input type="radio" id="q10-a1" name="q10" value="error" />
+            <input type="radio" id="q10-a1" name="q10" value="1" />
             <label for="q10-a1">The code will not run.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q10-a2" name="q10" value="unexpected" />
+            <input type="radio" id="q10-a2" name="q10" value="2" />
             <label for="q10-a2"
               >The code will run, but it will not produce the desired
               output.</label
             >
           </div>
           <div class="pad">
-            <input type="radio" id="q10-a3" name="q10" value="nothing" />
+            <input type="radio" id="q10-a3" name="q10" value="3" />
             <label for="q10-a3">Python ignores indentation.</label>
           </div>
         </div>
         <div class="question">
           <h2>
-            11. Which data type is used to represent <span class="purple">true</span>/<span class="purple">false</span> values in Python?
+            11. Which data type is used to represent
+            <span class="purple">true</span>/<span class="purple">false</span>
+            values in Python?
           </h2>
           <div class="pad">
-            <input type="radio" id="q11-a1" name="q11" value="int" />
+            <input type="radio" id="q11-a1" name="q11" value="1" />
             <label for="q11-a1">int</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a2" name="q11" value="float" />
+            <input type="radio" id="q11-a2" name="q11" value="2" />
             <label for="q11-a2">float</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a3" name="q11" value="bool" />
+            <input type="radio" id="q11-a3" name="q11" value="3" />
             <label for="q11-a3">bool</label>
           </div>
         </div>
@@ -232,20 +242,21 @@
               result <span class="pink">=</span> x <span class="pink">/</span> y</code>
           </pre>
           <div class="pad">
-            <input type="radio" id="q12-a1" name="q12" value="3.333" />
+            <input type="radio" id="q12-a1" name="q12" value="1" />
             <label for="q12-a1">3.333</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a2" name="q12" value="3" />
+            <input type="radio" id="q12-a2" name="q12" value="2" />
             <label for="q12-a2">3</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a3" name="q12" value="3.0" />
+            <input type="radio" id="q12-a3" name="q12" value="3" />
             <label for="q12-a3">3.0</label>
           </div>
         </div>
         <button type="submit">Submit Answers</button>
       </form>
     </div>
+    <script src="{% static 'app/checker.js' %}"></script>
   </body>
 </html>
