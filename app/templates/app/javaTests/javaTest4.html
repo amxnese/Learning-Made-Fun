@@ -6,193 +6,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
     <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Quiz</title>
+    <title>Level 4</title>
   </head>
   <body>
     <div id="quiz-container">
-      <h1></h1>
-      <form id="quiz-form" action="{% url 'app-' %}" method="post">
+      <h1>Java Test: Conditional Statements</h1>
+      <form id="quiz-form" action="{% url 'app-javaTest4' %}" method="post">
         {% csrf_token %}
         <div class="question">
-          <h2></h2>
+          <h2>What will the following Java code output?</h2>
+          <pre>
+            <code>
+              int a = 10;
+              if (a > 5) {
+                  System.out.println("Greater than five.");
+              } else {
+                  System.out.println("Five or less.");
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="" />
-            <label for="q1-a1"></label>
+            <input type="radio" id="q1-a1" name="q1" value="1" />
+            <label for="q1-a1">Greater than five.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="" />
-            <label for="q1-a2"></label>
+            <input type="radio" id="q1-a2" name="q1" value="2" />
+            <label for="q1-a2">Five or less.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="" />
-            <label for="q1-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="" />
-            <label for="q2-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="" />
-            <label for="q2-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="" />
-            <label for="q2-a3"></label>
+            <input type="radio" id="q1-a3" name="q1" value="3" />
+            <label for="q1-a3">No output</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>When are conditional statements used in Java?</h2>
           <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="" />
-            <label for="q3-a1"></label>
+            <input type="radio" id="q2-a1" name="q2" value="1" />
+            <label for="q2-a1">To repeat a block of code multiple times.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="" />
-            <label for="q3-a2"></label>
+            <input type="radio" id="q2-a2" name="q2" value="2" />
+            <label for="q2-a2"
+              >To execute a block of code based on a condition.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="" />
-            <label for="q3-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="" />
-            <label for="q4-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="" />
-            <label for="q4-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="" />
-            <label for="q4-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="" />
-            <label for="q5-a1"> </label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="" />
-            <label for="q5-a2"> </label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="" />
-            <label for="q5-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="" />
-            <label for="q6-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="" />
-            <label for="q6-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="" />
-            <label for="q6-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="" />
-            <label for="q7-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="" />
-            <label for="q7-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="" />
-            <label for="q7-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="" />
-            <label for="q8-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="" />
-            <label for="q8-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="" />
-            <label for="q8-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q9-a1" name="q9" value="" />
-            <label for="q9-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a2" name="q9" value="" />
-            <label for="q9-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a3" name="q9" value="" />
-            <label for="q9-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q10-a1" name="q10" value="" />
-            <label for="q10-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a2" name="q10" value="" />
-            <label for="q10-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a3" name="q10" value="" />
-            <label for="q10-a3"></label>
+            <input type="radio" id="q2-a3" name="q2" value="3" />
+            <label for="q2-a3">To declare and initialize variables.</label>
           </div>
         </div>
         <div class="question">
           <h2>
+            Consider the following else-if ladder. What is its output if score
+            is 75?
           </h2>
+          <pre>
+            <code>
+              int score = 75;
+              if (score >= 90) {
+                  System.out.println("Grade A");
+              } else if (score >= 75) {
+                  System.out.println("Grade B");
+              } else {
+                  System.out.println("Grade D");
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q11-a1" name="q11" value="" />
-            <label for="q11-a1"></label>
+            <input type="radio" id="q3-a1" name="q3" value="1" />
+            <label for="q3-a1">Grade A</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a2" name="q11" value="" />
-            <label for="q11-a2"></label>
+            <input type="radio" id="q3-a2" name="q3" value="2" />
+            <label for="q3-a2">Grade B</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a3" name="q11" value="" />
-            <label for="q11-a3"></label>
+            <input type="radio" id="q3-a3" name="q3" value="3" />
+            <label for="q3-a3">Grade C</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What will the following switch statement output?</h2>
+          <pre>
+            <code>
+              int number = 2;
+              switch (number) {
+                  case 1:
+                      System.out.println("One");
+                      break;
+                  case 2:
+                      System.out.println("Two");
+                      break;
+                  default:
+                      System.out.println("Invalid number");
+              }</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q4-a1" name="q4" value="1" />
+            <label for="q4-a1">One</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a2" name="q4" value="2" />
+            <label for="q4-a2">Two</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a3" name="q4" value="3" />
+            <label for="q4-a3">Invalid number</label>
           </div>
         </div>
         <div class="question">
           <h2>
+            What are the main keywords related to conditional statements in
+            Java?
           </h2>
           <div class="pad">
-            <input type="radio" id="q12-a1" name="q12" value="" />
-            <label for="q12-a1"></label>
+            <input type="radio" id="q5-a1" name="q5" value="1" />
+            <label for="q5-a1">if, else, for, while</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a2" name="q12" value="" />
-            <label for="q12-a2"></label>
+            <input type="radio" id="q5-a2" name="q5" value="2" />
+            <label for="q5-a2">if, else, switch, case</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a3" name="q12" value="" />
-            <label for="q12-a3"></label>
+            <input type="radio" id="q5-a3" name="q5" value="3" />
+            <label for="q5-a3">true, false, null</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>How does Java handle the following nested if statement?</h2>
+          <pre>
+            <code>
+              int temp = 25;
+              if (temp &gt; 20) {
+                  if (temp &lt; 30) {
+                      System.out.println("Comfortable");
+                  } else {
+                      System.out.println("Hot");
+                  }
+              } else {
+                  System.out.println("Cold");
+              }</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q6-a1" name="q6" value="1" />
+            <label for="q6-a1">Comfortable</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a2" name="q6" value="2" />
+            <label for="q6-a2">Hot</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a3" name="q6" value="3" />
+            <label for="q6-a3">Cold</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            What is the correct way to use a switch statement with string inputs
+            in Java?
+          </h2>
+          <pre>
+            <code>
+              String day = "MONDAY";
+              switch (day) {
+                  case "MONDAY":
+                      System.out.println("Start of the work week");
+                      break;
+                  case "FRIDAY":
+                      System.out.println("Almost the weekend");
+                      break;
+                  default:
+                      System.out.println("Midweek days");
+              }</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q7-a1" name="q7" value="1" />
+            <label for="q7-a1">Start of the work week</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a2" name="q7" value="2" />
+            <label for="q7-a2">Almost the weekend</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q7-a3" name="q7" value="3" />
+            <label for="q7-a3">Midweek days</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            Which if statement syntax is correct for checking equality in Java?
+          </h2>
+          <pre>
+            <code>
+              int x = 10;
+              if (x == 10) {
+                  System.out.println("x is 10");
+              }</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q8-a1" name="q8" value="1" />
+            <label for="q8-a1">if (x = 10) { ... }</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a2" name="q8" value="2" />
+            <label for="q8-a2">if (x == 10) { ... }</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a3" name="q8" value="3" />
+            <label for="q8-a3">if (x != 10) { ... }</label>
           </div>
         </div>
         <button type="submit">Submit Answers</button>

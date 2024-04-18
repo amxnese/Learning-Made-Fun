@@ -6,193 +6,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
     <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Quiz</title>
+    <title>Level 6</title>
   </head>
   <body>
     <div id="quiz-container">
-      <h1></h1>
-      <form id="quiz-form" action="{% url 'app-' %}" method="post">
+      <h1>Java Test: Functions</h1>
+      <form id="quiz-form" action="{% url 'app-javaTest6' %}" method="post">
         {% csrf_token %}
         <div class="question">
-          <h2></h2>
+          <h2>What will the following Java function do?</h2>
+          <pre>
+            <code>
+              public static void printHello() {
+                  System.out.println("Hello, world!");
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="" />
-            <label for="q1-a1"></label>
+            <input type="radio" id="q1-a1" name="q1" value="1" />
+            <label for="q1-a1">Prints "Hello, world!" to the console</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="" />
-            <label for="q1-a2"></label>
+            <input type="radio" id="q1-a2" name="q1" value="2" />
+            <label for="q1-a2">Returns "Hello, world!"</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="" />
-            <label for="q1-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="" />
-            <label for="q2-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="" />
-            <label for="q2-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="" />
-            <label for="q2-a3"></label>
+            <input type="radio" id="q1-a3" name="q1" value="3" />
+            <label for="q1-a3">Compiles with an error</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>Why are functions important in Java programming?</h2>
           <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="" />
-            <label for="q3-a1"></label>
+            <input type="radio" id="q2-a1" name="q2" value="1" />
+            <label for="q2-a1"
+              >They allow code to be executed multiple times without rewriting
+              it.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="" />
-            <label for="q3-a2"></label>
+            <input type="radio" id="q2-a2" name="q2" value="2" />
+            <label for="q2-a2"
+              >They organize code into manageable parts, making the program
+              easier to maintain and reuse.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="" />
-            <label for="q3-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="" />
-            <label for="q4-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="" />
-            <label for="q4-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="" />
-            <label for="q4-a3"></label>
+            <input type="radio" id="q2-a3" name="q2" value="3" />
+            <label for="q2-a3"
+              >They enhance the performance of the program by using less
+              memory.</label
+            >
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>What does the following Java method return?</h2>
+          <pre>
+            <code>
+              public static int addNumbers(int a, int b) {
+                  return a + b;
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="" />
-            <label for="q5-a1"> </label>
+            <input type="radio" id="q3-a1" name="q3" value="1" />
+            <label for="q3-a1">The sum of a and b</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="" />
-            <label for="q5-a2"> </label>
+            <input type="radio" id="q3-a2" name="q3" value="2" />
+            <label for="q3-a2">Prints the sum of a and b</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="" />
-            <label for="q5-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="" />
-            <label for="q6-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="" />
-            <label for="q6-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="" />
-            <label for="q6-a3"></label>
+            <input type="radio" id="q3-a3" name="q3" value="3" />
+            <label for="q3-a3">There is no return value</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>How do you define a function in Java that takes a parameter?</h2>
+          <pre>
+            <code>
+              public static void greet(String name) {
+                  System.out.println("Hello, " + name);
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="" />
-            <label for="q7-a1"></label>
+            <input type="radio" id="q4-a1" name="q4" value="1" />
+            <label for="q4-a1"
+              >This function does not compile because it lacks a return
+              type.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="" />
-            <label for="q7-a2"></label>
+            <input type="radio" id="q4-a2" name="q4" value="2" />
+            <label for="q4-a2"
+              >Correctly defines a function that takes a String parameter and
+              prints a greeting.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="" />
-            <label for="q7-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="" />
-            <label for="q8-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="" />
-            <label for="q8-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="" />
-            <label for="q8-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q9-a1" name="q9" value="" />
-            <label for="q9-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a2" name="q9" value="" />
-            <label for="q9-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a3" name="q9" value="" />
-            <label for="q9-a3"></label>
+            <input type="radio" id="q4-a3" name="q4" value="3" />
+            <label for="q4-a3"
+              >It defines a function that returns a String.</label
+            >
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>When should you use a function that returns a value in Java?</h2>
           <div class="pad">
-            <input type="radio" id="q10-a1" name="q10" value="" />
-            <label for="q10-a1"></label>
+            <input type="radio" id="q5-a1" name="q5" value="1" />
+            <label for="q5-a1"
+              >When you need to execute a block of code several times without
+              returning a result.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q10-a2" name="q10" value="" />
-            <label for="q10-a2"></label>
+            <input type="radio" id="q5-a2" name="q5" value="2" />
+            <label for="q5-a2"
+              >When you need to perform a calculation or operation and provide
+              the result to the caller.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q10-a3" name="q10" value="" />
-            <label for="q10-a3"></label>
+            <input type="radio" id="q5-a3" name="q5" value="3" />
+            <label for="q5-a3"
+              >Only when interacting with databases or external files.</label
+            >
           </div>
         </div>
         <div class="question">
           <h2>
+            Consider the following recursive function for calculating the
+            factorial of a number. What does it do?
           </h2>
+          <pre>
+            <code>
+              public static int factorial(int n) {
+                  if (n == 0) {
+                      return 1;
+                  } else {
+                      return n * factorial(n - 1);
+                  }
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q11-a1" name="q11" value="" />
-            <label for="q11-a1"></label>
+            <input type="radio" id="q6-a1" name="q6" value="1" />
+            <label for="q6-a1">Calculates the factorial of n.</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a2" name="q11" value="" />
-            <label for="q11-a2"></label>
+            <input type="radio" id="q6-a2" name="q6" value="2" />
+            <label for="q6-a2"
+              >Calculates the sum of numbers from 1 to n.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a3" name="q11" value="" />
-            <label for="q11-a3"></label>
+            <input type="radio" id="q6-a3" name="q6" value="3" />
+            <label for="q6-a3">Returns the constant value 1 for any n.</label>
           </div>
         </div>
         <div class="question">
           <h2>
+            What is the output of the following function when called as
+            factorial(5)?
           </h2>
+          <pre>
+            <code>
+              public static int factorial(int n) {
+                  if (n == 1) {
+                      return 1;
+                  } else {
+                      return n * factorial(n - 1);
+                  }
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q12-a1" name="q12" value="" />
-            <label for="q12-a1"></label>
+            <input type="radio" id="q7-a1" name="q7" value="1" />
+            <label for="q7-a1">120</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a2" name="q12" value="" />
-            <label for="q12-a2"></label>
+            <input type="radio" id="q7-a2" name="q7" value="2" />
+            <label for="q7-a2">24</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a3" name="q12" value="" />
-            <label for="q12-a3"></label>
+            <input type="radio" id="q7-a3" name="q7" value="3" />
+            <label for="q7-a3">5</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            How can you modify the factorial function to include error checking
+            for negative inputs?
+          </h2>
+          <pre>
+            <code>
+              public static int factorial(int n) {
+                if (n &lt; 0) {
+                    throw new IllegalArgumentException("Negative numbers are not allowed");
+                }
+                if (n == 0 || n == 1) {
+                    return 1;
+                }
+                return n * factorial(n - 1);
+            }</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q8-a1" name="q8" value="1" />
+            <label for="q8-a1"
+              >Add a condition to check for negative values and throw an
+              exception if true.</label
+            >
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a2" name="q8" value="2" />
+            <label for="q8-a2"
+              >The function already handles all types of inputs without
+              issues.</label
+            >
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a3" name="q8" value="3" />
+            <label for="q8-a3"
+              >Modify the base case to return 0 instead of 1.</label
+            >
           </div>
         </div>
         <button type="submit">Submit Answers</button>

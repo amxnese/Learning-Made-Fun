@@ -6,193 +6,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
     <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Quiz</title>
+    <title>Level 5</title>
   </head>
   <body>
     <div id="quiz-container">
-      <h1></h1>
-      <form id="quiz-form" action="{% url 'app-' %}" method="post">
+      <h1>Java Test: Loops</h1>
+      <form id="quiz-form" action="{% url 'app-javaTest5' %}" method="post">
         {% csrf_token %}
         <div class="question">
-          <h2></h2>
+          <h2>What will the following Java for loop output?</h2>
+          <pre>
+            <code>
+              for (int i = 0; i &lt; 3; i++) {
+                  System.out.println(i);
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="" />
-            <label for="q1-a1"></label>
+            <input type="radio" id="q1-a1" name="q1" value="1" />
+            <label for="q1-a1">0 1 2</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="" />
-            <label for="q1-a2"></label>
+            <input type="radio" id="q1-a2" name="q1" value="2" />
+            <label for="q1-a2">0 1 2 3</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="" />
-            <label for="q1-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="" />
-            <label for="q2-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="" />
-            <label for="q2-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="" />
-            <label for="q2-a3"></label>
+            <input type="radio" id="q1-a3" name="q1" value="3" />
+            <label for="q1-a3">1 2 3</label>
           </div>
         </div>
         <div class="question">
-          <h2></h2>
+          <h2>Why are loops used in programming?</h2>
           <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="" />
-            <label for="q3-a1"></label>
+            <input type="radio" id="q2-a1" name="q2" value="1" />
+            <label for="q2-a1"
+              >To execute a block of code multiple times based on a
+              condition.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="" />
-            <label for="q3-a2"></label>
+            <input type="radio" id="q2-a2" name="q2" value="2" />
+            <label for="q2-a2"
+              >To define variables only once and use them throughout the
+              program.</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="" />
-            <label for="q3-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="" />
-            <label for="q4-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="" />
-            <label for="q4-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="" />
-            <label for="q4-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="" />
-            <label for="q5-a1"> </label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="" />
-            <label for="q5-a2"> </label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="" />
-            <label for="q5-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="" />
-            <label for="q6-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="" />
-            <label for="q6-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="" />
-            <label for="q6-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="" />
-            <label for="q7-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="" />
-            <label for="q7-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="" />
-            <label for="q7-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="" />
-            <label for="q8-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="" />
-            <label for="q8-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="" />
-            <label for="q8-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q9-a1" name="q9" value="" />
-            <label for="q9-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a2" name="q9" value="" />
-            <label for="q9-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a3" name="q9" value="" />
-            <label for="q9-a3"></label>
-          </div>
-        </div>
-        <div class="question">
-          <h2></h2>
-          <div class="pad">
-            <input type="radio" id="q10-a1" name="q10" value="" />
-            <label for="q10-a1"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a2" name="q10" value="" />
-            <label for="q10-a2"></label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a3" name="q10" value="" />
-            <label for="q10-a3"></label>
+            <input type="radio" id="q2-a3" name="q2" value="3" />
+            <label for="q2-a3"
+              >To check the correctness of other statements in the code.</label
+            >
           </div>
         </div>
         <div class="question">
           <h2>
+            How does a for-each loop work in Java? What does the following code
+            print?
           </h2>
+          <pre>
+            <code>
+              int[] numbers = {1, 2, 3};
+              for (int number : numbers) {
+                  System.out.println(number);
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q11-a1" name="q11" value="" />
-            <label for="q11-a1"></label>
+            <input type="radio" id="q3-a1" name="q3" value="1" />
+            <label for="q3-a1">1 2 3</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a2" name="q11" value="" />
-            <label for="q11-a2"></label>
+            <input type="radio" id="q3-a2" name="q3" value="2" />
+            <label for="q3-a2">[1, 2, 3]</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q11-a3" name="q11" value="" />
-            <label for="q11-a3"></label>
+            <input type="radio" id="q3-a3" name="q3" value="3" />
+            <label for="q3-a3">Error</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What does the following while loop do?</h2>
+          <pre>
+            <code>
+              int x = 5;
+              while (x > 0) {
+                  System.out.println(x);
+                  x--;
+              }</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q4-a1" name="q4" value="1" />
+            <label for="q4-a1">Prints the numbers from 5 down to 1.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a2" name="q4" value="2" />
+            <label for="q4-a2">Creates an infinite loop.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q4-a3" name="q4" value="3" />
+            <label for="q4-a3">Prints the number 5 once.</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>Consider the following do-while loop. What is its output?</h2>
+          <pre>
+            <code>
+              int count = 0;
+              do {
+                  System.out.println("Count: " + count);
+                  count++;
+              } while (count &lt; 3);</code></pre>
+          <div class="pad">
+            <input type="radio" id="q5-a1" name="q5" value="1" />
+            <label for="q5-a1">"Count: 0" "Count: 1" "Count: 2"</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q5-a2" name="q5" value="2" />
+            <label for="q5-a2"
+              >"Count: 0" "Count: 1" "Count: 2" "Count: 3"</label
+            >
+          </div>
+          <div class="pad">
+            <input type="radio" id="q5-a3" name="q5" value="3" />
+            <label for="q5-a3">"Count: 0"</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>What are the key keywords associated with loops in Java?</h2>
+          <div class="pad">
+            <input type="radio" id="q6-a1" name="q6" value="1" />
+            <label for="q6-a1">if, else, return</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a2" name="q6" value="2" />
+            <label for="q6-a2">for, while, do</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q6-a3" name="q6" value="3" />
+            <label for="q6-a3">break, continue, array</label>
           </div>
         </div>
         <div class="question">
           <h2>
+            How can you use a while loop to execute until a certain condition is
+            no longer true? What will the following output?
           </h2>
+          <pre>
+            <code>
+              int num = 10;
+              while (num &gt; 7) {
+                  System.out.println("In loop: " + num);
+                  num--;
+              }</code>
+          </pre>
           <div class="pad">
-            <input type="radio" id="q12-a1" name="q12" value="" />
-            <label for="q12-a1"></label>
+            <input type="radio" id="q7-a1" name="q7" value="1" />
+            <label for="q7-a1"
+              >"In loop: 10" "In loop: 9" "In loop: 8" "In loop: 7"</label
+            >
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a2" name="q12" value="" />
-            <label for="q12-a2"></label>
+            <input type="radio" id="q7-a2" name="q7" value="2" />
+            <label for="q7-a2">"In loop: 10" "In loop: 9" "In loop: 8"</label>
           </div>
           <div class="pad">
-            <input type="radio" id="q12-a3" name="q12" value="" />
-            <label for="q12-a3"></label>
+            <input type="radio" id="q7-a3" name="q7" value="3" />
+            <label for="q7-a3">"In loop: 10"</label>
+          </div>
+        </div>
+        <div class="question">
+          <h2>
+            What is the correct way to write a do-while loop in Java that prints
+            numbers from 1 to 5?
+          </h2>
+          <pre>
+            <code>
+              int i = 1;
+              do {
+                  System.out.println(i);
+                  i++;
+              } while (i &lt;= 5);</code>
+          </pre>
+          <div class="pad">
+            <input type="radio" id="q8-a1" name="q8" value="1" />
+            <label for="q8-a1">This is the correct way.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a2" name="q8" value="2" />
+            <label for="q8-a2">There is a syntax error in the loop.</label>
+          </div>
+          <div class="pad">
+            <input type="radio" id="q8-a3" name="q8" value="3" />
+            <label for="q8-a3"
+              >The loop will cause an infinite print of 1.</label
+            >
           </div>
         </div>
         <button type="submit">Submit Answers</button>
