@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def home(request):
   return render(request, 'app/home.html')
@@ -46,8 +47,26 @@ def pyLevel5(request):
 @login_required
 def pyLevel6(request):
   return render(request, 'app/pyLevels/pyLevel6.html')
+
 @login_required
 def pyTest1(request):
+  if request.method == "POST":
+    answers = ['1','2','2','2','3','2','3','2','2','2','3','1']
+    # to_check = [request.POST[f'q{i}'] for i in range(1, 13) ]
+    to_check = []
+    for i in range(1,13):
+      try:
+        to_check.append(request.POST[f'q{i}'])
+      except ValueError:
+        messages.error(request, "Please make sure you answered all the questions")
+        return render(request, 'app/pyTests/pyTest1.html')
+        
+    score = 0
+    for i in range(0, 12):
+      score = score + 1 if answers[i] == to_check[i] else score
+    return render(request, 'app/response.html',{'res':f'you scored {score}'})
+      
+
   return render(request, 'app/pyTests/pyTest1.html')
 @login_required
 def pyTest2(request):
