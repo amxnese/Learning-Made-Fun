@@ -12,7 +12,6 @@ def main(request):
 def python(request):
   user = request.user
   lvl_py = user.python
-  hrefs = ['', '', '', '', '', '']
   levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary', 'secondary']
   for i in range(0, lvl_py+1):
     levels[i] = 'primary'
@@ -52,22 +51,32 @@ def pyLevel6(request):
 def pyTest1(request):
   if request.method == "POST":
     answers = ['1','2','2','2','3','2','3','2','2','2','3','1']
-    # to_check = [request.POST[f'q{i}'] for i in range(1, 13) ]
     to_check = []
     for i in range(1,13):
       try:
         to_check.append(request.POST[f'q{i}'])
-      except ValueError:
+      except KeyError:
         messages.error(request, "Please make sure you answered all the questions")
-        return render(request, 'app/pyTests/pyTest1.html')
-        
-    score = 0
+        return redirect('./')
+    score = 7
     for i in range(0, 12):
       score = score + 1 if answers[i] == to_check[i] else score
-    return render(request, 'app/response.html',{'res':f'you scored {score}'})
-      
-
+    passing_grage = int(score >= len(to_check) * 75 / 100)
+    if score >= passing_grage:
+      user = request.user
+      if user.python == 0:
+        user.python += 1
+        user.save()
+        messages.success(request, f"You scored {score}/12 and has made it to the next level")
+        return redirect('../')
+      else:
+        messages.success(request, f"You passed the test again and scored {score}/12")
+        return redirect('../')
+    else:
+      messages.error(request, f"You failed the test with a score of {score}/12, better luck next time")
+      return redirect('./')
   return render(request, 'app/pyTests/pyTest1.html')
+  
 @login_required
 def pyTest2(request):
   return render(request, 'app/pyTests/pyTest2.html')
