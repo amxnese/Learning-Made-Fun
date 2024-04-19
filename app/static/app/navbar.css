@@ -26,6 +26,7 @@ header nav ul li {
 header nav ul li:hover {
   transform: scale(1.1);
   background-color: #555;
+  border-radius: 4px;
   text-decoration: none;
 }
 a:hover {
@@ -38,4 +39,16 @@ header nav ul li a {
   color: white;
   padding: 15px;
   border-radius: 5px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  background-color: #555;
+  text-decoration: none;
+}
+
+.alert{
+  opacity: 1;
+  transition: opacity 3s;
 }
