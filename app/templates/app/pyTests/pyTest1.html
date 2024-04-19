@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
     <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/msg.css' %}" />
     <title>Level 1</title>
   </head>
   <body>
     <div id="quiz-container">
-      <h1>Python Syntax and Data Types Quiz</h1>
+      <h1>Python Syntax and Data Types Test</h1>
       {% if messages %} {% for message in messages %}
-      <h1>hi</h1>
+      <div id="errorMessage" class="alert">
+        {{ message }}
+        <button class="close-button">&times;</button>
+        <script src="{% static 'app/hide.js' %}"></script>
+      </div>
       <script>
-        alert('Please make sure you answered all questions ')
+        hideMessage();
       </script>
-      {% endfor %}
-      {% endif %}
-      <form
-        id="quiz-form"
-        action="{% url 'app-pyTest1' %}"
-        method="post"
-        onsubmit="return check_if_selected()"
-      >
+      {% endfor %} {% endif %}
+      <form id="quiz-form" action="{% url 'app-pyTest1' %}" method="post">
         {% csrf_token %}
         <div class="question">
           <h2>
@@ -254,9 +253,8 @@
             <label for="q12-a3">3.0</label>
           </div>
         </div>
-        <button type="submit">Submit Answers</button>
+        <button type="submit" class="take-test">Submit Answers</button>
       </form>
     </div>
-    <script src="{% static 'app/checker.js' %}"></script>
   </body>
 </html>
