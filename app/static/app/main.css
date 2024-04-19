@@ -30,7 +30,7 @@ body {
   align-items: center;
   margin-top: 20px;
 }
-.btn {
+.python,.java,.js {
   color: white;
   padding: 15px 20px;
   margin: 10px;
