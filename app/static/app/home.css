@@ -215,3 +215,8 @@ h2{
 .Btn:active {
   transform: translate(2px ,2px);
 }
+
+.alert{
+  opacity: 1;
+  transition: opacity 1s;
+}
