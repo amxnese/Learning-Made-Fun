@@ -1,0 +1,33 @@
+.hidden {
+  display: none;
+}
+.alert {
+  opacity: 1;
+  transition: opacity 1s;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  margin: 20px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative; /* Needed to position the close button */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; /* Center the alert */
+}
+.close-button {
+  position: absolute;
+  right: 11px;
+  top: 6%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px; /* Space between the button and the alert */
+}
