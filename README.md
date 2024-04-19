@@ -1,3 +1,3 @@
 # Learning-Made-Fun
 
-a Programing Eductional Website Project Made By Four Software Engineers Students
+a Programming Eductional Website That Teaches Python, Java, JavaScript From Grass to Functions Level,Each Language has 6 Levels With Clear Explanation and Enlightening Examples With a Test For Each Level.
