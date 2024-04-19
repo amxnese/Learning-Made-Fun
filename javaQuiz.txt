@@ -39,7 +39,7 @@ Question 4: Practical
 How do you declare a variable that holds a single character in Java?
 
 
-char myChar = 'A';
+
 a) String myChar = 'A';
 b) char myChar = "A";
 c) char myChar = 'A';
@@ -107,7 +107,7 @@ How would you declare a string variable in Java?
 
 a) string name = "John Doe";
 b) String name = "John Doe";
-c) char name = "John Doe";
+c) String name = "John Doe";
 
 Answer: b) String name = "John Doe";
 
@@ -332,7 +332,7 @@ c) 4
 Answer: b) 3
 
 Question 8: Practical
-How can you remove a specific key-value pair from a HashMap based on its key? What will the following output?
+What will the following output?
 
 
 HashMap<String, String> capitals = new HashMap<>();
@@ -418,7 +418,6 @@ if (score >= 90) {
 a) Grade A
 b) Grade B
 c) Grade C
-d) Grade D
 
 Answer: c) Grade C
 

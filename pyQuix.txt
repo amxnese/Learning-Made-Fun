@@ -276,7 +276,7 @@ a) To store data which can be indexed.
 b) To store unordered collection of unique items.
 c) To store data that needs to be accessed via keys.
 
-Answer: b) To store unordered collection of unique items.
+Answer: b) value=items
 
 Question 9: Practical
 How can you find the union of two sets in Python?
@@ -288,7 +288,7 @@ a) print(set1 + set2)
 b) print(set1.union(set2))
 c) print(set1 & set2)
 
-Answer: b) print(set1.union(set2))
+Answer: b) value=union
 
 Question 10: Practical
 What is the output of the following code?
@@ -300,7 +300,7 @@ a) John
 b) {name}
 c) 28
 
-Answer: a) John
+Answer: a) value=John
 
 Question 11: Practical
 What will be the result of the following Python line?
@@ -311,7 +311,7 @@ a) 3
 b) {1, 2, 3}
 c) {a, b, c}
 
-Answer: a) 3
+Answer: a) value=3
 
 Question 12: Practical
 Consider the following list operations:
@@ -324,7 +324,7 @@ a) [5, 2, 1]
 b) [5, 2, 9]
 c) [2, 9, 1]
 
-Answer: a) [5, 2, 1]
+Answer: a) value=529
 
 
 
@@ -345,7 +345,7 @@ a) Greater than five.
 b) Less than ten.
 c) Greater than five.\nElse block.
 
-Answer: c) Greater than five.\nElse block.
+Answer: c) value=else
 
 Question 2: Theoretical
 When should you use conditional statements in Python?
@@ -354,7 +354,7 @@ a) When you need to repeat a block of code a certain number of times.
 b) When you want to execute a block of code based on some condition.
 c) When you want to store multiple items in a single variable.
 
-Answer: b) When you want to execute a block of code based on some condition.
+Answer: b) value=condition
 
 Question 3: Practical
 Consider the following code snippet. What is its output?
@@ -372,7 +372,7 @@ a) Youth
 b) Young adult
 c) Adult
 
-Answer: b) Young adult
+Answer: b) value=young-adult
 
 Question 4: Practical
 What will the following code print?
@@ -399,42 +399,16 @@ a) if, for, else
 b) try, except, finally
 c) if, elif, else
 
-Answer: c) if, elif, else
+Answer: c) value=3
 
 Question 6: Practical
-Which option correctly shows a nested conditional statement?
+What are nested conditional statements?
 
 
-score = 85
-a)
-
-
-if score > 90:
-    print("Grade A")
-elif score > 80:
-    print("Grade B")
-else:
-    print("Grade C")
-b)
-
-
-if score > 70:
-    if score > 80:
-        print("Grade B")
-    else:
-        print("Grade C")
-else:
-    print("Grade D")
-c)
-
-
-if score > 60:
-    print("Pass")
-else:
-    print("Fail")
-    if score < 50:
-        print("Try again")
-Answer: b) Shows nested conditions where inner if conditions are used to further classify the score.
+a) 
+b)A sequence of conditional statements wheStatements that execute only if multiple conditions are met simultaneously.re each statement triggers another conditional statement.
+c)A method of organizing variables and functions for better reusability.
+Answer: b) value=2
 
 Question 7: Practical
 What output does the following Python code produce?
@@ -451,7 +425,7 @@ a) It's hot today.
 b) Nice weather.
 c) It's a bit cold.
 
-Answer: c) It's a bit cold.
+Answer: c) value=3 It's a bit cold.
 
 Question 8: Practical
 Given the following code, what will be printed?
@@ -466,7 +440,7 @@ a) Fizz
 b) Buzz
 c) Fizz\nBuzz
 
-Answer: c) Fizz\nBuzz
+Answer: c) value=3 Fizz\nBuzz
 
 
 LEVEL5:
@@ -481,7 +455,7 @@ a) 1 2 3
 b) [1, 2, 3]
 c) 123
 
-Answer: a) 1 2 3
+Answer: a) value=1  1 2 3
 
 Question 2: Theoretical
 Why are loops used in programming?
@@ -490,7 +464,7 @@ a) To execute a block of code a specific number of times based on a condition.
 b) To check the validity of data types only.
 c) To handle exceptions and errors.
 
-Answer: a) To execute a block of code a specific number of times based on a condition.
+Answer: a) value=1 To execute a block of code a specific number of times based on a condition.
 
 Question 3: Practical
 What does the following while loop do?
@@ -504,7 +478,7 @@ a) Prints numbers from 5 to 1.
 b) Creates an infinite loop.
 c) Prints the number 5 five times.
 
-Answer: a) Prints numbers from 5 to 1.
+Answer: a) value=1 Prints numbers from 5 to 1.
 
 Question 4: Practical
 Consider the following loop using range:
@@ -517,7 +491,7 @@ a) 3 4 5 6 7 8
 b) 3 4 5 6 7
 c) 4 5 6 7
 
-Answer: b) 3 4 5 6 7
+Answer: b) value=2 3 4 5 6 7
 
 Question 5: Theoretical
 What are the common keywords associated with loops in Python?
@@ -526,7 +500,7 @@ a) if, elif, else
 b) try, except, finally
 c) for, while, break, continue
 
-Answer: c) for, while, break, continue
+Answer: c)  3  for, while, break, continue
 
 Question 6: Practical
 What will the following nested loops output?

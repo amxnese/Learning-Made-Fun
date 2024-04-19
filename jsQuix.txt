@@ -178,7 +178,6 @@ Question 7: Practical
 How can you select an element by its CSS selector in JavaScript?
 
 
-document.querySelector('.my-class');
 a) document.getElementById('.my-class')
 b) document.querySelector('.my-class')
 c) document.getElementsByClassName('my-class')
