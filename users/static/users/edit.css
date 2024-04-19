@@ -4,3 +4,7 @@ body {
 .container {
   margin-top: 50px;
 }
+.alert {
+  opacity: 1;             /* Start fully visible */
+  transition: opacity 3s; /* Transition lasts 3 seconds */
+}
