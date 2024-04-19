@@ -144,3 +144,7 @@ header::after {
 #rememberCheckBox {
   cursor: pointer;
 }
+.alert{
+  opacity: 1;
+  transition: opacity 1s;
+}
