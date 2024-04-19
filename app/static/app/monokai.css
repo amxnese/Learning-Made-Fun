@@ -8,7 +8,7 @@ pre {
 }
 code, .keyword {
   font-size: 105%;
-  color: white;
+  color: crimson;
   font-family: "Consolas", "Monaco", "Lucida Console", monospace;
 }
 .var {
