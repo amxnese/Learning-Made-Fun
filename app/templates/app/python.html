@@ -1,8 +1,6 @@
-{% extends 'app/navbar.html' %} {% load static %}
-{% block additional_styles %}
-    <link rel="stylesheet" href="{% static 'app/levelsPy.css' %}" />
-{% endblock %}
-{% block content %}
+{% extends 'app/navbar.html' %} {% load static %} {% block additional_styles %}
+<link rel="stylesheet" href="{% static 'app/levelsPy.css' %}" />
+{% endblock %} {% block content %}
 <section class="content">
   <div class="card">
     <div class="card-body text-center">
@@ -42,9 +40,13 @@
         <p class="card-text">
           Covering most usable and known built-in functions of the language.
         </p>
+        {% if levels.lvl2 == 'primary' %}
         <a href="{% url 'app-pyLevel2' %}" class="btn btn-{{levels.lvl2}}"
           >Start Learning</a
         >
+        {% else %}
+        <a href="#" class="btn btn-{{levels.lvl2}}">Start Learning</a>
+        {% endif %}
       </div>
     </div>
     <!-- End Level 2 -->
@@ -61,9 +63,13 @@
           This level covers the Python's built-in data structures and some
           built-in methods related to them
         </p>
+        {% if levels.lvl3 == 'primary' %}
         <a href="{% url 'app-pyLevel3' %}" class="btn btn-{{levels.lvl3}}"
           >Start Learning</a
         >
+        {% else %}
+        <a href="#" class="btn btn-{{levels.lvl3}}">Start Learning</a>
+        {% endif %}
       </div>
     </div>
     <!-- end Level 3 -->
@@ -74,9 +80,13 @@
         <p class="card-text">
           Understanding Conditional Statements and relational operators
         </p>
+        {% if levels.lvl4 == 'primary' %}
         <a href="{% url 'app-pyLevel4' %}" class="btn btn-{{levels.lvl4}}"
           >Start Learning</a
         >
+        {% else %}
+        <a href="#" class="btn btn-{{levels.lvl4}}">Start Learning</a>
+        {% endif %}
       </div>
     </div>
     <!-- end Level 4 -->
@@ -90,9 +100,13 @@
       <div class="card-body">
         <h3 class="card-title">Level 5: Loops</h3>
         <p class="card-text">Where, When, Why, and How to use Loops</p>
+        {% if levels.lvl5 == 'primary' %}
         <a href="{% url 'app-pyLevel5' %}" class="btn btn-{{levels.lvl5}}"
           >Start Learning</a
         >
+        {% else %}
+        <a href="#" class="btn btn-{{levels.lvl5}}">Start Learning</a>
+        {% endif %}
       </div>
     </div>
     <!-- end Level 5 -->
@@ -102,9 +116,13 @@
       <div class="card-body">
         <h3 class="card-title">Level 6: Functions</h3>
         <p class="card-text">Getting Started with the concept of functions</p>
+        {% if levels.lvl6 == 'primary' %}
         <a href="{% url 'app-pyLevel6' %}" class="btn btn-{{levels.lvl6}}"
           >Start Learning</a
         >
+        {% else %}
+        <a href="#" class="btn btn-{{levels.lvl6}}">Start Learning</a>
+        {% endif %}
       </div>
     </div>
   </div>
