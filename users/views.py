@@ -11,14 +11,15 @@ def login(request):
     password = request.POST['password']
     if not CustomUser.objects.filter(username=username):
       messages.error(request, f"{username} is not registered")
-      return render(request, 'users/login.html')
+      return redirect('./')
     user = authenticate(request, username=username, password=password)
     if user:
       log(request, user)
+      messages.success(request, f"Welcome back {user.username}")
       return redirect('/main')
     else:
       messages.error(request, f"wrong password for {username}")
-      return render(request, 'users/login.html')
+      return redirect('./')
   else:
     return render(request, 'users/login.html')
 
@@ -29,16 +30,16 @@ def register(request):
     confirm = request.POST.get('confirm')
     if password != confirm:
       messages.error(request, "passwords don't match")
-      return render(request, 'users/register.html')
+      return redirect('./')
     if CustomUser.objects.filter(username=username):
-      messages.error(request, "username not available")
-      return render(request, 'users/register.html')
-    user = CustomUser.objects.create_user(username=username, password=password)
-    user1 = authenticate(request, username=username, password=password)
-    if user1:
+      messages.error(request, "username already taken")
+      return redirect('./')
+    CustomUser.objects.create_user(username=username, password=password)
+    user = authenticate(request, username=username, password=password) 
+    if user:
       log(request, user)
     messages.success(request, f"account for {username} was created successfully")
-    return render(request, 'app/home.html')
+    return redirect('/main')
   else:
     return render(request, 'users/register.html')
 
@@ -46,7 +47,7 @@ def register(request):
 def logout(request):
   out(request)
   messages.success(request, 'You have been logged out')
-  return redirect('../')
+  return redirect('/')
 
 @login_required
 def profile(request):
@@ -59,11 +60,11 @@ def profile(request):
     pic = request.FILES.get('profile_picture')
     user.profile_picture = pic
     user.save()
-    return redirect('/profile')
+    return redirect('./')
   context = {
-    'python' : int(user.python * 50 / 3) +20,
-    'java' : int(user.java * 50 / 3)+2,
-    'javaScript' : int(user.javaScript * 50 / 3)+50,
+    'python' : int(user.python * 50 / 3),
+    'java' : int(user.java * 50 / 3),
+    'javaScript' : int(user.javaScript * 50 / 3),
     'pic' : user.profile_picture.url if user.profile_picture else ""
   }
   return render(request, 'users/profile.html',{'info':context})
@@ -82,7 +83,7 @@ def edit(request):
     user.email = email if email else user.email
     user.save()
     messages.success(request, 'Profile updated successfully')
-    return render(request, 'app/home.html')
+    return redirect('/')
   else:
     return render(request, 'users/edit.html')
 
@@ -95,10 +96,10 @@ def change_password(request):
     confirm = request.POST.get('confirm')
     if not user.check_password(old):
       messages.error(request, 'Wrong password!')
-      return render(request, 'users/passwd.html')
+      return redirect('./')
     if new != confirm:
       messages.error(request, "Passwords don't match")
-      return render(request, 'users/passwd.html')
+      return redirect('./')
     user.set_password(new)
     user.save()
     messages.success(request, 'Updated password successfully')
@@ -110,4 +111,5 @@ def change_password(request):
 def delete(request):
   user = request.user
   user.delete()
-  return render(request, 'users/delete.html')
+  messages.success(request, 'Your account has been successfully deleted')
+  return render(request, 'app/home.html')
