@@ -1,9 +1,6 @@
-{% extends 'app/navbar.html' %} {% load static %} 
-{% block additional_styles %}
-    <link rel="stylesheet" href="{% static 'app/levelsJs.css' %}" />
-{% endblock %}
-
-{% block content %}
+{% extends 'app/navbar.html' %} {% load static %} {% block additional_styles %}
+<link rel="stylesheet" href="{% static 'app/levelsJs.css' %}" />
+{% endblock %} {% block content %}
 <section class="content">
   <div class="card">
     <div class="card-body text-center">
@@ -48,7 +45,7 @@
           >Start Learning</a
         >
         {% else %}
-        <a href="#" class="btn btn-{{levels.lvl2}}">Start Learning</a>
+        <a href="invalid/" class="btn btn-{{levels.lvl2}}">Start Learning</a>
         {% endif %}
       </div>
     </div>
@@ -71,7 +68,7 @@
           >Start Learning</a
         >
         {% else %}
-        <a href="#" class="btn btn-{{levels.lvl3}}">Start Learning</a>
+        <a href="invalid/" class="btn btn-{{levels.lvl3}}">Start Learning</a>
         {% endif %}
       </div>
     </div>
@@ -88,7 +85,7 @@
           >Start Learning</a
         >
         {% else %}
-        <a href="#" class="btn btn-{{levels.lvl4}}">Start Learning</a>
+        <a href="invalid/" class="btn btn-{{levels.lvl4}}">Start Learning</a>
         {% endif %}
       </div>
     </div>
@@ -108,7 +105,7 @@
           >Start Learning</a
         >
         {% else %}
-        <a href="#" class="btn btn-{{levels.lvl5}}">Start Learning</a>
+        <a href="invalid/" class="btn btn-{{levels.lvl5}}">Start Learning</a>
         {% endif %}
       </div>
     </div>
@@ -124,7 +121,7 @@
           >Start Learning</a
         >
         {% else %}
-        <a href="#" class="btn btn-{{levels.lvl6}}">Start Learning</a>
+        <a href="invalid/" class="btn btn-{{levels.lvl6}}">Start Learning</a>
         {% endif %}
       </div>
     </div>
