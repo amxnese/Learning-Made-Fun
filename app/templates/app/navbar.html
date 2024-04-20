@@ -35,27 +35,32 @@
             <li><a href="{% url 'app-home' %}">Home</a></li>
             <li><a href="">Tests</a></li>
             <li><a href="{% url 'app-main' %}">Languages</a></li>
+            <li><a href="{% url 'user-profile' %}">Profile</a></li>
             <li class="right"><a href="{% url 'user-logout' %}">Logout</a></li>
           </ul>
         </nav>
       </div>
     </header>
     {% if messages %} {% for message in messages %}
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <script src="{% static 'app/appHide.js' %}"></script>
+    <div
+      class="alert alert-warning alert-dismissible fade show"
+      role="alert"
+      id="dissmis"
+    >
       {{ message }}
       <button
         type="button"
         class="btn-close"
         data-bs-dismiss="alert"
         aria-label="Close"
+        onclick="dissmis()"
       ></button>
     </div>
     {% endfor %}
-    <script src="{% static 'app/hide.js' %}"></script>
     <script>
       hideMessage();
     </script>
-    {% endif %}
-    {% block content %} {% endblock %}
+    {% endif %} {% block content %} {% endblock %}
   </body>
 </html>

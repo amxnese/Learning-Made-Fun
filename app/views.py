@@ -60,21 +60,27 @@ def python(request):
 @login_required
 def pyIntro(request):
   return render(request, 'app/pyLevels/pyIntro.html')
+
 @login_required
 def pyLevel1(request):
   return render(request, 'app/pyLevels/pyLevel1.html')
+
 @login_required
 def pyLevel2(request):
   return render(request, 'app/pyLevels/pyLevel2.html')
+
 @login_required
 def pyLevel3(request):
   return render(request, 'app/pyLevels/pyLevel3.html')
+
 @login_required
 def pyLevel4(request):
   return render(request, 'app/pyLevels/pyLevel4.html')
+
 @login_required
 def pyLevel5(request):
   return render(request, 'app/pyLevels/pyLevel5.html')
+
 @login_required
 def pyLevel6(request):
   return render(request, 'app/pyLevels/pyLevel6.html')
@@ -102,6 +108,7 @@ def pyTest2(request):
     validate(request, score, full_mark=len(answers), level=2, language="python")
     return redirect('../')
   return render(request, 'app/pyTests/pyTest2.html')
+
 @login_required
 def pyTest3(request):
   if request.method == "POST":
@@ -113,6 +120,7 @@ def pyTest3(request):
     validate(request, score, full_mark=len(answers), level=3, language="python")
     return redirect('../')
   return render(request, 'app/pyTests/pyTest3.html')
+
 @login_required
 def pyTest4(request):
   if request.method == "POST":
@@ -124,6 +132,7 @@ def pyTest4(request):
     validate(request, score, full_mark=len(answers), level=4, language="python")
     return redirect('../')
   return render(request, 'app/pyTests/pyTest4.html')
+
 @login_required
 def pyTest5(request):
   if request.method == "POST":
@@ -135,6 +144,7 @@ def pyTest5(request):
     validate(request, score, full_mark=len(answers), level=5, language="python")
     return redirect('../')
   return render(request, 'app/pyTests/pyTest5.html')
+
 @login_required
 def pyTest6(request):
   if request.method == "POST":
@@ -146,6 +156,7 @@ def pyTest6(request):
     validate(request, score, full_mark=len(answers), level=6, language="python")
     return redirect('../')
   return render(request, 'app/pyTests/pyTest6.html')
+
 @login_required
 def pyInvalid(request):
   messages.error(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
@@ -171,21 +182,27 @@ def java(request):
 @login_required
 def javaIntro(request):
   return render(request, 'app/javaLevels/javaIntro.html')
+
 @login_required
 def javaLevel1(request):
   return render(request, 'app/javaLevels/javaLevel1.html')
+
 @login_required
 def javaLevel2(request):
   return render(request, 'app/javaLevels/javaLevel2.html')
+
 @login_required
 def javaLevel3(request):
   return render(request, 'app/javaLevels/javaLevel3.html')
+
 @login_required
 def javaLevel4(request):
   return render(request, 'app/javaLevels/javaLevel4.html')
+
 @login_required
 def javaLevel5(request):
   return render(request, 'app/javaLevels/javaLevel5.html')
+
 @login_required
 def javaLevel6(request):
   return render(request, 'app/javaLevels/javaLevel6.html')
@@ -287,21 +304,27 @@ def js(request):
 @login_required
 def jsIntro(request):
   return render(request, 'app/jsLevels/jsIntro.html')
+
 @login_required
 def jsLevel1(request):
   return render(request, 'app/jsLevels/jsLevel1.html')
+
 @login_required
 def jsLevel2(request):
   return render(request, 'app/jsLevels/jsLevel2.html')
+
 @login_required
 def jsLevel3(request):
   return render(request, 'app/jsLevels/jsLevel3.html')
+
 @login_required
 def jsLevel4(request):
   return render(request, 'app/jsLevels/jsLevel4.html')
+
 @login_required
 def jsLevel5(request):
   return render(request, 'app/jsLevels/jsLevel5.html')
+
 @login_required
 def jsLevel6(request):
   return render(request, 'app/jsLevels/jsLevel6.html')
@@ -377,6 +400,7 @@ def jsTest6(request):
     validate(request, score,  full_mark=len(answers), level=6, language="java")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest6.html')
+  
 @login_required
 def jsInvalid(request):
   messages.error(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")

@@ -43,15 +43,13 @@
       ></button>
     </div>
     {% endfor %}
-    <script src="{% static 'app/hide.js' %}"></script>
+    <script src="{% static 'app/appHide.js' %}"></script>
     <script>
       hideMessage();
     </script>
     {% endif %}
     <div class="content-buttons">
-      <button onclick="location.href='python/'" class="python">
-        Python
-      </button>
+      <button onclick="location.href='python/'" class="python">Python</button>
       <button onclick="location.href='java/'" class="java">Java</button>
       <button onclick="location.href='js/'" class="js">JavaScript</button>
     </div>
