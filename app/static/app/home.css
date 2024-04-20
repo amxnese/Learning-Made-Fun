@@ -217,6 +217,9 @@ h2{
 }
 
 .alert{
+  top: 8px;
+  width: 80%;
+  margin: 0 auto;
   opacity: 1;
   transition: opacity 1s;
 }
