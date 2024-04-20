@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/msg.css' %}" />
+    {% block title %} {% endblock title %}
+  </head>
+  <body>
+    <div id="quiz-container">
+      {% block header %} {% endblock header %} {% if messages %} {% for message in messages %}
+      <script src="{% static 'app/appHide.js' %}"></script>
+      <div id="errorMessage" class="alert">
+        {{ message }}
+        <button class="close-button" onclick="closeMe()">&times;</button>
+      </div>
+      <script>
+        hideMessage();
+      </script>
+      {% endfor %} {% endif %} {% block content %} {% endblock content %}
+    </div>
+  </body>
+</html>
