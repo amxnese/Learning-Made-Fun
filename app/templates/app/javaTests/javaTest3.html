@@ -1,21 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
-    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Level 3</title>
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1>Java Test: Built-in Data Structures</h1>
-      <form id="quiz-form" action="{% url 'app-javaTest3' %}" method="post">
-        {% csrf_token %}
-        <div class="question">
-          <h2>What will the following Java code output?</h2>
-          <pre>
+{% extends "app/baseTest.html" %} {% load static %} {% block title %}
+<title>Level 3</title>
+{% endblock title %} {% block header %}
+<h1>Java Test: Built-in Data Structures</h1>
+{% endblock header %} {% block content %}
+<form id="quiz-form" action="{% url 'app-javaTest3' %}" method="post">
+  {% csrf_token %}
+  <div class="question">
+    <h2>What will the following Java code output?</h2>
+    <pre>
             <code>
               ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
               numbers.add(1);
@@ -23,51 +15,49 @@
               numbers.add(3);
               System.out.println(numbers.size());</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="1" />
-            <label for="q1-a1">2</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="2" />
-            <label for="q1-a2">3</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="3" />
-            <label for="q1-a3">4</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            Why are built-in data structures such as ArrayList and HashMap
-            crucial in Java?
-          </h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="1" />
-            <label for="q2-a1"
-              >They provide a way to organize data that allows for efficient
-              processing and manipulation.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="2" />
-            <label for="q2-a2"
-              >They allow Java programs to execute faster than using native
-              arrays or primitives alone.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="3" />
-            <label for="q2-a3"
-              >They reduce the memory usage of applications.</label
-            >
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            How do you remove an element from an ArrayList by index? What will
-            the following code output?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q1-a1" name="q1" value="1" />
+      <label for="q1-a1">2</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a2" name="q1" value="2" />
+      <label for="q1-a2">3</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a3" name="q1" value="3" />
+      <label for="q1-a3">4</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      Why are built-in data structures such as ArrayList and HashMap crucial in
+      Java?
+    </h2>
+    <div class="pad">
+      <input type="radio" id="q2-a1" name="q2" value="1" />
+      <label for="q2-a1"
+        >They provide a way to organize data that allows for efficient
+        processing and manipulation.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a2" name="q2" value="2" />
+      <label for="q2-a2"
+        >They allow Java programs to execute faster than using native arrays or
+        primitives alone.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a3" name="q2" value="3" />
+      <label for="q2-a3">They reduce the memory usage of applications.</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      How do you remove an element from an ArrayList by index? What will the
+      following code output?
+    </h2>
+    <pre>
             <code>
               ArrayList&lt;String&gt; colors = new ArrayList&lt;&gt;();
               colors.add("Red");
@@ -76,47 +66,46 @@
               colors.remove(1);
               System.out.println(colors);</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="1" />
-            <label for="q3-a1">[Red, Blue, Green]</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="2" />
-            <label for="q3-a2">[Red, Green]</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="3" />
-            <label for="q3-a3">[Blue, Green]</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            What does the following HashMap operation do and what will it
-            output?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q3-a1" name="q3" value="1" />
+      <label for="q3-a1">[Red, Blue, Green]</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a2" name="q3" value="2" />
+      <label for="q3-a2">[Red, Green]</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a3" name="q3" value="3" />
+      <label for="q3-a3">[Blue, Green]</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      What does the following HashMap operation do and what will it output?
+    </h2>
+    <pre>
             <code>
               HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
               map.put("key1", 100);
               map.put("key2", 200);
               System.out.println(map.get("key2"));</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="1" />
-            <label for="q4-a1">Outputs 100</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="2" />
-            <label for="q4-a2">Outputs 200</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="3" />
-            <label for="q4-a3">Outputs null</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>What will the following HashSet operations result in?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q4-a1" name="q4" value="1" />
+      <label for="q4-a1">Outputs 100</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a2" name="q4" value="2" />
+      <label for="q4-a2">Outputs 200</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a3" name="q4" value="3" />
+      <label for="q4-a3">Outputs null</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What will the following HashSet operations result in?</h2>
+    <pre>
             <code>
               HashSet&lt;String&gt; set = new HashSet&lt;&gt;();
               set.add("Apple");
@@ -124,25 +113,25 @@
               set.add("Cherry");
               System.out.println(set.contains("Banana"));</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="1" />
-            <label for="q5-a1">true</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="2" />
-            <label for="q5-a2">false</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="3" />
-            <label for="q5-a3">Error</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            Consider using a TreeMap. After the following operations, what will
-            be the first key-value pair if printed?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q5-a1" name="q5" value="1" />
+      <label for="q5-a1">true</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a2" name="q5" value="2" />
+      <label for="q5-a2">false</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a3" name="q5" value="3" />
+      <label for="q5-a3">Error</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      Consider using a TreeMap. After the following operations, what will be the
+      first key-value pair if printed?
+    </h2>
+    <pre>
             <code>
               TreeMap&lt;Integer, String&gt; treeMap = new TreeMap&lt;&gt;();
               treeMap.put(3, "Three");
@@ -150,25 +139,25 @@
               treeMap.put(2, "Two");
               System.out.println(treeMap.firstEntry());</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="1" />
-            <label for="q6-a1">1=One</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="2" />
-            <label for="q6-a2">2=Two</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="3" />
-            <label for="q6-a3">3=Three</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            How do you check the number of elements in a HashSet? What does the
-            following code output?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q6-a1" name="q6" value="1" />
+      <label for="q6-a1">1=One</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a2" name="q6" value="2" />
+      <label for="q6-a2">2=Two</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a3" name="q6" value="3" />
+      <label for="q6-a3">3=Three</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      How do you check the number of elements in a HashSet? What does the
+      following code output?
+    </h2>
+    <pre>
             <code>
               HashSet&lt;Integer&gt; mySet = new HashSet&lt;&gt;();
               mySet.add(1);
@@ -176,22 +165,22 @@
               mySet.add(3);
               System.out.println(mySet.size());</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="1" />
-            <label for="q7-a1">2</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="2" />
-            <label for="q7-a2">3</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="3" />
-            <label for="q7-a3">4</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>What will the following output?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q7-a1" name="q7" value="1" />
+      <label for="q7-a1">2</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q7-a2" name="q7" value="2" />
+      <label for="q7-a2">3</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q7-a3" name="q7" value="3" />
+      <label for="q7-a3">4</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What will the following output?</h2>
+    <pre>
             <code>
               HashMap&lt;String, String&gt; capitals = new HashMap&lt;&gt;();
               capitals.put("USA", "Washington D.C.");
@@ -199,25 +188,24 @@
               capitals.remove("Japan");
               System.out.println(capitals.containsKey("Japan"));</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="1" />
-            <label for="q8-a1">true</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="2" />
-            <label for="q8-a2">false</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="3" />
-            <label for="q8-a3">error</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            What is the correct way to add an element at the end of an
-            ArrayList?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q8-a1" name="q8" value="1" />
+      <label for="q8-a1">true</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q8-a2" name="q8" value="2" />
+      <label for="q8-a2">false</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q8-a3" name="q8" value="3" />
+      <label for="q8-a3">error</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      What is the correct way to add an element at the end of an ArrayList?
+    </h2>
+    <pre>
             <code>
               ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
               list.add(10);
@@ -225,48 +213,44 @@
               list.add(30);
               System.out.println(list);</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q9-a1" name="q9" value="1" />
-            <label for="q9-a1">[10, 20, 30]</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a2" name="q9" value="2" />
-            <label for="q9-a2">[30, 20, 10]</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q9-a3" name="q9" value="3" />
-            <label for="q9-a3">[20, 10, 30]</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            What is the primary difference between HashSet and TreeMap in Java?
-          </h2>
-          <div class="pad">
-            <input type="radio" id="q10-a1" name="q10" value="1" />
-            <label for="q10-a1"
-              >HashSet organizes elements in insertion order, while TreeMap
-              organizes keys based on their natural ordering.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a2" name="q10" value="2" />
-            <label for="q10-a2"
-              >HashSet allows duplicate elements, while TreeMap does not allow
-              duplicate keys.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q10-a3" name="q10" value="3" />
-            <label for="q10-a3"
-              >HashSet is a collection of unique items, while TreeMap is a map
-              that maintains an order of keys according to their natural
-              ordering or by a comparator.</label
-            >
-          </div>
-        </div>
-        <button type="submit">Submit Answers</button>
-      </form>
+    <div class="pad">
+      <input type="radio" id="q9-a1" name="q9" value="1" />
+      <label for="q9-a1">[10, 20, 30]</label>
     </div>
-  </body>
-</html>
+    <div class="pad">
+      <input type="radio" id="q9-a2" name="q9" value="2" />
+      <label for="q9-a2">[30, 20, 10]</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q9-a3" name="q9" value="3" />
+      <label for="q9-a3">[20, 10, 30]</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What is the primary difference between HashSet and TreeMap in Java?</h2>
+    <div class="pad">
+      <input type="radio" id="q10-a1" name="q10" value="1" />
+      <label for="q10-a1"
+        >HashSet organizes elements in insertion order, while TreeMap organizes
+        keys based on their natural ordering.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q10-a2" name="q10" value="2" />
+      <label for="q10-a2"
+        >HashSet allows duplicate elements, while TreeMap does not allow
+        duplicate keys.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q10-a3" name="q10" value="3" />
+      <label for="q10-a3"
+        >HashSet is a collection of unique items, while TreeMap is a map that
+        maintains an order of keys according to their natural ordering or by a
+        comparator.</label
+      >
+    </div>
+  </div>
+  <button type="submit">Submit Answers</button>
+</form>
+{% endblock content %}

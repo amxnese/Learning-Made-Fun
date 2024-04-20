@@ -1,21 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
-    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Level 4</title>
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1>JavaScript Test: Conditional Statements</h1>
-      <form id="quiz-form" action="{% url 'app-jsTest4' %}" method="post">
-        {% csrf_token %}
-        <div class="question">
-          <h2>What will the following JavaScript code output?</h2>
-          <pre>
+{% extends "app/baseTest.html" %} {% load static %} {% block title %}
+<title>Level 4</title>
+{% endblock title %} {% block header %}
+<h1>JavaScript Test: Conditional Statements</h1>
+{% endblock header %} {% block content %}
+<form id="quiz-form" action="{% url 'app-jsTest4' %}" method="post">
+  {% csrf_token %}
+  <div class="question">
+    <h2>What will the following JavaScript code output?</h2>
+    <pre>
             <code>
               let age = 20;
               if (age >= 18) {
@@ -24,39 +16,39 @@
                   console.log("Minor");
               }</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="1" />
-            <label for="q1-a1">Adult</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="2" />
-            <label for="q1-a2">Minor</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="3" />
-            <label for="q1-a3">Error</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>When should conditional statements be used in JavaScript?</h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="1" />
-            <label for="q2-a1">To repeat a block of code multiple times.</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="2" />
-            <label for="q2-a2"
-              >To execute a block of code based on a specific condition.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="3" />
-            <label for="q2-a3">To handle errors in code execution. </label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>What is the output of the following switch statement?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q1-a1" name="q1" value="1" />
+      <label for="q1-a1">Adult</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a2" name="q1" value="2" />
+      <label for="q1-a2">Minor</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a3" name="q1" value="3" />
+      <label for="q1-a3">Error</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>When should conditional statements be used in JavaScript?</h2>
+    <div class="pad">
+      <input type="radio" id="q2-a1" name="q2" value="1" />
+      <label for="q2-a1">To repeat a block of code multiple times.</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a2" name="q2" value="2" />
+      <label for="q2-a2"
+        >To execute a block of code based on a specific condition.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a3" name="q2" value="3" />
+      <label for="q2-a3">To handle errors in code execution. </label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What is the output of the following switch statement?</h2>
+    <pre>
             <code>
               let fruit = 'apple';
               switch (fruit) {
@@ -70,24 +62,22 @@
                       console.log('Unknown fruit');
               }</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="1" />
-            <label for="q3-a1">Yellow fruit</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="2" />
-            <label for="q3-a2">Round fruit</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="3" />
-            <label for="q3-a3">Unknown fruit</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            Consider the following nested if statement. What does it print?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q3-a1" name="q3" value="1" />
+      <label for="q3-a1">Yellow fruit</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a2" name="q3" value="2" />
+      <label for="q3-a2">Round fruit</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a3" name="q3" value="3" />
+      <label for="q3-a3">Unknown fruit</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>Consider the following nested if statement. What does it print?</h2>
+    <pre>
             <code>
               let num = 30;
               if (num > 20) {
@@ -100,43 +90,43 @@
                   console.log("Number is 20 or less");
               }</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="1" />
-            <label for="q4-a1">Number is in the range 21-39</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="2" />
-            <label for="q4-a2">Number is 40 or more</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="3" />
-            <label for="q4-a3">Number is 20 or less</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            What are the main keywords associated with conditional statements in
-            JavaScript?
-          </h2>
-          <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="1" />
-            <label for="q5-a1">function, return, value</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="2" />
-            <label for="q5-a2">if, else, switch</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="3" />
-            <label for="q5-a3">for, while, do</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            How does an else if ladder work in JavaScript? What will the
-            following code print?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q4-a1" name="q4" value="1" />
+      <label for="q4-a1">Number is in the range 21-39</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a2" name="q4" value="2" />
+      <label for="q4-a2">Number is 40 or more</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a3" name="q4" value="3" />
+      <label for="q4-a3">Number is 20 or less</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      What are the main keywords associated with conditional statements in
+      JavaScript?
+    </h2>
+    <div class="pad">
+      <input type="radio" id="q5-a1" name="q5" value="1" />
+      <label for="q5-a1">function, return, value</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a2" name="q5" value="2" />
+      <label for="q5-a2">if, else, switch</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a3" name="q5" value="3" />
+      <label for="q5-a3">for, while, do</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      How does an else if ladder work in JavaScript? What will the following
+      code print?
+    </h2>
+    <pre>
             <code>
               let score = 75;
               if (score >= 90) {
@@ -149,22 +139,22 @@
                   console.log("Grade F");
               }</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="1" />
-            <label for="q6-a1">Grade A</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="2" />
-            <label for="q6-a2">Grade B</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="3" />
-            <label for="q6-a3">Grade C</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>Which case will the following switch statement default to?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q6-a1" name="q6" value="1" />
+      <label for="q6-a1">Grade A</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a2" name="q6" value="2" />
+      <label for="q6-a2">Grade B</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a3" name="q6" value="3" />
+      <label for="q6-a3">Grade C</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>Which case will the following switch statement default to?</h2>
+    <pre>
             <code>
               let day = 5;
               switch (day) {
@@ -181,45 +171,43 @@
                       console.log("Another day");
               }</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="1" />
-            <label for="q7-a1">Monday</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="2" />
-            <label for="q7-a2">Wednesday</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="3" />
-            <label for="q7-a3">Another day</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            Why might a programmer choose to use a switch statement over
-            multiple if-else statements?
-          </h2>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="1" />
-            <label for="q8-a1">To increase the performance of the code.</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="2" />
-            <label for="q8-a2"
-              >For better readability when dealing with multiple potential
-              conditions.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="3" />
-            <label for="q8-a3"
-              >Because switch statements can execute faster than if-else
-              statements in all cases.</label
-            >
-          </div>
-        </div>
-        <button type="submit">Submit Answers</button>
-      </form>
+    <div class="pad">
+      <input type="radio" id="q7-a1" name="q7" value="1" />
+      <label for="q7-a1">Monday</label>
     </div>
-  </body>
-</html>
+    <div class="pad">
+      <input type="radio" id="q7-a2" name="q7" value="2" />
+      <label for="q7-a2">Wednesday</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q7-a3" name="q7" value="3" />
+      <label for="q7-a3">Another day</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      Why might a programmer choose to use a switch statement over multiple
+      if-else statements?
+    </h2>
+    <div class="pad">
+      <input type="radio" id="q8-a1" name="q8" value="1" />
+      <label for="q8-a1">To increase the performance of the code.</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q8-a2" name="q8" value="2" />
+      <label for="q8-a2"
+        >For better readability when dealing with multiple potential
+        conditions.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q8-a3" name="q8" value="3" />
+      <label for="q8-a3"
+        >Because switch statements can execute faster than if-else statements in
+        all cases.</label
+      >
+    </div>
+  </div>
+  <button type="submit">Submit Answers</button>
+</form>
+{% endblock content %}

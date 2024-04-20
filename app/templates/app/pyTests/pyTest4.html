@@ -1,21 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
-    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Level 4</title>
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1>Python Test: Conditional Statements</h1>
-      <form id="quiz-form" action="{% url 'app-pyTest4' %}" method="post">
-        {% csrf_token %}
-        <div class="question">
-          <h2>What will be the output of the following code?</h2>
-          <pre>
+{% extends "app/baseTest.html" %} {% load static %} {% block title %}
+<title>Level 4</title>
+{% endblock title %} {% block header %}
+<h1>Python Conditional Statements Test</h1>
+{% endblock header %} {% block content %}
+<form id="quiz-form" action="{% url 'app-pyTest4' %}" method="post">
+  {% csrf_token %}
+  <div class="question">
+    <h2>What will be the output of the following code?</h2>
+    <pre>
             <code>
               x = 10
               if x > 5:
@@ -25,46 +17,45 @@
               else:
                   print("Else block.")</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="1" />
-            <label for="q1-a1">Greater than five.</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="2" />
-            <label for="q1-a2">Less than ten.</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="3" />
-            <label for="q1-a3">Greater than five. Else block.</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>When should you use conditional statements in Python?</h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="1" />
-            <label for="q2-a1"
-              >When you need to repeat a block of code a certain number of
-              times.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="2" />
-            <label for="q2-a2"
-              >When you want to execute a block of code based on some
-              condition.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="3" />
-            <label for="q2-a3"
-              >When you want to store multiple items in a single
-              variable.</label
-            >
-          </div>
-        </div>
-        <div class="question">
-          <h2>Consider the following code snippet. What is its output?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q1-a1" name="q1" value="1" />
+      <label for="q1-a1">Greater than five.</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a2" name="q1" value="2" />
+      <label for="q1-a2">Less than ten.</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a3" name="q1" value="3" />
+      <label for="q1-a3">Greater than five. Else block.</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>When should you use conditional statements in Python?</h2>
+    <div class="pad">
+      <input type="radio" id="q2-a1" name="q2" value="1" />
+      <label for="q2-a1"
+        >When you need to repeat a block of code a certain number of
+        times.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a2" name="q2" value="2" />
+      <label for="q2-a2"
+        >When you want to execute a block of code based on some
+        condition.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a3" name="q2" value="3" />
+      <label for="q2-a3"
+        >When you want to store multiple items in a single variable.</label
+      >
+    </div>
+  </div>
+  <div class="question">
+    <h2>Consider the following code snippet. What is its output?</h2>
+    <pre>
             <code>
               age = 18
               if age >= 18:
@@ -75,22 +66,22 @@
               else:
                   print("Youth")</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="1" />
-            <label for="q3-a1">Youth</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="2" />
-            <label for="q3-a2">Young adult</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="3" />
-            <label for="q3-a3">Adult</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>What will the following code print?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q3-a1" name="q3" value="1" />
+      <label for="q3-a1">Youth</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a2" name="q3" value="2" />
+      <label for="q3-a2">Young adult</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a3" name="q3" value="3" />
+      <label for="q3-a3">Adult</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What will the following code print?</h2>
+    <pre>
             <code>
               a = 5
               b = 10
@@ -101,63 +92,61 @@
               else:
                   print("Both are equal")</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="1" />
-            <label for="q4-a1">a is greater</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="2" />
-            <label for="q4-a2">b is greater</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="3" />
-            <label for="q4-a3">Both are equal</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            What are the keywords related to conditional statements in Python?
-          </h2>
-          <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="1" />
-            <label for="q5-a1">if, for, else</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="2" />
-            <label for="q5-a2">try, except, finally</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="3" />
-            <label for="q5-a3">if, elif, else </label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>What are nested conditional statements?</h2>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="1" />
-            <label for="q6-a1"
-              >Statements that execute only if multiple conditions are met
-              simultaneously.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="2" />
-            <label for="q6-a2"
-              >A sequence of conditional statements where each statement
-              triggers another conditional statement.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="3" />
-            <label for="q6-a3"
-              >A method of organizing variables and functions for better
-              reusability.</label
-            >
-          </div>
-        </div>
-        <div class="question">
-          <h2>What output does the following Python code produce?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q4-a1" name="q4" value="1" />
+      <label for="q4-a1">a is greater</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a2" name="q4" value="2" />
+      <label for="q4-a2">b is greater</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a3" name="q4" value="3" />
+      <label for="q4-a3">Both are equal</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What are the keywords related to conditional statements in Python?</h2>
+    <div class="pad">
+      <input type="radio" id="q5-a1" name="q5" value="1" />
+      <label for="q5-a1">if, for, else</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a2" name="q5" value="2" />
+      <label for="q5-a2">try, except, finally</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a3" name="q5" value="3" />
+      <label for="q5-a3">if, elif, else </label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What are nested conditional statements?</h2>
+    <div class="pad">
+      <input type="radio" id="q6-a1" name="q6" value="1" />
+      <label for="q6-a1"
+        >Statements that execute only if multiple conditions are met
+        simultaneously.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a2" name="q6" value="2" />
+      <label for="q6-a2"
+        >A sequence of conditional statements where each statement triggers
+        another conditional statement.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a3" name="q6" value="3" />
+      <label for="q6-a3"
+        >A method of organizing variables and functions for better
+        reusability.</label
+      >
+    </div>
+  </div>
+  <div class="question">
+    <h2>What output does the following Python code produce?</h2>
+    <pre>
             <code>
               temperature = 20
               if temperature > 30:
@@ -167,22 +156,22 @@
               else:
                   print("It's a bit cold.")</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="1" />
-            <label for="q7-a1">It's hot today.</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="2" />
-            <label for="q7-a2">Nice weather.</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="3" />
-            <label for="q7-a3">It's a bit cold.</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>Given the following code, what will be printed?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q7-a1" name="q7" value="1" />
+      <label for="q7-a1">It's hot today.</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q7-a2" name="q7" value="2" />
+      <label for="q7-a2">Nice weather.</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q7-a3" name="q7" value="3" />
+      <label for="q7-a3">It's a bit cold.</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>Given the following code, what will be printed?</h2>
+    <pre>
             <code>
               number = 15
               if number % 5 == 0:
@@ -190,21 +179,19 @@
                   if number % 3 == 0:
                       print("Buzz")</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="1" />
-            <label for="q8-a1">\Fizz</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="2" />
-            <label for="q8-a2">Buzz</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="3" />
-            <label for="q8-a3">Fizz Buzz</label>
-          </div>
-        </div>
-        <button type="submit">Submit Answers</button>
-      </form>
+    <div class="pad">
+      <input type="radio" id="q8-a1" name="q8" value="1" />
+      <label for="q8-a1">\Fizz</label>
     </div>
-  </body>
-</html>
+    <div class="pad">
+      <input type="radio" id="q8-a2" name="q8" value="2" />
+      <label for="q8-a2">Buzz</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q8-a3" name="q8" value="3" />
+      <label for="q8-a3">Fizz Buzz</label>
+    </div>
+  </div>
+  <button type="submit">Submit Answers</button>
+</form>
+{% endblock content %}

@@ -1,94 +1,85 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
-    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Level 6</title>
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1>JavaScript Test: Functions</h1>
-      <form id="quiz-form" action="{% url 'app-jsTest6' %}" method="post">
-        {% csrf_token %}
-        <div class="question">
-          <h2>What does the following JavaScript function output?</h2>
-          <pre>
+{% extends "app/baseTest.html" %} {% load static %} {% block title %}
+<title>Level 6</title>
+{% endblock title %} {% block header %}
+<h1>JavaScript Test: Functions</h1>
+{% endblock header %} {% block content %}
+<h1></h1>
+<form id="quiz-form" action="{% url 'app-jsTest6' %}" method="post">
+  {% csrf_token %}
+  <div class="question">
+    <h2>What does the following JavaScript function output?</h2>
+    <pre>
             <code>
               function sayHello() {
                 console.log("Hello!");
               }
               sayHello();</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q1-a1" name="q1" value="1" />
-            <label for="q1-a1">"Hello!"</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a2" name="q1" value="2" />
-            <label for="q1-a2">Undefined</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q1-a3" name="q1" value="3" />
-            <label for="q1-a3">Nothing, it produces an error</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>Why are functions important in JavaScript?</h2>
-          <div class="pad">
-            <input type="radio" id="q2-a1" name="q2" value="1" />
-            <label for="q2-a1"
-              >They allow code to be executed only when called, reducing memory
-              usage.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a2" name="q2" value="2" />
-            <label for="q2-a2"
-              >They organize code into reusable pieces, making it more readable
-              and maintainable.</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q2-a3" name="q2" value="3" />
-            <label for="q2-a3"
-              >They speed up the execution of the program.</label
-            >
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            How do you call a function with arguments in JavaScript? What will
-            the following function return?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q1-a1" name="q1" value="1" />
+      <label for="q1-a1">"Hello!"</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a2" name="q1" value="2" />
+      <label for="q1-a2">Undefined</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q1-a3" name="q1" value="3" />
+      <label for="q1-a3">Nothing, it produces an error</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>Why are functions important in JavaScript?</h2>
+    <div class="pad">
+      <input type="radio" id="q2-a1" name="q2" value="1" />
+      <label for="q2-a1"
+        >They allow code to be executed only when called, reducing memory
+        usage.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a2" name="q2" value="2" />
+      <label for="q2-a2"
+        >They organize code into reusable pieces, making it more readable and
+        maintainable.</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q2-a3" name="q2" value="3" />
+      <label for="q2-a3">They speed up the execution of the program.</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      How do you call a function with arguments in JavaScript? What will the
+      following function return?
+    </h2>
+    <pre>
             <code>
               function addNumbers(a, b) {
                   return a + b;
               }
               console.log(addNumbers(5, 10));</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q3-a1" name="q3" value="1" />
-            <label for="q3-a1">5</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a2" name="q3" value="2" />
-            <label for="q3-a2">15</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q3-a3" name="q3" value="3" />
-            <label for="q3-a3">"5 + 10"</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            What will the following function with a conditional statement output
-            if x is 6?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q3-a1" name="q3" value="1" />
+      <label for="q3-a1">5</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a2" name="q3" value="2" />
+      <label for="q3-a2">15</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q3-a3" name="q3" value="3" />
+      <label for="q3-a3">"5 + 10"</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      What will the following function with a conditional statement output if x
+      is 6?
+    </h2>
+    <pre>
             <code>
               function testNumber(x) {
                   if (x > 10) {
@@ -99,25 +90,25 @@
               }
               console.log(testNumber(6));</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q4-a1" name="q4" value="1" />
-            <label for="q4-a1">"Greater than 10"</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a2" name="q4" value="2" />
-            <label for="q4-a2">"10 or less"</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q4-a3" name="q4" value="3" />
-            <label for="q4-a3">"6"</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            Consider a function that contains a loop. What does the following
-            function do?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q4-a1" name="q4" value="1" />
+      <label for="q4-a1">"Greater than 10"</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a2" name="q4" value="2" />
+      <label for="q4-a2">"10 or less"</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q4-a3" name="q4" value="3" />
+      <label for="q4-a3">"6"</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>
+      Consider a function that contains a loop. What does the following function
+      do?
+    </h2>
+    <pre>
             <code>
               function countToN(n) {
                   for (let i = 1; i &lt;= n; i++) {
@@ -126,44 +117,42 @@
               }
               countToN(3);</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q5-a1" name="q5" value="1" />
-            <label for="q5-a1">Prints numbers from 1 to 3</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a2" name="q5" value="2" />
-            <label for="q5-a2">Prints numbers from 0 to 3</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q5-a3" name="q5" value="3" />
-            <label for="q5-a3">Returns the sum of numbers from 1 to 3</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>What is recursion in JavaScript?</h2>
-          <div class="pad">
-            <input type="radio" id="q6-a1" name="q6" value="1" />
-            <label for="q6-a1">A method to loop through array elements</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a2" name="q6" value="2" />
-            <label for="q6-a2"
-              >A function that calls itself to solve smaller instances of the
-              same problem</label
-            >
-          </div>
-          <div class="pad">
-            <input type="radio" id="q6-a3" name="q6" value="3" />
-            <label for="q6-a3"
-              >A syntax for defining multiple functions at once</label
-            >
-          </div>
-        </div>
-        <div class="question">
-          <h2>
-            Consider the following recursive function. What is its purpose?
-          </h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q5-a1" name="q5" value="1" />
+      <label for="q5-a1">Prints numbers from 1 to 3</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a2" name="q5" value="2" />
+      <label for="q5-a2">Prints numbers from 0 to 3</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q5-a3" name="q5" value="3" />
+      <label for="q5-a3">Returns the sum of numbers from 1 to 3</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What is recursion in JavaScript?</h2>
+    <div class="pad">
+      <input type="radio" id="q6-a1" name="q6" value="1" />
+      <label for="q6-a1">A method to loop through array elements</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a2" name="q6" value="2" />
+      <label for="q6-a2"
+        >A function that calls itself to solve smaller instances of the same
+        problem</label
+      >
+    </div>
+    <div class="pad">
+      <input type="radio" id="q6-a3" name="q6" value="3" />
+      <label for="q6-a3"
+        >A syntax for defining multiple functions at once</label
+      >
+    </div>
+  </div>
+  <div class="question">
+    <h2>Consider the following recursive function. What is its purpose?</h2>
+    <pre>
             <code>
               function factorial(n) {
                   if (n === 1) {
@@ -174,22 +163,22 @@
               }
               console.log(factorial(4));</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q7-a1" name="q7" value="1" />
-            <label for="q7-a1">Calculates the sum of numbers up to n</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a2" name="q7" value="2" />
-            <label for="q7-a2">Calculates the factorial of n</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q7-a3" name="q7" value="3" />
-            <label for="q7-a3">Counts down from n to 1</label>
-          </div>
-        </div>
-        <div class="question">
-          <h2>What does the following recursive function output?</h2>
-          <pre>
+    <div class="pad">
+      <input type="radio" id="q7-a1" name="q7" value="1" />
+      <label for="q7-a1">Calculates the sum of numbers up to n</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q7-a2" name="q7" value="2" />
+      <label for="q7-a2">Calculates the factorial of n</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q7-a3" name="q7" value="3" />
+      <label for="q7-a3">Counts down from n to 1</label>
+    </div>
+  </div>
+  <div class="question">
+    <h2>What does the following recursive function output?</h2>
+    <pre>
             <code>
               function fibonacci(n) {
                   if (n &lt; 2) {
@@ -200,21 +189,19 @@
               }
               console.log(fibonacci(6));</code>
           </pre>
-          <div class="pad">
-            <input type="radio" id="q8-a1" name="q8" value="1" />
-            <label for="q8-a1">8</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a2" name="q8" value="2" />
-            <label for="q8-a2">13</label>
-          </div>
-          <div class="pad">
-            <input type="radio" id="q8-a3" name="q8" value="3" />
-            <label for="q8-a3">21</label>
-          </div>
-        </div>
-        <button type="submit">Submit Answers</button>
-      </form>
+    <div class="pad">
+      <input type="radio" id="q8-a1" name="q8" value="1" />
+      <label for="q8-a1">8</label>
     </div>
-  </body>
-</html>
+    <div class="pad">
+      <input type="radio" id="q8-a2" name="q8" value="2" />
+      <label for="q8-a2">13</label>
+    </div>
+    <div class="pad">
+      <input type="radio" id="q8-a3" name="q8" value="3" />
+      <label for="q8-a3">21</label>
+    </div>
+  </div>
+  <button type="submit">Submit Answers</button>
+</form>
+{% endblock content %}

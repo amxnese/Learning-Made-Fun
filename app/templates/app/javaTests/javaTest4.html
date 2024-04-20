@@ -1,16 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'app/tests.css' %}" />
-    <link rel="stylesheet" href="{% static 'app/monokai.css' %}" />
-    <title>Level 4</title>
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1>Java Test: Conditional Statements</h1>
+{% extends "app/baseTest.html" %} {% load static %} {% block title %}
+<title>Level 4</title>
+{% endblock title %} {% block header %}
+<h1>Java Test: Conditional Statements</h1>
+{% endblock header %} {% block content %}
       <form id="quiz-form" action="{% url 'app-javaTest4' %}" method="post">
         {% csrf_token %}
         <div class="question">
@@ -216,6 +208,4 @@
         </div>
         <button type="submit">Submit Answers</button>
       </form>
-    </div>
-  </body>
-</html>
+{% endblock content %}
