@@ -49,6 +49,9 @@ button:hover {
 }
 
 .alert{
+  top: -7px;
+  width: 98%;
+  margin: 0 auto;
   opacity: 1;
-  transition: opacity 3s;
+  transition: opacity 1s;
 }
