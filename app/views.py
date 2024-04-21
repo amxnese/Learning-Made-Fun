@@ -210,12 +210,12 @@ def javaLevel6(request):
 @login_required
 def javaTest1(request):
   if request.method == "POST":
-    answers = ['1', '2', '1', '3', '2', '2', '2', '2', '1', '2', '2']
+    answers = ['1', '2', '1', '3', '2', '2', '2', '2', '1', '2']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score, full_mark=len(answers), level=1, language="javaScript")
+    validate(request, score, full_mark=len(answers), level=1, language="java")
     return redirect('../')
   return render(request, 'app/javaTests/javaTest1.html')
 
