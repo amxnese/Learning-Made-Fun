@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box; /* Border-box model for all elements */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+body {
+    background: #e9ebee; /* Background color */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 70%; /* Container width */
+    margin: auto; /* Center container horizontally */
+    padding: 20px; /* Padding */
+    height: 100%; /* Full height */
+}
+
+.editProfile {
+    width: 100%; /* Full width */
+    background-image: linear-gradient(135deg, #4fb3cf, #50b96f); /* Gradient background */
+    color: #fff; /* Text color */
+    border-radius: 20px; /* Border radius */
+    text-align: center; /* Center align text */
+    padding: 30px 0; /* Padding */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 50%; /* Input width */
+    padding: 10px; /* Padding */
+    margin-bottom: 10px; /* Bottom margin */
+    margin-top: 10px; /* Top margin */
+    border: none; /* Remove border */
+    background-color: #eeeeef; /* Background color */
+    border-radius: 20px; /* Border radius */
+}
+
+p {
+    margin-top: 15px; /* Top margin */
+    margin-bottom: 15px; /* Bottom margin */
+}
+
+.see {
+    margin-bottom: 25px; /* Bottom margin */
+    margin-top: 25px; /* Top margin */
+    font-family: 'Open Sans', sans-serif; /* Font family */
+}
+
+button {
+    background-color: transparent; /* Transparent background */
+    border: 1px solid #FFF; /* Border */
+    border-radius: 20px; /* Border radius */
+    padding: 10px 20px; /* Padding */
+    color: #fff; /* Text color */
+    font-size: 20px; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    transition: 0.2s all ease-in-out; /* Transition effect */
+}
+
+button:hover {
+    color: #64ce84; /* Text color on hover */
+    background-color: #fff; /* Background color on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}

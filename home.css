@@ -1,0 +1,272 @@
+/* Styling for the body */
+body {
+  background: linear-gradient(135deg, #4fb3cf, #50b96f); /* Gradient background */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for h2 elements */
+h2 {
+  text-align: center; /* Center align text */
+  color: rgb(42, 108, 108); /* Text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* Styling for the top section */
+.top {
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: space-between; /* Space between items */
+  height: 70px; /* Set height */
+  align-items: center; /* Align items vertically */
+  padding: 0px 40px; /* Padding */
+}
+
+/* Styling for the logo */
+.logo {
+  font-size: 40px; /* Font size */
+  color: white; /* Text color */
+  margin: 0; /* Remove default margin */
+  margin-top: 12px; /* Top margin */
+  margin-left: 20px; /* Left margin */
+}
+
+/* Styling for navigation */
+.nav {
+  position: relative; /* Position relative */
+  left: -85px; /* Offset from the left */
+  margin-top: 30px; /* Top margin */
+}
+
+/* Styling for links */
+a {
+  padding: 30px 15px; /* Padding */
+  color: white; /* Text color */
+  font-size: 30px; /* Font size */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for links */
+a:hover {
+  color: rgb(42, 108, 108); /* Text color on hover */
+  text-decoration: underline; /* Underline on hover */
+  text-underline-position: under; /* Position of underline */
+}
+
+/* Styling for the heading section */
+.heading {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-evenly; /* Even space between items */
+  padding-top: 65px; /* Top padding */
+  align-items: center; /* Align items vertically */
+}
+
+/* Styling for the right section */
+.right {
+  width: 440px; /* Width */
+  height: 440px; /* Height */
+  background-size: cover; /* Background size */
+  border-radius: 400px; /* Rounded corners */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center align horizontally */
+  align-items: center; /* Center align vertically */
+}
+
+/* Pseudo-element for the right section */
+.right::before {
+  width: 430px; /* Width */
+  height: 430px; /* Height */
+  border: 2px solid white; /* Border */
+  content: ""; /* Content */
+  position: absolute; /* Position absolute */
+  border-radius: 430px; /* Rounded corners */
+  padding: 10px; /* Padding */
+}
+
+/* Styling for text inside the left section */
+.left p:nth-child(1) {
+  font-size: 35px; /* Font size */
+  letter-spacing: 2px; /* Letter spacing */
+}
+
+.left p:nth-child(2) {
+  font-size: 25px; /* Font size */
+}
+
+.left p:nth-child(3) {
+  font-size: 25px; /* Font size */
+  letter-spacing: 1px; /* Letter spacing */
+}
+
+.left h1 {
+  font-size: 90px; /* Font size */
+  color: rgb(48, 164, 231); /* Text color */
+}
+
+/* Additional h2 styling */
+h2 {
+  font-size: 70px; /* Font size */
+  position: relative; /* Position relative */
+  top: -4px; /* Offset from the top */
+}
+
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+.cssbuttons-io-button {
+  margin: 20px;
+  margin-top: 30px;
+  margin-left: 256px;
+  background-image:linear-gradient(135deg, #4fb3cf, #50b96f);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  border-radius: 10em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  box-shadow: 0 0 1.6em rgba(183, 33, 255, 0.3),
+    0 0 1.6em hsla(191, 98%, 56%, 0.3);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 10em;
+  right: 0.3em;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #b721ff;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.9);
+}
+
+.Btn {
+  margin-left: 28px;
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+.alert {
+  top: 8px;
+  width: 80%;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+/* Footer styling */
+footer {
+  background-color: rgb(42, 108, 108); /* Background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center align text */
+  padding: 20px 0; /* Padding */
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2em; /* Font size */
+}
