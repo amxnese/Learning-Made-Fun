@@ -14,13 +14,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="{% static 'app/home.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{% static 'app/home.css' %}" />
     <title>Learning Made Fun</title>
   </head>
   <body>
@@ -76,7 +76,7 @@
         <p class="oswald-font" style="font-size: x-large">
           You are in the right place
         </p>
-        <button class="cssbuttons-io-button" onclick="location.href='/main'">
+        <button class="cssbuttons-io-button">
           Get started
           <div class="icon">
             <svg
@@ -96,5 +96,8 @@
       </div>
       <img src="{% static 'app/web.png' %}" alt="" class="right" />
     </div>
+    <footer>
+      <p>&copy; 2024 Learning Made Fun. All rights reserved.</p>
+    </footer>
   </body>
 </html>
