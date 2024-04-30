@@ -76,14 +76,22 @@ def edit(request):
     username = request.POST.get('username')
     fname = request.POST.get('fname')
     lname = request.POST.get('lname')
-    email = request.POST.get('email')
-    user.username = username if username else user.username
-    user.first_name = fname if fname else user.first_name
-    user.last_name = lname if lname else user.last_name
-    user.email = email if email else user.email
+    password = request.POST.get('password')
+    check_pwd = authenticate(request, username=user.username, password=password)
+    if not check_pwd:
+      messages.error(request, "Wrong Password")
+      print('wrong')
+      return redirect('./')
+    if CustomUser.objects.filter(username=username):
+      messages.error(request, "username already taken")
+      print("taken")
+      return redirect('./')
+    user.username = username
+    user.first_name = fname
+    user.last_name = lname
     user.save()
     messages.success(request, 'Profile updated successfully')
-    return redirect('/')
+    return redirect('../')
   else:
     return render(request, 'users/edit.html')
 
