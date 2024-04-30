@@ -1,25 +1,35 @@
-{% extends 'users/base.html' %}
 {% load static %}
-{% block content %}
-    <h1 class="h1"><a href="{% url 'app-home' %}">Learning Made Fun</a></h1>
-    <main>
-      <header>
-        <h4>Login</h4>
-      </header>
-      <form method="post" action="{% url 'user-login' %}">
-        {% csrf_token %}
-        <div class="form_wrapper">
-          <input id="input" type="text" required name="username"/>
-          <label for="input">Username</label>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'users/login.css' %}" />
+    <title>login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">
+        <div class="log-container">
+          <h1>Log in</h1>
+          <form method="post" action="{% url 'user-login' %}">
+            {% csrf_token %}
+            <input type="text" placeholder="Username" name="username" />
+            <input type="password" placeholder="Password" name="password"/><br />
+            <button type="submit">log in</button>
+          </form>
+          <!-- <div class="clearfix"></div> -->
+          <span class="copyright">&copy;2024 Learning Made Fun</span>
         </div>
-        <div class="form_wrapper">
-          <input id="password" type="password" required name="password"/>
-          <label for="password">Password</label>
+      </div>
+      <div class="register">
+        <div class="reg-container">
+          <i class="fas fa-user-plus fa-5x"></i>
+          <h2>Hello friend</h2>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="button-29" onclick="location.href='/register'" >Register</button>
         </div>
-        <button>Login</button>
-        <div class="new_account">
-          Don't have an account ? <a href="{% url 'user-register' %}">Sign up</a>
-        </div>
-      </form>
-    </main>
-{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
