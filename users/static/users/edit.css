@@ -1,10 +1,178 @@
+* {
+  box-sizing: border-box; /* Border-box model for all elements */
+  margin: 0; 
+  padding: 0; 
+  font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
+}
+
 body {
-  background-color: #f8f9fa;
+  background: #E7E9EB; /* Background color */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Full viewport height */
 }
+
 .container {
-  margin-top: 50px;
+  width: 960px; 
+  margin: auto; /* Center container horizontally */
+  padding: 20px; /* Padding */
+  /* height: 100%;  */
 }
+
+.editProfile {
+  width: 100%; /* Full width */
+  background-image: linear-gradient(
+    135deg,
+    #4fb3cf,
+    #50b96f
+  ); /* Gradient background */
+  color: #fff; /* Text color */
+  border-radius: 20px; /* Border radius */
+  text-align: center; /* Center align text */
+  padding: 30px 0; /* Padding */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 50%; /* Input width */
+  padding: 10px; /* Padding */
+  margin-bottom: 10px; /* Bottom margin */
+  margin-top: 10px; /* Top margin */
+  border: none; /* Remove border */
+  background-color: #eeeeef; /* Background color */
+  border-radius: 20px; /* Border radius */
+}
+
+p {
+  margin-top: 15px; /* Top margin */
+  margin-bottom: 15px; /* Bottom margin */
+}
+
+.see {
+  margin-bottom: 25px; /* Bottom margin */
+  margin-top: 25px; /* Top margin */
+  font-family: "Open Sans", sans-serif; /* Font family */
+}
+
+button {
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #fff; /* Border */
+  border-radius: 20px; /* Border radius */
+  padding: 10px 20px; /* Padding */
+  color: #fff; /* Text color */
+  font-size: 20px; /* Font size */
+  text-transform: uppercase; /* Uppercase text */
+  transition: 0.2s all ease-in-out; /* Transition effect */
+}
+
+.header{
+  position:relative;
+  bottom: 20px;
+  height: 60px;
+  padding: 14px;
+}
+
+/* fading out messages */
 .alert {
   opacity: 1;             /* Start fully visible */
   transition: opacity 3s; /* Transition lasts 3 seconds */
+}
+
+/* Buttons Style */
+button{
+  top: 8px;
+  margin-right: 9px;
+  margin-left: 9px;
+}
+
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }
