@@ -1,9 +1,7 @@
-let icon = document.querySelector(".icon");
-icon.addEventListener("click", () => {
-  document.querySelector(".file-input").click();
-});
-document.querySelector('.file-input').addEventListener('change', function(event) {
+let input = document.querySelector(".file-input");
+let to_hide = document.querySelector(".to-hide");
+input.addEventListener('change', function(event) {
   if (event.target.files.length > 0) {
-    document.querySelector(".to-hide").click()
+    to_hide.click()
   }
 });
