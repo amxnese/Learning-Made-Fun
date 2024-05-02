@@ -22,7 +22,7 @@ body {
   display: flex; 
   margin: auto; /* Center the container horizontally */
   padding: 20px; /* Padding inside the container */
-  height: 570px; 
+  height: 573px; 
 }
 
 .reg-container {
@@ -39,7 +39,7 @@ body {
 /* Style for login and register sections */
 .login,
 .register {
-  width: 525px;
+  width: 531px;
 }
 
 /* Start Login Style */
