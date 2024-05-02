@@ -1,132 +1,155 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>User profile</title>
-    <!-- bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- edit profile picture icon -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'users/profile.css' %}" />
-    <link rel="stylesheet" href="{% static 'users/del-btn.css' %}" />
-    <!-- bootstrap scripts -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <title>Profile</title>
   </head>
   <body>
-    <div class="profile">
-      <h1><strong>User profile</strong></h1>
-      <div class="display">
-        <form action="" method="post" enctype="multipart/form-data">
-          {% csrf_token %}
-          {% if user.profile_picture %}
-            <img src="{{ user.profile_picture.url }}" alt="profile picture" class="profile-picture" />
-          {% else %}
-            <img src="{% static 'users/default.jpg' %}" alt="profile picture" class="profile-picture" />
-          {% endif %}
-          <span class="material-symbols-outlined icon">
-            add_photo_alternate
-          </span>
-          <input type="file" name="profile_picture" class="file-input" accept="image/*">
-          <button type="submit" class="to-hide"></button>
-        </form>
-        
-        <div class="info">
-          <label for="username">Username:</label>
-          <span id="username"><strong>{{user.username}}</strong></span>
+    <style>
+      /* Keyframe animations */
+      @keyframes python {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: {{ info.python }}%;
+        }
+      }
+      @keyframes java {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: {{ info.java }}%;
+        }
+      }
+      @keyframes javascript {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: {{ info.javaScript }}%;
+        }
+      }
 
-          <hr />
-          <label for="email">Email: <strong>{{user.email}}</strong></label>
-          <hr />
-          <label for="firstName"
-            >First Name: <strong>{{user.first_name}}</strong></label
-          >
-          <hr />
-          <label for="lastName"
-            >Last Name: <strong>{{user.last_name}}</strong>
-          </label>
-        </div>
+      @keyframes total {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: {{ info.total }}%;
+        }
+      }
+    </style>
+    <div class="container">
+      <div class="title">
+        <h1>User Profile</h1>
       </div>
-      <div class="profile-info">
-        <label for="pythonProgress">Python Progress:</label>
-        <div
-          id="pythonProgress"
-          class="progress"
-          role="progressbar"
-          aria-label="Animated striped example"
-          aria-valuenow="75"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        >
-          <div
-            class="progress-bar progress-bar-striped progress-bar-animated"
-            style="background-color: #3776ab; width: {{ info.python }}%"
-          ></div>
+      <div class="flexed">
+        <div class="left">
+          <div class="profile-pic">
+            <form action="" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <label for="file-input" class="upload-btn">
+                <input
+                  type="file"
+                  id="file-input"
+                  class="file-input"
+                  name="profile_picture"
+                  accept="image/*"
+                />
+                {% if user.profile_picture %}
+                <img
+                  src="{{ user.profile_picture.url }}"
+                  alt="profile picture"
+                />
+                {% else %}
+                <img
+                  src="{% static 'users/default.jpg' %}"
+                  alt="profile picture"
+                />
+                {% endif %}
+                <span class="plus-icon icon">+</span>
+              </label>
+              <button type="submit" class="to-hide"></button>
+            </form>
+          </div>
+          <div class="infos">
+            <div class="info">
+              <p class="thick">Username</p>
+              <p class="see">{{user.username}}</p>
+            </div>
+            <div class="info">
+              <p class="thick">first name</p>
+              <p class="see">{{user.first_name}}</p>
+            </div>
+            <div class="info">
+              <p class="thick">Last name</p>
+              <p class="see">{{user.last_name}}</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <hr />
-      <div class="profile-info">
-        <label for="javaProgress">Java Progress:</label>
-        <div
-          id="javaProgress"
-          class="progress"
-          role="progressbar"
-          aria-label="Animated striped example"
-          aria-valuenow="75"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        >
-          <div
-            class="progress-bar progress-bar-striped progress-bar-animated"
-            style="background-color: #f89820; width: {{info.java}}% "
-          ></div>
-        </div>
-      </div>
+        <div class="right">
+          <div class="skill">
+            <!-- Skill section content -->
+            <h1 class="progress">Your Progress</h1>
+            <br />
+            <hr />
+            <ul>
+              <li>
+                <h3>Python</h3>
+                <span class="bar"
+                  ><span class="python" style="width: {{info.python}}%"></span
+                ></span>
+              </li>
+              <li>
+                <h3>Java</h3>
+                <span class="bar"
+                  ><span class="java" style="width: {{info.java}}%"></span
+                ></span>
+              </li>
+              <li>
+                <h3>JavaScript</h3>
+                <span class="bar"
+                  ><span
+                    class="javascript"
+                    style="width: {{info.javaScript}}%"
+                  ></span
+                ></span>
+              </li>
+            </ul>
+          </div>
+          <div class="buttons">
+            <button
+              class="button-29 edit"
+              role="button"
+              onclick="window.location.href='edit/'"
+            >
+              Edit Profile
+            </button>
+            <button
+              class="button-29 change"
+              role="button"
+              onclick="window.location.href='change_password/'"
+            >
+              Change Password
+            </button>
+            <button class="button-29 delete" role="button">
+              Delete Account
+            </button>
+          </div>
 
-      <hr />
-      <div class="profile-info">
-        <label for="javaScriptProgress">javaScript Progress:</label>
-        <div
-          id="javaScriptProgress"
-          class="progress"
-          role="progressbar"
-          aria-label="Animated striped example"
-          aria-valuenow="75"
-          aria-valuemin="0"
-          aria-valuemax="100"
+          <!-- <button
+          class="delete-profile"
+          onclick="window.location.href = 'delete/'"
         >
-          <div
-            class="progress-bar progress-bar-striped progress-bar-animated"
-            style="background-color: #f0db4f;width: {{info.javaScript}}%"
-          ></div>
-        </div>
-      </div>
-      <br />
-      <div style="display: flex; justify-content: center">
-        <div class="button-container edit-button">
-          <button onclick="window.location.href = 'edit/';">
-            Edit Profile
-          </button>
-        </div>
-        <div
-          class="button-container change-button"
-          onclick="window.location.href = 'change_password/';"
-        >
-          <button>Change Password</button>
-        </div>
-        <div class="button-container delete-button">
+          Change Password
+        </button> -->
+
+          <!-- <div class="button-container delete-button">
           <button id="deleteButton">Delete Account</button>
           <div class="confirmationModal" id="confirmationModal">
             <div class="modalContent">
@@ -138,6 +161,8 @@
               </button>
             </div>
           </div>
+        </div> -->
+          <!-- </div> -->
         </div>
       </div>
     </div>
