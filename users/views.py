@@ -26,6 +26,8 @@ def login(request):
 def register(request):
   if request.method == "POST":
     username = request.POST.get('username')
+    fname = request.POST.get('fname')
+    lname = request.POST.get('lname')
     password = request.POST.get('password')
     confirm = request.POST.get('confirm')
     if password != confirm:
@@ -34,7 +36,7 @@ def register(request):
     if CustomUser.objects.filter(username=username):
       messages.error(request, "username already taken")
       return redirect('./')
-    CustomUser.objects.create_user(username=username, password=password)
+    CustomUser.objects.create_user(username=username, password=password, first_name=fname, last_name=lname)
     user = authenticate(request, username=username, password=password) 
     if user:
       log(request, user)
