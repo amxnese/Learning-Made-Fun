@@ -1,35 +1,41 @@
-{% extends 'users/base.html' %}
 {% load static %}
-{% block content %}
-    <h1 class="h1"><a href="{% url 'app-home' %}">Learning Made Fun</a></h1>
-    <main>
-      <header>
-        <h4>Register</h4>
-      </header>
-      <form method="post" action="{% url 'user-register' %}">
-        {% csrf_token %}
-        <div class="form_wrapper">
-          <input id="username" type="text" required name="username"/>
-          <label for="username">Username</label>
-        </div>
-        <div class="form_wrapper">
-          <input id="password" type="password" required name="password"/>
-          <label for="password">Password</label>
-        </div>
-        <div class="form_wrapper">
-          <input id="confirm" type="password" required name="confirm"/>
-          <label for="confirm">Confirm Password</label>
-        </div>
-        <!-- <div class="remember_box">
-          <div class="remember">
-            <input id="rememberCheckBox" type="checkbox" />
-            Remember me
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'users/register.css' %}" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flexed">
+        <div class="register">
+          <div class="inner">
+            <h1>Register</h1>
+            <form method="post" action="{% url 'user-register' %}">
+              {% csrf_token %}
+              <input type="text" name="username" placeholder="Username" />
+              <input type="text" name="fname" placeholder="First Name" />
+              <input type="text" name="lname" placeholder="Last Name" />
+              <input type="password" name="password" placeholder="Password" /><br />
+              <input type="password" name="confirm" placeholder=" Confirm Password" /><br />
+              <button type="submit">Register</button>
+            </form>
+            <div class="clearfix"></div>
+            <span class="copyright">&copy;2024 Learning Made Fun</span>
           </div>
-        </div> -->
-        <button>Sign up</button>
-        <div class="new_account">
-          Already have an account ? <a href="{% url 'user-login' %}">Sign in</a>
         </div>
-      </form>
-    </main>
-{% endblock %}
+        <div class="login">
+          <div class="inner">
+            <i class="fas fa-user-plus fa-5x"></i>
+            <h2>Already Have an Account?</h2>
+            <p>You Can Sign in From Here</p>
+            <button class="button-29" onclick="location.href='/login'" >Login</button>
+            <!-- <button>Login <i class="fas fa-arrow-circle-right"></i></button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
