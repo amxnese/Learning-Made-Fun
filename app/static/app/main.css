@@ -1,50 +1,142 @@
+/* Styling for the body */
 body {
-  font-family: 'Bebas Neue';
-  margin: 0;
-  padding: 0;
-  background: #00bfff;
-  height: 100vh;
+    background: linear-gradient(135deg, #4fb3cf, #50b96f); /* Background gradient */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f0f0f0;
-  padding: 10px 20px;
+
+/* Styling for h2 elements */
+h2 {
+    text-align: center; /* Center align text */
+    color: white; /* Text color */
+    margin-top: 20px; /* Top margin */
 }
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+
+/* Styling for the top section */
+.top {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Arrange items in a row */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Space between items */
+    height: 50px; /* Set height */
+    align-items: center; /* Align items vertically */
+    padding: 0px 40px; /* Padding */
 }
-.navbar li {
-  padding: 8px 12px;
+
+/* Styling for navigation */
+.nav {
+    position: relative; /* Position relative */
+    margin-top: 30px; /* Top margin */
 }
-.navbar a {
-  text-decoration: none;
-  color: #333;
+
+/* Styling for the logo */
+.logo {
+    font-size: 25px; /* Font size */
+    color: white; /* Text color */
+    margin-top: 22px; /* Top margin */
+    margin-left: 40px; /* Left margin */
 }
-.content-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+
+/* Styling for links */
+a {
+    padding: 30px 15px; /* Padding */
+    color: white; /* Text color */
+    font-size: 20px; /* Font size */
+    text-decoration: none; /* Remove underline */
 }
-.python,.java,.js {
-  color: white;
-  padding: 15px 20px;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 4px;
+
+/* Hover effect for links */
+a:hover {
+    color: rgb(42, 108, 108); /* Text color on hover */
+    text-decoration: underline; /* Underline on hover */
 }
-.python{
-  background-color: #4584B6;
+
+/* Styling for text section */
+.text {
+    text-align: center; /* Center align text */
+    background: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    color: #666666; /* Text color */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 20px; /* Font size */
+    padding: 20px; /* Padding */
+    margin: 30px auto; /* Margin */
+    width: 70%; /* Width */
 }
-.java {
-  background-color: #f89820;
+
+/* Styling for lower body section */
+.lowerBody {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap items to next row */
+    justify-content: space-between; /* Space between items */
+    margin: 0 auto; /* Margin */
+    width: 80%; /* Width */
 }
-.js {
-  background-color: #f0db4f;
+
+/* Styling for individual skill sections */
+.java,
+.javascript,
+.python {
+    flex-basis: 30%; /* Flex basis */
+    text-align: center; /* Center align text */
+    margin-top: 40px; /* Top margin */
+    margin-bottom: 60px; /* Bottom margin */
+}
+
+/* Styling for images */
+img {
+    width: 150px; /* Width */
+    height: 150px; /* Height */
+    border-radius: 50%; /* Rounded corners */
+    border: 4px solid #2e6da4; /* Border */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Box shadow */
+    transition: transform 0.3s ease-in-out; /* Transition effect */
+    background-color: aliceblue;
+}
+
+/* Hover effect for images */
+img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+/* Styling for buttons */
+button {
+    background-color: transparent; /* Transparent background */
+    border: 1px solid #FFF; /* Border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    color: #fff; /* Text color */
+    font-size: 20px; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    transition: 0.2s all ease-in-out; /* Transition effect */
+    margin-top: 10px; /* Top margin */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    color: #64ce84; /* Text color on hover */
+    background-color: #fff; /* Background color on hover */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Styling for footer */
+footer {
+    background-color: rgb(42, 108, 108); /* Background color */
+    color: #fff; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 25px 0; /* Padding */
+    margin-top: 80px; /* Top margin */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2em; /* Font size */
+}
+
+.logo{
+    cursor: pointer;
 }
