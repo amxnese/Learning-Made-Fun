@@ -227,7 +227,7 @@ def javaTest2(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score, full_mark=len(answers), level=2, language="javaScript")
+    validate(request, score, full_mark=len(answers), level=2, language="java")
     return redirect('../')
   return render(request, 'app/javaTests/javaTest2.html')
 
@@ -239,7 +239,7 @@ def javaTest3(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=3, language="javaScript")
+    validate(request, score,  full_mark=len(answers), level=3, language="java")
     return redirect('../')
   return render(request, 'app/javaTests/javaTest3.html')
 
@@ -251,7 +251,7 @@ def javaTest4(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=4, language="javaScript")
+    validate(request, score,  full_mark=len(answers), level=4, language="java")
     return redirect('../')
   return render(request, 'app/javaTests/javaTest4.html')
 
@@ -263,19 +263,19 @@ def javaTest5(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=5, language="javaScript")
+    validate(request, score,  full_mark=len(answers), level=5, language="java")
     return redirect('../')
   return render(request, 'app/javaTests/javaTest5.html')
 
 @login_required
 def javaTest6(request):
   if request.method == "POST":
-    answers = [['1', '2', '1', '2', '2', '1', '1', '1']]
+    answers = ['1', '2', '1', '2', '2', '1', '1', '1']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=6, language="javaScript")
+    validate(request, score,  full_mark=len(answers), level=6, language="java")
     return redirect('../')
   return render(request, 'app/javaTests/javaTest6.html')
 
@@ -337,7 +337,7 @@ def jsTest1(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=1, language="java")
+    validate(request, score,  full_mark=len(answers), level=1, language="javaScript")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest1.html')
 
@@ -349,7 +349,7 @@ def jsTest2(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=2, language="java")
+    validate(request, score,  full_mark=len(answers), level=2, language="javaScript")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest2.html')
 
@@ -361,7 +361,7 @@ def jsTest3(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=3, language="java")
+    validate(request, score,  full_mark=len(answers), level=3, language="javaScript")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest3.html')
 
@@ -373,7 +373,7 @@ def jsTest4(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=4, language="java")
+    validate(request, score,  full_mark=len(answers), level=4, language="javaScript")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest4.html')
 
@@ -385,7 +385,7 @@ def jsTest5(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=5, language="java")
+    validate(request, score,  full_mark=len(answers), level=5, language="javaScript")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest5.html')
 
@@ -397,7 +397,7 @@ def jsTest6(request):
     if not to_check:
       return redirect('./')
     score = calc_score(answers, to_check)
-    validate(request, score,  full_mark=len(answers), level=6, language="java")
+    validate(request, score,  full_mark=len(answers), level=6, language="javaScript")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest6.html')
   
