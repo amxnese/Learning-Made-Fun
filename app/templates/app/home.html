@@ -1,103 +1,99 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'app/home.css' %}" />
-    <title>Learning Made Fun</title>
-  </head>
-  <body>
-    <div class="top">
-      <div class="logo">Learning Made Fun</div>
-      <div class="nav">
-        {% if not user.is_authenticated %}
-        <a href="{% url 'user-login' %}"> Login </a>
-        <a href="{% url 'user-register' %}"> Register </a>
-        {% endif %}
-        <a href=""> Contact us </a>
-        <a href=""> About us </a>
-        {% if user.is_authenticated %}
-        <a href="/profile"> Profile </a>
-        <button class="Btn" onclick="location.href='/logout'">
-          <div class="sign">
-            <svg viewBox="0 0 512 512">
-              <path
-                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
-              ></path>
-            </svg>
-          </div>
-          <div class="text">Logout</div>
-        </button>
-        {% endif %}
-      </div>
+    <title>Document</title>
+</head>
+<body>
+    <div class="up">
+        <h1 class="upH1"> Learning Made Fun</h1>
+        <p class="upP">Explore our comprehensive courses and transform your career.</p>
+        <button onclick="window.location.href='/main'">Explore courses</button>
     </div>
-    {% if messages %} {% for message in messages %}
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{ message }}
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button>
+    <div class="midlle">
+        <h1 class="h1M">Learning Made Fun</h1>
+        <p class="p-m">A definition of the most common and widely used programming languages.</p>
+        <div class="carts">
+            <div class="cart">
+                <h2>Python</h2>
+                <p class="aa">Explore the versatile Python language and learn to build applications, automate tasks, and more.</p>
+            </div>
+            <div class="cart">
+                <h2>C++</h2>
+                <p class="p-cart">Explore the versatile Python language and learn to build applications, automate tasks, and more.</p>
+            </div>
+            <div class="cart">
+                <h2>React</h2>
+                <p class="p-cart">Explore the versatile Python language and learn to build applications, automate tasks, and more.</p>
+            </div>
+            <div class="cart">
+                <h2>Css</h2>
+                <p class="p-cart">Explore the versatile Python language and learn to build applications, automate tasks, and more.</p>
+            </div>
+            <div class="cart">
+                <h2>Java</h2>
+                <p class="p-cart">Explore the versatile Python language and learn to build applications, automate tasks, and more.</p>
+            </div>
+            <div class="cart">
+                <h2>Python</h2>
+                <p class="p-cart">Explore the versatile Python language and learn to build applications, automate tasks, and more.</p>
+            </div>
+        </div>
     </div>
-    {% endfor %}
-    <script src="{% static 'app/appHide.js' %}"></script>
-    <script>
-      hideMessage();
-    </script>
-    {% endif %}
-    <div class="heading">
-      <div class="left">
-        <p class="oswald-font" style="top: -21px; position: flex">
-          New To programming?
-        </p>
-        <p class="oswald-font" style="top: -21px; position: flex">
-          Don't Know Where To Start?
-        </p>
-        <h2>Don't Wait</h2>
-        <p class="oswald-font" style="font-size: x-large">
-          You are in the right place
-        </p>
-        <button class="cssbuttons-io-button" onclick="window.location.href='/main'">
-          Get started
-          <div class="icon">
-            <svg
-              height="24"
-              width="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-        </button>
-      </div>
-      <img src="{% static 'app/web.png' %}" alt="" class="right" />
+    <div class="low">
+        <h1 class="h1low">What Our Students Say</h1>
+        <p class="plow">Hear from our students about their learning experiences and how our courses have impacted their careers.</p>
+        <div class="comment">
+            <div class="com">
+                <img src="images/l60Hf.png" alt="">
+                <h2> Akram</h2>
+                <p class="p-com">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, quibusdam.</p>
+            </div>
+            <div class="com">
+                <img src="images/l60Hf.png" alt="Profile Photo">
+                <h2> Nour </h2>
+                <p class="p-com">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, porro!</p>
+            </div>
+            <div class="com">
+                <img src="images/l60Hf.png" alt="Profile Photo">
+                <h2> Wassim </h2>
+                <p class="p-com">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, accusamus!</p>
+            </div>
+        </div>
     </div>
-    <footer>
-      <p>&copy; 2024 Learning Made Fun. All rights reserved.</p>
-    </footer>
-  </body>
+    <div class="low-l">
+        <h1 class="h1Aboutus">About us</h1>
+        <p class="pAboutus">A website for learning programming typically serves as a comprehensive online
+            hub where aspiring programmers can access structured lessons, practice coding challenges,
+            engage in interactive coding exercises, and often participate in a community of fellow learners and mentors.
+            These platforms cater to learners of all levels, from absolute beginners to advanced coders,
+            covering a wide range of programming languages, concepts, and technologies.</p>
+            <hr class="line">
+            <form class="ContactUs">
+                <h1 class="h1contactus">Contact Us</h1>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="email" placeholder="Email">
+                <input class="inputmessage" type="text" placeholder="Message">
+                <button>Send</button>
+            </form>
+    </div>
+    <div class="footer">
+        <p class="pf">© 2024 Programming Courses. All rights reserved.</p>
+        <div class="nav">
+            {% if not user.is_authenticated %}
+            <a href="{% url 'user-login' %}">Login</a>
+            <a href="{% url 'user-register' %}">Register</a>
+            {% endif %}
+            <a href="{% url 'app-main' %}">Courses</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'user-profile' %}">Profile</a>
+            <a href="{% url 'user-logout' %}">Logout</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
 </html>

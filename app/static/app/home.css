@@ -1,394 +1,228 @@
-/* Styling for the body */
-body {
-  background: linear-gradient(
-    135deg,
-    #4fb3cf,
-    #50b96f
-  ); /* Gradient background */
-  height: 100vh; /* Full viewport height */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Aria
+}
+.up{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #111827;
+    margin-bottom: 50px;   
+}
+.upH1{
+    font-size: 50px;
+    color: #ffffff;
+    margin: 30px 0;
+}
+.upP{
+    font-size: 25px;
+    color: silver;
+    margin: 30px 0;
+}
+button{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #4F46E5;
+    border: solid 2px #4F46E5;
+    margin: 30px 0;
+    cursor: pointer;
+    font-size: 25px;
+}
+button:hover{
+    background-color: #ffffff;
+    color: #111827;
+    border: solid white 2px;
+}
+.midlle{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/* Styling for h2 elements */
-h2 {
-  text-align: center; /* Center align text */
-  color: rgb(42, 108, 108); /* Text color */
-  margin: 0; /* Remove default margin */
+.h1M{
+    font-size: 50px;
+    margin: 30px 0;
+}
+.p-m{
+    font-size: 25px;
+    margin: 30px 100px;
+    color: #606366;
+    
+}
+.carts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px;
+}
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    background-color: white;
+    margin: 30px 15px;
+    border-radius: 20px;
+    padding: 0px 5px;
+    box-shadow: 0px 8px 12px rgba(174,178,183,0.5); 
+    position: relative;
+    margin-left: 35px;
+    margin-right: 35px;
+    
+}
+.cart:hover{
+    scale: 1.05;
+    
+}
+h2{
+    margin-bottom: 10px;
+}
+.p-cart{
+    color: #606366;
+    line-height: 20px;
+    margin: 15px 0;
+}
+.low{
+    background-color:#F3F4F6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.comment{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+.com {
+    height: auto; 
+    background-color: white;
+    margin: 30px 15px;
+    border-radius: 20px;
+    padding: 30px 30px;
+    box-shadow: 0px 8px 12px rgba(174, 178, 183, 0.5);
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-/* Styling for the top section */
-.top {
-  display: flex; /* Use flexbox layout */
-  flex-direction: row; /* Arrange items in a row */
-  justify-content: space-between; /* Space between items */
-  height: 70px; /* Set height */
-  align-items: center; /* Align items vertically */
-  padding: 0px 40px; /* Padding */
+.com img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
 }
 
-/* Styling for the logo */
-.logo {
-  font-size: 40px; /* Font size */
-  color: white; /* Text color */
-  margin: 0; /* Remove default margin */
-  margin-top: 12px; /* Top margin */
-  margin-left: 20px; /* Left margin */
+.h1low{
+    font-size: 50px;
+    margin: 30px 0;
+}
+.plow{
+    font-size: 25px;
+    margin: 30px 100px;
+    color: #606366;
+}
+.p-com{
+    text-align: center;
+    color: #606366;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #111827;
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
 }
 
-/* Styling for navigation */
-.nav {
-  position: relative; /* Position relative */
-  left: -85px; /* Offset from the left */
-  margin-top: 30px; /* Top margin */
+.nav{
+    justify-content: space-between;
+    position: absolute;
+    right: 13%;
+    
 }
-
-/* Styling for links */
-a {
-  padding: 30px 15px; /* Padding */
-  color: white; /* Text color */
-  font-size: 30px; /* Font size */
-  text-decoration: none; /* Remove underline */
+a{
+    text-decoration: none;
+    color: silver;
+    font-size: 20px;
 }
-
-/* Hover effect for links */
-a:hover {
-  color: rgb(42, 108, 108); /* Text color on hover */
-  text-decoration: underline; /* Underline on hover */
-  text-underline-position: under; /* Position of underline */
+.pf{
+    color: silver;
+    font-size: 20px;
 }
-
-/* Styling for the heading section */
-.heading {
-  display: flex; /* Use flexbox layout */
-  justify-content: space-evenly; /* Even space between items */
-  padding-top: 65px; /* Top padding */
-  align-items: center; /* Align items vertically */
+.nav > *{
+    margin: 15px;
 }
-
-/* Styling for the right section */
-.right {
-  width: 440px; /* Width */
-  height: 440px; /* Height */
-  background-size: cover; /* Background size */
-  border-radius: 400px; /* Rounded corners */
-  display: flex; /* Use flexbox layout */
-  justify-content: center; /* Center align horizontally */
-  align-items: center; /* Center align vertically */
+.low-l{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 170vh;
+    background-color: #111827;  
 }
-
-/* Pseudo-element for the right section */
-.right::before {
-  width: 430px; /* Width */
-  height: 430px; /* Height */
-  border: 2px solid white; /* Border */
-  content: ""; /* Content */
-  position: absolute; /* Position absolute */
-  border-radius: 430px; /* Rounded corners */
-  padding: 10px; /* Padding */
+.h1Aboutus{
+    font-size: 50px;
+    color: white;
 }
-
-/* Styling for text inside the left section */
-.left p:nth-child(1) {
-  font-size: 35px; /* Font size */
-  letter-spacing: 2px; /* Letter spacing */
+.pAboutus{
+    font-size: 30px;
+    color: silver;
+    margin: 30px 50px;
 }
-
-.left p:nth-child(2) {
-  font-size: 25px; /* Font size */
+.line {
+    margin: 20px 0;
+    border: 2px solid silver;
+    width: 80%;
 }
-
-.left p:nth-child(3) {
-  font-size: 25px; /* Font size */
-  letter-spacing: 1px; /* Letter spacing */
+.ContactUs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
 }
-
-.left h1 {
-  font-size: 90px; /* Font size */
-  color: rgb(48, 164, 231); /* Text color */
+input{
+    height: 50px;
+    width: 200px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: white solid 2px;
 }
-
-/* Additional h2 styling */
-h2 {
-  font-size: 70px; /* Font size */
-  position: relative; /* Position relative */
-  top: -4px; /* Offset from the top */
+input::placeholder {
+    font-size: 15px; 
+    padding-left: 10px;
 }
-
-.oswald-font {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  color: white;
+.h1contactus{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 30px;
 }
-
-.cssbuttons-io-button {
-  margin: 20px;
-  margin-top: 30px;
-  margin-left: 256px;
-  background-image: linear-gradient(135deg, #4fb3cf, #50b96f);
-  color: white;
-  font-family: inherit;
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 17px;
-  border-radius: 10em;
-  border: none;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 500;
-  box-shadow: 0 0 1.6em rgba(183, 33, 255, 0.3),
-    0 0 1.6em hsla(191, 98%, 56%, 0.3);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.cssbuttons-io-button .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 10em;
-  right: 0.3em;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.cssbuttons-io-button:hover .icon {
-  width: calc(100% - 0.6em);
-}
-
-.cssbuttons-io-button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #b721ff;
-}
-
-.cssbuttons-io-button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons-io-button:active .icon {
-  transform: scale(0.9);
-}
-
-.Btn {
-  margin-left: 28px;
-  margin-top: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition-duration: 0.3s;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: rgb(255, 65, 65);
-}
-
-.sign {
-  width: 100%;
-  transition-duration: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sign svg {
-  width: 17px;
-}
-
-.sign svg path {
-  fill: white;
-}
-
-/* text */
-.text {
-  position: absolute;
-  right: 0%;
-  width: 0%;
-  opacity: 0;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 600;
-  transition-duration: 0.3s;
-}
-
-/* hover effect on button width */
-.Btn:hover {
-  width: 125px;
-  border-radius: 40px;
-  transition-duration: 0.3s;
-}
-
-.Btn:hover .sign {
-  width: 30%;
-  transition-duration: 0.3s;
-  padding-left: 20px;
-}
-
-/* hover effect button's text */
-.Btn:hover .text {
-  opacity: 1;
-  width: 70%;
-  transition-duration: 0.3s;
-  padding-right: 10px;
-}
-
-/* button click effect*/
-.Btn:active {
-  transform: translate(2px, 2px);
-}
-
-.alert {
-  top: 8px;
-  width: 80%;
-  margin: 0 auto;
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-/* Footer styling */
-footer {
-  background-color: rgb(42, 108, 108); /* Background color */
-  color: #fff; /* Text color */
-  text-align: center; /* Center align text */
-  padding: 20px 0; /* Padding */
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  margin: 0; /* Remove default margin */
-  font-size: 1.2em; /* Font size */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* CSS */
-.button-82-pushable {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  outline-offset: 4px;
-  transition: filter 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-82-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
-  will-change: transform;
-  transform: translateY(2px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
-
-.button-82-edge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: linear-gradient(
-    to left,
-    hsl(340deg 100% 16%) 0%,
-    hsl(340deg 100% 32%) 8%,
-    hsl(340deg 100% 32%) 92%,
-    hsl(340deg 100% 16%) 100%
-  );
-}
-
-.button-82-front {
-  display: block;
-  position: relative;
-  padding: 12px 27px;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  color: white;
-  background: hsl(345deg 100% 47%);
-  will-change: transform;
-  transform: translateY(-4px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
-
-@media (min-width: 768px) {
-  .button-82-front {
-    font-size: 1.25rem;
-    padding: 12px 42px;
-  }
-}
-
-.button-82-pushable:hover {
-  filter: brightness(110%);
-  -webkit-filter: brightness(110%);
-}
-
-.button-82-pushable:hover .button-82-front {
-  transform: translateY(-6px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-.button-82-pushable:active .button-82-front {
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-
-.button-82-pushable:hover .button-82-shadow {
-  transform: translateY(4px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-.button-82-pushable:active .button-82-shadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
-
-.button-82-pushable:focus:not(:focus-visible) {
-  outline: none;
+.inputmessage{
+    height: 100px;
+    width: 400px;
+    margin: 20px 0;
+    border-radius: 10px;
 }
