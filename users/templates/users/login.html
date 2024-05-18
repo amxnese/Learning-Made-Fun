@@ -8,6 +8,16 @@
     <title>login</title>
   </head>
   <body>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'users/usersHide.js' %}"></script>
+    <div id="errorMessage" class="alert">
+      {{ message }}
+      <button class="close-button" onclick="closeMe()">&times;</button>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
     <div class="container">
       <div class="login">
         <div class="log-container">
@@ -15,8 +25,12 @@
           <form method="post" action="{% url 'user-login' %}">
             {% csrf_token %}
             <input type="text" placeholder="Username" name="username" />
-            <input type="password" placeholder="Password" name="password"/><br />
-            <button type="submit">log in</button>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+            /><br />
+            <button class="submit" type="submit">log in</button>
           </form>
           <!-- <div class="clearfix"></div> -->
           <span class="copyright">&copy;2024 Learning Made Fun</span>
@@ -27,9 +41,12 @@
           <i class="fas fa-user-plus fa-5x"></i>
           <h2>Don't Have an Account?</h2>
           <p>You Can Sign up From Here</p>
-          <button class="button-29" onclick="location.href='/register'" >Register</button>
+          <button class="button-29" onclick="location.href='/register'">
+            Register
+          </button>
         </div>
       </div>
     </div>
+
   </body>
 </html>
