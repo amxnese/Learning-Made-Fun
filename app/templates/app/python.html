@@ -1,130 +1,159 @@
-{% extends 'app/navbar.html' %} {% load static %} {% block additional_styles %}
-<link rel="stylesheet" href="{% static 'app/levelsPy.css' %}" />
-{% endblock %} {% block content %}
-<section class="content">
-  <div class="card">
-    <div class="card-body text-center">
-      <h3 class="card-title">
-        Introduction to Python
-        <img src="{% static 'app/python.png' %}" alt="" /><i
-          class="ri-image-add-line"
-        ></i>
-      </h3>
-      <p class="card-text">
-        This section provides an overview of the Python programming language and
-        terminology, Its capabilities, and why would you consider learning the
-        language.
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'app/levelsPy.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>python</title>
+  </head>
+  <body>
+		<div class="bar">
+			<h1 onclick="location.href='/'" class="pf home">Learning Made Fun</h1>
+      <div class="nav">
+        <a href="../">Main</a>
+        <a href="../#available">Courses</a>
+        <a href="../../#contact">Contact</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+    <div class="midlle">
+      <h1 class="h1M">Why Learn Python?</h1>
+      <p class="pm1">
+        Python is a powerful and versatile programming language that offers a
+        wide range of benefits for aspiring developers.
       </p>
-      <a href="{% url 'app-pyIntro' %}" class="btn btn-primary"
-        >Start Learning</a
-      >
-    </div>
-  </div>
-  <div class="level">
-    <!-- Level 1 -->
-    <div class="carte">
-      <div class="card-body">
-        <h3 class="card-title">Level 1: Syntax</h3>
-        <p class="card-text">
-          This level covers syntax, data types, variables...
-        </p>
-        <a href="{% url 'app-pyLevel1' %}" class="btn btn-{{levels.lvl1}}"
-          >Start Learning</a
-        >
+      <div class="carts">
+        <div class="cart">
+          <h2>Versatility and Flexibility</h2>
+          <p class="p-cart">
+            Python is a versatile language that can be used for a wide range of
+            applications, including web development, data analysis, artificial
+            intelligence, machine learning, scientific computing, and
+            automation. Its extensive standard library and third-party packages
+            provide developers with powerful tools to tackle various tasks
+            efficiently.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>Large and Supportive Community</h2>
+          <p class="p-cart">
+            Python boasts a large and supportive community of developers
+            worldwide. This vibrant community contributes to the continuous
+            improvement of the language, develops useful libraries and
+            frameworks, and provides extensive documentation and tutorials,
+            making it easy for newcomers to get started and learn from others.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>Cross-Platform Compatibility</h2>
+          <p class="p-cart">
+            Python is a platform-independent language, meaning that code written
+            in Python can run seamlessly on different operating systems,
+            including Windows, macOS, and Linux, without requiring any
+            modifications. This cross-platform compatibility enhances code
+            portability and simplifies deployment across diverse environments.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>Rapid Development</h2>
+          <p class="p-cart">
+            Python's focus on simplicity and productivity enables developers to
+            build and iterate on projects quickly. Its dynamic typing,
+            high-level data structures, and built-in support for common
+            programming tasks, such as file handling and networking, accelerate
+            the development process and reduce time-to-market for applications.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>Scalability and Performance</h2>
+          <p class="p-cart">
+            While Python is often praised for its ease of use and rapid
+            development, it also offers scalability and performance
+            capabilities. By leveraging techniques such as optimization,
+            concurrency, and parallelism, developers can create high-performance
+            Python applications that handle large-scale data processing and
+            computational tasks effectively.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>Simplicity and Readability</h2>
+          <p class="p-cart">
+            Python's syntax is designed to be simple and easy to read, making it
+            an ideal language for beginners. Its clean and concise code promotes
+            better maintainability and collaboration among developers.
+          </p>
+        </div>
       </div>
     </div>
-    <!-- Level 2 -->
-    <div class="carte">
-      <div class="card-body">
-        <h3 class="card-title">Level 2: Built-in methods</h3>
-        <p class="card-text">
-          Covering most usable and known built-in functions of the language.
-        </p>
-        {% if levels.lvl2 == 'primary' %}
-        <a href="{% url 'app-pyLevel2' %}" class="btn btn-{{levels.lvl2}}"
-          >Start Learning</a
-        >
-        {% else %}
-        <a href="invalid/" class="btn btn-{{levels.lvl2}}">Start Learning</a>
-        {% endif %}
-      </div>
-    </div>
-    <!-- End Level 2 -->
-  </div>
-  <!-- End Level Cards -->
+    <div class="low">
+      <img src="{% static 'app/python.png' %}" alt="" />
+      <h1 class="h1M">Let's Start</h1>
+      <p class="pm1">lessons and tests</p>
+      <div class="carts1">
+        <div class="cart1">
+          <a class="pm1" href="{% url 'app-pyLevel1' %}"> Cour 1</a>
 
-  <!-- Level Cards -->
-  <div class="level-container">
-    <!-- Level 3 -->
-    <div class="carte">
-      <div class="card-body">
-        <h3 class="card-title">Level 3: Built-in data structures</h3>
-        <p class="card-text">
-          This level covers the Python's built-in data structures and some
-          built-in methods related to them
-        </p>
-        {% if levels.lvl3 == 'primary' %}
-        <a href="{% url 'app-pyLevel3' %}" class="btn btn-{{levels.lvl3}}"
-          >Start Learning</a
-        >
-        {% else %}
-        <a href="invalid/" class="btn btn-{{levels.lvl3}}">Start Learning</a>
-        {% endif %}
-      </div>
-    </div>
-    <!-- end Level 3 -->
-    <!-- Level 4 -->
-    <div class="carte">
-      <div class="card-body">
-        <h3 class="card-title">Level 4: Conditional Statements</h3>
-        <p class="card-text">
-          Understanding Conditional Statements and relational operators
-        </p>
-        {% if levels.lvl4 == 'primary' %}
-        <a href="{% url 'app-pyLevel4' %}" class="btn btn-{{levels.lvl4}}"
-          >Start Learning</a
-        >
-        {% else %}
-        <a href="invalid/" class="btn btn-{{levels.lvl4}}">Start Learning</a>
-        {% endif %}
-      </div>
-    </div>
-    <!-- end Level 4 -->
-  </div>
-  <!-- End Level Cards -->
+          {% if levels.lvl2 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyLevel2' %}"> Lesson 2</a>
+          {% else %}
+          <a href="invalid/"> Lesson 2</a>
+          {% endif %} 
+					{% if levels.lvl3 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyLevel3' %}"> Lesson 3</a>
+          {% else %}
+          <a href="invalid/"> Lesson 3</a>
+          {% endif %} 
+					{% if levels.lvl4 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyLevel4' %}"> Lesson 4</a>
+          {% else %}
+          <a href="invalid/"> Lesson 4</a>
+          {% endif %} 
+					{% if levels.lvl5 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyLevel5' %}"> Lesson 5</a>
+          {% else %}
+          <a href="invalid/"> Lesson 5</a>
+          {% endif %} 
+					{% if levels.lvl6 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyLevel6' %}"> Lesson 6</a>
+          {% else %}
+          <a href="invalid/"> Lesson 6</a>
+          {% endif %}
+        </div>
+        <div class="cart1">
+					<a class="pm1" href="{% url 'app-pyTest1' %}"> Test 1</a>
+          {% if levels.lvl2 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyTest2' %}"> Test 2</a>
+          {% else %}
+          <a href="invalid/"> Test 2</a>
+          {% endif %} 
+					{% if levels.lvl3 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyTest3' %}"> Test 3</a>
+          {% else %}
+          <a href="invalid/"> Test 3</a>
+          {% endif %} 
+					{% if levels.lvl4 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyTest4' %}"> Test 4</a>
+          {% else %}
+          <a href="invalid/"> Test 4</a>
+          {% endif %} 
+					{% if levels.lvl5 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyTest5' %}"> Test 5</a>
+          {% else %}
+          <a href="invalid/"> Test 5</a>
+          {% endif %} 
+					{% if levels.lvl6 == 'primary' %}
+          <a class="pm1" href="{% url 'app-pyTest6' %}"> Test 6</a>
+          {% else %}
+          <a href="invalid/"> Test 6</a>
+          {% endif %}
 
-  <!-- Level Cards -->
-  <div class="level-container">
-    <!-- end Level 5 -->
-    <div class="carte">
-      <div class="card-body">
-        <h3 class="card-title">Level 5: Loops</h3>
-        <p class="card-text">Where, When, Why, and How to use Loops</p>
-        {% if levels.lvl5 == 'primary' %}
-        <a href="{% url 'app-pyLevel5' %}" class="btn btn-{{levels.lvl5}}"
-          >Start Learning</a
-        >
-        {% else %}
-        <a href="invalid/" class="btn btn-{{levels.lvl5}}">Start Learning</a>
-        {% endif %}
+        </div>
       </div>
     </div>
-    <!-- end Level 5 -->
-
-    <!-- Level 6-->
-    <div class="carte">
-      <div class="card-body">
-        <h3 class="card-title">Level 6: Functions</h3>
-        <p class="card-text">Getting Started with the concept of functions</p>
-        {% if levels.lvl6 == 'primary' %}
-        <a href="{% url 'app-pyLevel6' %}" class="btn btn-{{levels.lvl6}}"
-          >Start Learning</a
-        >
-        {% else %}
-        <a href="invalid/" class="btn btn-{{levels.lvl6}}">Start Learning</a>
-        {% endif %}
-      </div>
+    <div class="footer">
+      <p class="pf">© 2024 Programming Courses. All rights reserved</p>
     </div>
-  </div>
-</section>
-{% endblock %}
+		<script src="{% static 'app/scroll.js' %}"></script>
+  </body>
+</html>
