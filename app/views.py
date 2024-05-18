@@ -45,7 +45,7 @@ def python(request):
   user = request.user
   lvl_py = user.python
   levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary', 'secondary']
-  for i in range(0, lvl_py+1):
+  for i in range(0, lvl_py):
     levels[i] = 'primary'
   lvl = {
     'lvl1':levels[0],
@@ -167,7 +167,7 @@ def java(request):
   user = request.user
   lvl_java = user.java
   levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary', 'secondary']
-  for i in range(0, lvl_java+1):
+  for i in range(0, lvl_java):
     levels[i] = 'primary'
   lvl = {
     'lvl1':levels[0],
@@ -289,7 +289,7 @@ def js(request):
   user = request.user
   lvl_js = user.javaScript
   levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary', 'secondary']
-  for i in range(0, lvl_js+1):
+  for i in range(0, lvl_js):
     levels[i] = 'primary'
   lvl = {
     'lvl1':levels[0],
