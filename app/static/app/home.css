@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Aria
+    font-family: sans-serif;
 }
 .up{
     display: flex;
@@ -225,4 +225,7 @@ input::placeholder {
     width: 400px;
     margin: 20px 0;
     border-radius: 10px;
+}
+html {
+    scroll-behavior: smooth;
 }
