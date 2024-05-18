@@ -21,7 +21,7 @@ body {
   /* height: 100%;  */
 }
 
-.editProfile {
+.editProfile, .changePasswd{
   width: 100%; /* Full width */
   background-image: linear-gradient(
     135deg,
@@ -175,4 +175,8 @@ button{
 .button-30:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.passdiv{
+  padding: 15px;
 }
