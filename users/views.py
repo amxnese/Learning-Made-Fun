@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate,login as log, logout as out
 from .models import CustomUser
 from django.contrib.auth.decorators import login_required
 from django.core.files.storage import default_storage
+from django.contrib.auth import update_session_auth_hash
 
 def login(request):
   if request.method == "POST":
@@ -112,6 +113,7 @@ def change_password(request):
       return redirect('./')
     user.set_password(new)
     user.save()
+    update_session_auth_hash(request, user)  # Keeps the user logged in
     messages.success(request, 'Updated password successfully')
     return render(request, 'app/home.html')
   else:
@@ -120,6 +122,7 @@ def change_password(request):
 @login_required
 def delete(request):
   user = request.user
+  out(request)
   user.delete()
   messages.success(request, 'Your account has been successfully deleted')
-  return render(request, 'app/home.html')
+  return redirect('/')
