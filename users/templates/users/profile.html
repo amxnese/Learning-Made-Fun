@@ -137,32 +137,22 @@
             >
               Change Password
             </button>
-            <button class="button-29 delete" role="button">
+            <button id="deleteButton" onclick="cnf_delete()" class="button-29 delete" role="button">
               Delete Account
             </button>
           </div>
 
-          <!-- <button
-          class="delete-profile"
-          onclick="window.location.href = 'delete/'"
-        >
-          Change Password
-        </button> -->
-
-          <!-- <div class="button-container delete-button">
-          <button id="deleteButton">Delete Account</button>
-          <div class="confirmationModal" id="confirmationModal">
-            <div class="modalContent">
-              <span class="close" id="closeButton">&times;</span>
-              <h2>Confirmation</h2>
-              <p>Are you sure you want to delete your account?</p>
-              <button id="confirmDelete" style="background-color: #ff4d4f">
-                Delete
-              </button>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <h2>Confirm Account Deletion</h2>
+              <p class="conf-text">Are you sure you want to delete your account? This action cannot be undone.</p>
+              <div class="button-container">
+                <button id="confirm" class="war-btn yes">Confirm</button>
+                <button id="cancel" class="war-btn cancel">Cancel</button>
+              </div>
             </div>
           </div>
-        </div> -->
-          <!-- </div> -->
+
         </div>
       </div>
     </div>
