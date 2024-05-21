@@ -83,11 +83,9 @@ def edit(request):
     check_pwd = authenticate(request, username=user.username, password=password)
     if not check_pwd:
       messages.error(request, "Wrong Password")
-      print('wrong')
       return redirect('./')
-    if CustomUser.objects.filter(username=username):
+    if CustomUser.objects.filter(username=username) and user.username != username:
       messages.error(request, "username already taken")
-      print("taken")
       return redirect('./')
     user.username = username
     user.first_name = fname
