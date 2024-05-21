@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils.safestring import mark_safe
-
+from users.models import Comment, CustomUser
 def fetch(request, size):
   lst = []
   for i in range(1, size + 1):
@@ -35,7 +35,18 @@ def validate(request, score, full_mark, level, language):
       messages.error(request, f"You failed the test with a score of {score}/{full_mark}, better luck next time")
 
 def home(request):
-  return render(request, 'app/home.html')
+  if request.method == "POST":
+    user = request.user
+    user_comment = request.POST.get('comment')
+    comment = Comment.objects.create(user=user, content=user_comment)
+    messages.success(request, "your comment was added successfully")
+    return redirect('/')
+  
+  comments = Comment.objects.all()
+  for i in comments:
+    i.profile_pic = str(f"..{CustomUser.objects.get(id=i.user_id).profile_picture.url}")
+    i.user_id = CustomUser.objects.get(id=i.user_id)
+  return render(request, 'app/home.html', {'comments': comments})
 
 def main(request):
   return render(request, 'app/main.html')
