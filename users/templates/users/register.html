@@ -8,6 +8,16 @@
     <title>Register</title>
   </head>
   <body>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'users/usersHide.js' %}"></script>
+    <div id="errorMessage" class="alert">
+      {{ message }}
+      <button class="close-button" onclick="closeMe()">&times;</button>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
     <div class="container">
       <div class="flexed">
         <div class="register">
