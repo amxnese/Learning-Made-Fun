@@ -5,9 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'app/home.css' %}" />
-    <title>Document</title>
+    <title>Home</title>
   </head>
   <body>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'app/appHide.js' %}"></script>
+    <div class="flex alert">
+      <div class="message {{message.tags}}">
+        {% if message.tags == "success" %}
+        <h1>Logged out</h1>
+        {% elif message.tags == "info" %}
+        <h1>Deleted</h1>
+        {% elif message.tags == "error" %}
+        <h1>Commented</h1>
+        {% else %}
+        <h1>{{ message.tags }}</h1>
+        {% endif %}
+        <p>{{ message }}</p>
+      </div>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
     <div class="up">
       <h1 class="upH1">Learning Made Fun</h1>
       <p class="upP">
@@ -18,51 +38,75 @@
       </button>
     </div>
     <div class="midlle">
-      <h1 class="h1M">Learning Made Fun</h1>
+      <!-- <h1 class="h1M">Learning made fun</h1> -->
       <p class="p-m">
         A definition of the most common and widely used programming languages.
       </p>
       <div class="carts">
         <div class="cart">
           <h2>Python</h2>
-          <p class="aa">
-            Explore the versatile Python language and learn to build
-            applications, automate tasks, and more.
+          <p class="p-cart">
+            <strong>Python</strong> is a high-level,
+            <strong>interpreted</strong> programming language known for its
+            readability and versatility, commonly used for
+            <strong>web development</strong>, <strong>data analysis</strong>,
+            <strong>artificial intelligence</strong>, and
+            <strong>scientific computing</strong>
           </p>
         </div>
         <div class="cart">
-          <h2>C++</h2>
+          <h2>JavaScript</h2>
           <p class="p-cart">
-            Explore the versatile Python language and learn to build
-            applications, automate tasks, and more.
-          </p>
-        </div>
-        <div class="cart">
-          <h2>React</h2>
-          <p class="p-cart">
-            Explore the versatile Python language and learn to build
-            applications, automate tasks, and more.
-          </p>
-        </div>
-        <div class="cart">
-          <h2>Css</h2>
-          <p class="p-cart">
-            Explore the versatile Python language and learn to build
-            applications, automate tasks, and more.
+            <strong>JavaScript</strong> is a dynamic, high-level programming
+            language primarily used for
+            <strong
+              >enhancing the interactivity and functionality of web
+              pages</strong
+            >, and is an essential part of web development alongside
+            <strong>HTML</strong> and <strong>CSS</strong>
           </p>
         </div>
         <div class="cart">
           <h2>Java</h2>
           <p class="p-cart">
-            Explore the versatile Python language and learn to build
-            applications, automate tasks, and more.
+            <strong>Java</strong> is a <strong>class-based</strong>,
+            object-oriented programming language designed to have as few
+            implementation dependencies as possible, making it ideal for
+            developing platform-independent applications
           </p>
         </div>
         <div class="cart">
-          <h2>Python</h2>
+          <h2>C</h2>
           <p class="p-cart">
-            Explore the versatile Python language and learn to build
-            applications, automate tasks, and more.
+            <strong>C</strong> is a general-purpose,
+            <strong>procedural programming language</strong> that provides
+            <strong>low-level</strong> access to memory and is widely used for
+            <strong>system programming</strong>,
+            <strong>developing operating systems</strong>, and
+            <strong>embedded systems</strong> due to its
+            <strong>efficiency</strong> and control over hardware resources
+          </p>
+        </div>
+        <div class="cart">
+          <h2>C++</h2>
+          <p class="p-cart">
+            <strong>C++</strong> is an extension of the
+            <strong>C programming</strong> language that includes
+            <strong>object-oriented</strong> features, making it suitable for
+            <strong>software development</strong> that requires complex data
+            structures, real-time processing, and performance-critical
+            applications
+          </p>
+        </div>
+        <div class="cart">
+          <h2>SQL</h2>
+          <p class="p-cart">
+            <strong>SQL (Structured Query Language)</strong> is a standard
+            language for managing and manipulating
+            <strong>relational databases</strong>, allowing users to
+            <strong>query</strong>, <strong>update</strong>,
+            <strong>insert</strong>, and <strong>delete</strong> data with
+            commands that are both expressive and powerful
           </p>
         </div>
       </div>
@@ -81,7 +125,7 @@
           <div class="slide">
             <img src="{{ comment.profile_pic }}" alt="" />
             <p>{{comment.content}}</p>
-            <h3>{{ comment.user_id }}</h3>
+            <h3>- {{ comment.user_id }}</h3>
           </div>
           {% endfor %}
           <script>
@@ -129,10 +173,14 @@
       <hr class="line" />
       <form id="contact" class="ContactUs">
         <h1 class="h1contactus">Contact Us</h1>
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
-        <input type="email" placeholder="Email" />
-        <input class="inputmessage" type="text" placeholder="Message" />
+        <input name="fname" type="text" placeholder="First Name" />
+        <input name="lname" type="text" placeholder="Last Name" />
+        <input name="email" type="email" id="email" placeholder="Email" />
+        <textarea
+          placeholder="type your message here"
+          name="message"
+          id="message-area"
+        ></textarea>
         <button class="btn button-29">Send</button>
       </form>
     </div>
