@@ -8,6 +8,24 @@
     <title>main</title>
   </head>
   <body>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'app/appHide.js' %}"></script>
+    <div class="flex alert">
+      <div class="message {{message.tags}} success">
+        {% if message.tags == "info" %}
+        <h1>Registered</h1>
+        {% elif message.tags == "success" %}
+        <h1>Logged in</h1>
+        {% else %}
+        <h1>{{ message.tags }}</h1>
+        {% endif %}
+        <p>{{ message }}</p>
+      </div>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
     <div class="up">
       <h1 class="upH1">Explore Our Courses</h1>
       <p class="upP">
@@ -15,7 +33,7 @@
         category or browse our wide selection.
       </p>
       <div class="input-container">
-        <input type="text" placeholder="Search cources ..." />
+        <input type="text" placeholder="Search courses ..." />
         <button>Search</button>
       </div>
     </div>
@@ -27,97 +45,116 @@
 
       <div class="carts">
         <div class="cart">
-          <h2>Computer software development</h2>
+          <h2>Web Development</h2>
           <p class="p-cart">
-            Computer software development refers to the process of creating,
-            designing, and programming software applications or systems that run
-            on computers or other electronic devices. It involves
-            conceptualizing, planning, coding, testing, and deploying software
-            to meet specific user needs or solve particular problems. Software
-            developers use various programming languages, development
-            methodologies, and tools to build software that ranges from simple
-            applications to complex enterprise systems. The goal of software
-            development is to produce reliable, scalable, and user-friendly
-            solutions that enhance productivity, efficiency, and innovation in
-            various domains.
+            <strong>Web development</strong> involves building and maintaining
+            websites and web applications that are accessed via the internet.
+            This field encompasses a variety of tasks, including web design, web
+            content development, client-side/server-side scripting, and network
+            security configuration. basic languages used for this field are
+            <strong>HTML/CSS:</strong> Core technologies for structuring and
+            styling web pages. <strong>JavaScript:</strong> A versatile language
+            used for adding interactive elements to websites.
+            <strong>Frameworks/Libraries:</strong> <strong>React</strong>,
+            <strong>Angular</strong>, and <strong>Vue.js</strong> are popular
+            for <strong>front-end</strong> development;
+            <strong>Node.js</strong>, <strong>Django</strong>, and
+            <strong>Ruby on Rails</strong> are common for
+            <strong>back-end</strong> development. <strong>Databases:</strong>
+            <strong>MySQL</strong>, <strong>PostgreSQL</strong>,
+            <strong>MongoDB</strong>.
           </p>
         </div>
         <div class="cart">
-          <h2>Mobile software development</h2>
+          <h2>Mobile Development</h2>
           <p class="p-cart">
-            Mobile software development involves the creation, design, and
-            implementation of software applications specifically tailored to run
-            on mobile devices like smartphones and tablets. It encompasses the
-            entire lifecycle of app development, including planning, coding,
-            testing, and deployment. Mobile developers utilize programming
-            languages such as Java, Kotlin, Swift, or Dart, along with
-            development frameworks and tools, to create apps for platforms like
-            iOS and Android. The objective of mobile software development is to
-            deliver intuitive, responsive, and feature-rich applications that
-            provide valuable experiences to users while leveraging the unique
-            capabilities of mobile devices.
+            <strong>Mobile development</strong> involves creating software
+            applications that run on mobile devices such as smartphones and
+            tablets. These applications can be pre-installed on devices during
+            manufacturing or delivered as web applications using server-side or
+            client-side processing. Most Languages Used in that field are
+            <strong>Java/Kotlin:</strong> Primary languages for Android app
+            development. <strong>Swift/Objective-C:</strong> Primary languages
+            for iOS app development. <strong>React Native:</strong> A framework
+            for building native apps using React. <strong>Flutter:</strong> A UI
+            toolkit for building natively compiled applications for mobile from
+            a single codebase.
           </p>
         </div>
         <div class="cart">
-          <h2>Website development</h2>
+          <h2>Desktop Development</h2>
           <p class="p-cart">
-            Website development encompasses the process of designing, building,
-            and maintaining websites on the internet. It involves creating web
-            pages using languages like HTML, styling them with CSS, and adding
-            interactivity with JavaScript. Website developers use various tools
-            and frameworks to streamline development and ensure compatibility
-            across different browsers and devices. The goal of website
-            development is to deliver engaging, user-friendly online experiences
-            that serve specific purposes, whether informational, transactional,
-            or interactive.
+            <strong>Desktop development</strong> involves creating software
+            applications that run on desktop operating systems such as
+            <strong>Windows</strong>, <strong>macOS</strong>, and
+            <strong>Linux</strong>. These applications are designed to perform a
+            variety of tasks, from simple utilities to complex enterprise
+            software. Most languages used in this field are
+            <strong>C/C++:</strong> Widely used for system and application
+            software. <strong>C#:</strong> Popular for
+            <strong>Windows</strong> applications, especially with the
+            <strong>.NET</strong> framework. <strong>Java:</strong> Used for
+            <strong>cross-platform</strong> applications.
+            <strong>Python:</strong> Increasingly popular for a wide range of
+            desktop applications. <strong>Electron:</strong> A framework for
+            building cross-platform desktop apps with JavaScript,
+            <strong>HTML</strong>, and <strong>CSS</strong>.
           </p>
         </div>
       </div>
     </div>
     <div class="low">
-      <h1 id="available" class="h1M">Cources available</h1>
-      <p class="p-title">Computer software development</p>
-      <div class="cources">
+      <h1 id="available" class="h1M">available courses</h1>
+    </div>
+    <div class="low1">
+      <div class="courses">
         <div class="cart1">
           <img src="{% static 'app/python.png' %}" alt="" />
-          <button onclick="window.location.href='python/'" class="but">Python</button>
+          <button onclick="window.location.href='python/'" class="but">
+            Python
+          </button>
         </div>
         <div class="cart1">
           <img src="{% static 'app/java.png' %}" alt="" />
-          <button onclick="window.location.href='java/'" class="but">Java</button>
+          <button onclick="window.location.href='java/'" class="but">
+            Java
+          </button>
         </div>
         <div class="cart1">
           <img src="{% static 'app/js.png' %}" alt="" />
-          <button onclick="window.location.href='js/'" class="but">JavaScript</button>
+          <button onclick="window.location.href='js/'" class="but">
+            JavaScript
+          </button>
         </div>
       </div>
     </div>
+    <div class="low">
+      <h1 id="available" class="h1M">Coming Soon</h1>
+    </div>
     <div class="low1">
-      <p class="p-title">Mobile software development</p>
-      <div class="cources">
+      <div class="courses">
         <div class="cart1">
           <img src="{% static 'app/java.png' %}" alt="" />
           <button class="but">Java</button>
         </div>
         <div class="cart1">
-          <img src="{% static 'app/python.png' %}" alt="" />
+          <img src="{% static 'app/swift.png' %}" alt="" />
           <button class="but">Swift</button>
         </div>
         <div class="cart1">
-          <img src="{% static 'app/python.png' %}" />
+          <img src="{% static 'app/kotlin.png' %}" />
           <button class="but">Kotlin</button>
         </div>
       </div>
     </div>
     <div class="low1">
-      <p class="p-title">Website development</p>
-      <div class="cources">
+      <div class="courses">
         <div class="cart1">
-          <img src="{% static 'app/python.png' %}" alt="" />
+          <img src="{% static 'app/html.png' %}" alt="" />
           <button class="but">Html</button>
         </div>
         <div class="cart1">
-          <img src="{% static 'app/python.png' %}" alt="" />
+          <img src="{% static 'app/css.png' %}" alt="" />
           <button class="but">Css</button>
         </div>
         <div class="cart1">
@@ -129,8 +166,16 @@
     <div class="footer">
       <p class="pf">© 2024 Programming Courses. All rights reserved.</p>
       <div class="nav">
-        <a href="/logout"> Logout</a>
-        <a href="/profile"> Profile</a>
+        <a href="{% url 'app-home' %}">Home</a>
+        {% if not user.is_authenticated %}
+        <a href="{% url 'user-login' %}">Login</a>
+        <a href="{% url 'user-register' %}">Register</a>
+        {% endif %}
+        <a href="#available">Courses</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'user-profile' %}">Profile</a>
+        <a href="{% url 'user-logout' %}">Logout</a>
+        {% endif %}
       </div>
     </div>
   </body>
