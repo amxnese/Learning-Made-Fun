@@ -16,7 +16,7 @@ def login(request):
     user = authenticate(request, username=username, password=password)
     if user:
       log(request, user)
-      messages.success(request, f"Welcome back {user.username}")
+      messages.success(request, f"You have successfully logged in, Welcome back {user.username}")
       return redirect('/main')
     else:
       messages.error(request, f"wrong password for {username}")
@@ -35,13 +35,14 @@ def register(request):
       messages.error(request, "passwords don't match")
       return redirect('./')
     if CustomUser.objects.filter(username=username):
-      messages.error(request, "username already taken")
+      messages.warning(request, "username already taken")
       return redirect('./')
     CustomUser.objects.create_user(username=username, password=password, first_name=fname, last_name=lname)
     user = authenticate(request, username=username, password=password) 
     if user:
       log(request, user)
-    messages.success(request, f"account for {username} was created successfully")
+    # using debug to know where did the message came from
+    messages.info(request, f"account for {username} was created successfully")
     return redirect('/main')
   else:
     return render(request, 'users/register.html')
@@ -49,7 +50,7 @@ def register(request):
 @login_required
 def logout(request):
   out(request)
-  messages.success(request, 'You have been logged out')
+  messages.success(request, 'You have been successfully logged out, Hope we see you soon!')
   return redirect('/')
 
 @login_required
@@ -82,10 +83,10 @@ def edit(request):
     password = request.POST.get('password')
     check_pwd = authenticate(request, username=user.username, password=password)
     if not check_pwd:
-      messages.error(request, "Wrong Password")
+      messages.error(request, "Incorrect Password!")
       return redirect('./')
     if CustomUser.objects.filter(username=username) and user.username != username:
-      messages.error(request, "username already taken")
+      messages.warning(request, "username already taken")
       return redirect('./')
     user.username = username
     user.first_name = fname
@@ -104,7 +105,7 @@ def change_password(request):
     new = request.POST.get('new')
     confirm = request.POST.get('confirm')
     if not user.check_password(old):
-      messages.error(request, 'Wrong password!')
+      messages.error(request, 'Incorrect password!')
       return redirect('./')
     if new != confirm:
       messages.error(request, "Passwords don't match")
@@ -122,5 +123,5 @@ def delete(request):
   user = request.user
   out(request)
   user.delete()
-  messages.success(request, 'Your account has been successfully deleted')
+  messages.info(request, 'Your account has been successfully deleted!')
   return redirect('/')
