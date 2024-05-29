@@ -82,7 +82,7 @@
   margin-right: 35px;
 }
 .cart:hover {
-  scale: 1.05;
+  scale: 1.08;
 }
 h2 {
   margin-bottom: 10px;
@@ -172,6 +172,8 @@ a {
   margin: 30px 0;
 }
 input {
+  font-size: 20px;
+  padding: 0 20px;
   height: 50px;
   width: 200px;
   margin: 20px 0;
@@ -179,7 +181,7 @@ input {
   border: white solid 2px;
 }
 input::placeholder {
-  font-size: 15px;
+  font-size: 20px;
   padding-left: 10px;
 }
 .h1contactus {
@@ -329,6 +331,7 @@ html {
 }
 .comment-form .form-group input,
 .comment-form .form-group textarea {
+  font-size: 20px;
   width: 95%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -387,4 +390,63 @@ transform: translateY(-2px);
 .button-29:active {
 box-shadow: #3c4fe0 0 3px 7px inset;
 transform: translateY(2px);
+}
+
+.alert{
+  opacity: 1;
+  transition: opacity 1s;
+}
+.message {
+  top: 50px;
+  background-color: #ffffff;
+  padding: 20px 140px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: fixed;;
+}
+.message h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.message p {
+  color: #555555;
+  font-size: 18px;
+  margin: 0;
+}
+.success h1 , .info h1, .error h1{
+  color: #28a745; 
+}
+.success , .info, .error{
+  border: 2px solid #28a745;
+}
+/* .error {
+  border: 2px solid #dc3545;
+} */
+/* .error h1{
+  color: #dc3545;
+} */
+.warning{
+  border: 2px solid #ffc107;
+}
+.warning h1{
+  color: #ffc107;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+}
+#email{
+  width: 300px;
+}
+#message-area{
+  font-size: 20px;
+    width: 140%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    height: 80px;
+    padding-top: 17px;
+    margin-top: 19px;
 }
