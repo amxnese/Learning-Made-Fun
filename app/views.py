@@ -9,7 +9,7 @@ def fetch(request, size):
     try:
       lst.append(request.POST[f'q{i}'])
     except KeyError:
-      messages.error(request, "Please make sure you answered all the questions")
+      messages.warning(request, "Please make sure you answered all the questions")
       return False
   return lst
 
@@ -32,15 +32,19 @@ def validate(request, score, full_mark, level, language):
         user.save()
         messages.success(request, mark_safe(f"<strong>Congratulations</strong>, You scored {score}/{full_mark} and has made it to the next level"))
   else:
-      messages.error(request, f"You failed the test with a score of {score}/{full_mark}, better luck next time")
+      messages.warning(request, f"You failed the test with a score of {score}/{full_mark}, better luck next time")
 
 def home(request):
   if request.method == "POST":
     user = request.user
-    user_comment = request.POST.get('comment')
-    comment = Comment.objects.create(user=user, content=user_comment)
-    messages.success(request, "your comment was added successfully")
-    return redirect('/')
+    if user.is_authenticated:
+      user_comment = request.POST.get('comment')
+      comment = Comment.objects.create(user=user, content=user_comment)
+      messages.error(request, "Your comment was added successfully")
+      return redirect('/')
+    else:
+      messages.warning(request, "You need to log in so you can comment")
+      return redirect('/')
   
   comments = Comment.objects.all()
   for i in comments:
@@ -170,7 +174,7 @@ def pyTest6(request):
 
 @login_required
 def pyInvalid(request):
-  messages.error(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
+  messages.warning(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
 
 @login_required
@@ -292,7 +296,7 @@ def javaTest6(request):
 
 @login_required
 def javaInvalid(request):
-  messages.error(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
+  messages.warning(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
 
 @login_required
@@ -414,5 +418,5 @@ def jsTest6(request):
   
 @login_required
 def jsInvalid(request):
-  messages.error(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
+  messages.warning(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
