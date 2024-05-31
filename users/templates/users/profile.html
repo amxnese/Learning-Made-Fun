@@ -61,17 +61,10 @@
                   name="profile_picture"
                   accept="image/*"
                 />
-                {% if user.profile_picture %}
                 <img
                   src="{{ user.profile_picture.url }}"
                   alt="profile picture"
                 />
-                {% else %}
-                <img
-                  src="{% static 'users/default.jpg' %}"
-                  alt="profile picture"
-                />
-                {% endif %}
                 <span class="plus-icon icon">+</span>
               </label>
               <button type="submit" class="to-hide"></button>
