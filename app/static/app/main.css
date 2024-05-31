@@ -210,8 +210,10 @@ html {
 .alert{
   opacity: 1;
   transition: opacity 1s;
+  z-index: 1000;
 }
 .message {
+  z-index: 1000;
   top: 50px;
   background-color: #ffffff;
   padding: 20px 140px;
@@ -234,11 +236,11 @@ html {
   justify-content: center;
 }
 
-.success h1 ,.debug h1{
+.success h1 , .info h1{
   color: #28a745;
   
 }
-.success, .debug{
+.success, .info{
   border: 2px solid #28a745;
 }
 .error {
