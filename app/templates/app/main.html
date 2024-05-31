@@ -8,14 +8,27 @@
     <title>main</title>
   </head>
   <body>
+    {% if result %}
+    {% if result == 'python' or result == 'java' or result == 'js' %}
+    <script>
+      window.location.href = '{{result}}/'
+    </script>
+    {% else %}
+    <script>
+      window.location.href = '#{{result}}'
+    </script>
+    {% endif %}
+    {% endif %}
     {% if messages %} {% for message in messages %}
     <script src="{% static 'app/appHide.js' %}"></script>
     <div class="flex alert">
-      <div class="message {{message.tags}} success">
+      <div class="message {{message.tags}}">
         {% if message.tags == "info" %}
         <h1>Registered</h1>
         {% elif message.tags == "success" %}
         <h1>Logged in</h1>
+        {% elif message.tags == "warning" %}
+        <h1>No reuslts</h1>
         {% else %}
         <h1>{{ message.tags }}</h1>
         {% endif %}
@@ -33,8 +46,11 @@
         category or browse our wide selection.
       </p>
       <div class="input-container">
-        <input type="text" placeholder="Search courses ..." />
-        <button>Search</button>
+        <form action="{% url 'app-main' %}" method="post">
+          {% csrf_token %}
+          <input type="text" placeholder="Search courses" name="input" />
+          <button type="submit">Search</button>
+        </form>
       </div>
     </div>
     <div class="midlle">
@@ -108,19 +124,19 @@
     </div>
     <div class="low1">
       <div class="courses">
-        <div class="cart1">
+        <div class="cart1" id="python">
           <img src="{% static 'app/python.png' %}" alt="" />
           <button onclick="window.location.href='python/'" class="but">
             Python
           </button>
         </div>
-        <div class="cart1">
+        <div class="cart1" id="java">
           <img src="{% static 'app/java.png' %}" alt="" />
           <button onclick="window.location.href='java/'" class="but">
             Java
           </button>
         </div>
-        <div class="cart1">
+        <div class="cart1" id="javascript">
           <img src="{% static 'app/js.png' %}" alt="" />
           <button onclick="window.location.href='js/'" class="but">
             JavaScript
@@ -133,33 +149,33 @@
     </div>
     <div class="low1">
       <div class="courses">
-        <div class="cart1">
-          <img src="{% static 'app/java.png' %}" alt="" />
-          <button class="but">Java</button>
+        <div class="cart1" id="c">
+          <img src="{% static 'app/c.png' %}" alt="" />
+          <button class="but">C</button>
         </div>
-        <div class="cart1">
-          <img src="{% static 'app/swift.png' %}" alt="" />
-          <button class="but">Swift</button>
+        <div class="cart1" id="c++">
+          <img src="{% static 'app/cpp.png' %}" alt="" />
+          <button class="but">C++</button>
         </div>
-        <div class="cart1">
-          <img src="{% static 'app/kotlin.png' %}" />
-          <button class="but">Kotlin</button>
+        <div class="cart1" id="mysql">
+          <img src="{% static 'app/mysql.png' %}" />
+          <button class="but">MySql</button>
         </div>
       </div>
     </div>
     <div class="low1">
       <div class="courses">
-        <div class="cart1">
+        <div class="cart1" id="html">
           <img src="{% static 'app/html.png' %}" alt="" />
           <button class="but">Html</button>
         </div>
-        <div class="cart1">
+        <div class="cart1" id="css">
           <img src="{% static 'app/css.png' %}" alt="" />
           <button class="but">Css</button>
         </div>
-        <div class="cart1">
-          <img src="{% static 'app/js.png' %}" alt="" />
-          <button class="but">JavaScript</button>
+        <div class="cart1" id="php">
+          <img src="{% static 'app/php.png' %}" alt="" />
+          <button class="but">PHP</button>
         </div>
       </div>
     </div>
