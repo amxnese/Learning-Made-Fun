@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils.safestring import mark_safe
 from users.models import Comment, CustomUser
+
 def fetch(request, size):
   lst = []
   for i in range(1, size + 1):
@@ -26,9 +27,8 @@ def validate(request, score, full_mark, level, language):
   if current_level != level-1:
     messages.success(request, f"You passed the test again and scored {score}/{full_mark}")
   elif score >= passing_grade:
-      if current_level == level-1:
-        new_level = current_level + 1
-        setattr(user, language, new_level)
+        current_level += 1
+        setattr(user, language, current_level)
         user.save()
         messages.success(request, mark_safe(f"<strong>Congratulations</strong>, You scored {score}/{full_mark} and has made it to the next level"))
   else:
@@ -53,22 +53,54 @@ def home(request):
   return render(request, 'app/home.html', {'comments': comments})
 
 def main(request):
+  if request.method == 'POST':
+    results = request.POST.get('input')
+    if not results:
+      print('no results')
+      return redirect('./')
+    results = results.split(' ')
+    result = None
+    for course in results:
+      if course.lower() == 'python' or course.lower() == 'py':
+        result = 'python'
+      elif course.lower() == 'javascript' or course.lower() == 'js':
+        result = 'js'
+      elif course.lower() == 'java':
+        result = 'java'
+      elif course.lower() == 'c':
+        result = 'c'
+      elif course.lower() == 'cpp' or course.lower() == 'c++':
+        result = 'c++'
+      elif course.lower() == 'sql' or course.lower() == 'database' or course.lower() == 'mysql':
+        result = 'mysql'
+      elif course.lower() == 'html' or course.lower() == 'front-end' or course.lower() == 'frontend':
+        result = 'html'
+      elif course.lower() == 'css' or course.lower() == 'front-end' or course.lower() == 'frontend':
+        result = 'css'
+      elif course.lower() == 'php' or course.lower() == 'backend':
+        result = 'php'
+      else:
+        print('no results')
+        messages.warning(request, "Can't find any results related to your search")
+      return render(request, 'app/main.html', {'result' : result})
   return render(request, 'app/main.html')
 
 @login_required
 def python(request):
   user = request.user
   lvl_py = user.python
-  levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary', 'secondary']
-  for i in range(0, lvl_py):
-    levels[i] = 'primary'
+  levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary']
+  try:
+    for i in range(0, lvl_py):
+      levels[i] = 'primary'
+  except:
+    pass
   lvl = {
-    'lvl1':levels[0],
-    'lvl2':levels[1],
-    'lvl3':levels[2],
-    'lvl4':levels[3],
-    'lvl5':levels[4],
-    'lvl6':levels[5]
+    'lvl2':levels[0],
+    'lvl3':levels[1],
+    'lvl4':levels[2],
+    'lvl5':levels[3],
+    'lvl6':levels[4]
   }
   return render(request, 'app/python.html',{'levels':lvl})
 
@@ -103,7 +135,7 @@ def pyLevel6(request):
 @login_required
 def pyTest1(request):
   if request.method == "POST":
-    answers = ['1','2','2','2','3','2','3','2','2','2','3','1']
+    answers = ['1','2','2','2','3','2','1','2','2','2','3','1']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
@@ -174,7 +206,7 @@ def pyTest6(request):
 
 @login_required
 def pyInvalid(request):
-  messages.warning(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
+  messages.info(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
 
 @login_required
@@ -296,7 +328,7 @@ def javaTest6(request):
 
 @login_required
 def javaInvalid(request):
-  messages.warning(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
+  messages.info(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
 
 @login_required
@@ -418,5 +450,5 @@ def jsTest6(request):
   
 @login_required
 def jsInvalid(request):
-  messages.warning(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
+  messages.info(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
