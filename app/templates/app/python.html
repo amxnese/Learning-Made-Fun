@@ -3,13 +3,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="{% static 'app/levelsPy.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/entrance.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>python</title>
   </head>
   <body>
-		<div class="bar">
-			<h1 onclick="location.href='/'" class="pf home">Learning Made Fun</h1>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'app/appHide.js' %}"></script>
+    <div class="flex alert">
+      <div class="message {{message.tags}}">
+        {% if message.tags == "success" %}
+        <h1>Level Passed</h1>
+        {% elif message.tags == "warning" %}
+        <h1>Failed</h1>
+        {% elif message.tags == "info" %}
+        <h1>Unreachable</h1>
+        {% else %}
+        <h1>{{ message.tags }}</h1>
+        {% endif %}
+        <p>{{ message }}</p>
+      </div>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
+    <div class="bar">
+      <h1 onclick="location.href='/'" class="pf home">Learning Made Fun</h1>
       <div class="nav">
         <a href="../">Main</a>
         <a href="../#available">Courses</a>
@@ -25,63 +45,72 @@
       </p>
       <div class="carts">
         <div class="cart">
-          <h2>Versatility and Flexibility</h2>
+          <h2>Versatility and General-Purpose Nature</h2>
           <p class="p-cart">
-            Python is a versatile language that can be used for a wide range of
-            applications, including web development, data analysis, artificial
-            intelligence, machine learning, scientific computing, and
-            automation. Its extensive standard library and third-party packages
-            provide developers with powerful tools to tackle various tasks
-            efficiently.
+            Python is a highly <strong>versatile</strong> language used in
+            various fields such as
+            <strong
+              >web development, data science, artificial intelligence, machine
+              learning, automation, scientific computing</strong
+            >, and more. Its ability to handle a wide range of applications
+            makes it an invaluable tool for developers.
           </p>
         </div>
         <div class="cart">
-          <h2>Large and Supportive Community</h2>
+          <h2>Easy to Learn and Read</h2>
           <p class="p-cart">
-            Python boasts a large and supportive community of developers
-            worldwide. This vibrant community contributes to the continuous
-            improvement of the language, develops useful libraries and
-            frameworks, and provides extensive documentation and tutorials,
-            making it easy for newcomers to get started and learn from others.
+            Python's syntax is <strong>clear</strong> and
+            <strong>readable</strong>, making it an excellent choice for
+            beginners. It emphasizes <strong>readability</strong> and
+            <strong>simplicity</strong>, allowing new programmers to learn the
+            language quickly and focus on solving problems rather than
+            struggling with complex syntax.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>Large and Active Community</h2>
+          <p class="p-cart">
+            Python boasts a <strong>large</strong> and
+            <strong>active community</strong>, which means a wealth of resources
+            is available, including extensive
+            <strong>documentation, tutorials, forums</strong>, and
+            <strong>third-party libraries</strong>. This community support makes
+            it easier to find help and learn from others’ experiences.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>Extensive Libraries and Frameworks</h2>
+          <p class="p-cart">
+            Python has a rich ecosystem of <strong>libraries</strong> and
+            <strong>frameworks</strong> that simplify development tasks. For
+            example: Web Development: <strong>Django, Flask</strong> Data
+            Science and Analysis: <strong>Pandas, NumPy</strong> Machine
+            Learning: <strong>TensorFlow, scikit-learn</strong> Automation:
+            <strong>Selenium, Beautiful Soup</strong> These libraries enable
+            developers to build
+            <strong>robust applications</strong> efficiently.
+          </p>
+        </div>
+        <div class="cart">
+          <h2>High Demand and Career Opportunities</h2>
+          <p class="p-cart">
+            Python is one of the most
+            <strong>sought-after programming languages</strong> in the job
+            market. Its demand spans various industries, including
+            <strong>technology, finance, healthcare</strong>, and
+            <strong>academia</strong>. Learning Python can open doors to
+            numerous <strong>career opportunities</strong> and is often
+            associated with <strong>high-paying jobs</strong>.
           </p>
         </div>
         <div class="cart">
           <h2>Cross-Platform Compatibility</h2>
           <p class="p-cart">
-            Python is a platform-independent language, meaning that code written
-            in Python can run seamlessly on different operating systems,
-            including Windows, macOS, and Linux, without requiring any
-            modifications. This cross-platform compatibility enhances code
-            portability and simplifies deployment across diverse environments.
-          </p>
-        </div>
-        <div class="cart">
-          <h2>Rapid Development</h2>
-          <p class="p-cart">
-            Python's focus on simplicity and productivity enables developers to
-            build and iterate on projects quickly. Its dynamic typing,
-            high-level data structures, and built-in support for common
-            programming tasks, such as file handling and networking, accelerate
-            the development process and reduce time-to-market for applications.
-          </p>
-        </div>
-        <div class="cart">
-          <h2>Scalability and Performance</h2>
-          <p class="p-cart">
-            While Python is often praised for its ease of use and rapid
-            development, it also offers scalability and performance
-            capabilities. By leveraging techniques such as optimization,
-            concurrency, and parallelism, developers can create high-performance
-            Python applications that handle large-scale data processing and
-            computational tasks effectively.
-          </p>
-        </div>
-        <div class="cart">
-          <h2>Simplicity and Readability</h2>
-          <p class="p-cart">
-            Python's syntax is designed to be simple and easy to read, making it
-            an ideal language for beginners. Its clean and concise code promotes
-            better maintainability and collaboration among developers.
+            Python is <strong>cross-platform</strong>, meaning you can run
+            Python code on various operating systems, including
+            <strong>Windows, macOS, and Linux</strong>, without significant
+            changes. This flexibility makes it a convenient choice for
+            developers who work in diverse environments.
           </p>
         </div>
       </div>
@@ -92,68 +121,58 @@
       <p class="pm1">lessons and tests</p>
       <div class="carts1">
         <div class="cart1">
-          <a class="pm1" href="{% url 'app-pyLevel1' %}"> Cour 1</a>
-
+          <a class="pm1" href="{% url 'app-pyLevel1' %}"> Lesson 1</a>
           {% if levels.lvl2 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel2' %}"> Lesson 2</a>
           {% else %}
           <a href="invalid/"> Lesson 2</a>
-          {% endif %} 
-					{% if levels.lvl3 == 'primary' %}
+          {% endif %} {% if levels.lvl3 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel3' %}"> Lesson 3</a>
           {% else %}
           <a href="invalid/"> Lesson 3</a>
-          {% endif %} 
-					{% if levels.lvl4 == 'primary' %}
+          {% endif %} {% if levels.lvl4 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel4' %}"> Lesson 4</a>
           {% else %}
           <a href="invalid/"> Lesson 4</a>
-          {% endif %} 
-					{% if levels.lvl5 == 'primary' %}
+          {% endif %} {% if levels.lvl5 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel5' %}"> Lesson 5</a>
           {% else %}
           <a href="invalid/"> Lesson 5</a>
-          {% endif %} 
-					{% if levels.lvl6 == 'primary' %}
+          {% endif %} {% if levels.lvl6 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel6' %}"> Lesson 6</a>
           {% else %}
           <a href="invalid/"> Lesson 6</a>
           {% endif %}
         </div>
         <div class="cart1">
-					<a class="pm1" href="{% url 'app-pyTest1' %}"> Test 1</a>
+          <a class="pm1" href="{% url 'app-pyTest1' %}"> Test 1</a>
           {% if levels.lvl2 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest2' %}"> Test 2</a>
           {% else %}
           <a href="invalid/"> Test 2</a>
-          {% endif %} 
-					{% if levels.lvl3 == 'primary' %}
+          {% endif %} {% if levels.lvl3 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest3' %}"> Test 3</a>
           {% else %}
           <a href="invalid/"> Test 3</a>
-          {% endif %} 
-					{% if levels.lvl4 == 'primary' %}
+          {% endif %} {% if levels.lvl4 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest4' %}"> Test 4</a>
           {% else %}
           <a href="invalid/"> Test 4</a>
-          {% endif %} 
-					{% if levels.lvl5 == 'primary' %}
+          {% endif %} {% if levels.lvl5 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest5' %}"> Test 5</a>
           {% else %}
           <a href="invalid/"> Test 5</a>
-          {% endif %} 
-					{% if levels.lvl6 == 'primary' %}
+          {% endif %} {% if levels.lvl6 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest6' %}"> Test 6</a>
           {% else %}
           <a href="invalid/"> Test 6</a>
           {% endif %}
-
         </div>
       </div>
     </div>
     <div class="footer">
       <p class="pf">© 2024 Programming Courses. All rights reserved</p>
     </div>
-		<script src="{% static 'app/scroll.js' %}"></script>
+    <script src="{% static 'app/scroll.js' %}"></script>
   </body>
 </html>

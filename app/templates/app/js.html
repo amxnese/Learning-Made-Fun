@@ -3,13 +3,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="{% static 'app/levelsJs.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/entrance.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
   </head>
   <body>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'app/appHide.js' %}"></script>
+    <div class="flex alert">
+      <div class="message {{message.tags}}">
+        {% if message.tags == "success" %}
+        <h1>Level Passed</h1>
+        {% elif message.tags == "warning" %}
+        <h1>Failed</h1>
+        {% elif message.tags == "info" %}
+        <h1>Unreachable</h1>
+        {% else %}
+        <h1>{{ message.tags }}</h1>
+        {% endif %}
+        <p>{{ message }}</p>
+      </div>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
     <div class="bar">
-      <h1 class="pf">Learning Made Fun</h1>
+      <h1 onclick="location.href='/'" class="pf home">Learning Made Fun</h1>
       <div class="nav">
         <a href="../">Main</a>
         <a href="../#available">Courses</a>
@@ -25,62 +45,75 @@
       </p>
       <div class="carts">
         <div class="cart">
-          <h2>Simplicity and Readability</h2>
+          <h2>Versatility and Ubiquity</h2>
           <p class="p-cart">
-            JavaScript's syntax is designed to be simple and readable, making it
-            an ideal language for beginners. Its clean and concise code promotes
-            better maintainability and collaboration among developers.
+            JavaScript is a <strong>versatile</strong> language that runs on
+            almost every web browser, making it essential for web development.
+            It's used for both <strong>client-side</strong> and
+            <strong>server-side</strong> development, allowing you to create
+            <strong>interactive websites</strong> and
+            <strong>full-stack applications</strong> using technologies like
+            <strong>Node.js</strong>.
           </p>
         </div>
         <div class="cart">
-          <h2>Versatility and Flexibility</h2>
+          <h2>Rich Ecosystem and Frameworks</h2>
           <p class="p-cart">
-            JavaScript is a versatile language that can be used for a wide range
-            of applications, including web development, mobile app development,
-            server-side scripting, game development, and more. Its extensive
-            ecosystem of libraries and frameworks provides developers with
-            powerful tools to tackle various tasks efficiently.
+            JavaScript has a <strong>rich ecosystem</strong> with numerous
+            <strong>frameworks and libraries</strong> that simplify development:
+            Front-End: <strong>React, Angular, Vue.js</strong> Back-End:
+            <strong>Node.js, Express.js</strong> Mobile Development:
+            <strong>React Native, Ionic</strong> These tools help you build
+            <strong>modern, efficient, and scalable applications</strong>
+            quickly.
           </p>
         </div>
         <div class="cart">
-          <h2>Large and Supportive Community</h2>
+          <h2>High Demand and Career Opportunities</h2>
           <p class="p-cart">
-            JavaScript boasts a large and supportive community of developers
-            worldwide. This vibrant community contributes to the continuous
-            improvement of the language, develops useful libraries and
-            frameworks, and provides extensive documentation and tutorials,
-            making it easy for newcomers to get started and learn from others.
+            JavaScript is one of the most <strong>in-demand</strong> programming
+            languages in the job market. It’s a critical skill for
+            <strong>front-end, back-end, and full-stack developers</strong>.
+            Learning JavaScript can significantly enhance your
+            <strong>employability</strong> and open up numerous
+            <strong>career opportunities</strong> in tech.
           </p>
         </div>
         <div class="cart">
-          <h2>Cross-Platform Compatibility</h2>
+          <h2>Active Community and Abundant Resources</h2>
           <p class="p-cart">
-            JavaScript is a platform-independent language, meaning that code
-            written in JavaScript can run seamlessly on different platforms and
-            devices, including web browsers, servers, and mobile devices. This
-            cross-platform compatibility enhances code portability and
-            simplifies deployment across diverse environments.
+            JavaScript has a <strong>large, active community</strong> that
+            contributes to its growth and evolution. This means you have access
+            to <strong>extensive documentation, tutorials, forums</strong>, and
+            a wealth of <strong>open-source libraries</strong>. The community
+            support makes it easier to learn and solve problems.
           </p>
         </div>
         <div class="cart">
-          <h2>Rapid Development</h2>
+          <h2>Asynchronous Programming</h2>
           <p class="p-cart">
-            JavaScript's focus on simplicity and productivity enables developers
-            to build and iterate on projects quickly. Its dynamic typing,
-            flexible syntax, and built-in support for common programming tasks,
-            such as DOM manipulation and event handling, accelerate the
-            development process and reduce time-to-market for applications.
+            JavaScript’s support for
+            <strong>asynchronous programming</strong> with features like
+            <strong>Promises, async/await, and callbacks</strong> allows you to
+            handle multiple tasks concurrently. This is especially useful for
+            web development, where you often need to manage tasks like
+            <strong>API calls, user interactions</strong>, and
+            <strong>animations</strong> efficiently.
           </p>
         </div>
         <div class="cart">
-          <h2>Scalability and Performance</h2>
+          <h2>Modern Development Tools</h2>
           <p class="p-cart">
-            While JavaScript is often praised for its ease of use and rapid
-            development, it also offers scalability and performance
-            capabilities. By leveraging techniques such as asynchronous
-            programming, web workers, and optimization strategies, developers
-            can create high-performance JavaScript applications that handle
-            large-scale data processing and user interactions effectively.
+            JavaScript has a wide range of
+            <strong>powerful development tools</strong> that enhance
+            productivity and streamline development processes: Code Editors:
+            <strong>Visual Studio Code, Sublime Text</strong> Package Managers:
+            <strong>npm, Yarn</strong> Build Tools:
+            <strong>Webpack, Gulp</strong> Testing Frameworks:
+            <strong>Jest, Mocha</strong> These tools help
+            <strong>automate tasks, manage dependencies</strong>, and ensure
+            <strong>code quality</strong>, making development faster and more
+            efficient.
           </p>
         </div>
       </div>
@@ -88,10 +121,10 @@
     <div class="low">
       <img src="{% static 'app/js.png' %}" alt="" />
       <h1 class="h1M">Let's Start</h1>
-      <p class="pm1">cours and tests</p>
+      <p class="pm1">Lessons and Tests</p>
       <div class="carts1">
         <div class="cart1">
-          <a class="pm1" href="{% url 'app-jsLevel1' %}"> Cour 1</a>
+          <a class="pm1" href="{% url 'app-jsLevel1' %}"> Lesson 1</a>
 
           {% if levels.lvl2 == 'primary' %}
           <a class="pm1" href="{% url 'app-jsLevel2' %}"> Lesson 2</a>

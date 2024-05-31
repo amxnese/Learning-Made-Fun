@@ -3,13 +3,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="{% static 'app/levelsJava.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/entrance.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>java</title>
   </head>
   <body>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'app/appHide.js' %}"></script>
+    <div class="flex alert">
+      <div class="message {{message.tags}}">
+        {% if message.tags == "success" %}
+        <h1>Level Passed</h1>
+        {% elif message.tags == "warning" %}
+        <h1>Failed</h1>
+        {% elif message.tags == "info" %}
+        <h1>Unreachable</h1>
+        {% else %}
+        <h1>{{ message.tags }}</h1>
+        {% endif %}
+        <p>{{ message }}</p>
+      </div>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
     <div class="bar">
-      <h1 class="pf">Learning Made Fun</h1>
+      <h1 onclick="location.href='/'" class="pf home">Learning Made Fun</h1>
       <div class="nav">
         <a href="../">Main</a>
         <a href="../#available">Courses</a>
@@ -25,47 +45,75 @@
       </p>
       <div class="carts">
         <div class="cart">
-          <h2>Robust and Reliable</h2>
+          <h2>Platform Independence</h2>
           <p class="p-cart">
-            Java is known for its stability, security, and performance, making
-            it a reliable choice for a wide range of applications.
+            Java is known for its
+            <strong>"write once, run anywhere"</strong> capability. Thanks to
+            the <strong>Java Virtual Machine (JVM)</strong>, Java applications
+            can run on any device or operating system that has a JVM installed.
+            This <strong>platform independence</strong> makes Java a highly
+            versatile language.
           </p>
         </div>
         <div class="cart">
-          <h2>Cross-Platform Compatibility</h2>
+          <h2>Strong Object-Oriented Programming Principles</h2>
           <p class="p-cart">
-            Java programs can run on multiple operating systems, including
-            Windows, macOS, and Linux, making it a versatile choice.
+            Java is a
+            <strong>pure object-oriented programming language</strong>, which
+            helps in building
+            <strong>modular, flexible, and extensible software</strong>. OOP
+            principles such as
+            <strong>inheritance, encapsulation, polymorphism</strong>, and
+            <strong>abstraction</strong> are foundational to Java, making it a
+            great language for understanding and applying OOP concepts.
           </p>
         </div>
         <div class="cart">
-          <h2>Vast Ecosystem and Community</h2>
+          <h2>Enterprise-Grade Applications</h2>
           <p class="p-cart">
-            Java has a large and active community of developers, providing a
-            wealth of resources, libraries, and tools to support your learning
-            and development.
+            Java is widely used for building
+            <strong>large-scale, enterprise-grade applications</strong>. It is
+            the backbone of many
+            <strong>financial institutions, e-commerce platforms</strong>, and
+            <strong>enterprise resource planning (ERP) systems</strong>.
+            Frameworks like <strong>Spring, Hibernate</strong>, and
+            <strong>Java EE</strong> make it easier to develop robust, secure,
+            and scalable enterprise applications.
           </p>
         </div>
         <div class="cart">
-          <h2>Highly Scalable</h2>
+          <h2>Strong Community and Ecosystem</h2>
           <p class="p-cart">
-            Java is designed to handle large-scale applications and can be used
-            to build everything from mobile apps to enterprise-level software.
+            Java has a <strong>large, active, and mature community</strong>.
+            This means extensive <strong>documentation</strong>, a plethora of
+            <strong>libraries and frameworks</strong>, and a wealth of knowledge
+            shared across forums and online resources. The ecosystem around
+            Java, including tools like <strong>IntelliJ IDEA, Eclipse</strong>,
+            and <strong>Maven</strong>, supports efficient development.
           </p>
         </div>
         <div class="cart">
-          <h2>Excellent Career Prospects</h2>
+          <h2>Performance and Efficiency</h2>
           <p class="p-cart">
-            Java is one of the most in-demand programming languages, with a wide
-            range of job opportunities in various industries.
+            Java's performance is impressive due to its
+            <strong>Just-In-Time (JIT) compiler</strong> and efficient
+            <strong>garbage collection</strong> mechanism. Java applications
+            tend to be <strong>fast and efficient</strong>, which is crucial for
+            performance-critical applications. The JVM optimizes the code at
+            runtime, making Java applications perform better over time.
           </p>
         </div>
         <div class="cart">
-          <h2>Powerful and Flexible</h2>
+          <h2>Career Opportunities and Industry Demand</h2>
           <p class="p-cart">
-            Java's object-oriented design and extensive libraries make it a
-            powerful and flexible language for building a wide range of
-            applications.
+            Java has been one of the most
+            <strong>popular programming languages</strong> for decades, and its
+            demand in the job market remains strong. Many large organizations,
+            especially in the <strong>finance, telecommunications</strong>, and
+            <strong>healthcare</strong> sectors, rely heavily on Java. Learning
+            Java can open doors to numerous
+            <strong>career opportunities</strong> and provide
+            <strong>job security</strong> due to its widespread use.
           </p>
         </div>
       </div>
@@ -76,7 +124,7 @@
       <p class="pm1">lessons and tests</p>
       <div class="carts1">
         <div class="cart1">
-          <a class="pm1" href="{% url 'app-javaLevel1' %}"> Cour 1</a>
+          <a class="pm1" href="{% url 'app-javaLevel1' %}"> Lesson 1</a>
 
           {% if levels.lvl2 == 'primary' %}
           <a class="pm1" href="{% url 'app-javaLevel2' %}"> Lesson 2</a>
@@ -106,23 +154,19 @@
           <a class="pm1" href="{% url 'app-javaTest2' %}"> Test 2</a>
           {% else %}
           <a href="invalid/"> Test 2</a>
-          {% endif %} 
-					{% if levels.lvl3 == 'primary' %}
+          {% endif %} {% if levels.lvl3 == 'primary' %}
           <a class="pm1" href="{% url 'app-javaTest3' %}"> Test 3</a>
           {% else %}
           <a href="invalid/"> Test 3</a>
-          {% endif %} 
-					{% if levels.lvl4 == 'primary' %}
+          {% endif %} {% if levels.lvl4 == 'primary' %}
           <a class="pm1" href="{% url 'app-javaTest4' %}"> Test 4</a>
           {% else %}
           <a href="invalid/"> Test 4</a>
-          {% endif %} 
-					{% if levels.lvl5 == 'primary' %}
+          {% endif %} {% if levels.lvl5 == 'primary' %}
           <a class="pm1" href="{% url 'app-javaTest5' %}"> Test 5</a>
           {% else %}
           <a href="invalid/"> Test 5</a>
-          {% endif %} 
-					{% if levels.lvl6 == 'primary' %}
+          {% endif %} {% if levels.lvl6 == 'primary' %}
           <a class="pm1" href="{% url 'app-javaTest6' %}"> Test 6</a>
           {% else %}
           <a href="invalid/"> Test 6</a>
