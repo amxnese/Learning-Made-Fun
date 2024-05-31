@@ -41,6 +41,10 @@ def register(request):
     user = authenticate(request, username=username, password=password) 
     if user:
       log(request, user)
+    # giving user default profile picture
+    pic = 'default.jpg'
+    user.profile_picture = pic
+    user.save()
     # using debug to know where did the message came from
     messages.info(request, f"account for {username} was created successfully")
     return redirect('/main')
@@ -57,7 +61,7 @@ def logout(request):
 def profile(request):
   user = request.user
   if request.method == "POST" and request.FILES['profile_picture']:
-    if user.profile_picture:
+    if user.profile_picture and user.profile_picture != 'default.jpg':
       old_picture_path = user.profile_picture.path
       if default_storage.exists(old_picture_path):
         default_storage.delete(old_picture_path)
@@ -121,6 +125,11 @@ def change_password(request):
 @login_required
 def delete(request):
   user = request.user
+  # deleting the user's profile picture from database
+  if user.profile_picture and user.profile_picture != 'default.jpg':
+      old_picture_path = user.profile_picture.path
+      if default_storage.exists(old_picture_path):
+        default_storage.delete(old_picture_path)
   out(request)
   user.delete()
   messages.info(request, 'Your account has been successfully deleted!')
