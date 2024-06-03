@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="{% static 'app/levels.css' %}" />
   </head>
   <body>
-    <style>
-      pre {
-        width: 1000px;
-      }
-    </style>
+    <style></style>
     <div class="container">
       <header>
         <h1>Getting Familiar With Python's Syntax</h1>
@@ -161,9 +157,9 @@
                     its positive equivalent.
                   </p>
                   <pre>
-                    <code>
-                      int a = -20;
-                      System.out.println("Absolute value of -20 is: " + Math.abs(a));</code>
+        <code>
+          <span class="blue">int</span> <span class="white">a</span> <span class="pink">=</span> <span class="purple">-20</span><span class="orange">;</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Absolute value of -20 is: "</span> <span class="pink">+</span> <span class="white">Math</span><span class="purple">.</span><span class="white">abs</span><span class="orange">(</span><span class="white">a</span><span class="orange">));</span></code>
                   </pre>
                 </li>
                 <hr />
@@ -180,8 +176,8 @@
                   </p>
                   <pre>
                     <code>
-                      double b = 9.0;
-                      System.out.println("Square root of 9 is: " + Math.sqrt(b));</code>
+        <span class="blue">double</span> <span class="white">b</span> <span class="pink">=</span> <span class="purple">9.0</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Square root of 9 is: "</span> <span class="pink">+</span> <span class="white">Math</span><span class="purple">.</span><span class="white">sqrt</span><span class="orange">(</span><span class="white">b</span><span class="orange">));</span></code>
                   </pre>
                 </li>
                 <hr />
@@ -200,10 +196,11 @@
                   </p>
                   <pre>
                     <code>
-                      double base = 2.0;
-                      double exponent = 3.0;
-                      System.out.println("2 raised to the power of 3 is: " + Math.pow(base, exponent));</code>
+        <span class="blue">double</span> <span class="white">base</span> <span class="pink">=</span> <span class="purple">2.0</span><span class="orange">;</span>
+        <span class="blue">double</span> <span class="white">exponent</span> <span class="pink">=</span> <span class="purple">3.0</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"2 raised to the power of 3 is: "</span> <span class="pink">+</span> <span class="white">Math</span><span class="purple">.</span><span class="white">pow</span><span class="orange">(</span><span class="white">base</span><span class="white">,</span> <span class="white">exponent</span><span class="orange">));</span></code>
                   </pre>
+                  
                 </li>
               </ul>
             </li>
@@ -225,9 +222,9 @@
                   </p>
                   <pre>
                     <code>
-                      String str = "Hello, world!";
-                      System.out.println("Length of the string is: " + str.length());</code>
-                  </pre>
+        <span class="blue">String</span> <span class="white">str</span> <span class="pink">=</span> <span class="yellow">"Hello, world!"</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Length of the string is: "</span> <span class="pink">+</span> <span class="white">str</span><span class="purple">.</span><span class="white">length</span><span class="orange">());</span></code>
+                  </pre>                  
                 </li>
                 <hr />
                 <li>
@@ -246,9 +243,9 @@
                   </p>
                   <pre>
                     <code>
-                      String str = "Hello, world!";
-                      System.out.println("Substring from index 7 to 12 is: " + str.substring(7, 12));</code>
-                  </pre>
+        <span class="blue">String</span> <span class="white">str</span> <span class="pink">=</span> <span class="yellow">"Hello, world!"</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Sub from 7 to 12 is: "</span> <span class="pink">+</span> <span class="white">str</span><span class="purple">.</span><span class="white">substring</span><span class="orange">(</span><span class="purple">7</span><span class="white">,</span> <span class="purple">12</span><span class="orange">));</span></code>
+                  </pre>                  
                 </li>
                 <hr />
                 <li>
@@ -266,13 +263,13 @@
                     references point to the exact same object, not if their
                     contents are the same.
                   </p>
-                  <pre>
-                    <code>
-                      String str1 = "Hello";
-                      String str2 = "World";
-                      <span class="comment">// Comparing str1 and str2</span>
-                      System.out.print(str1 == str2); <span class="comment">// output : false</span></code>
-                  </pre>
+        <pre>
+          <code>
+            <span class="blue">String</span> <span class="white">str1</span> <span class="pink">=</span> <span class="yellow">"Hello"</span><span class="orange">;</span>
+            <span class="blue">String</span> <span class="white">str2</span> <span class="pink">=</span> <span class="yellow">"World"</span><span class="orange">;</span>
+            <span class="comment">// Comparing str1 and str2</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">print</span><span class="orange">(</span><span class="white">str1</span> <span class="white">==</span> <span class="white">str2</span><span class="orange">);</span> <span class="comment">// output : false</span></code>
+        </pre>
                 </li>
                 <hr />
                 <li>
@@ -294,10 +291,10 @@
                   comparisons are necessary.
                   <pre>
                     <code>
-                      String s = "Hello World!";
-                      System.out.println(s.toUpperCase()); <span class="comment">// Outputs: "HELLO WORLD!"</span>
-                      System.out.println(s.toLowerCase()); <span class="comment">// Outputs: "hello world!"</span></code>
-                  </pre>
+        <span class="blue">String</span> <span class="white">s</span> <span class="pink">=</span> <span class="yellow">"Hello World!"</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">s</span><span class="purple">.</span><span class="white">toUpperCase</span><span class="orange">());</span> <span class="comment">// Outputs: "HELLO WORLD!"</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">s</span><span class="purple">.</span><span class="white">toLowerCase</span><span class="orange">());</span> <span class="comment">// Outputs: "hello world!"</span></code>
+                  </pre>                  
                 </li>
               </ul>
             </li>

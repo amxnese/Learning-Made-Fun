@@ -182,52 +182,53 @@
           <h3>Example 1: for loop</h3>
           <pre>
             <code>
-              // Looping through an array using for loop
-              const numbers = [1, 2, 3, 4, 5];
-              for (let i = 0; i &lt; numbers.length; i++) {
-                  console.log(numbers[i]);
-              }</code>
+              <span class="comment">// Looping through an array using for loop</span>
+              <span class="blue">const</span> <span class="white">numbers</span> <span class="pink">=</span> <span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="white">,</span> <span class="purple">4</span><span class="white">,</span> <span class="purple">5</span><span class="orange">]</span><span class="white">;</span>
+              <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">i</span> <span class="pink">=</span> <span class="purple">0</span><span class="white">;</span> <span class="white">i</span> <span class="white">&lt;</span> <span class="white">numbers</span><span class="white">.</span><span class="green">length</span><span class="white">;</span> <span class="white">i</span><span class="white">++</span><span class="yellow">)</span> <span class="orange">{</span>
+                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">numbers</span><span class="yellow">[</span><span class="white">i</span><span class="yellow">]</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="orange">}</span></code>
           </pre>
-
           <h3>Example 2: while loop</h3>
           <pre>
             <code>
-              // Looping until a condition is met using while loop
-              let count = 0;
-              while (count &lt; 5) {
-                  console.log('Count:', count);
-                  count++;
-              }</code>
+              <span class="comment">// Looping until a condition is met using while loop</span>
+              <span class="blue">let</span> <span class="white">count</span> <span class="pink">=</span> <span class="purple">0</span><span class="white">;</span>
+              <span class="pink">while</span> <span class="yellow">(</span><span class="white">count</span> <span class="white">&lt;</span> <span class="purple">5</span><span class="yellow">)</span> <span class="orange">{</span>
+                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Count:'</span><span class="white">,</span> <span class="white">count</span><span class="yellow">)</span><span class="white">;</span>
+                <span class="white">count</span><span class="white">++</span><span class="white">;</span>
+              <span class="orange">}</span></code>
           </pre>
+
           <h3>Example 3: do-while loop</h3>
           <pre>
             <code>
-              // Executing code at least once with do-while loop
-              let result;
-              do {
-                  result = prompt("Enter a number greater than 10", "");
-              } while (result &lt;= 10);</code>
+              <span class="comment">// Executing code at least once with do-while loop</span>
+              <span class="blue">let</span> <span class="white">result</span><span class="white">;</span>
+              <span class="pink">do</span> <span class="orange">{</span>
+                <span class="white">result</span> <span class="pink">=</span> <span class="green">prompt</span><span class="yellow">(</span><span class="yellow">"Enter a number greater than 10"</span><span class="white">,</span> <span class="yellow">""</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="orange">}</span> <span class="pink">while</span> <span class="yellow">(</span><span class="white">result</span> <span class="white">&lt;=</span> <span class="purple">10</span><span class="yellow">)</span><span class="white">;</span></code>
           </pre>
 
           <h3>Example 4: for-in loop</h3>
           <pre>
             <code>
-              // Iterating over object properties using for-in loop
-              const person = {fname: "John", lname: "Doe", age: 25};
-              for (let key in person) {
-                  console.log(key + ': ' + person[key]);
-              }</code>
+              <span class="comment">// Iterating over object properties using for-in loop</span>
+              <span class="blue">const</span> <span class="white">person</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">fname</span><span class="white">:</span> <span class="yellow">"John"</span><span class="white">,</span> <span class="white">lname</span><span class="white">:</span> <span class="yellow">"Doe"</span><span class="white">,</span> <span class="white">age</span><span class="white">:</span> <span class="purple">25</span><span class="orange">}</span><span class="white">;</span>
+              <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">key</span> <span class="pink">in</span> <span class="white">person</span><span class="yellow">)</span> <span class="orange">{</span>
+                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">key</span> <span class="white">+</span> <span class="yellow">': '</span> <span class="white">+</span> <span class="white">person</span><span class="yellow">[</span><span class="white">key</span><span class="yellow">]</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="orange">}</span></code>
           </pre>
 
           <h3>Example 5: for-of loop</h3>
           <pre>
             <code>
-              // Iterating over an array using for-of loop
-              const colors = ['red', 'green', 'blue'];
-              for (let color of colors) {
-                  console.log(color);
-              }</code>
+              <span class="comment">// Iterating over an array using for-of loop</span>
+              <span class="blue">const</span> <span class="white">colors</span> <span class="pink">=</span> <span class="orange">[</span><span class="yellow">'red'</span><span class="white">,</span> <span class="yellow">'green'</span><span class="white">,</span> <span class="yellow">'blue'</span><span class="orange">]</span><span class="white">;</span>
+              <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">color</span> <span class="pink">of</span> <span class="white">colors</span><span class="yellow">)</span> <span class="orange">{</span>
+                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">color</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="orange">}</span></code>
           </pre>
+
           <p>
             These examples illustrate how each type of loop can be used in
             JavaScript to handle a variety of programming tasks, from processing

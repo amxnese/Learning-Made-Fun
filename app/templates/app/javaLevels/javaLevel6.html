@@ -60,13 +60,14 @@
           <p>Example of a simple method in Java:</p>
           <pre>
             <code>
-              public class Calculator {
-              <span class="comment">// Method to add two numbers</span>
-                public int add(int a, int b) {
-                    return a + b;
-                }
-              }</code>
+        <span class="blue">public class</span> <span class="white">Calculator</span> <span class="orange">{</span>
+          <span class="comment">// Method to add two numbers</span>
+          <span class="blue">public int</span> <span class="white">add</span><span class="orange">(</span><span class="blue">int</span> <span class="white">a</span><span class="white">,</span> <span class="blue">int</span> <span class="white">b</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="blue">return</span> <span class="white">a</span> <span class="pink">+</span> <span class="white">b</span><span class="orange">;</span>
+          <span class="orange">}</span>
+        <span class="orange">}</span></code>
           </pre>
+
           <p>
             This example defines a <code>Calculator</code> class with a method
             <code>add</code> that takes two integers as parameters and returns
@@ -193,104 +194,101 @@
               <strong>Example 1: Basic Function</strong>
               <pre>
                 <code>
-                  public class Main {
-                    <span class="comment">Declaring and Defining the function</span>
-                    public static void printMessage() {
-                        System.out.println("Hello, World!");
-                    }
-                
-                    public static void main(String[] args) {
-                        printMessage();  <span class="comment">// Calling the function</span>
-                    }
-                }</code>
+        <span class="blue">public class</span> <span class="white">Main</span> <span class="orange">{</span>
+          <span class="comment">// Declaring and Defining the function</span>
+          <span class="blue">public static void</span> <span class="white">printMessage</span><span class="orange">()</span> <span class="orange">{</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello, World!"</span><span class="orange">);</span>
+          <span class="orange">}</span>
+    
+          <span class="blue">public static void</span> <span class="white">main</span><span class="orange">(</span><span class="blue">String</span><span class="white">[]</span> <span class="white">args</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="white">printMessage</span><span class="orange">();</span>  <span class="comment">// Calling the function</span>
+          <span class="orange">}</span>
+        <span class="orange">}</span></code>
               </pre>
             </li>
             <li>
               <strong>Example 2: Function with Return Value</strong>
               <pre>
                 <code>
-                  public class Calculator {
-                    <span class="comment">Defining the function</span>
-                    public static int sum(int a, int b) {
-                      return a + b;
-                    }
-                
-                    public static void main(String[] args) {
-                        int result = sum(5, 3); <span class="comment">Calling the function</span>
-                        System.out.println("Sum is: " + result);
-                    }
-                }</code>
+        <span class="blue">public class</span> <span class="white">Calculator</span> <span class="orange">{</span>
+          <span class="comment">// Defining the function</span>
+          <span class="blue">public static int</span> <span class="white">sum</span><span class="orange">(</span><span class="blue">int</span> <span class="white">a</span><span class="white">,</span> <span class="blue">int</span> <span class="white">b</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="blue">return</span> <span class="white">a</span> <span class="pink">+</span> <span class="white">b</span><span class="orange">;</span>
+          <span class="orange">}</span>
+    
+          <span class="blue">public static void</span> <span class="white">main</span><span class="orange">(</span><span class="blue">String</span><span class="white">[]</span> <span class="white">args</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="blue">int</span> <span class="white">result</span> <span class="pink">=</span> <span class="white">sum</span><span class="orange">(</span><span class="purple">5</span><span class="white">,</span> <span class="purple">3</span><span class="orange">);</span> <span class="comment">// Calling the function</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Sum is: "</span> <span class="pink">+</span> <span class="white">result</span><span class="orange">);</span>
+          <span class="orange">}</span>
+        <span class="orange">}</span></code>
               </pre>
             </li>
             <li>
               <strong>Example 3: Function with Parameters</strong>
               <pre>
                 <code>
-                  public class Main {
-                    public static void displayUser(String name, int age) {
-                        System.out.println("Name: " + name + ", Age: " + age);
-                    }
-                
-                    public static void main(String[] args) {
-                        displayUser("Alice", 30);
-                    }
-                }</code>
+        <span class="blue">public class</span> <span class="white">Main</span> <span class="orange">{</span>
+          <span class="blue">public static void</span> <span class="white">displayUser</span><span class="orange">(</span><span class="blue">String</span> <span class="white">name</span><span class="white">,</span> <span class="blue">int</span> <span class="white">age</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Name: "</span> <span class="pink">+</span> <span class="white">name</span> <span class="pink">+</span> <span class="yellow">", Age: "</span> <span class="pink">+</span> <span class="white">age</span><span class="orange">);</span>
+          <span class="orange">}</span>
+    
+          <span class="blue">public static void</span> <span class="white">main</span><span class="orange">(</span><span class="blue">String</span><span class="white">[]</span> <span class="white">args</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="white">displayUser</span><span class="orange">(</span><span class="yellow">"Alice"</span><span class="white">,</span> <span class="purple">30</span><span class="orange">);</span>
+          <span class="orange">}</span>
+        <span class="orange">}</span></code>
               </pre>
             </li>
           </ul>
         </section>
         <section>
-          <section>
-            <h2>Recursion in Java</h2>
-            <p>
-              Recursion in Java is a process where a method calls itself
-              continuously. A method that uses this technique is referred to as
-              a recursive method. To prevent a recursive method from running
-              indefinitely, a condition is typically used to end the method
-              calls.
-            </p>
-            <h3>Key Concepts of Recursion</h3>
-            <ul>
-              <li>
-                <strong>Base Case:</strong> This is the condition under which
-                the recursion stops. Without a base case, the recursion would
-                continue indefinitely, likely causing a stack overflow error.
-              </li>
-              <li>
-                <strong>Recursive Case:</strong> This is the part of the method
-                where the recursion occurs, meaning the method calls itself with
-                modified parameters.
-              </li>
-            </ul>
-            <h3>Example of Recursion in Java</h3>
-            <p>
-              Here is a simple example of a recursive method in Java that
-              calculates the factorial of a number:
-            </p>
-            <pre>
+          <h2>Recursion in Java</h2>
+          <p>
+            Recursion in Java is a process where a method calls itself
+            continuously. A method that uses this technique is referred to as a
+            recursive method. To prevent a recursive method from running
+            indefinitely, a condition is typically used to end the method calls.
+          </p>
+          <h3>Key Concepts of Recursion</h3>
+          <ul>
+            <li>
+              <strong>Base Case:</strong> This is the condition under which the
+              recursion stops. Without a base case, the recursion would continue
+              indefinitely, likely causing a stack overflow error.
+            </li>
+            <li>
+              <strong>Recursive Case:</strong> This is the part of the method
+              where the recursion occurs, meaning the method calls itself with
+              modified parameters.
+            </li>
+          </ul>
+          <h3>Example of Recursion in Java</h3>
+          <p>
+            Here is a simple example of a recursive method in Java that
+            calculates the factorial of a number:
+          </p>
+          <pre>
               <code>
-                public class Factorial {
-                    public static int factorial(int n) {
-                        if (n == 0) { <span class="comment">// Base case</span>
-                            return 1;
-                        } else { <span class="comment">// Recursive case</span>
-                            return n * factorial(n - 1);
-                        }
-                    }
-                    
-                    public static void main(String[] args) {
-                        int result = factorial(5);
-                        System.out.println("Factorial of 5 is: " + result);
-                    }
-                }</code>
+        <span class="blue">public class</span> <span class="white">Factorial</span> <span class="orange">{</span>
+          <span class="blue">public static int</span> <span class="white">factorial</span><span class="orange">(</span><span class="blue">int</span> <span class="white">n</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="pink">if</span> <span class="orange">(</span><span class="white">n</span> <span class="white">==</span> <span class="purple">0</span><span class="orange">)</span> <span class="orange">{</span> <span class="comment">// Base case</span>
+              <span class="blue">return</span> <span class="purple">1</span><span class="orange">;</span>
+            <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span> <span class="comment">// Recursive case</span>
+              <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">factorial</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">);</span>
+            <span class="orange">}</span>
+          <span class="orange">}</span>
+          <span class="blue">public static void</span> <span class="white">main</span><span class="orange">(</span><span class="blue">String</span><span class="white">[]</span> <span class="white">args</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="blue">int</span> <span class="white">result</span> <span class="pink">=</span> <span class="white">factorial</span><span class="orange">(</span><span class="purple">5</span><span class="orange">);</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Factorial of 5 is: "</span> <span class="pink">+</span> <span class="white">result</span><span class="orange">);</span>
+          <span class="orange">}</span>
+        <span class="orange">}</span></code>
             </pre>
-            <p>
-              This method uses a base case where if <code>n</code> is 0, it
-              returns 1 (since 0! = 1). Otherwise, it calls itself with
-              <code>n - 1</code>, multiplying the result by <code>n</code> each
-              time.
-            </p>
-          </section>
+
+          <p>
+            This method uses a base case where if <code>n</code> is 0, it
+            returns 1 (since 0! = 1). Otherwise, it calls itself with
+            <code>n - 1</code>, multiplying the result by <code>n</code> each
+            time.
+          </p>
         </section>
       </main>
       <footer>

@@ -76,11 +76,10 @@
           </ul>
           <pre>
             <code>
-              let arr = ["Apple", "Banana"];
-              arr.push("Orange"); <span class="comment">// Adding element to the end</span>
-              let fruit = arr[0]; <span class="comment">// Accessing element by index</span></code>
+              <span class="blue">let</span> <span class="white">arr</span> <span class="pink">=</span> <span class="yellow">["Apple", "Banana"]</span><span class="white">;</span>
+              <span class="white">arr</span><span class="white">.</span><span class="green">push</span><span class="yellow">(</span><span class="yellow">"Orange"</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Adding element to the end</span>
+              <span class="blue">let</span> <span class="white">fruit</span> <span class="pink">=</span> <span class="white">arr</span><span class="yellow">[</span><span class="purple">0</span><span class="yellow">]</span><span class="white">; </span><span class="comment">// Accessing element by index</span></code>
           </pre>
-
           <h3>2. Set:</h3>
           <ul>
             <li>Set is a collection of unique values.</li>
@@ -90,12 +89,12 @@
             </li>
             <li>Example:</li>
           </ul>
-          <pre>
+          <pre style="width: 850px">
             <code>
-              let set = new Set();
-              set.add("Apple");
-              set.add("Banana");
-              let containsApple = set.has("Apple"); <span class="comment">// Checking if set contains an element</span></code>
+              <span class="blue">let</span> <span class="white">set</span> <span class="pink">=</span> <span class="pink">new</span> <span class="green">Set</span><span class="yellow">(</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">set</span><span class="white">.</span><span class="green">add</span><span class="yellow">(</span><span class="yellow">"Apple"</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">set</span><span class="white">.</span><span class="green">add</span><span class="yellow">(</span><span class="yellow">"Banana"</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="blue">let</span> <span class="white">containsApple</span> <span class="pink">=</span> <span class="white">set</span><span class="white">.</span><span class="green">has</span><span class="yellow">(</span><span class="yellow">"Apple"</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Checking if set contains an element</span></code>
           </pre>
 
           <h3>3. Map:</h3>
@@ -111,10 +110,10 @@
           </ul>
           <pre>
             <code>
-              let map = new Map();
-              map.set("apple", 10);
-              map.set("banana", 5);
-              let quantity = map.get("apple"); <span class="comment">// Retrieving value by key</span></code>
+              <span class="blue">let</span> <span class="white">map</span> <span class="pink">=</span> <span class="pink">new</span> <span class="green">Map</span><span class="yellow">(</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">map</span><span class="white">.</span><span class="green">set</span><span class="yellow">(</span><span class="yellow">"apple"</span><span class="white">,</span> <span class="purple">10</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">map</span><span class="white">.</span><span class="green">set</span><span class="yellow">(</span><span class="yellow">"banana"</span><span class="white">,</span> <span class="purple">5</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="blue">let</span> <span class="white">quantity</span> <span class="pink">=</span> <span class="white">map</span><span class="white">.</span><span class="green">get</span><span class="yellow">(</span><span class="yellow">"apple"</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Retrieving value by key</span></code>
           </pre>
 
           <h3>4. Object:</h3>
@@ -130,11 +129,11 @@
           </ul>
           <pre>
             <code>
-              let obj = {
-                name: "John",
-                age: 30
-              };
-              let name = obj.name; <span class="comment">// Accessing property by key</span></code>
+              <span class="blue">let</span> <span class="white">obj</span> <span class="pink">=</span> <span class="orange">{</span>
+                <span class="white">name</span><span class="white">:</span> <span class="yellow">"John"</span><span class="white">,</span>
+                <span class="white">age</span><span class="white">:</span> <span class="purple">30</span>
+              <span class="orange">}</span><span class="white">;</span>
+              <span class="blue">let</span> <span class="white">name</span> <span class="pink">=</span> <span class="white">obj</span><span class="white">.</span><span class="white">name</span><span class="white">; </span><span class="comment">// Accessing property by key</span></code>
           </pre>
         </section>
         <section>
@@ -161,18 +160,18 @@
           <p>Examples:</p>
           <pre>
             <code>
-              let myArray = [3, 1, 4, 1, 5, 9, 2, 6, 5];
-              console.log(myArray.length);  <span class="comment">// Output: 9</span>
-
-              myArray.push(7);
-              console.log(myArray);  <span class="comment">// Output: [3, 1, 4, 1, 5, 9, 2, 6, 5, 7]</span>
-
-              let poppedItem = myArray.pop();
-              console.log(poppedItem);  <span class="comment">// Output: 7</span>
-              console.log(myArray);  <span class="comment">// Output: [3, 1, 4, 1, 5, 9, 2, 6, 5]</span>
-
-              myArray.sort();
-              console.log(myArray);  <span class="comment">// Output: [1, 1, 2, 3, 5, 5, 6, 9]</span></code>
+              <span class="blue">let</span> <span class="white">myArray</span> <span class="pink">=</span> <span class="orange">[</span><span class="purple">3</span><span class="white">,</span> <span class="purple">1</span><span class="white">,</span> <span class="purple">4</span><span class="white">,</span> <span class="purple">1</span><span class="white">,</span> <span class="purple">5</span><span class="white">,</span> <span class="purple">9</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">6</span><span class="white">,</span> <span class="purple">5</span><span class="orange">]</span><span class="white">;</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">myArray</span><span class="white">.</span><span class="green">length</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: 9</span>
+          
+              <span class="white">myArray</span><span class="white">.</span><span class="green">push</span><span class="yellow">(</span><span class="purple">7</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">myArray</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: [3, 1, 4, 1, 5, 9, 2, 6, 5, 7]</span>
+          
+              <span class="blue">let</span> <span class="white">poppedItem</span> <span class="pink">=</span> <span class="white">myArray</span><span class="white">.</span><span class="green">pop</span><span class="yellow">(</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">poppedItem</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: 7</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">myArray</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: [3, 1, 4, 1, 5, 9, 2, 6, 5]</span>
+          
+              <span class="white">myArray</span><span class="white">.</span><span class="green">sort</span><span class="yellow">(</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">myArray</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: [1, 1, 2, 3, 5, 5, 6, 9]</span></code>
           </pre>
 
           <h3>Objects</h3>
@@ -198,16 +197,15 @@
           <p>Examples:</p>
           <pre>
             <code>
-              let myObject = {a: 1, b: 2, c: 3};
-
-              console.log(Object.keys(myObject));  // Output: ["a", "b", "c"]
-              console.log(Object.values(myObject));  // Output: [1, 2, 3]
-              console.log(Object.entries(myObject));  // Output: [["a", 1], ["b", 2], ["c", 3]]
-
-              let copiedObject = Object.assign({}, myObject);
-              console.log(copiedObject);  // Output: {a: 1, b: 2, c: 3}</code>
+              <span class="blue">let</span> <span class="white">myObject</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">a</span><span class="white">:</span> <span class="purple">1</span><span class="white">,</span> <span class="white">b</span><span class="white">:</span> <span class="purple">2</span><span class="white">,</span> <span class="white">c</span><span class="white">:</span> <span class="purple">3</span><span class="orange">}</span><span class="white">;</span>
+          
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">Object</span><span class="white">.</span><span class="green">keys</span><span class="yellow">(</span><span class="white">myObject</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: ["a", "b", "c"]</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">Object</span><span class="white">.</span><span class="green">values</span><span class="yellow">(</span><span class="white">myObject</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: [1, 2, 3]</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">Object</span><span class="white">.</span><span class="green">entries</span><span class="yellow">(</span><span class="white">myObject</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: [["a", 1], ["b", 2], ["c", 3]]</span>
+          
+              <span class="blue">let</span> <span class="white">copiedObject</span> <span class="pink">=</span> <span class="blue">Object</span><span class="white">.</span><span class="green">assign</span><span class="yellow">(</span><span class="orange">{}</span><span class="white">,</span> <span class="white">myObject</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">copiedObject</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: {a: 1, b: 2, c: 3}</span></code>
           </pre>
-
           <h3>Sets</h3>
           <ul>
             <li><strong>add()</strong>: Adds a new element to the set.</li>
@@ -227,22 +225,22 @@
           <p>Examples:</p>
           <pre>
             <code>
-              let mySet = new Set([1, 2, 3]);
-
-              mySet.add(4);
-              console.log(mySet);  // Output: Set { 1, 2, 3, 4 }
-
-              mySet.delete(2);
-              console.log(mySet);  // Output: Set { 1, 3, 4 }
-
-              console.log(mySet.has(3));  // Output: true
-              console.log(mySet.has(2));  // Output: false
-
-              mySet.forEach(item => console.log(item * 2));
-              // Output:
-              // 2
-              // 6
-              // 8</code>
+              <span class="blue">let</span> <span class="white">mySet</span> <span class="pink">=</span> <span class="pink">new</span> <span class="green">Set</span><span class="yellow">(</span><span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="orange">]</span><span class="yellow">)</span><span class="white">;</span>
+          
+              <span class="white">mySet</span><span class="white">.</span><span class="green">add</span><span class="yellow">(</span><span class="purple">4</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">mySet</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: Set { 1, 2, 3, 4 }</span>
+          
+              <span class="white">mySet</span><span class="white">.</span><span class="green">delete</span><span class="yellow">(</span><span class="purple">2</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">mySet</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Output: Set { 1, 3, 4 }</span>
+          
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">mySet</span><span class="white">.</span><span class="green">has</span><span class="yellow">(</span><span class="purple">3</span><span class="yellow">)</span><span class="white">); </span><span class="comment">// Output: true</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">mySet</span><span class="white">.</span><span class="green">has</span><span class="yellow">(</span><span class="purple">2</span><span class="yellow">)</span><span class="white">); </span><span class="comment">// Output: false</span>
+          
+              <span class="white">mySet</span><span class="white">.</span><span class="green">forEach</span><span class="yellow">(</span><span class="white">item</span> <span class="pink">=></span> <span class="white">console</span><span class="white">.</span><span class="green">log</span><span class="yellow">(</span><span class="white">item</span> <span class="white">*</span> <span class="purple">2</span><span class="yellow">)</span><span class="white">);</span>
+              <span class="comment">// Output:</span>
+              <span class="comment">// 2</span>
+              <span class="comment">// 6</span>
+              <span class="comment">// 8</span></code>
           </pre>
         </section>
       </main>

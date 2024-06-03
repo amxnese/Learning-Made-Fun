@@ -80,11 +80,11 @@
           </ul>
           <pre>
             <code>
-            ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-            list.add("Apple");
-            list.add("Banana");
-            String fruit = list.get(0); <span class="comment">// Accessing element by index</span></code>
-            </pre>
+          <span class="blue">ArrayList</span><<span class="blue">String</span>> <span class="white">list</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
+          <span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Apple"</span><span class="orange">);</span>
+          <span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">);</span>
+          <span class="blue">String</span> <span class="white">fruit</span> <span class="pink">=</span> <span class="white">list</span><span class="purple">.</span><span class="blue">get</span><span class="orange">(</span><span class="purple">0</span><span class="orange">);</span> <span class="comment">// Accessing element by index</span></code>
+          </pre>
           <p><strong>2. LinkedList:</strong></p>
           <ul>
             <li>LinkedList is a doubly-linked list implementation.</li>
@@ -96,11 +96,11 @@
           </ul>
           <pre>
             <code>
-            LinkedList&lt;Integer&gt; list = new LinkedList&lt;&gt;();
-            list.add(10);
-            list.addFirst(5); <span class="comment">// Inserting at the beginning</span>
-            int firstElement = list.getFirst(); <span class="comment">// Retrieving the first element</span></code>
-            </pre>
+        <span class="blue">LinkedList</span><<span class="blue">Integer</span>> <span class="white">list</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">LinkedList</span><><span class="orange">();</span>
+        <span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">10</span><span class="orange">);</span>
+        <span class="white">list</span><span class="purple">.</span><span class="blue">addFirst</span><span class="orange">(</span><span class="purple">5</span><span class="orange">);</span> <span class="comment">// Inserting at the beginning</span>
+        <span class="blue">int</span> <span class="white">firstElement</span> <span class="pink">=</span> <span class="white">list</span><span class="purple">.</span><span class="blue">getFirst</span><span class="orange">();</span> <span class="comment">// Retrieving the first element</span></code>
+          </pre>
           <p><strong>3. HashMap:</strong></p>
           <ul>
             <li>HashMap stores key-value pairs.</li>
@@ -109,11 +109,12 @@
           </ul>
           <pre>
             <code>
-            HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
-            map.put("apple", 10);
-            map.put("banana", 5);
-            int quantity = map.get("apple"); <span class="comment">// Retrieving value by key</span></code>
-            </pre>
+        <span class="blue">HashMap</span><<span class="blue">String</span><span class="white">,</span> <span class="blue">Integer</span>> <span class="white">map</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashMap</span><><span class="orange">();</span>
+        <span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"apple"</span><span class="white">,</span> <span class="purple">10</span><span class="orange">);</span>
+        <span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"banana"</span><span class="white">,</span> <span class="purple">5</span><span class="orange">);</span>
+        <span class="blue">int</span> <span class="white">quantity</span> <span class="pink">=</span> <span class="white">map</span><span class="purple">.</span><span class="blue">get</span><span class="orange">(</span><span class="yellow">"apple"</span><span class="orange">);</span> <span class="comment">// Retrieving value by key</span></code>
+          </pre>
+
           <p><strong>4. HashSet:</strong></p>
           <ul>
             <li>HashSet stores unique elements.</li>
@@ -124,11 +125,12 @@
           </ul>
           <pre>
             <code>
-            HashSet&lt;String&gt; set = new HashSet&lt;&gt;();
-            set.add("apple");
-            set.add("banana");
-            boolean containsApple = set.contains("apple"); <span class="comment">// Checking if set contains an element</span></code>
-            </pre>
+        <span class="blue">HashSet</span><<span class="blue">String</span>> <span class="white">set</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashSet</span><><span class="orange">();</span>
+        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"apple"</span><span class="orange">);</span>
+        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"banana"</span><span class="orange">);</span>
+        <span class="blue">boolean</span> <span class="white">containsApple</span> <span class="pink">=</span> <span class="white">set</span><span class="purple">.</span><span class="blue">contains</span><span class="orange">(</span><span class="yellow">"apple"</span><span class="orange">);</span> <span class="comment">// Checking if set contains an element</span></code>
+          </pre>
+          
           <p><strong>5. TreeMap:</strong></p>
           <ul>
             <li>
@@ -140,11 +142,12 @@
           </ul>
           <pre>
             <code>
-            TreeMap&lt;String, Integer&gt; map = new TreeMap&lt;&gt;();
-            map.put("apple", 10);
-            map.put("banana", 5);
-            String firstKey = map.firstKey(); <span class="comment">// Retrieving the first key</span></code>
-            </pre>
+              <span class="blue">TreeMap</span><<span class="blue">String</span><span class="white">,</span> <span class="blue">Integer</span>> <span class="white">map</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">TreeMap</span><><span class="orange">();</span>
+              <span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"apple"</span><span class="white">,</span> <span class="purple">10</span><span class="orange">);</span>
+              <span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"banana"</span><span class="white">,</span> <span class="purple">5</span><span class="orange">);</span>
+              <span class="blue">String</span> <span class="white">firstKey</span> <span class="pink">=</span> <span class="white">map</span><span class="purple">.</span><span class="blue">firstKey</span><span class="orange">();</span> <span class="comment">// Retrieving the first key</span></code>
+          </pre>
+          
         </section>
         <section>
           <h1>Common Methods Related to Built-in Datastrures</h1>
@@ -170,18 +173,19 @@
           <p>Example:</p>
           <pre>
             <code>
-              import java.util.ArrayList;
-
-              ArrayList&lt;Integer&gt; myList = new ArrayList&lt;&gt;();
-              myList.add(3);
-              myList.add(1);
-              myList.add(4);
-
-              System.out.println(myList.size());  <span class="comment">// Output: 3</span>
-              System.out.println(myList.get(1));  <span class="comment">// Output: 1</span>
-              myList.remove(1);
-              System.out.println(myList);  <span class="comment">// Output: [3, 4]</span></code>
+        <span class="blue">import</span> <span class="white">java.util.ArrayList</span><span class="orange">;</span>
+    
+        <span class="blue">ArrayList</span><<span class="blue">Integer</span>> <span class="white">myList</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
+        <span class="white">myList</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">3</span><span class="orange">);</span>
+        <span class="white">myList</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
+        <span class="white">myList</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">4</span><span class="orange">);</span>
+    
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">myList</span><span class="purple">.</span><span class="white">size</span><span class="orange">());</span>  <span class="comment">// Output: 3</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">myList</span><span class="purple">.</span><span class="white">get</span><span class="orange">(</span><span class="purple">1</span><span class="orange">));</span>  <span class="comment">// Output: 1</span>
+        <span class="white">myList</span><span class="purple">.</span><span class="blue">remove</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">myList</span><span class="orange">);</span>  <span class="comment">// Output: [3, 4]</span></code>
           </pre>
+          
 
           <h2>HashMap</h2>
           <ul>
@@ -205,19 +209,19 @@
           </ul>
           <p>Example:</p>
           <pre>
-          <code>
-            import java.util.HashMap;
-
-            HashMap&lt;String, Integer&gt; myMap = new HashMap&lt;&gt;();
-            myMap.put("a", 1);
-            myMap.put("b", 2);
-            myMap.put("c", 3);
-
-            System.out.println(myMap.size());  <span class="comment">// Output: 3</span>
-            System.out.println(myMap.get("b"));  <span class="comment">// Output: 2</span>
-            myMap.remove("a");
-            System.out.println(myMap);  <span class="comment">// Output: {b=2, c=3}</span></code>
-          </pre>
+            <code>
+        <span class="blue">import</span> <span class="white">java.util.HashMap</span><span class="orange">;</span>
+    
+        <span class="blue">HashMap</span><<span class="blue">String</span><span class="white">,</span> <span class="blue">Integer</span>> <span class="white">myMap</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashMap</span><><span class="orange">();</span>
+        <span class="white">myMap</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"a"</span><span class="white">,</span> <span class="purple">1</span><span class="orange">);</span>
+        <span class="white">myMap</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"b"</span><span class="white">,</span> <span class="purple">2</span><span class="orange">);</span>
+        <span class="white">myMap</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"c"</span><span class="white">,</span> <span class="purple">3</span><span class="orange">);</span>
+    
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">myMap</span><span class="purple">.</span><span class="white">size</span><span class="orange">());</span>  <span class="comment">// Output: 3</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">myMap</span><span class="purple">.</span><span class="white">get</span><span class="orange">(</span><span class="yellow">"b"</span><span class="orange">));</span>  <span class="comment">// Output: 2</span>
+        <span class="white">myMap</span><span class="purple">.</span><span class="blue">remove</span><span class="orange">(</span><span class="yellow">"a"</span><span class="orange">);</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">myMap</span><span class="orange">);</span>  <span class="comment">// Output: {b=2, c=3}</span></code>
+          </pre>          
 
           <h2>HashSet</h2>
           <ul>
@@ -241,18 +245,19 @@
           <p>Example:</p>
           <pre>
             <code>
-              import java.util.HashSet;
-
-              HashSet&lt;Integer&gt; mySet = new HashSet&lt;&gt;();
-              mySet.add(1);
-              mySet.add(2);
-              mySet.add(3);
-
-              System.out.println(mySet.size()); <span class="comment"> // Output: 3</span>
-              System.out.println(mySet.contains(2));  <span class="comment">// Output: true</span>
-              mySet.remove(1);
-              System.out.println(mySet);  <span class="comment">// Output: [2, 3]</span></code>
+        <span class="blue">import</span> <span class="white">java.util.HashSet</span><span class="orange">;</span>
+    
+        <span class="blue">HashSet</span><<span class="blue">Integer</span>> <span class="white">mySet</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashSet</span><><span class="orange">();</span>
+        <span class="white">mySet</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
+        <span class="white">mySet</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">2</span><span class="orange">);</span>
+        <span class="white">mySet</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">3</span><span class="orange">);</span>
+    
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">mySet</span><span class="purple">.</span><span class="white">size</span><span class="orange">());</span> <span class="comment"> // Output: 3</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">mySet</span><span class="purple">.</span><span class="white">contains</span><span class="orange">(</span><span class="purple">2</span><span class="orange">));</span>  <span class="comment">// Output: true</span>
+        <span class="white">mySet</span><span class="purple">.</span><span class="blue">remove</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">mySet</span><span class="orange">);</span>  <span class="comment">// Output: [2, 3]</span></code>
           </pre>
+          
         </section>
       </main>
       <footer>

@@ -29,9 +29,9 @@
               a block of code if the condition is true.
               <pre>
                 <code>
-                  if (condition) {
-                    <span class="comment">// code to be executed if condition is true</span>
-                  }</code>
+        <span class="pink">if</span> <span class="orange">(</span><span class="white">condition</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="comment">// code to be executed if condition is true</span>
+        <span class="orange">}</span></code>
               </pre>
             </li>
             <li>
@@ -40,26 +40,28 @@
               otherwise executes another block of code.
               <pre>
                 <code>
-                  if (condition) {
-                    <span class="comment">// code to be executed if condition is true</span>
-                  } else {
-                    <span class="comment">// code to be executed if condition is false</span>
-                  }</code>
+        <span class="pink">if</span> <span class="orange">(</span><span class="white">condition</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="comment">// code to be executed if condition is true</span>
+        <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+          <span class="comment">// code to be executed if condition is false</span>
+        <span class="orange">}</span></code>
               </pre>
+              
             </li>
             <li>
               <strong>3. else-if ladder:</strong> A series of conditions to be
               checked in sequence.
               <pre>
                 <code>
-                  if (condition1) {
-                    <span class="comment">// code to be executed if condition1 is true</span>
-                  } else if (condition2) {
-                      <span class="comment">// code to be executed if condition2 is true</span>
-                  } else {
-                      <span class="comment">// code to be executed if all previous conditions are false</span>
-                  }</code>
+        <span class="pink">if</span> <span class="orange">(</span><span class="white">condition1</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="comment">// code to be executed if condition1 is true</span>
+        <span class="orange">}</span> <span class="pink">else if</span> <span class="orange">(</span><span class="white">condition2</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="comment">// code to be executed if condition2 is true</span>
+        <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+          <span class="comment">// code to be executed if all previous conditions are false</span>
+        <span class="orange">}</span></code>
               </pre>
+              
             </li>
             <li>
               <strong>4. switch statement:</strong> Specifies many alternative
@@ -68,17 +70,18 @@
               multiple conditions on the same variable.
               <pre>
                 <code>
-                  switch (expression) {
-                    case value1:
-                        <span class="comment">// code to be executed when expression equals value1</span>
-                        break;
-                    case value2:
-                        <span class="comment">// code to be executed when expression equals value2</span>
-                        break;
-                    default:
-                        <span class="comment">// code to be executed if expression doesn't match any case</span>
-                  }</code>
+        <span class="pink">switch</span> <span class="orange">(</span><span class="white">expression</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="pink">case</span> <span class="white">value1</span><span class="orange">:</span>
+            <span class="comment">// code to be executed when expression equals value1</span>
+            <span class="pink">break</span><span class="orange">;</span>
+          <span class="pink">case</span> <span class="white">value2</span><span class="orange">:</span>
+            <span class="comment">// code to be executed when expression equals value2</span>
+            <span class="pink">break</span><span class="orange">;</span>
+          <span class="pink">default</span><span class="orange">:</span>
+            <span class="comment">// code to be executed if expression doesn't match any case</span>
+        <span class="orange">}</span></code>
               </pre>
+              
             </li>
           </ul>
         </section>
@@ -175,55 +178,56 @@
               <strong>if statement</strong>
               <pre>
                 <code>
-                  if (score &gt;= 70) {
-                    System.out.println("Passed!");
-                  }</code>
+        <span class="pink">if</span> <span class="orange">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">70</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Passed!"</span><span class="orange">);</span>
+        <span class="orange">}</span></code>
               </pre>
             </li>
             <li>
               <strong>if-else statement</strong>
               <pre>
                 <code>
-                  if (age &lt; 18) {
-                    System.out.println("You are a minor.");
-                  } else {
-                    System.out.println("You are an adult.");
-                  }</code>
-              </pre>
+        <span class="pink">if</span> <span class="orange">(</span><span class="white">age</span> <span class="white">&lt;</span> <span class="purple">18</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"You are a minor."</span><span class="orange">);</span>
+        <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"You are an adult."</span><span class="orange">);</span>
+        <span class="orange">}</span></code>
+              </pre>              
             </li>
             <li>
               <strong>else-if ladder</strong>
               <pre>
                 <code>
-                  if (grade &gt;= 90) {
-                      System.out.println("Grade A");
-                  } else if (grade &gt;= 80) {
-                      System.out.println("Grade B");
-                  } else if (grade &gt;= 70) {
-                      System.out.println("Grade C");
-                  } else {
-                      System.out.println("Grade F");
-                  }</code>
+        <span class="pink">if</span> <span class="orange">(</span><span class="white">grade</span> <span class="white">&gt;=</span> <span class="purple">90</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade A"</span><span class="orange">);</span>
+        <span class="orange">}</span> <span class="pink">else if</span> <span class="orange">(</span><span class="white">grade</span> <span class="white">&gt;=</span> <span class="purple">80</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade B"</span><span class="orange">);</span>
+        <span class="orange">}</span> <span class="pink">else if</span> <span class="orange">(</span><span class="white">grade</span> <span class="white">&gt;=</span> <span class="purple">70</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade C"</span><span class="orange">);</span>
+        <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade F"</span><span class="orange">);</span>
+        <span class="orange">}</span></code>
               </pre>
             </li>
             <li>
               <strong>switch statement</strong>
               <pre>
                 <code>
-                  switch (day) {
-                    case 1:
-                      System.out.println("Monday");
-                      break;
-                    case 2:
-                      System.out.println("Tuesday");
-                      break;
-                    case 3:
-                      System.out.println("Wednesday");
-                      break;
-                    default:
-                      System.out.println("Another day");
-                  }</code>
+        <span class="pink">switch</span> <span class="orange">(</span><span class="white">day</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="pink">case</span> <span class="purple">1</span><span class="orange">:</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Monday"</span><span class="orange">);</span>
+            <span class="pink">break</span><span class="orange">;</span>
+          <span class="pink">case</span> <span class="purple">2</span><span class="orange">:</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Tuesday"</span><span class="orange">);</span>
+            <span class="pink">break</span><span class="orange">;</span>
+          <span class="pink">case</span> <span class="purple">3</span><span class="orange">:</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Wednesday"</span><span class="orange">);</span>
+            <span class="pink">break</span><span class="orange">;</span>
+          <span class="pink">default</span><span class="orange">:</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Another day"</span><span class="orange">);</span>
+        <span class="orange">}</span></code>
               </pre>
+              
             </li>
           </ul>
         </section>

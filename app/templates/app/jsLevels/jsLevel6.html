@@ -31,10 +31,11 @@
             </li>
             <pre>
               <code>
-                function add(x, y) {
-                return x + y;
-                }</code>
+                <span class="blue">function</span> <span class="white">add</span><span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="orange">{</span>
+                  <span class="blue">return</span> <span class="white">x</span> <span class="white">+</span> <span class="white">y</span><span class="white">;</span>
+                <span class="orange">}</span></code>
             </pre>
+            
             <li>
               <strong>Function Expression:</strong> A function can also be
               defined using an expression. Function expressions can be anonymous
@@ -42,10 +43,11 @@
             </li>
             <pre>
               <code>
-                const multiply = function(x, y) {
-                return x * y;
-                };</code>
+                <span class="blue">const</span> <span class="white">multiply</span> <span class="pink">=</span> <span class="blue">function</span><span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="orange">{</span>
+                  <span class="blue">return</span> <span class="white">x</span> <span class="white">*</span> <span class="white">y</span><span class="white">;</span>
+                <span class="orange">}</span><span class="white">;</span></code>
             </pre>
+            
             <li>
               <strong>Arrow Function:</strong> Introduced in ES6, arrow
               functions offer a more concise syntax for writing function
@@ -53,7 +55,7 @@
             </li>
             <pre>
               <code>
-                const subtract = (x, y) => x - y;</code>
+                <span class="blue">const</span> <span class="white">subtract</span> <span class="pink">=</span> <span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="pink">=></span> <span class="white">x</span> <span class="white">-</span> <span class="white">y</span><span class="white">;</span></code>
             </pre>
           </ul>
           <p>
@@ -198,21 +200,22 @@
           <p>This function takes no arguments and prints a greeting message:</p>
           <pre>
             <code>
-              function greet() {
-                console.log("Hello");
-              }
-              greet(); // Outputs: Hello</code>
-          </pre>
+              <span class="blue">function</span> <span class="white">greet</span><span class="purple">(</span><span class="purple">)</span> <span class="orange">{</span>
+                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Hello"</span><span class="yellow">)</span><span class="white">;</span>
+              <span class="orange">}</span>
+              <span class="white">greet</span><span class="yellow">(</span><span class="purple">)</span><span class="white">; </span><span class="comment">// Outputs: Hello</span></code>
+          </pre>          
 
           <h3>2. Simple Function to Add Two Numbers</h3>
           <p>This function takes two parameters and returns their sum:</p>
           <pre>
             <code>
-              function add(a, b) {
-                return a + b;
-              }
-              console.log(add(2, 3)); <span class="comment">// Outputs: 5</span></code>
+              <span class="blue">function</span> <span class="white">add</span><span class="purple">(</span><span class="white">a</span><span class="white">,</span> <span class="white">b</span><span class="purple">)</span> <span class="orange">{</span>
+                <span class="blue">return</span> <span class="white">a</span> <span class="white">+</span> <span class="white">b</span><span class="white">;</span>
+              <span class="orange">}</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">add</span><span class="yellow">(</span><span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 5</span></code>
           </pre>
+          
           <h3>3. Check Age Function</h3>
           <p>
             This function takes an age and checks if the person is eligible to
@@ -220,31 +223,31 @@
           </p>
           <pre>
             <code>
-              function canVote(age) {
-                if (age >= 18) {
-                    console.log("You are eligible to vote.");
-                } else {
-                    console.log("You are not eligible to vote.");
-                }
-              }
-              canVote(21); <span class="comment">// Outputs: You are eligible to vote.</span>
-              canVote(16); <span class="comment">// Outputs: You are not eligible to vote.</span></code>
-          </pre>
+              <span class="blue">function</span> <span class="white">canVote</span><span class="purple">(</span><span class="white">age</span><span class="purple">)</span> <span class="orange">{</span>
+                <span class="pink">if</span> <span class="yellow">(</span><span class="white">age</span> <span class="white">&gt;=</span> <span class="purple">18</span><span class="yellow">)</span> <span class="orange">{</span>
+                  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
+                <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+                  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are not eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
+                <span class="orange">}</span>
+              <span class="orange">}</span>
+              <span class="white">canVote</span><span class="yellow">(</span><span class="purple">21</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: You are eligible to vote.</span>
+              <span class="white">canVote</span><span class="yellow">(</span><span class="purple">16</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: You are not eligible to vote.</span></code>
+          </pre>          
           <h3>4. Function to Calculate Factorial</h3>
           <p>
             This function uses a loop to calculate the factorial of a number:
           </p>
           <pre>
             <code>
-              function factorial(n) {
-                let result = 1;
-                for (let i = 1; i &lt;= n; i++) {
-                  result *= i;
-                }
-                return result;
-              }
-              console.log(factorial(5)); // Outputs: 120</code>
-          </pre>
+              <span class="blue">function</span> <span class="white">factorial</span><span class="purple">(</span><span class="white">n</span><span class="purple">)</span> <span class="orange">{</span>
+                <span class="blue">let</span> <span class="white">result</span> <span class="pink">=</span> <span class="purple">1</span><span class="white">;</span>
+                <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">i</span> <span class="pink">=</span> <span class="purple">1</span><span class="white">;</span> <span class="white">i</span> <span class="white">&lt;=</span> <span class="white">n</span><span class="white">;</span> <span class="white">i</span><span class="white">++</span><span class="yellow">)</span> <span class="orange">{</span>
+                  <span class="white">result</span> <span class="white">*</span><span class="white">=</span> <span class="white">i</span><span class="white">;</span>
+                <span class="orange">}</span>
+                <span class="blue">return</span> <span class="white">result</span><span class="white">;</span>
+              <span class="orange">}</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">factorial</span><span class="yellow">(</span><span class="purple">5</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 120</span></code>
+          </pre>          
         </section>
         <section>
           <h2>Recursion in JavaScript</h2>
@@ -275,16 +278,16 @@
           </p>
           <pre>
             <code>
-              function factorial(n) {
-                  if (n === 0) { <span class="comment">// Base case</span>
-                      return 1;
-                  } else { <span class="comment">// Recursive case</span>
-                      return n * factorial(n - 1);
-                  }
-              }
-              
-              console.log(factorial(5)); <span class="comment">// Outputs: 120</span></code>
+              <span class="blue">function</span> <span class="white">factorial</span><span class="purple">(</span><span class="white">n</span><span class="purple">)</span> <span class="orange">{</span>
+                <span class="pink">if</span> <span class="yellow">(</span><span class="white">n</span> <span class="white">===</span> <span class="purple">0</span><span class="yellow">)</span> <span class="orange">{</span> <span class="comment">// Base case</span>
+                  <span class="blue">return</span> <span class="purple">1</span><span class="white">;</span>
+                <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span> <span class="comment">// Recursive case</span>
+                  <span class="blue">return</span> <span class="white">n</span> <span class="white">*</span> <span class="white">factorial</span><span class="yellow">(</span><span class="white">n</span> <span class="white">-</span> <span class="purple">1</span><span class="yellow">)</span><span class="white">;</span>
+                <span class="orange">}</span>
+              <span class="orange">}</span>
+              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">factorial</span><span class="yellow">(</span><span class="purple">5</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 120</span></code>
           </pre>
+          
           <p>
             In this example, the <code>factorial</code> function calls itself
             with decreasing values of <code>n</code> until it reaches 0, at

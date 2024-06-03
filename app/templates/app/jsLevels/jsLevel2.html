@@ -9,7 +9,7 @@
   </head>
   <body>
     <style>
-      pre{
+      pre {
         width: 900px;
       }
     </style>
@@ -168,7 +168,7 @@
                 of scenarios, primarily for quick debugging or simple
                 notifications.
               </p>
-              <pre style="width: 800px;">
+              <pre style="width: 800px">
               <code>
                 <span class="comment">// Example of using alert() to show a greeting</span>
                 alert(<span class="yellow">"Hello, world!"</span>)</code>
@@ -186,11 +186,11 @@
                 execution.
               </p>
               <pre>
-              <code>
-                <span class="comment">// Example of using console.log() to display a message and a variable</span>
-                var message = <span class="yellow">"The value is:"</span>;
-                var value = 10;
-                console.log(message, value);</code>
+                <code>
+                  <span class="comment">// Example of using console.log() to display a message and a variable</span>
+                  <span class="blue">var</span> <span class="white">message</span> <span class="pink">=</span> <span class="yellow">"The value is:"</span><span class="white">;</span>
+                  <span class="blue">var</span> <span class="white">value</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span>
+                  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">message</span><span class="white">,</span> <span class="white">value</span><span class="yellow">)</span><span class="white">;</span></code>
               </pre>
               <p>
                 This example illustrates how console.log() can be used to log
@@ -211,10 +211,10 @@
                 page dynamically.
               </p>
               <pre>
-              <code>
-                <span class="comment">// Example of using document.getElementById() to change text content</span>
-                var myElement = document.getElementById(<span class="yellow">"demo"</span>);
-                myElement.textContent = <span class="yellow">"Hello, JavaScript!"</span>;</code>
+                <code>
+                  <span class="comment">// Example of using document.getElementById() to change text content</span>
+                  <span class="blue">var</span> <span class="white">myElement</span> <span class="pink">=</span> <span class="white">document</span><span class="white">.</span><span class="green">getElementById</span><span class="yellow">(</span><span class="yellow">"demo"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="white">myElement</span><span class="white">.</span><span class="white">textContent</span> <span class="pink">=</span> <span class="yellow">"Hello, JavaScript!"</span><span class="white">;</span></code>
               </pre>
               <p>
                 This example demonstrates how to select an HTML element with the
@@ -235,10 +235,10 @@
                 or class selectors.
               </p>
               <pre>
-              <code>
-                <span class="comment">// Example of using document.querySelector() to find and style a button</span>
-                var button = document.querySelector(<span class="yellow">"button.primary"</span>);
-                button.style.backgroundColor = <span class="yellow">"blue"</span>;</code>
+                <code>
+                  <span class="comment">// Example of using document.querySelector() to find and style a button</span>
+                  <span class="blue">var</span> <span class="white">button</span> <span class="pink">=</span> <span class="white">document</span><span class="white">.</span><span class="green">querySelector</span><span class="yellow">(</span><span class="yellow">"button.primary"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="white">button</span><span class="white">.</span><span class="white">style</span><span class="white">.</span><span class="white">backgroundColor</span> <span class="pink">=</span> <span class="yellow">"blue"</span><span class="white">;</span></code>
               </pre>
               <p>
                 This example shows how to select the first button element with a
@@ -258,12 +258,12 @@
                 modify content, and interact with the document structure
                 programmatically.
               </p>
-              <pre style="width: 1000px;">
-              <code>
-                <span class="comment">// Example of using document.createElement() to create a new div and add it to the body</span>
-                var newDiv = document.createElement(<span class="yellow">"div"</span>);
-                newDiv.innerHTML = <span class="yellow">"Hello, dynamic world!"</span>;
-                document.body.appendChild(newDiv);</code>
+              <pre style="width: 1000px">
+                <code>
+                  <span class="comment">// Example of using document.createElement() to create a new div and add it to the body</span>
+                  <span class="blue">var</span> <span class="white">newDiv</span> <span class="pink">=</span> <span class="white">document</span><span class="white">.</span><span class="green">createElement</span><span class="yellow">(</span><span class="yellow">"div"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="white">newDiv</span><span class="white">.</span><span class="white">innerHTML</span> <span class="pink">=</span> <span class="yellow">"Hello, dynamic world!"</span><span class="white">;</span>
+                  <span class="white">document</span><span class="white">.</span><span class="white">body</span><span class="white">.</span><span class="green">appendChild</span><span class="yellow">(</span><span class="white">newDiv</span><span class="yellow">)</span><span class="white">;</span></code>
               </pre>
               <p>
                 In this example, a new &lt;div&gt; element is created, its inner
@@ -284,12 +284,12 @@
                 efficient, non-obtrusive way.
               </p>
               <pre>
-              <code>
-                <span class="comment">// Example of using addEventListener() to handle click events</span>
-                var btn = document.querySelector(<span class="yellow">"button"</span>);
-                btn.addEventListener(<span class="yellow">"click"</span>, function() {
-                  alert(<span class="yellow">"Button was clicked!"</span>);
-                });</code>
+                <code>
+                  <span class="comment">// Example of using addEventListener() to handle click events</span>
+                  <span class="blue">var</span> <span class="white">btn</span> <span class="pink">=</span> <span class="white">document</span><span class="white">.</span><span class="green">querySelector</span><span class="yellow">(</span><span class="yellow">"button"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="white">btn</span><span class="white">.</span><span class="green">addEventListener</span><span class="yellow">(</span><span class="yellow">"click"</span><span class="white">,</span> <span class="blue">function</span><span class="purple">()</span> <span class="purple">{</span>
+                    <span class="blue">alert</span><span class="yellow">(</span><span class="yellow">"Button was clicked!"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="purple">}</span><span class="yellow">)</span><span class="white">;</span></code>
               </pre>
               <p>
                 This example demonstrates how to attach a click event listener
@@ -310,12 +310,13 @@
                 creating timeouts, or scheduling tasks to run after an interval.
               </p>
               <pre>
-              <code>
-                <span class="comment">// Example of using setTimeout() to execute a function after a 3-second delay</span>
-                setTimeout(function() {
-                  console.log(<span class="yellow">"This message appears after 3 seconds"</span>);
-                }, 3000);</code>
+                <code>
+                  <span class="comment">// Example of using setTimeout() to execute a function after a 3-second delay</span>
+                  <span class="green">setTimeout</span><span class="yellow">(</span><span class="blue">function</span><span class="purple">()</span> <span class="purple">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"This message appears after 3 seconds"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="purple">}</span><span class="white">,</span> <span class="purple">3000</span><span class="yellow">)</span><span class="white">;</span></code>
               </pre>
+
               <p>
                 This example shows how to use setTimeout() to log a message to
                 the console after a delay of 3000 milliseconds (or 3 seconds).
@@ -336,18 +337,19 @@
                 animating elements in a loop, or polling a server.
               </p>
               <pre>
-              <code>
-                <span class="comment">// Example of using setInterval() to increment and display a counter every second</span>
-                var count = 0;
-                var intervalId = setInterval(function() {
-                  count++;
-                  console.log(<span class="yellow">"Count: "</span> + count);
-                  if (count >= 5) {
-                    clearInterval(intervalId); // Stop the interval after 5 iterations
-                    console.log(<span class="yellow">"Interval stopped."</span>);
-                  }
-                }, 1000);</code>
+                <code>
+                  <span class="comment">// Example of using setInterval() to increment and display a counter every second</span>
+                  <span class="blue">var</span> <span class="white">count</span> <span class="pink">=</span> <span class="purple">0</span><span class="white">;</span>
+                  <span class="blue">var</span> <span class="white">intervalId</span> <span class="pink">=</span> <span class="green">setInterval</span><span class="yellow">(</span><span class="blue">function</span><span class="purple">()</span> <span class="purple">{</span>
+                    <span class="white">count</span><span class="white">++</span><span class="white">;</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Count: "</span> <span class="white">+</span> <span class="white">count</span><span class="yellow">)</span><span class="white">;</span>
+                    <span class="blue">if</span> <span class="yellow">(</span><span class="white">count</span> <span class="white">>=</span> <span class="purple">5</span><span class="yellow">)</span> <span class="purple">{</span>
+                      <span class="green">clearInterval</span><span class="yellow">(</span><span class="white">intervalId</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Stop the interval after 5 iterations</span>
+                      <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Interval stopped."</span><span class="yellow">)</span><span class="white">;</span>
+                    <span class="purple">}</span>
+                  <span class="purple">}</span><span class="white">,</span> <span class="purple">1000</span><span class="yellow">)</span><span class="white">;</span></code>
               </pre>
+              
               <p>
                 This example demonstrates how to use setInterval() to create a
                 simple counter that increments every second. The interval is

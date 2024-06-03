@@ -47,9 +47,9 @@
           <p>Here is how you can define a simple function in Python:</p>
           <pre>
             <code>
-              def greet_user(username):
-                <span class="comment">#Display a simple greeting message.</span>
-                print(f"Hello, {username}!")</code>
+              <span class="blue">def</span> <span class="white">greet_user</span><span class="orange">(</span><span class="white">username</span><span class="orange">):</span>
+                <span class="comment"># Display a simple greeting message.</span>
+                <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Hello, {username}!"</span><span class="orange">)</span></code>
           </pre>
           <h3>Calling a Function</h3>
           <p>
@@ -59,9 +59,8 @@
           </p>
           <pre>
             <code>
-              greet_user('Alice')</code>
+              <span class="white">greet_user</span><span class="orange">(</span><span class="yellow">'Alice'</span><span class="orange">)</span></code>
           </pre>
-
           <p>
             This function call results in the output: <em>Hello, Alice!</em>
           </p>
@@ -152,15 +151,14 @@
           </p>
           <pre>
             <code>
-              def calculate_area(width, height):
-                  <span class="comment">#Calculate the area of a rectangle.</span>
-                  return width * height
-
-              <span class="commment"># Call the function with width=5 and height=10</span>
-              area = calculate_area(5, 10)
-              print("Area of the rectangle:", area)</code>
+              <span class="blue">def</span> <span class="white">calculate_area</span><span class="orange">(</span><span class="white">width</span><span class="white">,</span> <span class="white">height</span><span class="orange">):</span>
+                <span class="comment"># Calculate the area of a rectangle.</span>
+                <span class="blue">return</span> <span class="white">width</span> <span class="pink">*</span> <span class="white">height</span>
+          
+              <span class="comment"># Call the function with width=5 and height=10</span>
+              <span class="white">area</span> <span class="pink">=</span> <span class="white">calculate_area</span><span class="orange">(</span><span class="purple">5</span><span class="white">,</span> <span class="purple">10</span><span class="orange">)</span>
+              <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Area of the rectangle:"</span><span class="white">,</span> <span class="white">area</span><span class="orange">)</span></code>
           </pre>
-
           <p>
             This function, <code>calculate_area</code>, calculates the area of a
             rectangle, demonstrating the practical use of functions to perform
@@ -217,10 +215,11 @@
               <strong>Basic Function:</strong>
               <pre>
                 <code>
-                  def greet(name):
-                    print(f"Hello, {name}!")
-                  greet('Alice')</code>
+                  <span class="blue">def</span> <span class="white">greet</span><span class="orange">(</span><span class="white">name</span><span class="orange">):</span>
+                    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Hello, {name}!"</span><span class="orange">)</span>
+                  <span class="white">greet</span><span class="orange">(</span><span class="yellow">'Alice'</span><span class="orange">)</span></code>
               </pre>
+
               <p>
                 This function takes a name as a parameter and prints a greeting
                 message.
@@ -230,22 +229,24 @@
               <strong>Function with Return Value:</strong>
               <pre>
                 <code>
-                  def add(a, b):
-                    return a + b
-                  result = add(5, 3)
-                  print(result)</code>
+                  <span class="blue">def</span> <span class="white">add</span><span class="orange">(</span><span class="white">a</span><span class="white">,</span> <span class="white">b</span><span class="orange">):</span>
+                    <span class="blue">return</span> <span class="white">a</span> <span class="pink">+</span> <span class="white">b</span>
+                  <span class="white">result</span> <span class="pink">=</span> <span class="white">add</span><span class="orange">(</span><span class="purple">5</span><span class="white">,</span> <span class="purple">3</span><span class="orange">)</span>
+                  <span class="blue">print</span><span class="orange">(</span><span class="white">result</span><span class="orange">)</span></code>
               </pre>
+              
               <p>This function adds two numbers and returns the result.</p>
             </li>
             <li>
               <strong>Function with Default Parameters:</strong>
               <pre>
                 <code>
-                  def info(article, price=50):
-                    print(f"Article: {article}, Price: {price}")
-                  info('Notebook')
-                  info('Pen', 10)</code>
+                  <span class="blue">def</span> <span class="white">info</span><span class="orange">(</span><span class="white">article</span><span class="white">,</span> <span class="white">price</span><span class="pink">=</span><span class="purple">50</span><span class="orange">):</span>
+                    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Article: {article}, Price: {price}"</span><span class="orange">)</span>
+                  <span class="white">info</span><span class="orange">(</span><span class="yellow">'Notebook'</span><span class="orange">)</span>
+                  <span class="white">info</span><span class="orange">(</span><span class="yellow">'Pen'</span><span class="white">,</span> <span class="purple">10</span><span class="orange">)</span></code>
               </pre>
+              
               <p>
                 This function has a default parameter for price. If no price is
                 provided, it defaults to 50.
@@ -255,12 +256,13 @@
               <strong>Function with Variable-length Arguments:</strong>
               <pre>
                 <code>
-                  def print_scores(student, *scores):
-                    print(f"Scores for {student}:")
-                    for score in scores:
-                      print(score)
-                  print_scores('John', 92, 85, 88)</code>
+                  <span class="blue">def</span> <span class="white">print_scores</span><span class="orange">(</span><span class="white">student</span><span class="white">,</span> <span class="pink">*</span><span class="white">scores</span><span class="orange">):</span>
+                    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Scores for {student}:"</span><span class="orange">)</span>
+                    <span class="pink">for</span> <span class="white">score</span> <span class="pink">in</span> <span class="white">scores</span><span class="orange">:</span>
+                      <span class="blue">print</span><span class="orange">(</span><span class="white">score</span><span class="orange">)</span>
+                  <span class="white">print_scores</span><span class="orange">(</span><span class="yellow">'John'</span><span class="white">,</span> <span class="purple">92</span><span class="white">,</span> <span class="purple">85</span><span class="white">,</span> <span class="purple">88</span><span class="orange">)</span></code>
               </pre>
+              
               <p>
                 This function accepts a variable number of scores and prints
                 each one of them. Useful for situations where the number of
@@ -299,17 +301,18 @@
           </p>
           <pre>
             <code>
-              def factorial(n):
+              <span class="blue">def</span> <span class="white">factorial</span><span class="orange">(</span><span class="white">n</span><span class="orange">):</span>
                 <span class="comment"># Base case: if n is 0 or 1</span>
-                if n in (0, 1):
-                  return 1
+                <span class="pink">if</span> <span class="white">n</span> <span class="pink">in</span> <span class="orange">(</span><span class="purple">0</span><span class="white">,</span> <span class="purple">1</span><span class="orange">):</span>
+                  <span class="blue">return</span> <span class="purple">1</span>
                 <span class="comment"># Recursive case: n times the factorial of n-1</span>
-                else:
-                  return n * factorial(n - 1)
-            
+                <span class="pink">else</span><span class="orange">:</span>
+                  <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">factorial</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">)</span>
+              
                 <span class="comment"># Example usage</span>
-                print(factorial(5))  <span class="comment"># Outputs: 120</span></code>
+                <span class="blue">print</span><span class="orange">(</span><span class="white">factorial</span><span class="orange">(</span><span class="purple">5</span><span class="orange">))</span>  <span class="comment"># Outputs: 120</span></code>
           </pre>
+          
 
           <h3>Example: Fibonacci Sequence Using Recursion</h3>
           <p>
@@ -319,17 +322,18 @@
           </p>
           <pre>
             <code>
-              def fibonacci(n):
+              <span class="blue">def</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span><span class="orange">):</span>
                 <span class="comment"># Base cases: if n is 0 or 1</span>
-                if n in (0, 1):
-                  return n
+                <span class="pink">if</span> <span class="white">n</span> <span class="pink">in</span> <span class="orange">(</span><span class="purple">0</span><span class="white">,</span> <span class="purple">1</span><span class="orange">):</span>
+                  <span class="blue">return</span> <span class="white">n</span>
                 <span class="comment"># Recursive case: sum of the two preceding numbers</span>
-                else:
-                  return fibonacci(n - 1) + fibonacci(n - 2)
-            
-              <span class="comment"># Example usage</span>
-              print(fibonacci(6))  <span class="comment"># Outputs: 8</span></code>
+                <span class="pink">else</span><span class="orange">:</span>
+                  <span class="blue">return</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">)</span> <span class="pink">+</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">2</span><span class="orange">)</span>
+              
+                <span class="comment"># Example usage</span>
+                <span class="blue">print</span><span class="orange">(</span><span class="white">fibonacci</span><span class="orange">(</span><span class="purple">6</span><span class="orange">))</span>  <span class="comment"># Outputs: 8</span></code>
           </pre>
+          
         </section>
       </main>
       <footer>

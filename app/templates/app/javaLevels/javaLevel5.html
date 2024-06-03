@@ -174,41 +174,43 @@
           <h3>Example 1: <code>for</code> loop</h3>
           <pre>
             <code>
-              <span class="comment">// Iterating over an array using for loop</span>
-              int[] numbers = {10, 20, 30, 40, 50};
-              for (int i = 0; i &lt; numbers.length; i++) {
-                  System.out.println(numbers[i]);
-              }</code>
+        <span class="comment">// Iterating over an array using for loop</span>
+        <span class="blue">int</span><span class="white">[]</span> <span class="white">numbers</span> <span class="pink">=</span> <span class="orange">{</span><span class="purple">10</span><span class="white">,</span> <span class="purple">20</span><span class="white">,</span> <span class="purple">30</span><span class="white">,</span> <span class="purple">40</span><span class="white">,</span> <span class="purple">50</span><span class="orange">};</span>
+        <span class="pink">for</span> <span class="orange">(</span><span class="blue">int</span> <span class="white">i</span> <span class="pink">=</span> <span class="purple">0</span><span class="orange">;</span> <span class="white">i</span> <span class="white">&lt;</span> <span class="white">numbers</span><span class="purple">.</span><span class="white">length</span><span class="orange">;</span> <span class="white">i</span><span class="orange">++)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">numbers</span><span class="orange">[</span><span class="white">i</span><span class="orange">]);</span>
+        <span class="orange">}</span></code>
           </pre>
+          
           <h3>Example 2: Enhanced <code>for</code> loop (for-each loop)</h3>
           <pre>
             <code>
-              <span class="comment">// Iterating over an array using enhanced for loop</span>
-              String[] names = {"Alice", "Bob", "Charlie"};
-              for (String name : names) {
-                  System.out.println("Name: " + name);
-              }</code>
-          </pre>
+        <span class="comment">// Iterating over an array using enhanced for loop</span>
+        <span class="blue">String</span><span class="white">[]</span> <span class="white">names</span> <span class="pink">=</span> <span class="orange">{</span><span class="yellow">"Alice"</span><span class="white">,</span> <span class="yellow">"Bob"</span><span class="white">,</span> <span class="yellow">"Charlie"</span><span class="orange">};</span>
+        <span class="pink">for</span> <span class="orange">(</span><span class="blue">String</span> <span class="white">name</span> <span class="pink">:</span> <span class="white">names</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Name: "</span> <span class="pink">+</span> <span class="white">name</span><span class="orange">);</span>
+        <span class="orange">}</span></code>
+          </pre>          
           <h3>Example 3: while loop</h3>
           <pre>
             <code>
-              <span class="comment">// Executing while loop until a condition is met</span>
-              int count = 0;
-              while (count &lt; 5) {
-                  System.out.println("Count is: " + count);
-                  count++;
-              }</code>
-          </pre>
+        <span class="comment">// Executing while loop until a condition is met</span>
+        <span class="blue">int</span> <span class="white">count</span> <span class="pink">=</span> <span class="purple">0</span><span class="orange">;</span>
+        <span class="pink">while</span> <span class="orange">(</span><span class="white">count</span> <span class="white">&lt;</span> <span class="purple">5</span><span class="orange">)</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Count is: "</span> <span class="pink">+</span> <span class="white">count</span><span class="orange">);</span>
+          <span class="white">count</span><span class="purple">++</span><span class="orange">;</span>
+        <span class="orange">}</span></code>
+          </pre>          
           <h3>Example 4: do-while loop</h3>
           <pre>
             <code>
-              <span class="comment">// Executing do-while loop; it runs at least once</span>
-              int n = 0;
-              do {
-                  System.out.println("Current number is: " + n);
-                  n++;
-              } while (n &lt; 5);</code>
+        <span class="comment">// Executing do-while loop; it runs at least once</span>
+        <span class="blue">int</span> <span class="white">n</span> <span class="pink">=</span> <span class="purple">0</span><span class="orange">;</span>
+        <span class="pink">do</span> <span class="orange">{</span>
+          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Current number is: "</span> <span class="pink">+</span> <span class="white">n</span><span class="orange">);</span>
+          <span class="white">n</span><span class="purple">++</span><span class="orange">;</span>
+        <span class="orange">}</span> <span class="pink">while</span> <span class="orange">(</span><span class="white">n</span> <span class="white">&lt;</span> <span class="purple">5</span><span class="orange">);</span></code>
           </pre>
+          
           <p>
             These examples demonstrate the basic use of each type of loop in
             Java, showing how they can be applied to common programming tasks.

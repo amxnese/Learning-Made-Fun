@@ -29,10 +29,11 @@
               Executes a block of code if the specified condition is true.
               <pre>
                 <code>
-                  if (condition) {
-                    // code to be executed if condition is true
-                  }</code>
+                  <span class="pink">if</span> <span class="yellow">(</span><span class="white">condition</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="comment">// code to be executed if condition is true</span>
+                  <span class="orange">}</span></code>
               </pre>
+              
             </li>
             <li>
               <strong>if-else statement:</strong> Executes a block of code if
@@ -41,25 +42,28 @@
             </li>
             <pre>
               <code>
-                if (condition) {
-                    // code to be executed if condition is true
-                } else {
-                    // code to be executed if condition is false
-                }</code>
+                <span class="pink">if</span> <span class="yellow">(</span><span class="white">condition</span><span class="yellow">)</span> <span class="orange">{</span>
+                  <span class="comment">// code to be executed if condition is true</span>
+                <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+                  <span class="comment">// code to be executed if condition is false</span>
+                <span class="orange">}</span></code>
             </pre>
+            
+            
             <li>
               else-if ladder: Provides a way to decide among several blocks of
               code to be executed.
               <pre>
                 <code>
-                  if (condition1) {
-                      // code to be executed if condition1 is true
-                  } else if (condition2) {
-                      // code to be executed if condition2 is true
-                  } else {
-                      // code to be executed if both condition1 and condition2 are false
-                  }</code>
+                  <span class="pink">if</span> <span class="yellow">(</span><span class="white">condition1</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="comment">// code to be executed if condition1 is true</span>
+                  <span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">condition2</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="comment">// code to be executed if condition2 is true</span>
+                  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+                    <span class="comment">// code to be executed if both condition1 and condition2 are false</span>
+                  <span class="orange">}</span></code>
               </pre>
+              
             </li>
             <li>
               switch statement: Executes one code block from many choices.
@@ -67,17 +71,18 @@
               statement selects execution paths based on an expression's value.
               <pre>
                 <code>
-                  switch (expression) {
-                    case x:
-                        // code block
-                        break;
-                    case y:
-                        // code block
-                        break;
-                    default:
-                        // default code block
-                  }</code>
+                  <span class="pink">switch</span> <span class="yellow">(</span><span class="white">expression</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="pink">case</span> <span class="white">x</span><span class="white">:</span>
+                      <span class="comment">// code block</span>
+                      <span class="pink">break</span><span class="white">;</span>
+                    <span class="pink">case</span> <span class="white">y</span><span class="white">:</span>
+                      <span class="comment">// code block</span>
+                      <span class="pink">break</span><span class="white">;</span>
+                    <span class="pink">default</span><span class="white">:</span>
+                      <span class="comment">// default code block</span>
+                  <span class="orange">}</span></code>
               </pre>
+              
             </li>
           </ul>
         </section>
@@ -197,14 +202,15 @@
               </p>
               <pre>
                 <code>
-                  // Check if someone is old enough to vote
-                  var age = 20;
-                  if (age >= 18) {
-                    console.log("You are eligible to vote.");
-                  } else {
-                    console.log("You are not eligible to vote.");
-                  }</code>
+                  <span class="comment">// Check if someone is old enough to vote</span>
+                  <span class="blue">var</span> <span class="white">age</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
+                  <span class="pink">if</span> <span class="yellow">(</span><span class="white">age</span> <span class="white">&gt;=</span> <span class="purple">18</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are not eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span></code>
               </pre>
+              
             </li>
             <li>
               <p>
@@ -213,20 +219,21 @@
               </p>
               <pre>
                 <code>
-                  // Determine the grade of a student based on their score
-                  var score = 85;
-                  if (score >= 90) {
-                    console.log("Grade A");
-                  } else if (score >= 80) {
-                    console.log("Grade B");
-                  } else if (score >= 70) {
-                    console.log("Grade C");
-                  } else if (score >= 60) {
-                    console.log("Grade D");
-                  } else {
-                    console.log("Grade F");
-                  }</code>
+                  <span class="comment">// Determine the grade of a student based on their score</span>
+                  <span class="blue">var</span> <span class="white">score</span> <span class="pink">=</span> <span class="purple">85</span><span class="white">;</span>
+                  <span class="pink">if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">90</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade A"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">80</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade B"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">70</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade C"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">60</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade D"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade F"</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span></code>
               </pre>
+              
             </li>
             <li>
               <p>
@@ -235,19 +242,20 @@
               </p>
               <pre>
                 <code>
-                  // Respond to a user command
-                  var command = 'start';
-                  switch (command) {
-                    case 'start':
-                      console.log("Starting the engine...");
-                      break;
-                    case 'stop':
-                      console.log("Stopping the engine...");
-                      break;
-                    default:
-                      console.log("Command not recognized.");
-                  }</code>
+                  <span class="comment">// Respond to a user command</span>
+                  <span class="blue">var</span> <span class="white">command</span> <span class="pink">=</span> <span class="yellow">'start'</span><span class="white">;</span>
+                  <span class="pink">switch</span> <span class="yellow">(</span><span class="white">command</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="pink">case</span> <span class="yellow">'start'</span><span class="white">:</span>
+                      <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Starting the engine..."</span><span class="yellow">)</span><span class="white">;</span>
+                      <span class="pink">break</span><span class="white">;</span>
+                    <span class="pink">case</span> <span class="yellow">'stop'</span><span class="white">:</span>
+                      <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Stopping the engine..."</span><span class="yellow">)</span><span class="white">;</span>
+                      <span class="pink">break</span><span class="white">;</span>
+                    <span class="pink">default</span><span class="white">:</span>
+                      <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Command not recognized."</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span></code>
               </pre>
+              
             </li>
             <li>
               <p>
@@ -256,19 +264,20 @@
               </p>
               <pre>
                 <code>
-                  // Check login status and user role
-                  var loggedIn = true;
-                  var userRole = 'admin';
-                  if (loggedIn) {
-                    if (userRole === 'admin') {
-                      console.log("Access granted to admin panel.");
-                    } else {
-                      console.log("Access granted. Limited permissions.");
-                    }
-                  } else {
-                    console.log("Please log in to continue.");
-                  }</code>
+                  <span class="comment">// Check login status and user role</span>
+                  <span class="blue">var</span> <span class="white">loggedIn</span> <span class="pink">=</span> <span class="purple">true</span><span class="white">;</span>
+                  <span class="blue">var</span> <span class="white">userRole</span> <span class="pink">=</span> <span class="yellow">'admin'</span><span class="white">;</span>
+                  <span class="pink">if</span> <span class="yellow">(</span><span class="white">loggedIn</span><span class="yellow">)</span> <span class="orange">{</span>
+                    <span class="pink">if</span> <span class="yellow">(</span><span class="white">userRole</span> <span class="white">===</span> <span class="yellow">'admin'</span><span class="yellow">)</span> <span class="orange">{</span>
+                      <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Access granted to admin panel."</span><span class="yellow">)</span><span class="white">;</span>
+                    <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+                      <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Access granted. Limited permissions."</span><span class="yellow">)</span><span class="white">;</span>
+                    <span class="orange">}</span>
+                  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+                    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Please log in to continue."</span><span class="yellow">)</span><span class="white">;</span>
+                  <span class="orange">}</span></code>
               </pre>
+              
             </li>
           </ul>
         </section>
