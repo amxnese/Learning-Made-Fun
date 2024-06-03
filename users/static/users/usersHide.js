@@ -2,14 +2,13 @@ function hideMessage() {
   let msg = document.querySelector(".alert");
   setTimeout(() => {
     msg.style.opacity = "0";
-  }, 1700);
+  }, 2000);
   setTimeout(() => {
     msg.style.display = "none";
-  }, 3000);
+  }, 3300);
 }
 
 function closeMe() {
-  console.log("hi");
   let msg = document.getElementById("errorMessage");
   msg.style.display = "none";
 }
