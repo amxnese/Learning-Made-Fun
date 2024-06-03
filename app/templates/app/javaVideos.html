@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app/videos.css' %}" />
+    <title>Miscellaneous About Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+          }
+          header {
+            background-color: #4f46e5;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+          }
+          nav {
+            margin: 10px;
+            text-align: center;
+          }
+          nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4f46e5;
+          }
+          main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+          }
+          .video-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            width: 320px;
+            text-align: center;
+          }
+          .video-card h3 {
+            margin: 10px 0;
+          }
+          .video-card p {
+            color: #777;
+          }
+          .video-card button {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          .video-card button:hover {
+            background-color: #4f46e5;
+          }
+          footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4f46e5;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+          }
+          iframe {
+            max-width: 100%;
+            border: none;
+            border-radius: 8px;
+            max-height: 200px;
+          }
+          
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Related videos</h1>
+    </header>
+    <main id="videos">
+        <div class="video-card">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/0dnVwuAHGx0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>VS Code Java</h3>
+            <p>How to Install & Run Java in Visual Studio Code [2023] | VS Code Java | Java Extensions in VS Code
+            </p>
+           
+        </div>
+        <div class="video-card">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/hBh_CC5y8-s" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Java Tutorial for Beginners</h3>
+            <p>A comprehensive tutorial on Java for beginners.</p>
+
+        </div>
+        <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tv-_1er1mWI?si=oQDZnsdd3NaBa1z6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <h3>Java Design Patterns</h3>
+            <p>Understanding design patterns in Java.</p>
+
+        </div>
+        <div class="video-card">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/grEKMHGYyns" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Advanced Java Programming</h3>
+            <p>Explore advanced Java programming concepts.</p>
+
+        </div>
+        <div class="video-card">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eIrMbAQSU34" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Java Programming Full Course</h3>
+            <p>A full course on Java programming for developers.</p>
+
+        </div>
+        <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/r_MbozD32eo?si=wKRqZ2MX7KX-cLsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <h3>Java Multithreading</h3>
+            <p>Learn about multithreading in Java.</p>
+
+        </div>
+        <div class="video-card">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/sTX0UEplF54" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Java Streams API</h3>
+            <p>Understanding the Streams API in Java 8.</p>
+
+        </div>
+        <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fM8yj93X80s?si=xLdvAYjAfNVmgLCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <h3>Java Memory Management</h3>
+            <p>Memory Management Tutorial in Java | Java Stack vs Heap | Java Training | Edureka
+            </p>
+
+        </div>
+        <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/viTHc_4XfCA?si=mWa2M7XUBFPF0Pfu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <p>A deep dive into the Java Collections Framework.</p>
+            
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Miscellaneous About Java
+    </footer>
+</body>
+</html>
