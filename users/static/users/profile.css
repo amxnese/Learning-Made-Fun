@@ -25,7 +25,9 @@ body{
 /* Login style */
 .left{
   float: left; /* Float left for left column */
-  background-image: linear-gradient(135deg, #4fb3cf, #50b96f); /* Gradient background */
+  /* background-image: linear-gradient(135deg, #4fb3cf, #50b96f);  */
+  /* background-image: linear-gradient(135deg, #4F46F6, #4F468B); */
+  background-image: linear-gradient(179deg, #4F47FF, #4F469E);
   height: 511px; 
   color:#fff; /* Text color */
   text-align: center; /* Center text */
@@ -70,9 +72,9 @@ h3{
 .skill{
   width: 630px; /* Width of skill element */
   margin: auto; /* Center horizontally */
-  color: rgb(42, 108, 108); /* Text color */
+  color: #4F46F6; /* Text color */
   padding: 22px; /* Padding */
-  border: 2px solid #64ce84; /* Border */
+  border: 2px solid #4F47FF; /* Border */
   border-radius: 10px; 
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); /* Box shadow */
 }  
@@ -101,6 +103,9 @@ h3{
   height: 20px;
   float: left;
   background: linear-gradient(135deg, #4fb3cf, #50b96f);
+  background-image: linear-gradient(135deg, #4F46F6, #4F468B);
+  background-image: linear-gradient(179deg, #4F47FF, #4F469E);
+  background-image: linear-gradient(179deg, #4a42ff, #8884b3);
 }
 
 /* Animation keyframes */
@@ -255,22 +260,23 @@ h3{
 
 .edit,
 .change{
-  background-image: radial-gradient(100% 100% at 100% 0, #4fb3cf 0,#50b96f 100%);
+  /* background-image: radial-gradient(100% 100% at 100% 0, #4fb3cf 0,#50b96f 100%); */
+  background-image: linear-gradient(135deg, #4F46F6, #4F468B);
 }
 .edit:focus,
 .change:focus{
-  box-shadow: rgb(42, 108, 108) 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: #4F46F6 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
 .edit:active,
 .change:active{
-  box-shadow: rgb(42, 108, 108) 0 3px 7px inset;
+  box-shadow: #4F46F6 0 3px 7px inset;
   transform: translateY(2px);
 }
 
 .edit:hover,
 .change:hover{
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgb(42, 108, 108) 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #4F46F6 0 -3px 0 inset;
 }
 
 .delete{
@@ -347,4 +353,24 @@ h3{
 
 .conf-text {
   margin-top: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px; /* Center the text vertically */
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #b6b5b5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }
