@@ -5,189 +5,190 @@
 {% endblock header %} {% block content %}
 <form id="quiz-form" action="{% url 'app-javaTest1' %}" method="post">
   {% csrf_token %}
-  <div class="question">
-    <h2>What is the output of the following Java code?</h2>
+  <hr><div class="question">
+    <h2>1.What is the output of the following Java code?</h2>
     <pre>
-            <code>
-              public class Main {
-                  public static void main(String[] args) {
-                      int a = 10;
-                      int b = 5;
-                      System.out.println(a + b);
-                  }
-              }</code>
-          </pre>
+      <code>
+        <span class="blue">public class</span> <span class="white">Main</span> <span class="orange">{</span>
+          <span class="blue">public static void</span> <span class="white">main</span><span class="orange">(</span><span class="blue">String</span><span class="white">[]</span> <span class="white">args</span><span class="orange">)</span> <span class="orange">{</span>
+            <span class="blue">int</span> <span class="white">a</span> <span class="pink">=</span> <span class="purple">10</span><span class="orange">;</span>
+            <span class="blue">int</span> <span class="white">b</span> <span class="pink">=</span> <span class="purple">5</span><span class="orange">;</span>
+            <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">a</span> <span class="pink">+</span> <span class="white">b</span><span class="orange">);</span>
+          <span class="orange">}</span>
+        <span class="orange">}</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
-      <label for="q1-a1">15</label>
+      <label class="radio-label" for="q1-a1">15</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a2" name="q1" value="2" />
-      <label for="q1-a2">"10 + 5"</label>
+      <label class="radio-label" for="q1-a2">"10 + 5"</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a3" name="q1" value="3" />
-      <label for="q1-a3">10</label>
+      <label class="radio-label" for="q1-a3">10</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Why is it important to use comments in Java code?</h2>
+  <hr><div class="question">
+    <h2>2. Why is it important to use comments in Java code?</h2>
     <div class="pad">
       <input type="radio" id="q2-a1" name="q2" value="1" />
-      <label for="q2-a1">To modify the way code executes</label>
+      <label class="radio-label" for="q2-a1">To modify the way code executes</label>
     </div>
     <div class="pad">
       <input type="radio" id="q2-a2" name="q2" value="2" />
-      <label for="q2-a2"
+      <label class="radio-label" for="q2-a2"
         >To leave notes and explanations for other developers or for future
         reference</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q2-a3" name="q2" value="3" />
-      <label for="q2-a3">To prevent certain code from compiling</label>
+      <label class="radio-label" for="q2-a3">To import certain libraries</label>
     </div>
   </div>
-  <div class="question">
+  <hr><div class="question">
     <h2>
-      Which of the following data types would be most appropriate for storing a
+      3. Which of the following data types would be most appropriate for storing a
       person's age?
     </h2>
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
-      <label for="q3-a1">byte</label>
+      <label class="radio-label" for="q3-a1">byte</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a2" name="q3" value="2" />
-      <label for="q3-a2">double</label>
+      <label class="radio-label" for="q3-a2">double</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a3" name="q3" value="3" />
-      <label for="q3-a3">boolean</label>
+      <label class="radio-label" for="q3-a3">boolean</label>
     </div>
   </div>
-  <div class="question">
+  <hr><div class="question">
     <h2>
-      How do you declare a variable that holds a single character in Java?
+      4. How do you declare a variable that holds a single character in Java?
     </h2>
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
-      <label for="q4-a1">String myChar = 'A';</label>
+      <label class="radio-label" for="q4-a1">String myChar = 'A';</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a2" name="q4" value="2" />
-      <label for="q4-a2">char myChar = "A";</label>
+      <label class="radio-label" for="q4-a2">char myChar = "A";</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a3" name="q4" value="3" />
-      <label for="q4-a3">char myChar = 'A';</label>
+      <label class="radio-label" for="q4-a3">char myChar = 'A';</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What is the purpose of the assignment operator in Java?</h2>
+  <hr><div class="question">
+    <h2>5. What is the purpose of the assignment operator in Java?</h2>
     <div class="pad">
       <input type="radio" id="q5-a1" name="q5" value="1" />
-      <label for="q5-a1">To compare two values</label>
+      <label class="radio-label" for="q5-a1">To compare two values</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a2" name="q5" value="2" />
-      <label for="q5-a2">To assign a value to a variable</label>
+      <label class="radio-label" for="q5-a2">To assign a value to a variable</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a3" name="q5" value="3" />
-      <label for="q5-a3">To perform mathematical calculations</label>
+      <label class="radio-label" for="q5-a3">To perform mathematical calculations</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What will the following Java code snippet output?</h2>
+  <hr><div class="question">
+    <h2>6. What will the following Java code snippet output?</h2>
     <pre>
-            <code>
-              int num = 50;
-              num *= 2;
-              System.out.println(num);</code>
-          </pre>
+      <code>
+        <span class="blue">int</span> <span class="white">num</span> <span class="pink">=</span> <span class="purple">50</span><span class="orange">;</span>
+        <span class="white">num</span> <span class="pink">*=</span> <span class="purple">2</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">num</span><span class="orange">);</span></code>
+    </pre>    
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
-      <label for="q6-a1">50</label>
+      <label class="radio-label" for="q6-a1">50</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a2" name="q6" value="2" />
-      <label for="q6-a2">100</label>
+      <label class="radio-label" for="q6-a2">100</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a3" name="q6" value="3" />
-      <label for="q6-a3">25</label>
+      <label class="radio-label" for="q6-a3">25</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Which data type would you use to store a precise decimal in Java?</h2>
+  <hr><div class="question">
+    <h2>7. Which data type would you use to store a precise decimal in Java?</h2>
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
-      <label for="q7-a1">int</label>
+      <label class="radio-label" for="q7-a1">int</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a2" name="q7" value="2" />
-      <label for="q7-a2">double</label>
+      <label class="radio-label" for="q7-a2">double</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a3" name="q7" value="3" />
-      <label for="q7-a3">boolean</label>
+      <label class="radio-label" for="q7-a3">boolean</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What does the following Java code output?</h2>
+  <hr><div class="question">
+    <h2>8. What does the following Java code output?</h2>
     <pre>
-            <code>
-              boolean isJavaFun = true;
-              boolean isFishTasty = false;
-              System.out.println(isJavaFun && isFishTasty);</code>
-          </pre>
+      <code>
+        <span class="blue">boolean</span> <span class="white">isJavaFun</span> <span class="pink">=</span> <span class="purple">true</span><span class="orange">;</span>
+        <span class="blue">boolean</span> <span class="white">isFishTasty</span> <span class="pink">=</span> <span class="purple">false</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">isJavaFun</span> <span class="white">&&</span> <span class="white">isFishTasty</span><span class="orange">);</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
-      <label for="q8-a1">true</label>
+      <label class="radio-label" for="q8-a1">true</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a2" name="q8" value="2" />
-      <label for="q8-a2">false</label>
+      <label class="radio-label" for="q8-a2">false</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a3" name="q8" value="3" />
-      <label for="q8-a3">Compilation error</label>
+      <label class="radio-label" for="q8-a3">Compilation error</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What is the result of the following operation in Java?</h2>
+  <hr><div class="question">
+    <h2>9. What is the result of the following operation in Java?</h2>
     <pre>
-            <code>
-              int result = 21 % 6;
-              System.out.println(result);</code>
-          </pre>
+      <code>
+        <span class="blue">int</span> <span class="white">result</span> <span class="pink">=</span> <span class="purple">21</span> <span class="pink">%</span> <span class="purple">6</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">result</span><span class="orange">);</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q9-a1" name="q9" value="1" />
-      <label for="q9-a1">3</label>
+      <label class="radio-label" for="q9-a1">3</label>
     </div>
     <div class="pad">
       <input type="radio" id="q9-a2" name="q9" value="2" />
-      <label for="q9-a2">3.5</label>
+      <label class="radio-label" for="q9-a2">3.5</label>
     </div>
     <div class="pad">
       <input type="radio" id="q9-a3" name="q9" value="3" />
-      <label for="q9-a3">4</label>
+      <label class="radio-label" for="q9-a3">4</label>
     </div>
   </div>
-  <div class="question">
-    <h2>How would you declare a string variable in Java?</h2>
+  <hr><div class="question">
+    <h2>10. How would you declare a string variable in Java?</h2>
     <div class="pad">
       <input type="radio" id="q10-a1" name="q10" value="1" />
-      <label for="q10-a1">string msg = "welcome";</label>
+      <label class="radio-label" for="q10-a1">string msg = "welcome";</label>
     </div>
     <div class="pad">
       <input type="radio" id="q10-a2" name="q10" value="2" />
-      <label for="q10-a2">String msg = "welcome";</label>
+      <label class="radio-label" for="q10-a2">String msg = "welcome";</label>
     </div>
     <div class="pad">
       <input type="radio" id="q10-a3" name="q10" value="3" />
-      <label for="q10-a3">char msg = "welcome";</label>
+      <label class="radio-label" for="q10-a3">char msg = "welcome";</label>
     </div>
   </div>
   <button type="submit" class="take-test">Submit Answers</button>

@@ -5,208 +5,205 @@
 {% endblock header %} {% block content %}
 <form id="quiz-form" action="{% url 'app-jsTest2' %}" method="post">
   {% csrf_token %}
-  <div class="question">
-    <h2>What will the following JavaScript code output to the console?</h2>
+  <hr><div class="question">
+    <h2>1. What will the following JavaScript code output to the console?</h2>
     <pre>
-            <code>
-              console.log(document.getElementById === document.querySelector);</code>
-          </pre>
+      <code>
+        <span class="blue">let</span> <span class="white">var1</span> <span class="pink">=</span> <span class="white">document</span><span class="white">.</span><span class="green">getElem</span><span class="white">;</span>
+        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">document</span><span class="white">.</span><span class="green">getElementById</span> <span class="white">===</span> <span class="white">document</span><span class="white">.</span><span class="green">querySelector</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
-      <label for="q1-a1">true</label>
+      <label class="radio-label" for="q1-a1">true</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a2" name="q1" value="2" />
-      <label for="q1-a2">false</label>
+      <label class="radio-label" for="q1-a2">false</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a3" name="q1" value="3" />
-      <label for="q1-a3">undefined</label>
+      <label class="radio-label" for="q1-a3">undefined</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Why are built-in functions important in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>2. Why are built-in functions important in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q2-a1" name="q2" value="1" />
-      <label for="q2-a1"
+      <label class="radio-label" for="q2-a1"
         >They allow for direct modification of HTML and CSS via
         JavaScript.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q2-a2" name="q2" value="2" />
-      <label for="q2-a2"
+      <label class="radio-label" for="q2-a2"
         >They provide ready-made functions that help in performing common tasks,
         thus enhancing code efficiency and simplicity.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q2-a3" name="q2" value="3" />
-      <label for="q2-a3"
+      <label class="radio-label" for="q2-a3"
         >They are the only way to interact with web pages.</label
       >
     </div>
   </div>
-  <div class="question">
-    <h2>Which function is used to create a new HTML element in JavaScript?</h2>
-    <pre>
-            <code>
-              document.createElement('div');</code>
-          </pre>
+  <hr><div class="question">
+    <h2>3. Which function is used to create a new HTML element in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
-      <label for="q3-a1">document.getElementById</label>
+      <label class="radio-label" for="q3-a1">document.getElement</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a2" name="q3" value="2" />
-      <label for="q3-a2">document.querySelector</label>
+      <label class="radio-label" for="q3-a2">document.querySelector</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a3" name="q3" value="3" />
-      <label for="q3-a3">document.createElement</label>
+      <label class="radio-label" for="q3-a3">document.createElement</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What does the following code snippet do?</h2>
+  <hr><div class="question">
+    <h2>4. What does the following code snippet do?</h2>
     <pre>
-            <code>
-              setTimeout(function() {
-                  alert("Hello!");
-              }, 3000);</code>
-          </pre>
+      <code>
+        <span class="green">setTimeout</span><span class="yellow">(</span><span class="blue">function</span><span class="purple">()</span> <span class="orange">{</span>
+          <span class="blue">alert</span><span class="yellow">(</span><span class="yellow">"Hello!"</span><span class="yellow">)</span><span class="white">;</span>
+        <span class="orange">}</span><span class="white">,</span> <span class="purple">3000</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
-      <label for="q4-a1"
-        >Displays an alert box with "Hello!" immediately.</label
+      <label class="radio-label" for="q4-a1"
+        >Displays an alert box with "Hello!" after 3000 seconds.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q4-a2" name="q4" value="2" />
-      <label for="q4-a2"
+      <label class="radio-label" for="q4-a2"
         >Displays an alert box with "Hello!" after 3 seconds.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q4-a3" name="q4" value="3" />
-      <label for="q4-a3">Repeats an alert every 3 seconds.</label>
+      <label class="radio-label" for="q4-a3">Repeats an alert every 3 seconds.</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What is the purpose of addEventListener in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>5. What is the purpose of the following addEventListener ?</h2>
     <pre>
-            <code>
-              document.getElementById("myButton").addEventListener("click", function() {
-                  console.log("Button clicked!");
-              });</code>
-          </pre>
+      <code>
+        <span class="white">document</span><span class="white">.</span><span class="green">getElementById</span><span class="yellow">(</span><span class="yellow">"myButton"</span><span class="yellow">)</span><span class="white">.</span><span class="green">addEventListener</span><span class="yellow">(</span><span class="yellow">"click"</span><span class="white">,</span> <span class="blue">function</span><span class="purple">()</span> <span class="orange">{</span>
+          <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Button clicked!"</span><span class="yellow">)</span><span class="white">;</span>
+        <span class="orange">}</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q5-a1" name="q5" value="1" />
-      <label for="q5-a1"
+      <label class="radio-label" for="q5-a1"
         >It outputs "Button clicked!" to the console whenever a button is
         clicked.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q5-a2" name="q5" value="2" />
-      <label for="q5-a2">It creates a new button element.</label>
+      <label class="radio-label" for="q5-a2">It creates a new button element.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a3" name="q5" value="3" />
-      <label for="q5-a3">It checks if the button is clicked.</label>
+      <label class="radio-label" for="q5-a3">It checks if the button is clicked.</label>
     </div>
   </div>
-  <div class="question">
+  <hr><div class="question">
     <h2>
-      Which built-in function is used to execute a block of code repeatedly at
+      6. Which built-in function is used to execute a block of code repeatedly at
       specific time intervals in JavaScript?
     </h2>
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
-      <label for="q6-a1">setTimeout</label>
+      <label class="radio-label" for="q6-a1">setTimeout</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a2" name="q6" value="2" />
-      <label for="q6-a2">setInterval</label>
+      <label class="radio-label" for="q6-a2">setInterval</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a3" name="q6" value="3" />
-      <label for="q6-a3">addEventListener</label>
+      <label class="radio-label" for="q6-a3">addEventListener</label>
     </div>
   </div>
-  <div class="question">
-    <h2>How can you select an element by its CSS selector in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>7. How can you select an element by its CSS selector in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
-      <label for="q7-a1">document.getElementById('.my-class')</label>
+      <label class="radio-label" for="q7-a1">document.getElementById('.my-class')</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a2" name="q7" value="2" />
-      <label for="q7-a2">document.querySelector('.my-class')</label>
+      <label class="radio-label" for="q7-a2">document.querySelector('.my-class')</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a3" name="q7" value="3" />
-      <label for="q7-a3">document.getElementsByClassName('my-class')</label>
+      <label class="radio-label" for="q7-a3">document.getElementsByClassName('my-class')</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What is the primary use of console.log in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>8. What is the primary use of console.log in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
-      <label for="q8-a1"
+      <label class="radio-label" for="q8-a1"
         >To write information to the console as a debugging aid.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q8-a2" name="q8" value="2" />
-      <label for="q8-a2">To display user alerts in the web browser.</label>
+      <label class="radio-label" for="q8-a2">To display user alerts in the web browser.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a3" name="q8" value="3" />
-      <label for="q8-a3"
+      <label class="radio-label" for="q8-a3"
         >To read data from the web server asynchronously.</label
       >
     </div>
   </div>
-  <div class="question">
+  <hr><div class="question">
     <h2>
-      What will happen if you use document.getElementById("nonexistent-id")?
+      9. What will happen if you use document.getElementById("nonexistent-id")?
     </h2>
     <div class="pad">
       <input type="radio" id="q9-a1" name="q9" value="1" />
-      <label for="q9-a1"
+      <label class="radio-label" for="q9-a1"
         >It will create a new element with the id "nonexistent-id".</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q9-a2" name="q9" value="2" />
-      <label for="q9-a2">It will return null.</label>
+      <label class="radio-label" for="q9-a2">It will return null.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q9-a3" name="q9" value="3" />
-      <label for="q9-a3">It will throw a syntax error.</label>
+      <label class="radio-label" for="q9-a3">It will throw a syntax error.</label>
     </div>
   </div>
-  <div class="question">
+  <hr><div class="question">
     <h2>
-      Which method is used to apply a CSS selector and return the first element
+      10. Which method is used to apply a CSS selector and return the first element
       that matches this selector?
     </h2>
-    <pre>
-            <code>
-              let elem = document.querySelector("#myId");</code>
-          </pre>
     <div class="pad">
       <input type="radio" id="q10-a1" name="q10" value="1" />
-      <label for="q10-a1">document.getElementByTagName</label>
+      <label class="radio-label" for="q10-a1">document.getElementByTagName</label>
     </div>
     <div class="pad">
       <input type="radio" id="q10-a2" name="q10" value="2" />
-      <label for="q10-a2">document.querySelector</label>
+      <label class="radio-label" for="q10-a2">document.querySelector</label>
     </div>
     <div class="pad">
       <input type="radio" id="q10-a3" name="q10" value="3" />
-      <label for="q10-a3">document.getElementById</label>
+      <label class="radio-label" for="q10-a3">document.getElementById</label>
     </div>
   </div>
   <button type="submit" class="take-test">Submit Answers</button>
 </form>
+{% endblock content %}

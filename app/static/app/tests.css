@@ -12,15 +12,18 @@ body {
 }
 #quiz-container {
   margin: 12px;
-  width: 700px;
+  width: 820px;
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 h1 {
-  color: #00bfff;
+  color: #4f46e5;
   text-align: center;
+}
+.question{
+  padding: 0 0 30px 0;
 }
 .question h2 {
   padding: 10px;
@@ -28,23 +31,34 @@ h1 {
   font-size: 18px;
   margin-bottom: 10px;
 }
-label {
+/* label {
   margin-left: 10px;
   font-size: 16px;
   color: #666;
-}
-.pad{
+} */
+label{
   padding: 3px;
+  background-color: #E7E9EB;
+  display: block;
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  word-wrap: break-word;
 }
 input[type="radio"] {
-  margin-right: 5px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 .take-test {
   display: block;
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #00bfff;
+  background-color: #4f46e5;
   color: white;
   border: none;
   border-radius: 5px;
@@ -52,5 +66,35 @@ input[type="radio"] {
   font-size: 16px;
 }
 .take-test:hover {
-  background-color: #009acd;
+  background-color: #4F46A0;
 }
+
+.radio-label {
+  background-color: #E7E9EB;
+  display: block;
+  position: relative;
+  padding: 10px 20px 10px 25px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  word-wrap: break-word;
+  margin: 2px;
+  border: 1px solid #ccc;
+} 
+
+
+/* Default style */
+.radio-label:not(.selected) {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Change label color when the corresponding radio input is checked */
+input[type="radio"]:checked + .radio-label {
+  background-color: #4f46e5; 
+  color: #fff;
+}
+  .radio-label:hover{
+    background-color: #dcdbdb;
+  }

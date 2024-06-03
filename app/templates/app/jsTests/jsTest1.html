@@ -5,190 +5,196 @@
 {% endblock header %} {% block content %}
 <form id="quiz-form" action="{% url 'app-jsTest1' %}" method="post">
   {% csrf_token %}
-  <div class="question">
-    <h2>What will the following JavaScript code output to the console?</h2>
+  <hr><div class="question">
+    <h2>1. What will the following JavaScript code output to the console?</h2>
     <pre>
-            <code>
-              console.log(typeof "Hello, world!");</code>
-          </pre>
+      <code>
+        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">typeof</span> <span class="yellow">"Hello, world!"</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
-      <label for="q1-a1">string</label>
+      <label class="radio-label" for="q1-a1">string</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a2" name="q1" value="2" />
-      <label for="q1-a2">text</label>
+      <label class="radio-label" for="q1-a2">text</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a3" name="q1" value="3" />
-      <label for="q1-a3">String</label>
+      <label class="radio-label" for="q1-a3">String</label>
     </div>
     <p>
       <strong>Note:</strong> the <code>typeof</code> function returns the data
       type
     </p>
   </div>
-  <div class="question">
-    <h2>Which of the following is not a primitive data type in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>2. Which of the following is not a primitive data type in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q2-a1" name="q2" value="1" />
-      <label for="q2-a1">String</label>
+      <label class="radio-label" for="q2-a1">string</label>
     </div>
     <div class="pad">
       <input type="radio" id="q2-a2" name="q2" value="2" />
-      <label for="q2-a2">undefined</label>
+      <label class="radio-label" for="q2-a2">undefined</label>
     </div>
     <div class="pad">
       <input type="radio" id="q2-a3" name="q2" value="3" />
-      <label for="q2-a3">Array</label>
+      <label class="radio-label" for="q2-a3">Array</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What is the result of the following operation?</h2>
+  <hr><div class="question">
+    <h2>3. What is the result of the following operation?</h2>
     <pre>
-            <code>
-              let result = 10 + 5 * 2;
-              console.log(result);</code>
-          </pre>
+      <code>
+        <span class="blue">let</span> <span class="white">result</span> <span class="pink">=</span> <span class="purple">10</span> <span class="white">+</span> <span class="purple">5</span> <span class="white">*</span> <span class="purple">2</span><span class="white">;</span>
+        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">result</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
-      <label for="q3-a1">30</label>
+      <label class="radio-label" for="q3-a1">30</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a2" name="q3" value="2" />
-      <label for="q3-a2">20</label>
+      <label class="radio-label" for="q3-a2">20</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a3" name="q3" value="3" />
-      <label for="q3-a3">25</label>
+      <label class="radio-label" for="q3-a3">25</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Which operator is used for string concatenation in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>4. Which operator is used for string concatenation in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
-      <label for="q4-a1">+</label>
+      <label class="radio-label" for="q4-a1">+</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a2" name="q4" value="2" />
-      <label for="q4-a2">&</label>
+      <label class="radio-label" for="q4-a2">&</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a3" name="q4" value="3" />
-      <label for="q4-a3">.</label>
+      <label class="radio-label" for="q4-a3">.</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What does the following code snippet display?</h2>
+  <hr><div class="question">
+    <h2>5. What does the following code snippet display?</h2>
     <pre>
-            <code>
-              let x = "5";
-              let y = "10";
-              console.log(x + y);</code>
-          </pre>
+      <code>
+        <span class="blue">let</span> <span class="white">x</span> <span class="pink">=</span> <span class="yellow">"5"</span><span class="white">;</span>
+        <span class="blue">let</span> <span class="white">y</span> <span class="pink">=</span> <span class="yellow">"10"</span><span class="white">;</span>
+        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">x</span> <span class="white">+</span> <span class="white">y</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+
     <div class="pad">
       <input type="radio" id="q5-a1" name="q5" value="1" />
-      <label for="q5-a1">15</label>
+      <label class="radio-label" for="q5-a1">15</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a2" name="q5" value="2" />
-      <label for="q5-a2">"510"</label>
+      <label class="radio-label" for="q5-a2">"510"</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a3" name="q5" value="3" />
-      <label for="q5-a3">"15"</label>
+      <label class="radio-label" for="q5-a3">"15"</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What is the purpose of the null data type in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>6. What is the purpose of the null data type in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
-      <label for="q6-a1">To denote a nonexistent or invalid value.</label>
+      <label class="radio-label" for="q6-a1">To denote a nonexistent or invalid value.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a2" name="q6" value="2" />
-      <label for="q6-a2">To declare variables that will store text.</label>
+      <label class="radio-label" for="q6-a2">To declare variables that will store text.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a3" name="q6" value="3" />
-      <label for="q6-a3">To perform complex arithmetic operations.</label>
+      <label class="radio-label" for="q6-a3">To perform complex arithmetic operations.</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What will be the output of the following JavaScript code?</h2>
+  <hr><div class="question">
+    <h2>7. What will be the output of the following JavaScript code?</h2>
     <pre>
-            <code>
-              let value = 10;
-              console.log(value += 5);</code>
-          </pre>
+      <code>
+        <span class="blue">let</span> <span class="white">value</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span>
+        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">value</span> <span class="pink">+=</span> <span class="purple">5</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
-      <label for="q7-a1">10</label>
+      <label class="radio-label" for="q7-a1">10</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a2" name="q7" value="2" />
-      <label for="q7-a2">15</label>
+      <label class="radio-label" for="q7-a2">15</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a3" name="q7" value="3" />
-      <label for="q7-a3">5</label>
+      <label class="radio-label" for="q7-a3">5</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Consider the following JavaScript code. What is its output?</h2>
+  <hr><div class="question">
+    <h2>8. Consider the following JavaScript code. What is its output?</h2>
     <pre>
-            <code>
-              let num = 20;
-              let check = num % 2 === 0 ? "Even" : "Odd";
-              console.log(check);</code>
-          </pre>
+      <code>
+        <span class="blue">let</span> <span class="white">num</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
+        <span class="blue">let</span> <span class="white">check</span> <span class="pink">=</span> <span class="white">num</span> <span class="white">%</span> <span class="purple">2</span> <span class="white">===</span> <span class="purple">0</span> <span class="pink">?</span> <span class="yellow">"One"</span> <span class="pink">:</span> <span class="yellow">"Two"</span><span class="white">;</span>
+        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">check</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
-      <label for="q8-a1">Even</label>
+      <label class="radio-label" for="q8-a1">One</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a2" name="q8" value="2" />
-      <label for="q8-a2">Odd</label>
+      <label class="radio-label" for="q8-a2">Two</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a3" name="q8" value="3" />
-      <label for="q8-a3">20</label>
+      <label class="radio-label" for="q8-a3">20</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What does this code output?</h2>
+  <hr><div class="question">
+    <h2>9. What does this code output?</h2>
     <pre>
-            <code>
-              console.log(typeof null);</code>
-          </pre>
+      <code>
+        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">typeof</span> <span class="purple">null</span><span class="yellow">)</span><span class="white">;</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q9-a1" name="q9" value="1" />
-      <label for="q9-a1">null</label>
+      <label class="radio-label" for="q9-a1">null</label>
     </div>
     <div class="pad">
       <input type="radio" id="q9-a2" name="q9" value="2" />
-      <label for="q9-a2">object</label>
+      <label class="radio-label" for="q9-a2">object</label>
     </div>
     <div class="pad">
       <input type="radio" id="q9-a3" name="q9" value="3" />
-      <label for="q9-a3">undefined</label>
+      <label class="radio-label" for="q9-a3">undefined</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Why do we use variables in JavaScript?</h2>
+  <hr><div class="question">
+    <h2>10. Why do we use variables in JavaScript?</h2>
     <div class="pad">
       <input type="radio" id="q10-a1" name="q10" value="1" />
-      <label for="q10-a1"
+      <label class="radio-label" for="q10-a1"
         >To store data values that can change over time.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q10-a2" name="q10" value="2" />
-      <label for="q10-a2">To perform operations without storing data.</label>
+      <label class="radio-label" for="q10-a2">To perform operations without storing data.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q10-a3" name="q10" value="3" />
-      <label for="q10-a3">To increase the processing speed of scripts.</label>
+      <label class="radio-label" for="q10-a3">To increase the processing speed of scripts.</label>
     </div>
   </div>
   <button type="submit" class="take-test">Submit Answers</button>

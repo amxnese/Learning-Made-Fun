@@ -5,191 +5,197 @@
 {% endblock header %} {% block content %}
 <form id="quiz-form" action="{% url 'app-pyTest4' %}" method="post">
   {% csrf_token %}
-  <div class="question">
-    <h2>What will be the output of the following code?</h2>
+  <hr><div class="question">
+    <h2>1. What will be the output of the following code?</h2>
     <pre>
-            <code>
-              x = 10
-              if x > 5:
-                  print("Greater than five.")
-              if x &lt; 10:
-                  print("Less than ten.")
-              else:
-                  print("Else block.")</code>
-          </pre>
+      <code>
+        <span class="white">x</span> <span class="pink">=</span> <span class="purple">10</span>
+        <span class="pink">if</span> <span class="white">x</span> <span class="white">&gt;</span> <span class="purple">5</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Greater than five."</span><span class="orange">)</span>
+        <span class="pink">if</span> <span class="white">x</span> <span class="white">&lt;</span> <span class="purple">10</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Less than ten."</span><span class="orange">)</span>
+        <span class="pink">else</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Else block."</span><span class="orange">)</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
-      <label for="q1-a1">Greater than five.</label>
+      <label class="radio-label" for="q1-a1">Greater than five.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a2" name="q1" value="2" />
-      <label for="q1-a2">Less than ten.</label>
+      <label class="radio-label" for="q1-a2">Less than ten.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a3" name="q1" value="3" />
-      <label for="q1-a3">Greater than five. Else block.</label>
+      <label class="radio-label" for="q1-a3"
+        >Greater than five. Else block.</label
+      >
     </div>
   </div>
-  <div class="question">
-    <h2>When should you use conditional statements in Python?</h2>
+  <hr><div class="question">
+    <h2>2. When should you use conditional statements in Python?</h2>
     <div class="pad">
       <input type="radio" id="q2-a1" name="q2" value="1" />
-      <label for="q2-a1"
+      <label class="radio-label" for="q2-a1"
         >When you need to repeat a block of code a certain number of
         times.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q2-a2" name="q2" value="2" />
-      <label for="q2-a2"
+      <label class="radio-label" for="q2-a2"
         >When you want to execute a block of code based on some
         condition.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q2-a3" name="q2" value="3" />
-      <label for="q2-a3"
+      <label class="radio-label" for="q2-a3"
         >When you want to store multiple items in a single variable.</label
       >
     </div>
   </div>
-  <div class="question">
-    <h2>Consider the following code snippet. What is its output?</h2>
+  <hr><div class="question">
+    <h2>3. Consider the following code snippet. What is its output?</h2>
     <pre>
-            <code>
-              age = 18
-              if age >= 18:
-                  if age &lt;= 30:
-                      print("Young adult")
-                  else:
-                      print("Adult")
-              else:
-                  print("Youth")</code>
-          </pre>
+      <code>
+        <span class="white">age</span> <span class="pink">=</span> <span class="purple">18</span>
+        <span class="pink">if</span> <span class="white">age</span> <span class="white">&gt;=</span> <span class="purple">18</span><span class="orange">:</span>
+          <span class="pink">if</span> <span class="white">age</span> <span class="white">&lt;=</span> <span class="purple">30</span><span class="orange">:</span>
+            <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Young adult"</span><span class="orange">)</span>
+          <span class="pink">else</span><span class="orange">:</span>
+            <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Adult"</span><span class="orange">)</span>
+        <span class="pink">else</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Youth"</span><span class="orange">)</span></code>
+    </pre>
+    
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
-      <label for="q3-a1">Youth</label>
+      <label class="radio-label" for="q3-a1">Youth</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a2" name="q3" value="2" />
-      <label for="q3-a2">Young adult</label>
+      <label class="radio-label" for="q3-a2">Young adult</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a3" name="q3" value="3" />
-      <label for="q3-a3">Adult</label>
+      <label class="radio-label" for="q3-a3">Adult</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What will the following code print?</h2>
+  <hr><div class="question">
+    <h2>4. What will the following code print?</h2>
     <pre>
-            <code>
-              a = 5
-              b = 10
-              if a > 10:
-                  print("a is greater")
-              elif a &lt; b:
-                  print("b is greater")
-              else:
-                  print("Both are equal")</code>
-          </pre>
+      <code>
+        <span class="white">a</span> <span class="pink">=</span> <span class="purple">5</span>
+        <span class="white">b</span> <span class="pink">=</span> <span class="purple">10</span>
+        <span class="pink">if</span> <span class="white">a</span> <span class="white">&gt;</span> <span class="white">b</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"a is greater"</span><span class="orange">)</span>
+        <span class="pink">elif</span> <span class="white">a</span> <span class="white">&lt;</span> <span class="white">b</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"b is greater"</span><span class="orange">)</span>
+        <span class="pink">else</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Both are equal"</span><span class="orange">)</span></code>
+    </pre>    
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
-      <label for="q4-a1">a is greater</label>
+      <label class="radio-label" for="q4-a1">a is greater</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a2" name="q4" value="2" />
-      <label for="q4-a2">b is greater</label>
+      <label class="radio-label" for="q4-a2">b is greater</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a3" name="q4" value="3" />
-      <label for="q4-a3">Both are equal</label>
+      <label class="radio-label" for="q4-a3">Both are equal</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What are the keywords related to conditional statements in Python?</h2>
+  <hr><div class="question">
+    <h2>
+      5. What are the keywords related to conditional statements in Python?
+    </h2>
     <div class="pad">
       <input type="radio" id="q5-a1" name="q5" value="1" />
-      <label for="q5-a1">if, for, else</label>
+      <label class="radio-label" for="q5-a1">if, for, else</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a2" name="q5" value="2" />
-      <label for="q5-a2">try, except, finally</label>
+      <label class="radio-label" for="q5-a2">try, except, finally</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a3" name="q5" value="3" />
-      <label for="q5-a3">if, elif, else </label>
+      <label class="radio-label" for="q5-a3">if, elif, else </label>
     </div>
   </div>
-  <div class="question">
-    <h2>What are nested conditional statements?</h2>
+  <hr><div class="question">
+    <h2>6. What are nested conditional statements?</h2>
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
-      <label for="q6-a1"
+      <label class="radio-label" for="q6-a1"
         >Statements that execute only if multiple conditions are met
         simultaneously.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q6-a2" name="q6" value="2" />
-      <label for="q6-a2"
+      <label class="radio-label" for="q6-a2"
         >A sequence of conditional statements where each statement triggers
         another conditional statement.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q6-a3" name="q6" value="3" />
-      <label for="q6-a3"
+      <label class="radio-label" for="q6-a3"
         >A method of organizing variables and functions for better
         reusability.</label
       >
     </div>
   </div>
-  <div class="question">
-    <h2>What output does the following Python code produce?</h2>
+  <hr><div class="question">
+    <h2>7. What output does the following Python code produce?</h2>
     <pre>
-            <code>
-              temperature = 20
-              if temperature > 30:
-                  print("It's hot today.")
-              elif temperature > 20:
-                  print("Nice weather.")
-              else:
-                  print("It's a bit cold.")</code>
-          </pre>
+      <code>
+        <span class="white">temperature</span> <span class="pink">=</span> <span class="purple">20</span>
+        <span class="pink">if</span> <span class="white">temperature</span> <span class="white">&gt;</span> <span class="purple">30</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"It's hot today."</span><span class="orange">)</span>
+        <span class="pink">elif</span> <span class="white">temperature</span> <span class="white">&gt;</span> <span class="purple">20</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Nice weather."</span><span class="orange">)</span>
+        <span class="pink">else</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"It's a bit cold."</span><span class="orange">)</span></code>
+    </pre>    
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
-      <label for="q7-a1">It's hot today.</label>
+      <label class="radio-label" for="q7-a1">It's hot today.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a2" name="q7" value="2" />
-      <label for="q7-a2">Nice weather.</label>
+      <label class="radio-label" for="q7-a2">Nice weather.</label>
     </div>
     <div class="pad">
       <input type="radio" id="q7-a3" name="q7" value="3" />
-      <label for="q7-a3">It's a bit cold.</label>
+      <label class="radio-label" for="q7-a3">It's a bit cold.</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Given the following code, what will be printed?</h2>
+  <hr><div class="question">
+    <h2>8. Given the following code, what will be printed?</h2>
     <pre>
-            <code>
-              number = 15
-              if number % 5 == 0:
-                  print("Fizz")
-                  if number % 3 == 0:
-                      print("Buzz")</code>
-          </pre>
+      <code>
+        <span class="white">number</span> <span class="pink">=</span> <span class="purple">15</span>
+        <span class="pink">if</span> <span class="white">number</span> <span class="white">%</span> <span class="purple">5</span> <span class="white">==</span> <span class="purple">0</span><span class="orange">:</span>
+          <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Fizz"</span><span class="orange">)</span>
+          <span class="pink">if</span> <span class="white">number</span> <span class="white">%</span> <span class="purple">3</span> <span class="white">==</span> <span class="purple">0</span><span class="orange">:</span>
+            <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Buzz"</span><span class="orange">)</span></code>
+    </pre>    
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
-      <label for="q8-a1">\Fizz</label>
+      <label class="radio-label" for="q8-a1">Fizz</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a2" name="q8" value="2" />
-      <label for="q8-a2">Buzz</label>
+      <label class="radio-label" for="q8-a2">Buzz</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a3" name="q8" value="3" />
-      <label for="q8-a3">Fizz Buzz</label>
+      <label class="radio-label" for="q8-a3">Fizz Buzz</label>
     </div>
   </div>
   <button type="submit" class="take-test">Submit Answers</button>

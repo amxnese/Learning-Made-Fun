@@ -5,202 +5,208 @@
 {% endblock header %} {% block content %}
 <form id="quiz-form" action="{% url 'app-javaTest2' %}" method="post">
   {% csrf_token %}
-  <div class="question">
-    <h2>What does the following Java code output?</h2>
+  <hr><div class="question">
+    <h2>1. What does the following Java code output?</h2>
     <pre>
-            <code>
-              System.out.println(Math.abs(-10));</code>
-          </pre>
+      <code>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">Math</span><span class="purple">.</span><span class="white">abs</span><span class="orange">(</span><span class="purple">-10</span><span class="orange">));</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
-      <label for="q1-a1">-10</label>
+      <label class="radio-label" for="q1-a1">-10</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a2" name="q1" value="2" />
-      <label for="q1-a2">10</label>
+      <label class="radio-label" for="q1-a2">10</label>
     </div>
     <div class="pad">
       <input type="radio" id="q1-a3" name="q1" value="3" />
-      <label for="q1-a3">0</label>
+      <label class="radio-label" for="q1-a3">0</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Why do programmers use built-in functions in Java?</h2>
+  <hr><div class="question">
+    <h2>2. Why do programmers use built-in functions in Java?</h2>
     <div class="pad">
       <input type="radio" id="q2-a1" name="q2" value="1" />
-      <label for="q2-a1"
+      <label class="radio-label" for="q2-a1"
         >To write less code and improve readability by using pre-tested methods
         that perform common tasks.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q2-a2" name="q2" value="2" />
-      <label for="q2-a2">To interface with the operating system.</label>
+      <label class="radio-label" for="q2-a2"
+        >To interface with the operating system.</label
+      >
     </div>
     <div class="pad">
       <input type="radio" id="q2-a3" name="q2" value="3" />
-      <label for="q2-a3">To enhance the speed of the compiler.</label>
+      <label class="radio-label" for="q2-a3"
+        >To enhance the speed of the compiler.</label
+      >
     </div>
   </div>
-  <div class="question">
-    <h2>
-      Which Math function is used to calculate the square root and what will be
-      the output for 16?
-    </h2>
+  <hr><div class="question">
+    <h2>3. Which function is used to calculate the square root of a number</h2>
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
-      <label for="q3-a1">Math.pow, 4</label>
+      <label class="radio-label" for="q3-a1">Math.square</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a2" name="q3" value="2" />
-      <label for="q3-a2">Math.sqrt, 16</label>
+      <label class="radio-label" for="q3-a2">Math.root</label>
     </div>
     <div class="pad">
       <input type="radio" id="q3-a3" name="q3" value="3" />
-      <label for="q3-a3">Math.sqrt, 4</label>
+      <label class="radio-label" for="q3-a3">Math.sqrt</label>
     </div>
   </div>
-  <div class="question">
-    <h2>Consider the following code snippet. What does it do?</h2>
+  <hr><div class="question">
+    <h2>4. Consider the following code snippet. What does it do?</h2>
     <pre>
-            <code>
-              String phrase = "Hello World";
-              System.out.println(phrase.substring(6, 11));</code>
-          </pre>
+      <code>
+        <span class="blue">String</span> <span class="white">phrase</span> <span class="pink">=</span> <span class="yellow">"Hello World"</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">phrase</span><span class="purple">.</span><span class="white">substring</span><span class="orange">(</span><span class="purple">6</span><span class="white">,</span> <span class="purple">11</span><span class="orange">));</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
-      <label for="q4-a1">Prints "World"</label>
+      <label class="radio-label" for="q4-a1">Prints "World"</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a2" name="q4" value="2" />
-      <label for="q4-a2">Prints "Hello"</label>
+      <label class="radio-label" for="q4-a2">Prints "Hello"</label>
     </div>
     <div class="pad">
       <input type="radio" id="q4-a3" name="q4" value="3" />
-      <label for="q4-a3">Prints "Hello World"</label>
+      <label class="radio-label" for="q4-a3">Prints "Hello World"</label>
     </div>
   </div>
-  <div class="question">
-    <h2>
-      How do you check if two string variables are exactly the same in Java?
-    </h2>
+  <hr><div class="question">
+    <h2>5. What will this code snippet output?</h2>
     <pre>
-            <code>
-              String a = "hello";
-              String b = "Hello";
-              System.out.println(a.equals(b));</code>
-          </pre>
+      <code>
+        <span class="blue">String</span> <span class="white">a</span> <span class="pink">=</span> <span class="yellow">"hello"</span><span class="orange">;</span>
+        <span class="blue">String</span> <span class="white">b</span> <span class="pink">=</span> <span class="yellow">"Hello"</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">a</span><span class="purple">.</span><span class="white">equals</span><span class="orange">(</span><span class="white">b</span><span class="orange">));</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q5-a1" name="q5" value="1" />
-      <label for="q5-a1">true</label>
+      <label class="radio-label" for="q5-a1">true</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a2" name="q5" value="2" />
-      <label for="q5-a2">false</label>
+      <label class="radio-label" for="q5-a2">false</label>
     </div>
     <div class="pad">
       <input type="radio" id="q5-a3" name="q5" value="3" />
-      <label for="q5-a3">Error</label>
+      <label class="radio-label" for="q5-a3">Error</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What will the following Java method return?</h2>
+  <hr><div class="question">
+    <h2>6. What will be the output of this method ?</h2>
     <pre>
-            <code>
-              System.out.println("Java".toUpperCase());</code>
-          </pre>
+      <code>
+        <span class="blue">String</span> <span class="white">myString</span> <span class="pink">=</span> <span class="yellow">"Java!"</span><span class="orange">;</span>
+        <span class="blue">int</span> <span class="white">length</span> <span class="pink">=</span> <span class="white">myString</span><span class="purple">.</span><span class="white">length</span><span class="orange">();</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">length</span><span class="orange">);</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
-      <label for="q6-a1">"java"</label>
+      <label class="radio-label" for="q6-a1">1</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a2" name="q6" value="2" />
-      <label for="q6-a2">"JAVA"</label>
+      <label class="radio-label" for="q6-a2">5</label>
     </div>
     <div class="pad">
       <input type="radio" id="q6-a3" name="q6" value="3" />
-      <label for="q6-a3">"Java"</label>
+      <label class="radio-label" for="q6-a3">4</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What does the toLowerCase() method do with the following string?</h2>
+  <hr><div class="question">
+    <h2>7. What does the toLowerCase() method do with the following string?</h2>
     <pre>
-            <code>
-              System.out.println("Hello World".toLowerCase());</code>
-          </pre>
+      <code>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello World"</span><span class="purple">.</span><span class="white">toLowerCase</span><span class="orange">());</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
-      <label for="q7-a1">Converts "Hello World" to "hello world"</label>
+      <label class="radio-label" for="q7-a1"
+        >Converts "Hello World" to "hello world"</label
+      >
     </div>
     <div class="pad">
       <input type="radio" id="q7-a2" name="q7" value="2" />
-      <label for="q7-a2">Keeps the string as "Hello World"</label>
+      <label class="radio-label" for="q7-a2"
+        >Keeps the string as "Hello World"</label
+      >
     </div>
     <div class="pad">
       <input type="radio" id="q7-a3" name="q7" value="3" />
-      <label for="q7-a3">Converts "Hello World" to "HELLO WORLD"</label>
+      <label class="radio-label" for="q7-a3"
+        >Calculates the number of letters that are in lower case</label
+      >
     </div>
   </div>
-  <div class="question">
-    <h2>What is the result of the following code?</h2>
+  <hr><div class="question">
+    <h2>8. What is the result of the following code?</h2>
     <pre>
-            <code>
-              System.out.println(Math.pow(2, 3));</code>
-          </pre>
+      <code>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">Math</span><span class="purple">.</span><span class="white">pow</span><span class="orange">(</span><span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="orange">));</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
-      <label for="q8-a1">6</label>
+      <label class="radio-label" for="q8-a1">6</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a2" name="q8" value="2" />
-      <label for="q8-a2">8</label>
+      <label class="radio-label" for="q8-a2">8</label>
     </div>
     <div class="pad">
       <input type="radio" id="q8-a3" name="q8" value="3" />
-      <label for="q8-a3">9</label>
+      <label class="radio-label" for="q8-a3">9</label>
     </div>
   </div>
-  <div class="question">
-    <h2>What is the primary purpose of the String.length() method in Java?</h2>
+  <hr><div class="question">
+    <h2>9. What is the primary purpose of the String.length() method in Java?</h2>
     <div class="pad">
       <input type="radio" id="q9-a1" name="q9" value="1" />
-      <label for="q9-a1"
+      <label class="radio-label" for="q9-a1"
         >To modify the string length by trimming or adding spaces.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q9-a2" name="q9" value="2" />
-      <label for="q9-a2"
+      <label class="radio-label" for="q9-a2"
         >To return the number of characters in the string.</label
       >
     </div>
     <div class="pad">
       <input type="radio" id="q9-a3" name="q9" value="3" />
-      <label for="q9-a3">To compare the length of two strings.</label>
+      <label class="radio-label" for="q9-a3"
+        >To compare the length of two strings.</label
+      >
     </div>
   </div>
-  <div class="question">
-    <h2>
-      How can you compare two strings for equality, ignoring case sensitivity in
-      Java?
-    </h2>
+  <hr><div class="question">
+    <h2>10. What will be the output of this code snippet?</h2>
     <pre>
-            <code>
-              String text1 = "java";
-              String text2 = "Java";
-              System.out.println(text1.equalsIgnoreCase(text2));</code>
-          </pre>
+      <code>
+        <span class="blue">String</span> <span class="white">text1</span> <span class="pink">=</span> <span class="yellow">"java"</span><span class="orange">;</span>
+        <span class="blue">String</span> <span class="white">text2</span> <span class="pink">=</span> <span class="yellow">"Java"</span><span class="orange">;</span>
+        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">text1</span><span class="purple">.</span><span class="white">equalsIgnoreCase</span><span class="orange">(</span><span class="white">text2</span><span class="orange">));</span></code>
+    </pre>
     <div class="pad">
       <input type="radio" id="q10-a1" name="q10" value="1" />
-      <label for="q10-a1">true</label>
+      <label class="radio-label" for="q10-a1">true</label>
     </div>
     <div class="pad">
       <input type="radio" id="q10-a2" name="q10" value="2" />
-      <label for="q10-a2">false</label>
+      <label class="radio-label" for="q10-a2">false</label>
     </div>
     <div class="pad">
       <input type="radio" id="q10-a3" name="q10" value="3" />
-      <label for="q10-a3">Compilation error</label>
+      <label class="radio-label" for="q10-a3">Compilation error</label>
     </div>
   </div>
   <button type="submit" class="take-test">Submit Answers</button>
