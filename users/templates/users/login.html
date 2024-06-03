@@ -24,15 +24,15 @@
           <h1>Log in</h1>
           <form method="post" action="{% url 'user-login' %}">
             {% csrf_token %}
-            <input type="text" placeholder="Username" name="username" />
+            <input required type="text" placeholder="Username" name="username" />
             <input
+              required
               type="password"
               placeholder="Password"
               name="password"
             /><br />
             <button class="submit" type="submit">log in</button>
           </form>
-          <!-- <div class="clearfix"></div> -->
           <span class="copyright">&copy;2024 Learning Made Fun</span>
         </div>
       </div>
@@ -47,6 +47,5 @@
         </div>
       </div>
     </div>
-
   </body>
 </html>
