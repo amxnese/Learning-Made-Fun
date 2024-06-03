@@ -25,11 +25,11 @@
             <h1>Register</h1>
             <form method="post" action="{% url 'user-register' %}">
               {% csrf_token %}
-              <input type="text" name="username" placeholder="Username" />
-              <input type="text" name="fname" placeholder="First Name" />
-              <input type="text" name="lname" placeholder="Last Name" />
-              <input type="password" name="password" placeholder="Password" /><br />
-              <input type="password" name="confirm" placeholder=" Confirm Password" /><br />
+              <input required type="text" name="username" placeholder="Username" />
+              <input required type="text" name="fname" placeholder="First Name" />
+              <input required type="text" name="lname" placeholder="Last Name" />
+              <input required type="password" name="password" placeholder="Password" /><br />
+              <input required type="password" name="confirm" placeholder=" Confirm Password" /><br />
               <button type="submit">Register</button>
             </form>
             <div class="clearfix"></div>
