@@ -24,13 +24,14 @@ def validate(request, score, full_mark, level, language):
   passing_grade = int(full_mark * 75 / 100)
   user = request.user
   current_level = getattr(user, language)
+  print(current_level)
   if current_level != level-1:
     messages.success(request, f"You passed the test again and scored {score}/{full_mark}")
   elif score >= passing_grade:
-        current_level += 1
-        setattr(user, language, current_level)
-        user.save()
-        messages.success(request, mark_safe(f"<strong>Congratulations</strong>, You scored {score}/{full_mark} and has made it to the next level"))
+    current_level += 1
+    setattr(user, language, current_level)
+    user.save()
+    messages.success(request, mark_safe(f"<strong>Congratulations</strong>, You scored {score}/{full_mark} and has made it to the next level"))
   else:
       messages.warning(request, f"You failed the test with a score of {score}/{full_mark}, better luck next time")
 
@@ -82,6 +83,7 @@ def main(request):
       else:
         print('no results')
         messages.warning(request, "Can't find any results related to your search")
+        return redirect('./')
       return render(request, 'app/main.html', {'result' : result})
   return render(request, 'app/main.html')
 
@@ -147,7 +149,7 @@ def pyTest1(request):
 @login_required
 def pyTest2(request):
   if request.method == "POST":
-    answers = ['2', '1', '2', '2', '1', '2', '1', '3', '2', '1', '2', '1', '1', '2', '2', '3', '1', '1']
+    answers = ['2', '1', '2', '2', '1', '2', '1', '3', '3', '1', '2', '1', '1', '2', '2', '1', '1', '1']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
@@ -159,7 +161,7 @@ def pyTest2(request):
 @login_required
 def pyTest3(request):
   if request.method == "POST":
-    answers = ['2', '2', '1', '2', '3', '1', '1', '2', '2', '1', '1', '1']
+    answers = ['2', '2', '1', '2', '3', '1', '1', '2', '2', '1', '1', '2']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
@@ -205,6 +207,14 @@ def pyTest6(request):
   return render(request, 'app/pyTests/pyTest6.html')
 
 @login_required
+def pyVideos(request):
+  return render(request, 'app/pyVideos.html')
+
+@login_required
+def pyBooks(request):
+  return render(request, 'app/pyBooks/pyBooks.html')
+
+@login_required
 def pyInvalid(request):
   messages.info(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
@@ -213,16 +223,18 @@ def pyInvalid(request):
 def java(request):
   user = request.user
   lvl_java = user.java
-  levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary', 'secondary']
-  for i in range(0, lvl_java):
-    levels[i] = 'primary'
+  levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary']
+  try:
+    for i in range(0, lvl_java):
+      levels[i] = 'primary'
+  except:
+    pass
   lvl = {
-    'lvl1':levels[0],
-    'lvl2':levels[1],
-    'lvl3':levels[2],
-    'lvl4':levels[3],
-    'lvl5':levels[4],
-    'lvl6':levels[5]
+    'lvl2':levels[0],
+    'lvl3':levels[1],
+    'lvl4':levels[2],
+    'lvl5':levels[3],
+    'lvl6':levels[4]
   }
   return render(request, 'app/java.html',{'levels':lvl})
 
@@ -293,7 +305,7 @@ def javaTest3(request):
 @login_required
 def javaTest4(request):
   if request.method == "POST":
-    answers = ['1', '2', '3', '2', '2', '1', '1', '2']
+    answers = ['1', '2', '2', '2', '2', '1', '1', '2']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
@@ -327,6 +339,14 @@ def javaTest6(request):
   return render(request, 'app/javaTests/javaTest6.html')
 
 @login_required
+def javaVideos(request):
+  return render(request, 'app/javaVideos.html')  
+
+@login_required
+def javaBooks(request):
+  return render(request, 'app/javaBooks/javaBooks.html')
+
+@login_required
 def javaInvalid(request):
   messages.info(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
@@ -335,16 +355,18 @@ def javaInvalid(request):
 def js(request):
   user = request.user
   lvl_js = user.javaScript
-  levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary', 'secondary']
-  for i in range(0, lvl_js):
-    levels[i] = 'primary'
+  levels = ['secondary', 'secondary', 'secondary', 'secondary', 'secondary']
+  try:
+    for i in range(0, lvl_js):
+      levels[i] = 'primary'
+  except:
+    pass
   lvl = {
-    'lvl1':levels[0],
-    'lvl2':levels[1],
-    'lvl3':levels[2],
-    'lvl4':levels[3],
-    'lvl5':levels[4],
-    'lvl6':levels[5]
+    'lvl2':levels[0],
+    'lvl3':levels[1],
+    'lvl4':levels[2],
+    'lvl5':levels[3],
+    'lvl6':levels[4]
   }
   return render(request, 'app/js.html',{'levels':lvl})
 
@@ -403,7 +425,7 @@ def jsTest2(request):
 @login_required
 def jsTest3(request):
   if request.method == "POST":
-    answers = ['2', '1', '1', '2', '3', '2', '1', '1', '2', '2']
+    answers = ['2', '1', '1', '2', '3', '2', '2', '1', '2', '2']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
@@ -439,7 +461,7 @@ def jsTest5(request):
 @login_required
 def jsTest6(request):
   if request.method == "POST":
-    answers = ['1', '2', '2', '2', '1', '2', '2', '1']
+    answers = ['1', '2', '2', '2', '3', '2', '2', '1']
     to_check = fetch(request, len(answers))
     if not to_check:
       return redirect('./')
@@ -447,6 +469,14 @@ def jsTest6(request):
     validate(request, score,  full_mark=len(answers), level=6, language="javaScript")
     return redirect('../')
   return render(request, 'app/jsTests/jsTest6.html')
+
+@login_required
+def jsVideos(request):
+  return render(request, 'app/jsVideos.html')
+
+@login_required
+def jsBooks(request):
+  return render(request, 'app/jsBooks/jsBooks.html')
   
 @login_required
 def jsInvalid(request):
