@@ -40,8 +40,8 @@
     <div class="midlle">
       <h1 class="h1M">Why Learn Python?</h1>
       <p class="pm1">
-        Python is a powerful and versatile programming language that offers a
-        wide range of benefits for aspiring developers.
+        Python is the number one go-to to many developers for the vast amount of
+        benefits it provides
       </p>
       <div class="carts">
         <div class="cart">
@@ -125,23 +125,23 @@
           {% if levels.lvl2 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel2' %}"> Lesson 2</a>
           {% else %}
-          <a href="invalid/"> Lesson 2</a>
+          <a class="sec" href="invalid/"> Lesson 2</a>
           {% endif %} {% if levels.lvl3 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel3' %}"> Lesson 3</a>
           {% else %}
-          <a href="invalid/"> Lesson 3</a>
+          <a class="sec" href="invalid/"> Lesson 3</a>
           {% endif %} {% if levels.lvl4 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel4' %}"> Lesson 4</a>
           {% else %}
-          <a href="invalid/"> Lesson 4</a>
+          <a class="sec" href="invalid/"> Lesson 4</a>
           {% endif %} {% if levels.lvl5 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel5' %}"> Lesson 5</a>
           {% else %}
-          <a href="invalid/"> Lesson 5</a>
+          <a class="sec" href="invalid/"> Lesson 5</a>
           {% endif %} {% if levels.lvl6 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyLevel6' %}"> Lesson 6</a>
           {% else %}
-          <a href="invalid/"> Lesson 6</a>
+          <a class="sec" href="invalid/"> Lesson 6</a>
           {% endif %}
         </div>
         <div class="cart1">
@@ -149,24 +149,40 @@
           {% if levels.lvl2 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest2' %}"> Test 2</a>
           {% else %}
-          <a href="invalid/"> Test 2</a>
+          <a class="sec" href="invalid/"> Test 2</a>
           {% endif %} {% if levels.lvl3 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest3' %}"> Test 3</a>
           {% else %}
-          <a href="invalid/"> Test 3</a>
+          <a class="sec" href="invalid/"> Test 3</a>
           {% endif %} {% if levels.lvl4 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest4' %}"> Test 4</a>
           {% else %}
-          <a href="invalid/"> Test 4</a>
+          <a class="sec" href="invalid/"> Test 4</a>
           {% endif %} {% if levels.lvl5 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest5' %}"> Test 5</a>
           {% else %}
-          <a href="invalid/"> Test 5</a>
+          <a class="sec" href="invalid/"> Test 5</a>
           {% endif %} {% if levels.lvl6 == 'primary' %}
           <a class="pm1" href="{% url 'app-pyTest6' %}"> Test 6</a>
           {% else %}
-          <a href="invalid/"> Test 6</a>
+          <a class="sec" href="invalid/"> Test 6</a>
           {% endif %}
+        </div>
+        <div class="btns">
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='videos/'"
+          >
+            Related videos
+          </button>
+          <button
+            class="test"
+            role="button"
+            onclick="location.href='books/'"
+          >
+            Related books
+          </button>
         </div>
       </div>
     </div>
