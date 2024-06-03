@@ -114,11 +114,14 @@ def change_password(request):
     if new != confirm:
       messages.error(request, "Passwords don't match")
       return redirect('./')
+    if old == new:
+      messages.error(request, "Your new password must be different from your previous password.")
+      return redirect('./')
     user.set_password(new)
     user.save()
     update_session_auth_hash(request, user)  # Keeps the user logged in
-    messages.success(request, 'Updated password successfully')
-    return render(request, 'app/home.html')
+    messages.success(request, 'changed')
+    return redirect('/')
   else:
     return render(request, 'users/passwd.html')
 
