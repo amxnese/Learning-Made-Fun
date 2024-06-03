@@ -9,25 +9,26 @@
     <link rel="stylesheet" href="{% static 'users/msg.css' %}" />
   </head>
   <body>
+    {% if messages %} {% for message in messages %}
+    <script src="{% static 'users/usersHide.js' %}"></script>
+    <div class="alert">
+      {{ message }}
+      <button class="close-button" onclick="closeMe()">&times;</button>
+    </div>
+    <script>
+      hideMessage();
+    </script>
+    {% endfor %} {% endif %}
     <div class="container">
-      {% if messages %} {% for message in messages %}
-        <script src="{% static 'users/usersHide.js' %}"></script>
-        <div id="errorMessage" class="alert">
-          {{ message }}
-          <button class="close-button" onclick="closeMe()">&times;</button>
-        </div>
-        <script>
-          hideMessage();
-        </script>
-        {% endfor %} {% endif %}
       <div class="changePasswd">
         <div class="header">
-          <h1>Change password </h1><hr>
+          <h1>Change password</h1>
+          <hr />
         </div>
         <form method="post" action="{% url 'user-passwd' %}">
           {% csrf_token %}
           <div class="passdiv">
-            <label for="old">Old password</label><br>
+            <label for="old">Old password</label><br />
             <input
               type="password"
               id="old"
@@ -38,29 +39,38 @@
           </div>
 
           <div class="passdiv">
-            <label for="new">New password</label><br>
-          <input
-            type="password"
-            id="new"
-            placeholder="Enter your new password"
-            name="new"
-            required
-          />
+            <label for="new">New password</label><br />
+            <input
+              type="password"
+              id="new"
+              placeholder="Enter your new password"
+              name="new"
+              required
+            />
           </div>
 
           <div class="passdiv">
-            <label for="confirm">Confirm password</label><br>
-          <input
-            type="password"
-            id="confirm"
-            placeholder="Confirm your new password"
-            name="confirm"
-            required
-          />
+            <label for="confirm">Confirm password</label><br />
+            <input
+              type="password"
+              id="confirm"
+              placeholder="Confirm your new password"
+              name="confirm"
+              required
+            />
           </div>
 
-          <button class="button-30" role="button" type="button" onclick="window.location.href = '../'">Cancel</button>
-          <button class="button-29" role="button" type="submit">Save Changes</button>
+          <button
+            class="button-30"
+            role="button"
+            type="button"
+            onclick="window.location.href = '../'"
+          >
+            Cancel
+          </button>
+          <button class="button-29" role="button" type="submit">
+            Save Changes
+          </button>
         </form>
       </div>
     </div>
