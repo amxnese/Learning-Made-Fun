@@ -12,7 +12,10 @@
     <script src="{% static 'app/appHide.js' %}"></script>
     <div class="flex alert">
       <div class="message {{message.tags}}">
-        {% if message.tags == "success" %}
+        {% if message.message == "changed" %}
+        <h1>Password Changed</h1>
+        <p>Your password has been changed successfully!</p>
+        {% elif message.tags == "success" %}
         <h1>Logged out</h1>
         {% elif message.tags == "info" %}
         <h1>Deleted</h1>
@@ -21,7 +24,9 @@
         {% else %}
         <h1>{{ message.tags }}</h1>
         {% endif %}
+        {% if message.message != 'changed' %}
         <p>{{ message }}</p>
+        {% endif %}
       </div>
     </div>
     <script>
@@ -171,18 +176,16 @@
         concepts, and technologies.
       </p>
       <hr class="line" />
-      <form id="contact" class="ContactUs">
+      <div id="contact">
         <h1 class="h1contactus">Contact Us</h1>
-        <input name="fname" type="text" placeholder="First Name" />
-        <input name="lname" type="text" placeholder="Last Name" />
-        <input name="email" type="email" id="email" placeholder="Email" />
-        <textarea
-          placeholder="type your message here"
-          name="message"
-          id="message-area"
-        ></textarea>
-        <button class="btn button-29">Send</button>
-      </form>
+        <p class="pContactus">
+          If you want to report an error, or if you want to make a suggestion,
+          or if you have any questions, you can send us an e-mail at:
+        </p>
+        <a class="maillink" href="mailto:aminesdrt42@gmail.com"
+          >aminesdrt42@gmail.com</a
+        >
+      </div>
     </div>
     <div class="footer">
       <p class="pf">© 2024 Programming Courses. All rights reserved.</p>
