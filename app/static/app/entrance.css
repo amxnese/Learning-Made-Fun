@@ -59,7 +59,7 @@ a {
   margin: 15px 0;
 }
 img {
-  margin-top: -230px;
+  /* margin-top: -230px; */
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -270,10 +270,16 @@ img:hover {
 .sec{
   padding: 4px;
 }
-
-.test {
+.btns{
+  display: block;
+  justify-content: center;  
+ }
+.btn {
+  height: 65px;
+  width: 15rem;
   align-items: center;
-  appearance: none;
+  margin: 0rem 6rem 5rem 6rem;
+  /* appearance: none; */
   background-image: radial-gradient(
     100% 100% at 100% 0,
     #4f46e5 0,
@@ -286,45 +292,41 @@ img:hover {
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  display: inline-flex;
+  /* display: inline-flex; */
   font-family: "JetBrains Mono", monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
+  /* justify-content: center; */
+  /* line-height: 1; */
   list-style: none;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
+  /* padding-left: 16px; */
+  /* padding-right: 16px; */
+  /* position: relative; */
+  /* text-align: left; */
   text-decoration: none;
   transition: box-shadow 0.15s, transform 0.15s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   will-change: box-shadow, transform;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bolder;
 }
-.test:focus {
+.btn:focus {
   box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
-.test:hover {
+.btn:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
-.test:active {
+.btn:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
-
-.btns{
-  justify-content: center;
-    display: contents;
-    padding: 0 0 0 0;
-    width: auto;
+i{
+  font-size: 2rem;
 }
