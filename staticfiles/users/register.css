@@ -1,0 +1,239 @@
+/* Start Global Style */
+* {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+body {
+  background: #e9ebee; /* Background color for the body */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  font-family: sans-serif; /* Default font family */
+}
+
+.flexed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1100px; /* Width of the  */
+  margin: auto; /* Center the  horizontally */
+  padding: 19px; /* Padding inside the  */
+}
+
+.inner {
+  width: 450px; /* Width of the  */
+  margin: auto; /* Center the  horizontally */
+  padding: 19px; /* Padding inside the  */
+}
+
+.login,
+.register {
+  width: 620px; /* Each takes half of the container width */
+}
+
+/* Start Login Style */
+.register {
+  float: left; /* Float the register section to the left */
+  background-color: #fafafa; /* Background color */
+  height: 573px; /* Full height */
+  border-radius: 10px 0 0 10px; /* Rounded corners */
+  text-align: center; /* Center text */
+  padding-top: 11px; /* Padding at the top */
+}
+
+.register h1 {
+  margin-bottom: 40px; /* Bottom margin for the heading */
+  font-size: 2.5em; /* Font size for the heading */
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding */
+  margin-bottom: 30px; /* Bottom margin */
+  border: none; /* No border */
+  background-color: #eeeeef; /* Background color */
+}
+
+input[type="checkbox"] {
+  float: left; /* Float left */
+  margin-right: 5px; /* Right margin */
+}
+
+.register span {
+  float: left; /* Float left */
+}
+
+.register a {
+  float: right; /* Float right */
+  text-decoration: none; /* No underline */
+  color: #000; /* Text color */
+  transition: 0.3s all ease-in-out; /* Transition effect */
+}
+
+.register a:hover {
+  color: #50b96f; /* Text color on hover */
+  font-weight: bold; /* Bold font on hover */
+}
+
+/* Button styling */
+.register button {
+  width: 100%; /* Full width */
+  margin: 30px 0; /* Margin */
+  padding: 10px; /* Padding */
+  border: none; /* No border */
+  background-color: rgb(42, 108, 108); /* Background color */
+  color: #fff; /* Text color */
+  font-size: 20px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  transition: 0.3s all ease-in-out; /* Transition effect */
+}
+
+.register button:hover {
+  width: 97%; /* Slightly reduced width on hover */
+  font-size: 22px; /* Increased font size on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.register hr {
+  width: 30%; /* Width */
+  display: inline-block; /* Display as inline-block */
+}
+
+.register p {
+  display: inline-block; /* Display as inline-block */
+  margin: 0px 10px 30px; /* Margin */
+}
+.register .copyright {
+  display: inline-block; /* Display as inline-block */
+  text-align: center;
+  float: none; /* Clear float */
+}
+
+/* Start Register Style */
+.login {
+  float: right; /* Float the login section to the right */
+  background-image: linear-gradient(
+    135deg,
+    #4fb3cf,
+    #50b96f
+  ); /* Background gradient */
+  height: 573px; /* Full height */
+  color: #fff; /* Text color */
+  border-radius: 0 10px 10px 0; /* Rounded corners */
+  text-align: center; /* Center text */
+  padding: 100px 0; /* Padding */
+}
+
+.login h2 {
+  margin: 59px 0; /* Margin */
+  font-size: 45px; /* Font size */
+  letter-spacing: 3px; /* Letter spacing */
+}
+
+.login p {
+  font-size: 20px; /* Font size */
+  letter-spacing: 1px;
+  margin-bottom: 70px; /* Bottom margin */
+}
+
+
+.button-29 {
+  letter-spacing: 2px;
+  width: 200px;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.alert {
+  opacity: 1;
+  transition: opacity 1s;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  margin: 20px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  position: relative; /* Needed to position the close button */
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; /* Center the alert */
+  z-index: 1000;
+  position: fixed;
+  top: 99px;
+}
+.close-button {
+  position: absolute;
+  right: 11px;
+  top: 6%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px; /* Space between the button and the alert */
+}

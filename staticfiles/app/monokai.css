@@ -1,0 +1,49 @@
+pre {
+  font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+  background-color: #2e2e2e;
+  border: 1px solid #999;
+  overflow: hidden;
+  width: auto;
+  border-radius: 10px;
+}
+code, .keyword {
+  font-size: 105%;
+  color: crimson;
+  font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+}
+.var {
+  color: #d6d6d6;
+}
+.string {
+  color: #e6db74;
+}
+.number {
+  color: #9e86c8;
+}
+.operator {
+  color: #f92672;
+}
+.pink {
+  color: #f92672;
+}
+.white {
+  color: #f8f8f2;
+}
+.yellow {
+  color: #e6db74;
+}
+.green {
+  color: #a6e22e;
+}
+.orange {
+  color: #eed810
+}
+.purple {
+  color: #ae81ff;
+}
+.blue {
+  color: #66d9ef;
+}
+.comment {
+  color: #797979;
+}
