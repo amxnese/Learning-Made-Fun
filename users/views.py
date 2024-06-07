@@ -96,7 +96,7 @@ def edit(request):
     user.first_name = fname
     user.last_name = lname
     user.save()
-    messages.success(request, 'Profile updated successfully')
+    # messages.success(request, 'Profile updated successfully')
     return redirect('../')
   else:
     return render(request, 'users/edit.html')
