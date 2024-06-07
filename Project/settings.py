@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get('secret_key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lmf-4e64cccfc309.herokuapp.com']
+ALLOWED_HOSTS = ['lmf-4e64cccfc309.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -105,8 +105,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('SUPABASE_DB_NAME'),
-        'USER': os.getenv('SUPABASE_DB_USER'),
-        'PASSWORD': os.getenv('SUPABASE_DB_PASSWORD'),
+        'USER': os.environ.get('SUPABASE_DB_USER'),
+        'PASSWORD': os.environ.get('SUPABASE_DB_PASSWORD'),
         'HOST': os.getenv('SUPABASE_DB_HOST'),
         'PORT': os.getenv('SUPABASE_DB_PORT', '5432'),
     }
