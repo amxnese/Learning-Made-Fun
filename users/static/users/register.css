@@ -89,7 +89,7 @@ input[type="checkbox"] {
   margin: 30px 0; /* Margin */
   padding: 10px; /* Padding */
   border: none; /* No border */
-  background-color: rgb(42, 108, 108); /* Background color */
+  background-color: #4F47FF; /* Background color */
   color: #fff; /* Text color */
   font-size: 20px; /* Font size */
   cursor: pointer; /* Cursor style */
@@ -120,11 +120,7 @@ input[type="checkbox"] {
 /* Start Register Style */
 .login {
   float: right; /* Float the login section to the right */
-  background-image: linear-gradient(
-    135deg,
-    #4fb3cf,
-    #50b96f
-  ); /* Background gradient */
+  background-image: linear-gradient(179deg, #4F47FF, #4F469E);
   height: 573px; /* Full height */
   color: #fff; /* Text color */
   border-radius: 0 10px 10px 0; /* Rounded corners */
