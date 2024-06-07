@@ -145,7 +145,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 130vh;
+  height: 150vh;
   background-color: #111827;
 }
 .h1Aboutus {
@@ -162,6 +162,7 @@ a {
   margin: 20px 0;
   border: 2px solid silver;
   width: 80%;
+  display: inline-block;
 }
 .ContactUs {
   display: flex;
@@ -186,6 +187,11 @@ input::placeholder {
 }
 .h1contactus {
   font-size: 50px;
+  color: white;
+  margin-bottom: 30px;
+}
+.h2crew {
+  font-size: 30px;
   color: white;
   margin-bottom: 30px;
 }
@@ -538,4 +544,7 @@ html {
   100% {
     background-position: 0% 50%;
   }
+}
+.pipe{
+  color:white;
 }
