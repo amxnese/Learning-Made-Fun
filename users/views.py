@@ -5,6 +5,7 @@ from .models import CustomUser
 from django.contrib.auth.decorators import login_required
 from django.core.files.storage import default_storage
 from django.contrib.auth import update_session_auth_hash
+import os
 
 def login(request):
   if request.method == "POST":
@@ -61,10 +62,12 @@ def logout(request):
 def profile(request):
   user = request.user
   if request.method == "POST" and request.FILES['profile_picture']:
-    if user.profile_picture and user.profile_picture != 'default.jpg':
-      old_picture_path = user.profile_picture.path
-      if default_storage.exists(old_picture_path):
-        default_storage.delete(old_picture_path)
+    # deleting the old profile picture if the app is on production mode
+    if os.environ.get('DJANGO_DEVELOPMENT'):
+      if user.profile_picture and user.profile_picture != 'default.jpg':
+        old_picture_path = user.profile_picture.path
+        if default_storage.exists(old_picture_path):
+          default_storage.delete(old_picture_path)
     pic = request.FILES.get('profile_picture')
     user.profile_picture = pic
     user.save()
