@@ -49,7 +49,7 @@ def home(request):
   
   comments = Comment.objects.all()
   for i in comments:
-    i.profile_pic = str(f"..{CustomUser.objects.get(id=i.user_id).profile_picture.url}")
+    i.profile_pic = str(f"{CustomUser.objects.get(id=i.user_id).profile_picture.url}")
     i.user_id = CustomUser.objects.get(id=i.user_id)
   return render(request, 'app/home.html', {'comments': comments})
 
