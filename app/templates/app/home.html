@@ -127,7 +127,11 @@
         <div class="slider">
           {% for comment in comments %}
           <div class="slide">
-            <img src="{{ comment.profile_pic }}" alt="" />
+            {% if comment.profile_pic %}
+            <img src="{{ comment.profile_pic }}" alt="profile picture" />
+            {% else %}
+            <img src="{% static 'users/default.jpg' %}" alt="profile picture" />
+            {% endif %}
             <p>{{comment.content}}</p>
             <h3>- {{ comment.user_id }}</h3>
           </div>
