@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',  # Cloudinary
+    'cloudinary_storage',  # Cloudinary Storage
 ]
 
 MIDDLEWARE = [
@@ -165,3 +167,15 @@ AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_URL = '/login/'
 
 django_heroku.settings(locals())
+
+# setting the default file storage to cloudinary if the app is in production
+if not os.environ.get('DJANGO_DEVELOPMENT'):
+    # cloudinary
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+        'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+        'API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
+    }
+
+    # setting cloudinary as a default file storage
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
