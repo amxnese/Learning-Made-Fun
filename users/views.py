@@ -43,10 +43,10 @@ def register(request):
     if user:
       log(request, user)
     # giving user default profile picture
-    pic = 'default.jpg'
-    user.profile_picture = pic
+    # pic = 'default.jpg'
+    # user.profile_picture = pic
     user.save()
-    # using debug to know where did the message came from
+    # using defferent message tags to know where did the message came from
     messages.info(request, f"account for {username} was created successfully")
     return redirect('/main')
   else:
