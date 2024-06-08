@@ -145,7 +145,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 150vh;
+  height: 162vh;
   background-color: #111827;
 }
 .h1Aboutus {
@@ -547,4 +547,18 @@ html {
 }
 .pipe{
   color:white;
+}
+.github {
+  /* position:absolute; */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.gitdiv{
+  text-align: center;
+  padding: 7px;
+  background-color: #f8f9fa;
+  margin-top: 73px;
 }
