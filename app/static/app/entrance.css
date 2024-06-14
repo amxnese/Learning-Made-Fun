@@ -45,7 +45,7 @@ a {
 }
 .h1M {
   font-size: 50px;
-  margin: 60px;
+  margin: 35px 0;
   color: #4f46e5
 }
 .pm1 {
@@ -59,7 +59,7 @@ a {
   margin: 15px 0;
 }
 img {
-  /* margin-top: -230px; */
+  margin-top: 50px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -71,9 +71,9 @@ img:hover {
   transform: scale(1.05);
 }
 .low {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   background-color: #f3f4f6;
-  height: 200vh;
+  /* height: 200vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,9 +271,10 @@ img:hover {
   padding: 4px;
 }
 .btns{
-  display: block;
-  justify-content: center;  
- }
+  display: ruby;
+  justify-self: center;  
+  margin-bottom: 35px;
+}
 .btn {
   height: 65px;
   width: 15rem;
