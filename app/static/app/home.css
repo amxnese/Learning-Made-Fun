@@ -11,7 +11,7 @@
   flex-direction: column;
   height: 100vh;
   background-color: #111827;
-  margin-bottom: 130px;
+  /* margin-bottom: 130px; */
 }
 .upH1 {
   font-size: 50px;
@@ -39,11 +39,11 @@
   color: #111827;
   border: solid white 2px;
 }
-.midlle {
-  margin-top: 10px;
-  margin-bottom: 90px;
+.middle {
+  /* margin-top: 10px; */
+  /* margin-bottom: 90px; */
   text-align: center;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,12 +145,14 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 162vh;
+  /* height: 162vh; */
   background-color: #111827;
+  margin-bottom: 60px;
 }
 .h1Aboutus {
   font-size: 50px;
   color: white;
+  margin-top: 15px;
 }
 .pAboutus,
 .pContactus {
@@ -560,5 +562,8 @@ html {
   text-align: center;
   padding: 7px;
   background-color: #f8f9fa;
-  margin-top: 73px;
+  /* margin-top: 73px; */
+}
+.crew {
+  margin-bottom: 20px;
 }
