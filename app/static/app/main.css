@@ -12,6 +12,7 @@
   height: 100vh;
   background-color: #111827;
   margin-bottom: 50px;
+  overflow-x: hidden;
 }
 .upH1 {
   font-size: 50px;
@@ -166,6 +167,7 @@ img:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .p-title {
   font-size: 25px;
