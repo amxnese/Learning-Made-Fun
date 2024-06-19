@@ -11,8 +11,7 @@ next.addEventListener('click', function() {
   if(active+1 < slides.length){
     slides[active].classList.remove('active')
     slides[active+1].classList.add('active')
-    console.log(active);
-    slider.style.transform = `translateX(${-700*(active+1)}px)`;
+    slider.style.transform = `translateX(${-61.5*(active+1)}vw)`;
   }
   else{
     slides[active].classList.remove('active')
@@ -27,7 +26,6 @@ prev.addEventListener('click', function() {
   if(active > 0){
     slides[active].classList.remove('active')
     slides[active-1].classList.add('active')
-    console.log(active);
     slider.style.transform = `translateX(${-700*(active-1)}px)`;
   }
 })
