@@ -7,10 +7,7 @@
   {% csrf_token %}
   <hr><div class="question">
     <h2>1. What will the following JavaScript code output to the console?</h2>
-    <pre>
-      <code>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">typeof</span> <span class="yellow">"Hello, world!"</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">typeof</span> <span class="yellow">"Hello, world!"</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
@@ -25,7 +22,7 @@
       <label class="radio-label" for="q1-a3">String</label>
     </div>
     <p>
-      <strong>Note:</strong> the <code>typeof</code> function returns the data
+      <strong>Note:</strong> the <span class="keyword">typeof</span> function returns the data
       type
     </p>
   </div>
@@ -46,11 +43,9 @@
   </div>
   <hr><div class="question">
     <h2>3. What is the result of the following operation?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">result</span> <span class="pink">=</span> <span class="purple">10</span> <span class="white">+</span> <span class="purple">5</span> <span class="white">*</span> <span class="purple">2</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">result</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code>
+<span class="blue">let</span> <span class="white">result</span> <span class="pink">=</span> <span class="purple">10</span> <span class="white">+</span> <span class="purple">5</span> <span class="white">*</span> <span class="purple">2</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">result</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
@@ -82,12 +77,9 @@
   </div>
   <hr><div class="question">
     <h2>5. What does the following code snippet display?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">x</span> <span class="pink">=</span> <span class="yellow">"5"</span><span class="white">;</span>
-        <span class="blue">let</span> <span class="white">y</span> <span class="pink">=</span> <span class="yellow">"10"</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">x</span> <span class="white">+</span> <span class="white">y</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">x</span> <span class="pink">=</span> <span class="yellow">"5"</span><span class="white">;</span>
+<span class="blue">let</span> <span class="white">y</span> <span class="pink">=</span> <span class="yellow">"10"</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">x</span> <span class="white">+</span> <span class="white">y</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q5-a1" name="q5" value="1" />
@@ -119,11 +111,9 @@
   </div>
   <hr><div class="question">
     <h2>7. What will be the output of the following JavaScript code?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">value</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">value</span> <span class="pink">+=</span> <span class="purple">5</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code>
+<span class="blue">let</span> <span class="white">value</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">value</span> <span class="pink">+=</span> <span class="purple">5</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
@@ -140,12 +130,9 @@
   </div>
   <hr><div class="question">
     <h2>8. Consider the following JavaScript code. What is its output?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">num</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
-        <span class="blue">let</span> <span class="white">check</span> <span class="pink">=</span> <span class="white">num</span> <span class="white">%</span> <span class="purple">2</span> <span class="white">===</span> <span class="purple">0</span> <span class="pink">?</span> <span class="yellow">"One"</span> <span class="pink">:</span> <span class="yellow">"Two"</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">check</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">num</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
+<span class="blue">let</span> <span class="white">check</span> <span class="pink">=</span> <span class="white">num</span> <span class="white">%</span> <span class="purple">2</span> <span class="white">===</span> <span class="purple">0</span> <span class="pink">?</span> <span class="yellow">"One"</span> <span class="pink">:</span> <span class="yellow">"Two"</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">check</span><span class="yellow">)</span><span class="white">;</span></code></pre>
     
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
@@ -162,10 +149,7 @@
   </div>
   <hr><div class="question">
     <h2>9. What does this code output?</h2>
-    <pre>
-      <code>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">typeof</span> <span class="purple">null</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">typeof</span> <span class="purple">null</span><span class="yellow">)</span><span class="white">;</span></code></pre>
     
     <div class="pad">
       <input type="radio" id="q9-a1" name="q9" value="1" />

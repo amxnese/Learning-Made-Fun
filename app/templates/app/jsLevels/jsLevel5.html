@@ -135,38 +135,38 @@
           </p>
           <ul>
             <li>
-              <code>for</code> - A loop that repeats until a specified condition
+              <span class="keyword">for</span> - A loop that repeats until a specified condition
               evaluates to false.
             </li>
             <li>
-              <code>for-in</code> - Iterates over the enumerable properties of
+              <span class="keyword">for-in</span> - Iterates over the enumerable properties of
               an object, in arbitrary order.
             </li>
             <li>
-              <code>for-of</code> - Iterates over iterable objects (including
+              <span class="keyword">for-of</span> - Iterates over iterable objects (including
               arrays, array-like objects, iterators, and generators), providing
               access to the value of each element.
             </li>
             <li>
-              <code>while</code> - Creates a loop that executes as long as the
+              <span class="keyword">while</span> - Creates a loop that executes as long as the
               specified condition evaluates to true.
             </li>
             <li>
-              <code>do-while</code> - Also a loop that executes at least once
+              <span class="keyword">do-while</span> - Also a loop that executes at least once
               and re-executes as long as the specified condition evaluates to
               true.
             </li>
             <li>
-              <code>break</code> - Immediately exits the loop, regardless of the
+              <span class="keyword">break</span> - Immediately exits the loop, regardless of the
               loop's condition.
             </li>
             <li>
-              <code>continue</code> - Skips the remaining part of the loop and
+              <span class="keyword">continue</span> - Skips the remaining part of the loop and
               starts the next iteration.
             </li>
             <li>
-              <code>label</code> - Can be used with <code>break</code> and
-              <code>continue</code> to control the flow more precisely in nested
+              <span class="keyword">label</span> - Can be used with <code>break</code> and
+              <span class="keyword">continue</span> to control the flow more precisely in nested
               loops.
             </li>
           </ul>
@@ -180,54 +180,40 @@
           </p>
 
           <h3>Example 1: for loop</h3>
-          <pre>
-            <code>
-              <span class="comment">// Looping through an array using for loop</span>
-              <span class="blue">const</span> <span class="white">numbers</span> <span class="pink">=</span> <span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="white">,</span> <span class="purple">4</span><span class="white">,</span> <span class="purple">5</span><span class="orange">]</span><span class="white">;</span>
-              <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">i</span> <span class="pink">=</span> <span class="purple">0</span><span class="white">;</span> <span class="white">i</span> <span class="white">&lt;</span> <span class="white">numbers</span><span class="white">.</span><span class="green">length</span><span class="white">;</span> <span class="white">i</span><span class="white">++</span><span class="yellow">)</span> <span class="orange">{</span>
-                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">numbers</span><span class="yellow">[</span><span class="white">i</span><span class="yellow">]</span><span class="yellow">)</span><span class="white">;</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="comment">// Looping through an array using for loop</span>
+<span class="blue">const</span> <span class="white">numbers</span> <span class="pink">=</span> <span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="white">,</span> <span class="purple">4</span><span class="white">,</span> <span class="purple">5</span><span class="orange">]</span><span class="white">;</span>
+<span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">i</span> <span class="pink">=</span> <span class="purple">0</span><span class="white">;</span> <span class="white">i</span> <span class="white">&lt;</span> <span class="white">numbers</span><span class="white">.</span><span class="green">length</span><span class="white">;</span> <span class="white">i</span><span class="white">++</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">numbers</span><span class="yellow">[</span><span class="white">i</span><span class="yellow">]</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
           <h3>Example 2: while loop</h3>
-          <pre>
-            <code>
-              <span class="comment">// Looping until a condition is met using while loop</span>
-              <span class="blue">let</span> <span class="white">count</span> <span class="pink">=</span> <span class="purple">0</span><span class="white">;</span>
-              <span class="pink">while</span> <span class="yellow">(</span><span class="white">count</span> <span class="white">&lt;</span> <span class="purple">5</span><span class="yellow">)</span> <span class="orange">{</span>
-                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Count:'</span><span class="white">,</span> <span class="white">count</span><span class="yellow">)</span><span class="white">;</span>
-                <span class="white">count</span><span class="white">++</span><span class="white">;</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="comment">// Looping until a condition is met using while loop</span>
+<span class="blue">let</span> <span class="white">count</span> <span class="pink">=</span> <span class="purple">0</span><span class="white">;</span>
+<span class="pink">while</span> <span class="yellow">(</span><span class="white">count</span> <span class="white">&lt;</span> <span class="purple">5</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Count:'</span><span class="white">,</span> <span class="white">count</span><span class="yellow">)</span><span class="white">;</span>
+  <span class="white">count</span><span class="white">++</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
           <h3>Example 3: do-while loop</h3>
-          <pre>
-            <code>
-              <span class="comment">// Executing code at least once with do-while loop</span>
-              <span class="blue">let</span> <span class="white">result</span><span class="white">;</span>
-              <span class="pink">do</span> <span class="orange">{</span>
-                <span class="white">result</span> <span class="pink">=</span> <span class="green">prompt</span><span class="yellow">(</span><span class="yellow">"Enter a number greater than 10"</span><span class="white">,</span> <span class="yellow">""</span><span class="yellow">)</span><span class="white">;</span>
-              <span class="orange">}</span> <span class="pink">while</span> <span class="yellow">(</span><span class="white">result</span> <span class="white">&lt;=</span> <span class="purple">10</span><span class="yellow">)</span><span class="white">;</span></code>
-          </pre>
+          <pre><code><span class="comment">// Executing code at least once with do-while loop</span>
+<span class="blue">let</span> <span class="white">result</span><span class="white">;</span>
+<span class="pink">do</span> <span class="orange">{</span>
+  <span class="white">result</span> <span class="pink">=</span> <span class="green">prompt</span><span class="yellow">(</span><span class="yellow">"Enter a number greater than 10"</span><span class="white">,</span> <span class="yellow">""</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span> <span class="pink">while</span> <span class="yellow">(</span><span class="white">result</span> <span class="white">&lt;=</span> <span class="purple">10</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
           <h3>Example 4: for-in loop</h3>
-          <pre>
-            <code>
-              <span class="comment">// Iterating over object properties using for-in loop</span>
-              <span class="blue">const</span> <span class="white">person</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">fname</span><span class="white">:</span> <span class="yellow">"John"</span><span class="white">,</span> <span class="white">lname</span><span class="white">:</span> <span class="yellow">"Doe"</span><span class="white">,</span> <span class="white">age</span><span class="white">:</span> <span class="purple">25</span><span class="orange">}</span><span class="white">;</span>
-              <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">key</span> <span class="pink">in</span> <span class="white">person</span><span class="yellow">)</span> <span class="orange">{</span>
-                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">key</span> <span class="white">+</span> <span class="yellow">': '</span> <span class="white">+</span> <span class="white">person</span><span class="yellow">[</span><span class="white">key</span><span class="yellow">]</span><span class="yellow">)</span><span class="white">;</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code>
+<span class="comment">// Iterating over object properties using for-in loop</span>
+<span class="blue">const</span> <span class="white">person</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">fname</span><span class="white">:</span> <span class="yellow">"John"</span><span class="white">,</span> <span class="white">lname</span><span class="white">:</span> <span class="yellow">"Doe"</span><span class="white">,</span> <span class="white">age</span><span class="white">:</span> <span class="purple">25</span><span class="orange">}</span><span class="white">;</span>
+<span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">key</span> <span class="pink">in</span> <span class="white">person</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">key</span> <span class="white">+</span> <span class="yellow">': '</span> <span class="white">+</span> <span class="white">person</span><span class="yellow">[</span><span class="white">key</span><span class="yellow">]</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
           <h3>Example 5: for-of loop</h3>
-          <pre>
-            <code>
-              <span class="comment">// Iterating over an array using for-of loop</span>
-              <span class="blue">const</span> <span class="white">colors</span> <span class="pink">=</span> <span class="orange">[</span><span class="yellow">'red'</span><span class="white">,</span> <span class="yellow">'green'</span><span class="white">,</span> <span class="yellow">'blue'</span><span class="orange">]</span><span class="white">;</span>
-              <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">color</span> <span class="pink">of</span> <span class="white">colors</span><span class="yellow">)</span> <span class="orange">{</span>
-                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">color</span><span class="yellow">)</span><span class="white">;</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="comment">// Iterating over an array using for-of loop</span>
+<span class="blue">const</span> <span class="white">colors</span> <span class="pink">=</span> <span class="orange">[</span><span class="yellow">'red'</span><span class="white">,</span> <span class="yellow">'green'</span><span class="white">,</span> <span class="yellow">'blue'</span><span class="orange">]</span><span class="white">;</span>
+<span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">color</span> <span class="pink">of</span> <span class="white">colors</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">color</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
           <p>
             These examples illustrate how each type of loop can be used in

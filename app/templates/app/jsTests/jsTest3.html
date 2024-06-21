@@ -7,12 +7,9 @@
   {% csrf_token %}
   <hr><div class="question">
     <h2>1. What will this code outputs in the console?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">numbers</span> <span class="pink">=</span> <span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="orange">]</span><span class="white">;</span>
-        <span class="white">numbers</span><span class="white">.</span><span class="green">push</span><span class="yellow">(</span><span class="purple">4</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">numbers</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">numbers</span> <span class="pink">=</span> <span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="orange">]</span><span class="white">;</span>
+<span class="white">numbers</span><span class="white">.</span><span class="green">push</span><span class="yellow">(</span><span class="purple">4</span><span class="yellow">)</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">numbers</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
@@ -52,12 +49,9 @@
   </div>
   <hr><div class="question">
     <h2>3. What will the following code output?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">fruits</span> <span class="pink">=</span> <span class="pink">new</span> <span class="green">Set</span><span class="yellow">(</span><span class="orange">[</span><span class="yellow">"apple"</span><span class="white">,</span> <span class="yellow">"banana"</span><span class="white">,</span> <span class="yellow">"cherry"</span><span class="orange">]</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="white">fruits</span><span class="white">.</span><span class="green">add</span><span class="yellow">(</span><span class="yellow">"mango"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">fruits</span><span class="white">.</span><span class="green">has</span><span class="yellow">(</span><span class="yellow">"mango"</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">fruits</span> <span class="pink">=</span> <span class="pink">new</span> <span class="green">Set</span><span class="yellow">(</span><span class="orange">[</span><span class="yellow">"apple"</span><span class="white">,</span> <span class="yellow">"banana"</span><span class="white">,</span> <span class="yellow">"cherry"</span><span class="orange">]</span><span class="yellow">)</span><span class="white">;</span>
+<span class="white">fruits</span><span class="white">.</span><span class="green">add</span><span class="yellow">(</span><span class="yellow">"mango"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">fruits</span><span class="white">.</span><span class="green">has</span><span class="yellow">(</span><span class="yellow">"mango"</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
@@ -74,11 +68,8 @@
   </div>
   <hr><div class="question">
     <h2>4. What will be the output of the following code snippet?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">person</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">name</span><span class="white">:</span> <span class="yellow">"John"</span><span class="white">,</span> <span class="white">age</span><span class="white">:</span> <span class="purple">30</span><span class="orange">}</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">Object</span><span class="white">.</span><span class="green">keys</span><span class="yellow">(</span><span class="white">person</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">person</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">name</span><span class="white">:</span> <span class="yellow">"John"</span><span class="white">,</span> <span class="white">age</span><span class="white">:</span> <span class="purple">30</span><span class="orange">}</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="blue">Object</span><span class="white">.</span><span class="green">keys</span><span class="yellow">(</span><span class="white">person</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
@@ -144,13 +135,10 @@
   </div>
   <hr><div class="question">
     <h2>8. What does the Object.assign method accomplish in this code snippet?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">obj1</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">a</span><span class="white">:</span> <span class="purple">1</span><span class="orange">}</span><span class="white">;</span>
-        <span class="blue">let</span> <span class="white">obj2</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">b</span><span class="white">:</span> <span class="purple">2</span><span class="orange">}</span><span class="white">;</span>
-        <span class="blue">let</span> <span class="white">obj3</span> <span class="pink">=</span> <span class="blue">Object</span><span class="white">.</span><span class="green">assign</span><span class="yellow">(</span><span class="white">obj1</span><span class="white">,</span> <span class="white">obj2</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">obj3</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">obj1</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">a</span><span class="white">:</span> <span class="purple">1</span><span class="orange">}</span><span class="white">;</span>
+<span class="blue">let</span> <span class="white">obj2</span> <span class="pink">=</span> <span class="orange">{</span><span class="white">b</span><span class="white">:</span> <span class="purple">2</span><span class="orange">}</span><span class="white">;</span>
+<span class="blue">let</span> <span class="white">obj3</span> <span class="pink">=</span> <span class="blue">Object</span><span class="white">.</span><span class="green">assign</span><span class="yellow">(</span><span class="white">obj1</span><span class="white">,</span> <span class="white">obj2</span><span class="yellow">)</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">obj3</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
@@ -167,13 +155,10 @@
   </div>
   <hr><div class="question">
     <h2>9. What will be the output of this JavaScript code?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">mySet</span> <span class="pink">=</span> <span class="pink">new</span> <span class="green">Set</span><span class="yellow">(</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="white">mySet</span><span class="white">.</span><span class="green">add</span><span class="yellow">(</span><span class="yellow">"hello"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="white">mySet</span><span class="white">.</span><span class="green">delete</span><span class="yellow">(</span><span class="yellow">"hello"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">mySet</span><span class="white">.</span><span class="green">has</span><span class="yellow">(</span><span class="yellow">"hello"</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">;</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">mySet</span> <span class="pink">=</span> <span class="pink">new</span> <span class="green">Set</span><span class="yellow">(</span><span class="yellow">)</span><span class="white">;</span>
+<span class="white">mySet</span><span class="white">.</span><span class="green">add</span><span class="yellow">(</span><span class="yellow">"hello"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="white">mySet</span><span class="white">.</span><span class="green">delete</span><span class="yellow">(</span><span class="yellow">"hello"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">mySet</span><span class="white">.</span><span class="green">has</span><span class="yellow">(</span><span class="yellow">"hello"</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">;</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q9-a1" name="q9" value="1" />

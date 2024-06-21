@@ -29,34 +29,25 @@
               <strong>Function Declaration:</strong> Also known as a function
               statement, it defines a function with the specified parameters.
             </li>
-            <pre>
-              <code>
-                <span class="blue">function</span> <span class="white">add</span><span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="orange">{</span>
-                  <span class="blue">return</span> <span class="white">x</span> <span class="white">+</span> <span class="white">y</span><span class="white">;</span>
-                <span class="orange">}</span></code>
-            </pre>
+            <pre><code><span class="blue">function</span> <span class="white">add</span><span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="orange">{</span>
+  <span class="blue">return</span> <span class="white">x</span> <span class="white">+</span> <span class="white">y</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
             
             <li>
               <strong>Function Expression:</strong> A function can also be
               defined using an expression. Function expressions can be anonymous
               or named.
             </li>
-            <pre>
-              <code>
-                <span class="blue">const</span> <span class="white">multiply</span> <span class="pink">=</span> <span class="blue">function</span><span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="orange">{</span>
-                  <span class="blue">return</span> <span class="white">x</span> <span class="white">*</span> <span class="white">y</span><span class="white">;</span>
-                <span class="orange">}</span><span class="white">;</span></code>
-            </pre>
+            <pre><code><span class="blue">const</span> <span class="white">multiply</span> <span class="pink">=</span> <span class="blue">function</span><span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="orange">{</span>
+  <span class="blue">return</span> <span class="white">x</span> <span class="white">*</span> <span class="white">y</span><span class="white">;</span>
+<span class="orange">}</span><span class="white">;</span></code></pre>
             
             <li>
               <strong>Arrow Function:</strong> Introduced in ES6, arrow
               functions offer a more concise syntax for writing function
               expressions.
             </li>
-            <pre>
-              <code>
-                <span class="blue">const</span> <span class="white">subtract</span> <span class="pink">=</span> <span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="pink">=></span> <span class="white">x</span> <span class="white">-</span> <span class="white">y</span><span class="white">;</span></code>
-            </pre>
+            <pre><code><span class="blue">const</span> <span class="white">subtract</span> <span class="pink">=</span> <span class="purple">(</span><span class="white">x</span><span class="white">,</span> <span class="white">y</span><span class="purple">)</span> <span class="pink">=></span> <span class="white">x</span> <span class="white">-</span> <span class="white">y</span><span class="white">;</span></code></pre>
           </ul>
           <p>
             Functions are first-class objects in JavaScript, meaning they can be
@@ -73,36 +64,36 @@
           </p>
           <ul>
             <li>
-              <code>function</code> - The keyword used to declare a function.
+              <span class="keyword">function</span> - The keyword used to declare a function.
             </li>
             <li>
-              <code>return</code> - Specifies the value that is returned by the
+              <span class="keyword">return</span> - Specifies the value that is returned by the
               function.
             </li>
             <li>
-              <code>this</code> - Refers to the object that the function is a
+              <span class="keyword">this</span> - Refers to the object that the function is a
               method of.
             </li>
             <li>
-              <code>async</code> - Declares an asynchronous function which
+              <span class="keyword">async</span> - Declares an asynchronous function which
               returns a promise.
             </li>
             <li>
-              <code>await</code> - Pauses the execution of an async function to
+              <span class="keyword">await</span> - Pauses the execution of an async function to
               wait for the Promise's resolution.
             </li>
             <li>
-              <code>arguments</code> - An array-like object accessible inside
+              <span class="keyword">arguments</span> - An array-like object accessible inside
               functions that contains the values of the arguments passed to that
               function.
             </li>
             <li>
-              <code>function*</code> - Declares a generator function, which can
+              <span class="keyword">function*</span> - Declares a generator function, which can
               be exited and later re-entered with its context (variable
               bindings) saved across re-entrances.
             </li>
             <li>
-              <code>=></code> - Used to define arrow functions, which provide a
+              <span class="keyword">=></span> - Used to define arrow functions, which provide a
               concise syntax for writing function expressions.
             </li>
           </ul>
@@ -198,56 +189,44 @@
           <p>Here are examples that illustrate using functions in JavaScript</p>
           <h3>1. Greeting Function</h3>
           <p>This function takes no arguments and prints a greeting message:</p>
-          <pre>
-            <code>
-              <span class="blue">function</span> <span class="white">greet</span><span class="purple">(</span><span class="purple">)</span> <span class="orange">{</span>
-                <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Hello"</span><span class="yellow">)</span><span class="white">;</span>
-              <span class="orange">}</span>
-              <span class="white">greet</span><span class="yellow">(</span><span class="purple">)</span><span class="white">; </span><span class="comment">// Outputs: Hello</span></code>
-          </pre>          
+          <pre><code><span class="blue">function</span> <span class="white">greet</span><span class="purple">(</span><span class="purple">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Hello"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span>
+<span class="white">greet</span><span class="yellow">(</span><span class="purple">)</span><span class="white">; </span><span class="comment">// Outputs: Hello</span></code></pre>          
 
           <h3>2. Simple Function to Add Two Numbers</h3>
           <p>This function takes two parameters and returns their sum:</p>
-          <pre>
-            <code>
-              <span class="blue">function</span> <span class="white">add</span><span class="purple">(</span><span class="white">a</span><span class="white">,</span> <span class="white">b</span><span class="purple">)</span> <span class="orange">{</span>
-                <span class="blue">return</span> <span class="white">a</span> <span class="white">+</span> <span class="white">b</span><span class="white">;</span>
-              <span class="orange">}</span>
-              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">add</span><span class="yellow">(</span><span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 5</span></code>
-          </pre>
+          <pre><code><span class="blue">function</span> <span class="white">add</span><span class="purple">(</span><span class="white">a</span><span class="white">,</span> <span class="white">b</span><span class="purple">)</span> <span class="orange">{</span>
+  <span class="blue">return</span> <span class="white">a</span> <span class="white">+</span> <span class="white">b</span><span class="white">;</span>
+<span class="orange">}</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">add</span><span class="yellow">(</span><span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 5</span></code></pre>
           
           <h3>3. Check Age Function</h3>
           <p>
             This function takes an age and checks if the person is eligible to
             vote (18 years and older):
           </p>
-          <pre>
-            <code>
-              <span class="blue">function</span> <span class="white">canVote</span><span class="purple">(</span><span class="white">age</span><span class="purple">)</span> <span class="orange">{</span>
-                <span class="pink">if</span> <span class="yellow">(</span><span class="white">age</span> <span class="white">&gt;=</span> <span class="purple">18</span><span class="yellow">)</span> <span class="orange">{</span>
-                  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
-                <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-                  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are not eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
-                <span class="orange">}</span>
-              <span class="orange">}</span>
-              <span class="white">canVote</span><span class="yellow">(</span><span class="purple">21</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: You are eligible to vote.</span>
-              <span class="white">canVote</span><span class="yellow">(</span><span class="purple">16</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: You are not eligible to vote.</span></code>
-          </pre>          
+          <pre><code><span class="blue">function</span> <span class="white">canVote</span><span class="purple">(</span><span class="white">age</span><span class="purple">)</span> <span class="orange">{</span>
+  <span class="pink">if</span> <span class="yellow">(</span><span class="white">age</span> <span class="white">&gt;=</span> <span class="purple">18</span><span class="yellow">)</span> <span class="orange">{</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
+  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"You are not eligible to vote."</span><span class="yellow">)</span><span class="white">;</span>
+  <span class="orange">}</span>
+<span class="orange">}</span>
+<span class="white">canVote</span><span class="yellow">(</span><span class="purple">21</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: You are eligible to vote.</span>
+<span class="white">canVote</span><span class="yellow">(</span><span class="purple">16</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: You are not eligible to vote.</span></code></pre>          
           <h3>4. Function to Calculate Factorial</h3>
           <p>
             This function uses a loop to calculate the factorial of a number:
           </p>
-          <pre>
-            <code>
-              <span class="blue">function</span> <span class="white">factorial</span><span class="purple">(</span><span class="white">n</span><span class="purple">)</span> <span class="orange">{</span>
-                <span class="blue">let</span> <span class="white">result</span> <span class="pink">=</span> <span class="purple">1</span><span class="white">;</span>
-                <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">i</span> <span class="pink">=</span> <span class="purple">1</span><span class="white">;</span> <span class="white">i</span> <span class="white">&lt;=</span> <span class="white">n</span><span class="white">;</span> <span class="white">i</span><span class="white">++</span><span class="yellow">)</span> <span class="orange">{</span>
-                  <span class="white">result</span> <span class="white">*</span><span class="white">=</span> <span class="white">i</span><span class="white">;</span>
-                <span class="orange">}</span>
-                <span class="blue">return</span> <span class="white">result</span><span class="white">;</span>
-              <span class="orange">}</span>
-              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">factorial</span><span class="yellow">(</span><span class="purple">5</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 120</span></code>
-          </pre>          
+          <pre><code><span class="blue">function</span> <span class="white">factorial</span><span class="purple">(</span><span class="white">n</span><span class="purple">)</span> <span class="orange">{</span>
+  <span class="blue">let</span> <span class="white">result</span> <span class="pink">=</span> <span class="purple">1</span><span class="white">;</span>
+  <span class="pink">for</span> <span class="yellow">(</span><span class="blue">let</span> <span class="white">i</span> <span class="pink">=</span> <span class="purple">1</span><span class="white">;</span> <span class="white">i</span> <span class="white">&lt;=</span> <span class="white">n</span><span class="white">;</span> <span class="white">i</span><span class="white">++</span><span class="yellow">)</span> <span class="orange">{</span>
+    <span class="white">result</span> <span class="white">*</span><span class="white">=</span> <span class="white">i</span><span class="white">;</span>
+  <span class="orange">}</span>
+  <span class="blue">return</span> <span class="white">result</span><span class="white">;</span>
+<span class="orange">}</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">factorial</span><span class="yellow">(</span><span class="purple">5</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 120</span></code></pre>          
         </section>
         <section>
           <h2>Recursion in JavaScript</h2>
@@ -276,21 +255,18 @@
             Below is a simple example of a recursive function in JavaScript that
             computes the factorial of a number:
           </p>
-          <pre>
-            <code>
-              <span class="blue">function</span> <span class="white">factorial</span><span class="purple">(</span><span class="white">n</span><span class="purple">)</span> <span class="orange">{</span>
-                <span class="pink">if</span> <span class="yellow">(</span><span class="white">n</span> <span class="white">===</span> <span class="purple">0</span><span class="yellow">)</span> <span class="orange">{</span> <span class="comment">// Base case</span>
-                  <span class="blue">return</span> <span class="purple">1</span><span class="white">;</span>
-                <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span> <span class="comment">// Recursive case</span>
-                  <span class="blue">return</span> <span class="white">n</span> <span class="white">*</span> <span class="white">factorial</span><span class="yellow">(</span><span class="white">n</span> <span class="white">-</span> <span class="purple">1</span><span class="yellow">)</span><span class="white">;</span>
-                <span class="orange">}</span>
-              <span class="orange">}</span>
-              <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">factorial</span><span class="yellow">(</span><span class="purple">5</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 120</span></code>
-          </pre>
+          <pre><code><span class="blue">function</span> <span class="white">factorial</span><span class="purple">(</span><span class="white">n</span><span class="purple">)</span> <span class="orange">{</span>
+  <span class="pink">if</span> <span class="yellow">(</span><span class="white">n</span> <span class="white">===</span> <span class="purple">0</span><span class="yellow">)</span> <span class="orange">{</span> <span class="comment">// Base case</span>
+    <span class="blue">return</span> <span class="purple">1</span><span class="white">;</span>
+  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span> <span class="comment">// Recursive case</span>
+    <span class="blue">return</span> <span class="white">n</span> <span class="white">*</span> <span class="white">factorial</span><span class="yellow">(</span><span class="white">n</span> <span class="white">-</span> <span class="purple">1</span><span class="yellow">)</span><span class="white">;</span>
+  <span class="orange">}</span>
+<span class="orange">}</span>
+<span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="white">factorial</span><span class="yellow">(</span><span class="purple">5</span><span class="yellow">)</span><span class="yellow">)</span><span class="white">; </span><span class="comment">// Outputs: 120</span></code></pre>
           
           <p>
-            In this example, the <code>factorial</code> function calls itself
-            with decreasing values of <code>n</code> until it reaches 0, at
+            In this example, the <span class="keyword">factorial</span> function calls itself
+            with decreasing values of <span class="keyword">n</span> until it reaches 0, at
             which point it returns 1. Each return value is then multiplied back
             up the chain to calculate the final factorial.
           </p>

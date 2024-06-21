@@ -7,15 +7,12 @@
   {% csrf_token %}
   <hr><div class="question">
     <h2>1. What will the following JavaScript code output?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">age</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
-        <span class="pink">if</span> <span class="yellow">(</span><span class="white">age</span> <span class="white">&gt;=</span> <span class="purple">18</span><span class="yellow">)</span> <span class="orange">{</span>
-          <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Adult"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-          <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Minor"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">age</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
+<span class="pink">if</span> <span class="yellow">(</span><span class="white">age</span> <span class="white">&gt;=</span> <span class="purple">18</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Adult"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Minor"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
@@ -53,20 +50,17 @@
   </div>
   <hr><div class="question">
     <h2>3. What is the output of the following switch statement?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">fruit</span> <span class="pink">=</span> <span class="yellow">'apple'</span><span class="white">;</span>
-        <span class="pink">switch</span> <span class="yellow">(</span><span class="white">fruit</span><span class="yellow">)</span> <span class="orange">{</span>
-          <span class="pink">case</span> <span class="yellow">'banana'</span><span class="white">:</span>
-            <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Yellow fruit'</span><span class="yellow">)</span><span class="white">;</span>
-            <span class="pink">break</span><span class="white">;</span>
-          <span class="pink">case</span> <span class="yellow">'apple'</span><span class="white">:</span>
-            <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Round fruit'</span><span class="yellow">)</span><span class="white">;</span>
-            <span class="pink">break</span><span class="white">;</span>
-          <span class="pink">default</span><span class="white">:</span>
-            <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Unknown fruit'</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">fruit</span> <span class="pink">=</span> <span class="yellow">'apple'</span><span class="white">;</span>
+<span class="pink">switch</span> <span class="yellow">(</span><span class="white">fruit</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="pink">case</span> <span class="yellow">'banana'</span><span class="white">:</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Yellow fruit'</span><span class="yellow">)</span><span class="white">;</span>
+    <span class="pink">break</span><span class="white">;</span>
+  <span class="pink">case</span> <span class="yellow">'apple'</span><span class="white">:</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Round fruit'</span><span class="yellow">)</span><span class="white">;</span>
+    <span class="pink">break</span><span class="white">;</span>
+  <span class="pink">default</span><span class="white">:</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">'Unknown fruit'</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
@@ -83,19 +77,16 @@
   </div>
   <hr><div class="question">
     <h2>4. Consider the following nested if statement. What does it print?</h2>
-    <pre>
-  <code>
-    <span class="blue">let</span> <span class="white">num</span> <span class="pink">=</span> <span class="purple">30</span><span class="white">;</span>
-    <span class="pink">if</span> <span class="yellow">(</span><span class="white">num</span> <span class="white">&gt;</span> <span class="purple">20</span><span class="yellow">)</span> <span class="orange">{</span>
-      <span class="pink">if</span> <span class="yellow">(</span><span class="white">num</span> <span class="white">&lt;</span> <span class="purple">40</span><span class="yellow">)</span> <span class="orange">{</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Number is in the range 21-39"</span><span class="yellow">)</span><span class="white">;</span>
-      <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-        <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Number is 40 or more"</span><span class="yellow">)</span><span class="white">;</span>
-      <span class="orange">}</span>
-    <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-      <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Number is 20 or less"</span><span class="yellow">)</span><span class="white">;</span>
-    <span class="orange">}</span></code>
-</pre>
+    <pre><code><span class="blue">let</span> <span class="white">num</span> <span class="pink">=</span> <span class="purple">30</span><span class="white">;</span>
+<span class="pink">if</span> <span class="yellow">(</span><span class="white">num</span> <span class="white">&gt;</span> <span class="purple">20</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="pink">if</span> <span class="yellow">(</span><span class="white">num</span> <span class="white">&lt;</span> <span class="purple">40</span><span class="yellow">)</span> <span class="orange">{</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Number is in the range 21-39"</span><span class="yellow">)</span><span class="white">;</span>
+  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Number is 40 or more"</span><span class="yellow">)</span><span class="white">;</span>
+  <span class="orange">}</span>
+<span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Number is 20 or less"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
@@ -132,19 +123,16 @@
   </div>
   <hr><div class="question">
     <h2>6. What will the following code print?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">score</span> <span class="pink">=</span> <span class="purple">75</span><span class="white">;</span>
-        <span class="pink">if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">90</span><span class="yellow">)</span> <span class="orange">{</span>
-          <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade A"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">80</span><span class="yellow">)</span> <span class="orange">{</span>
-          <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade B"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">70</span><span class="yellow">)</span> <span class="orange">{</span>
-          <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade C"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-          <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade F"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">score</span> <span class="pink">=</span> <span class="purple">75</span><span class="white">;</span>
+<span class="pink">if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">90</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade A"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">80</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade B"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span> <span class="pink">else if</span> <span class="yellow">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">70</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade C"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+  <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Grade F"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
@@ -161,23 +149,20 @@
   </div>
   <hr><div class="question">
     <h2>7. Which case will the following switch statement default to?</h2>
-    <pre>
-      <code>
-        <span class="blue">let</span> <span class="white">day</span> <span class="pink">=</span> <span class="purple">5</span><span class="white">;</span>
-        <span class="pink">switch</span> <span class="yellow">(</span><span class="white">day</span><span class="yellow">)</span> <span class="orange">{</span>
-          <span class="pink">case</span> <span class="purple">1</span><span class="white">:</span>
-            <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Monday"</span><span class="yellow">)</span><span class="white">;</span>
-            <span class="pink">break</span><span class="white">;</span>
-          <span class="pink">case</span> <span class="purple">2</span><span class="white">:</span>
-            <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Tuesday"</span><span class="yellow">)</span><span class="white">;</span>
-            <span class="pink">break</span><span class="white">;</span>
-          <span class="pink">case</span> <span class="purple">3</span><span class="white">:</span>
-            <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Wednesday"</span><span class="yellow">)</span><span class="white">;</span>
-            <span class="pink">break</span><span class="white">;</span>
-          <span class="pink">default</span><span class="white">:</span>
-            <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Another day"</span><span class="yellow">)</span><span class="white">;</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">let</span> <span class="white">day</span> <span class="pink">=</span> <span class="purple">5</span><span class="white">;</span>
+<span class="pink">switch</span> <span class="yellow">(</span><span class="white">day</span><span class="yellow">)</span> <span class="orange">{</span>
+  <span class="pink">case</span> <span class="purple">1</span><span class="white">:</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Monday"</span><span class="yellow">)</span><span class="white">;</span>
+    <span class="pink">break</span><span class="white">;</span>
+  <span class="pink">case</span> <span class="purple">2</span><span class="white">:</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Tuesday"</span><span class="yellow">)</span><span class="white">;</span>
+    <span class="pink">break</span><span class="white">;</span>
+  <span class="pink">case</span> <span class="purple">3</span><span class="white">:</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Wednesday"</span><span class="yellow">)</span><span class="white">;</span>
+    <span class="pink">break</span><span class="white">;</span>
+  <span class="pink">default</span><span class="white">:</span>
+    <span class="white">console.</span><span class="green">log</span><span class="yellow">(</span><span class="yellow">"Another day"</span><span class="yellow">)</span><span class="white">;</span>
+<span class="orange">}</span></code></pre>
 
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
