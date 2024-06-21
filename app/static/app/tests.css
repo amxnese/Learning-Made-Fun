@@ -12,7 +12,7 @@ body {
 }
 #quiz-container {
   margin: 12px;
-  width: 820px;
+  width: 70vw;
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -97,4 +97,34 @@ input[type="radio"]:checked + .radio-label {
 }
   .radio-label:hover{
     background-color: #dcdbdb;
+  }
+pre {
+    font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+    background-color: #2e2e2e;
+    border: 1px solid #999;
+    overflow: auto;
+    width: auto;
+    border-radius: 10px;
+}
+code {
+    display: inline-block;
+    font-size: 105%;
+    color: crimson;
+    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+    padding: 20px 4vw;
+  }
+.keyword {
+    display: inline;
+    font-size: 105%;
+    color: crimson;
+    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+  }
+ul {
+    padding-left: 0; /* Remove default padding */
+    margin-left: 0;  /* Remove default margin */
+    list-style-type: none; /* Remove bullets */
+  }
+  /* Apply custom padding to li elements */
+li {
+    padding-left: 2vw; /* Example padding value */
   }
