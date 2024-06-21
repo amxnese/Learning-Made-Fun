@@ -8,18 +8,15 @@
     <title>main</title>
   </head>
   <body>
-    {% if result %}
-    {% if result == 'python' or result == 'java' or result == 'js' %}
+    {% if result %} {% if result == 'python' or result == 'java' or result == 'js' %}
     <script>
-      window.location.href = '{{result}}/'
+      window.location.href = "{{result}}/";
     </script>
     {% else %}
     <script>
-      window.location.href = '#{{result}}'
+      window.location.href = "#{{result}}";
     </script>
-    {% endif %}
-    {% endif %}
-    {% if messages %} {% for message in messages %}
+    {% endif %} {% endif %} {% if messages %} {% for message in messages %}
     <script src="{% static 'app/appHide.js' %}"></script>
     <div class="flex alert">
       <div class="message {{message.tags}}">
@@ -74,11 +71,8 @@
             <strong>Frameworks/Libraries:</strong> <strong>React</strong>,
             <strong>Angular</strong>, and <strong>Vue.js</strong> are popular
             for <strong>front-end</strong> development;
-            <strong>Node.js</strong>, <strong>Django</strong>, and
-            <strong>Ruby on Rails</strong> are common for
-            <strong>back-end</strong> development. <strong>Databases:</strong>
-            <strong>MySQL</strong>, <strong>PostgreSQL</strong>,
-            <strong>MongoDB</strong>.
+            <strong>Laravel</strong> and <strong>Django</strong> are common for
+            <strong>back-end</strong> development.
           </p>
         </div>
         <div class="cart">
@@ -109,12 +103,12 @@
             <strong>C/C++:</strong> Widely used for system and application
             software. <strong>C#:</strong> Popular for
             <strong>Windows</strong> applications, especially with the
-            <strong>.NET</strong> framework. <strong>Java:</strong> Used for
+            <strong>.NET</strong> framework. <strong>Java:</strong> Used for building
             <strong>cross-platform</strong> applications.
-            <strong>Python:</strong> Increasingly popular for a wide range of
-            desktop applications. <strong>Electron:</strong> A framework for
-            building cross-platform desktop apps with JavaScript,
-            <strong>HTML</strong>, and <strong>CSS</strong>.
+            <strong>Electron:</strong> A JavaScript framework for
+            building cross-platform desktop apps using
+            <strong>JavaScript</strong>, <strong>HTML</strong>, and
+            <strong>CSS</strong>.
           </p>
         </div>
       </div>
@@ -145,7 +139,7 @@
       </div>
     </div>
     <div class="low">
-      <h1 id="available" class="h1M">Coming Soon</h1>
+      <h1 class="h1M">Coming Soon</h1>
     </div>
     <div class="low1">
       <div class="courses">
@@ -161,10 +155,6 @@
           <img src="{% static 'app/mysql.png' %}" />
           <button class="but">MySql</button>
         </div>
-      </div>
-    </div>
-    <div class="low1">
-      <div class="courses">
         <div class="cart1" id="html">
           <img src="{% static 'app/html.png' %}" alt="" />
           <button class="but">Html</button>
