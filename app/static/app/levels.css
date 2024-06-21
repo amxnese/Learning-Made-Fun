@@ -10,8 +10,8 @@ body {
 header {
   background: #4f46e5;
   color: #fff;
-  padding-top: 30px;
-  min-height: 70px;
+  padding: 18px 0;
+  /* height: fit-content; */
   border-bottom: #1d11fd 3px solid;
   text-align: center;
 }
@@ -38,8 +38,9 @@ nav a {
 }
 
 main {
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
+
 main{
   justify-content: center;
   display: grid;
@@ -47,7 +48,8 @@ main{
 
 
 section {
-  width: 800px;
+  /* width: 800px; */
+  width: 70vw;
   margin-bottom: 20px;
   padding: 20px;
   background: #fff;
@@ -67,14 +69,9 @@ pre {
   font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
   background-color: #2e2e2e;
   border: 1px solid #999;
-  overflow: hidden;
+  overflow: auto;
   width: auto;
   border-radius: 10px;
-}
-code, .keyword {
-  font-size: 105%;
-  color: crimson;
-  font-family: "Consolas", "Monaco", "Lucida Console", monospace;
 }
 .var {
   color: #d6d6d6;
@@ -114,6 +111,7 @@ code, .keyword {
 }
 .center {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .test {
@@ -181,4 +179,27 @@ td {
 }
 th {
   background-color: #f2f2f2;
+}
+code {
+  display: inline-block;
+  font-size: 105%;
+  color: crimson;
+  font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+  padding: 20px 4vw;
+}
+.keyword {
+  display: inline;
+  font-size: 105%;
+  color: crimson;
+  font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+}
+ul {
+  padding-left: 0; /* Remove default padding */
+  margin-left: 0;  /* Remove default margin */
+  list-style-type: none; /* Remove bullets */
+}
+
+/* Apply custom padding to li elements */
+li {
+  padding-left: 2vw; /* Example padding value */
 }
