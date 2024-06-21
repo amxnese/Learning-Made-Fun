@@ -98,87 +98,79 @@
           </p>
           <ul>
             <li>
-              <code>if</code> - The basic conditional statement that executes a
+              <span class="keyword">if</span> - The basic conditional statement that executes a
               block of code if the condition is true.
             </li>
             <li>
-              <code>else</code> - Used to execute a block of code if the
-              condition in the <code>if</code> statement is false.
+              <span class="keyword">else</span> - Used to execute a block of code if the
+              condition in the <span class="keyword">if</span> statement is false.
             </li>
             <li>
-              <code>elif</code> - Short for "else if", used to check multiple
+              <span class="keyword">elif</span> - Short for "else if", used to check multiple
               expressions for TRUE and execute a block of code as soon as one of
               the conditions evaluates to TRUE.
             </li>
             <li>
-              <code>and</code> - A logical operator that combines multiple
+              <span class="keyword">and</span> - A logical operator that combines multiple
               conditions. All conditions must be true for the overall condition
               to be true.
             </li>
             <li>
-              <code>or</code> - A logical operator that combines multiple
+              <span class="keyword">or</span> - A logical operator that combines multiple
               conditions. At least one of the conditions must be true for the
               overall condition to be true.
             </li>
             <li>
-              <code>not</code> - A logical operator used to invert the truth
+              <span class="keyword">not</span> - A logical operator used to invert the truth
               value of the condition.
             </li>
             <li>
-              <code>in</code> - Used to check if a value exists within an
+              <span class="keyword">in</span> - Used to check if a value exists within an
               iterable.
             </li>
             <li>
-              <code>not in</code> - Used to check if a value does not exist
+              <span class="keyword">not in</span> - Used to check if a value does not exist
               within an iterable.
             </li>
-            <li><code>is</code> - Tests for object identity.</li>
-            <li><code>is not</code> - Tests for object non-identity.</li>
+            <li><span class="keyword">is</span> - Tests for object identity.</li>
+            <li><span class="keyword">is not</span> - Tests for object non-identity.</li>
           </ul>
         </section>
 
         <section>
           <h2>Examples on Python's Conditional Statements</h2>
           <p>
-            Here are examples of how to use <code>if</code>, <code>elif</code>,
-            and <code>else</code> statements
+            Here are examples of how to use <span class="keyword">if</span>, <span class="keyword">elif</span>,
+            and <span class="keyword">else</span> statements
           </p>
           <h3>
-            Simple <code>if</code>, <code>elif</code>, and
-            <code>else</code> Example
+            Simple <span class="keyword">if</span>, <span class="keyword">elif</span>, and
+            <span class="keyword">else</span> Example
           </h3>
           <p>This example demonstrates basic conditional logic:</p>
-          <pre>
-            <code>
-              <span class="white">x</span> <span class="pink">=</span> <span class="purple">20</span>
-              <span class="pink">if</span> <span class="white">x</span> <span class="pink">&lt;</span> <span class="purple">10</span><span class="orange">:</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Less than 10"</span><span class="orange">)</span>
-              <span class="pink">elif</span> <span class="white">x</span> <span class="pink">&lt;</span> <span class="purple">20</span><span class="orange">:</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Less than 20 but not less than 10"</span><span class="orange">)</span>
-              <span class="pink">else</span><span class="orange">:</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="yellow">"20 or more"</span><span class="orange">)</span></code>
-          </pre>
-          
+          <pre><code><span class="white">x</span> <span class="pink">=</span> <span class="purple">20</span>
+<span class="pink">if</span> <span class="white">x</span> <span class="pink">&lt;</span> <span class="purple">10</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Less than 10"</span><span class="orange">)</span>
+<span class="pink">elif</span> <span class="white">x</span> <span class="pink">&lt;</span> <span class="purple">20</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Less than 20 but not less than 10"</span><span class="orange">)</span>
+<span class="pink">else</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"20 or more"</span><span class="orange">)</span></code></pre>
 
           <h3>Nested Conditional Example</h3>
           <p>
             Nested conditionals are useful for more complex decision structures.
-            Here is how you can use a nested <code>if</code> inside another
-            <code>if</code>:
+            Here is how you can use a nested <span class="keyword">if</span> inside another
+            <span class="keyword">if</span>:
           </p>
-          <pre>
-            <code>
-              <span class="white">age</span> <span class="pink">=</span> <span class="purple">25</span>
-              <span class="white">registered</span> <span class="pink">=</span> <span class="blue">True</span>
-              <span class="pink">if</span> <span class="white">registered</span><span class="orange">:</span>
-                <span class="pink">if</span> <span class="white">age</span> <span class="pink">&lt;</span> <span class="purple">18</span><span class="orange">:</span>
-                  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Registered but under 18"</span><span class="orange">)</span>
-                <span class="pink">else</span><span class="orange">:</span>
-                  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Registered and 18 or older"</span><span class="orange">)</span>
-              <span class="pink">else</span><span class="orange">:</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Not registered"</span><span class="orange">)</span></code>
-          </pre>
-          
+          <pre><code><span class="white">age</span> <span class="pink">=</span> <span class="purple">25</span>
+<span class="white">registered</span> <span class="pink">=</span> <span class="blue">True</span>
+<span class="pink">if</span> <span class="white">registered</span><span class="orange">:</span>
+  <span class="pink">if</span> <span class="white">age</span> <span class="pink">&lt;</span> <span class="purple">18</span><span class="orange">:</span>
+    <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Registered but under 18"</span><span class="orange">)</span>
+  <span class="pink">else</span><span class="orange">:</span>
+    <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Registered and 18 or older"</span><span class="orange">)</span>
+<span class="pink">else</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Not registered"</span><span class="orange">)</span></code></pre>
 
           <h3>Summary</h3>
           <p>

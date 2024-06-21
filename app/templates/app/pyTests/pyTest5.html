@@ -11,11 +11,8 @@
   {% csrf_token %}
   <hr><div class="question">
     <h2>1. What will be the output of the following code?</h2>
-    <pre>
-      <code>
-        <span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="orange">]</span><span class="orange">:</span>
-          <span class="blue">print</span><span class="orange">(</span><span class="white">i</span><span class="orange">)</span></code>
-    </pre>    
+    <pre><code><span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="orange">[</span><span class="purple">1</span><span class="white">,</span> <span class="purple">2</span><span class="white">,</span> <span class="purple">3</span><span class="orange">]</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="white">i</span><span class="orange">)</span></code></pre>    
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
       <label class="radio-label" for="q1-a1">1 2 3</label>
@@ -49,13 +46,10 @@
   </div>
   <hr><div class="question">
     <h2>3. What does the following while loop do?</h2>
-    <pre>
-      <code>
-        <span class="white">x</span> <span class="pink">=</span> <span class="purple">5</span>
-        <span class="pink">while</span> <span class="white">x</span> <span class="white">&gt;</span> <span class="purple">0</span><span class="orange">:</span>
-          <span class="blue">print</span><span class="orange">(</span><span class="white">x</span><span class="orange">)</span>
-          <span class="white">x</span> <span class="pink">-=</span> <span class="purple">1</span></code>
-    </pre>    
+    <pre><code><span class="white">x</span> <span class="pink">=</span> <span class="purple">5</span>
+<span class="pink">while</span> <span class="white">x</span> <span class="white">&gt;</span> <span class="purple">0</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="white">x</span><span class="orange">)</span>
+  <span class="white">x</span> <span class="pink">-=</span> <span class="purple">1</span></code></pre>    
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
       <label class="radio-label" for="q3-a1">Prints numbers from 5 to 1.</label>
@@ -71,11 +65,8 @@
   </div>
   <hr><div class="question">
     <h2>4. Consider the following loop using range:</h2>
-    <pre>
-      <code>
-        <span class="pink">for</span> <span class="white">num</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">3</span><span class="white">,</span> <span class="purple">8</span><span class="orange">)</span><span class="orange">:</span>
-          <span class="blue">print</span><span class="orange">(</span><span class="white">num</span><span class="orange">)</span></code>
-    </pre>    
+    <pre><code><span class="pink">for</span> <span class="white">num</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">3</span><span class="white">,</span> <span class="purple">8</span><span class="orange">)</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="white">num</span><span class="orange">)</span></code></pre>    
     <p>What is the output?</p>
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
@@ -107,13 +98,10 @@
   </div>
   <hr><div class="question">
     <h2>6. What will the following nested loops output?</h2>
-    <pre>
-      <code>
-        <span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">2</span><span class="orange">)</span><span class="orange">:</span>
-          <span class="pink">for</span> <span class="white">j</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">3</span><span class="orange">)</span><span class="orange">:</span>
-            <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"({i}, {j})"</span><span class="white">,</span> <span class="white">end</span><span class="orange">=</span><span class="yellow">' '</span><span class="orange">)</span>
-          <span class="blue">print</span><span class="orange">(</span><span class="orange">)</span></code>
-    </pre>
+    <pre><code><span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">2</span><span class="orange">)</span><span class="orange">:</span>
+  <span class="pink">for</span> <span class="white">j</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">3</span><span class="orange">)</span><span class="orange">:</span>
+    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"({i}, {j})"</span><span class="white">,</span> <span class="white">end</span><span class="orange">=</span><span class="yellow">' '</span><span class="orange">)</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="orange">)</span></code></pre>
     
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
@@ -130,15 +118,12 @@
   </div>
   <hr><div class="question">
     <h2>7. How will the following code behave?</h2>
-    <pre>
-      <code>
-        <span class="white">i</span> <span class="pink">=</span> <span class="purple">0</span>
-        <span class="pink">while</span> <span class="white">i</span> <span class="white">&lt;</span> <span class="purple">5</span><span class="orange">:</span>
-          <span class="white">i</span> <span class="pink">+=</span> <span class="purple">1</span>
-          <span class="pink">if</span> <span class="white">i</span> <span class="white">==</span> <span class="purple">3</span><span class="orange">:</span>
-            <span class="pink">continue</span>
-          <span class="blue">print</span><span class="orange">(</span><span class="white">i</span><span class="orange">)</span></code>
-    </pre>
+    <pre><code><span class="white">i</span> <span class="pink">=</span> <span class="purple">0</span>
+<span class="pink">while</span> <span class="white">i</span> <span class="white">&lt;</span> <span class="purple">5</span><span class="orange">:</span>
+  <span class="white">i</span> <span class="pink">+=</span> <span class="purple">1</span>
+  <span class="pink">if</span> <span class="white">i</span> <span class="white">==</span> <span class="purple">3</span><span class="orange">:</span>
+    <span class="pink">continue</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="white">i</span><span class="orange">)</span></code></pre>
     
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
@@ -155,11 +140,8 @@
   </div>
   <hr><div class="question">
     <h2>8. What will this for loop output?</h2>
-    <pre>
-      <code>
-        <span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">10</span><span class="white">,</span> <span class="purple">2</span><span class="orange">)</span><span class="orange">:</span>
-          <span class="blue">print</span><span class="orange">(</span><span class="white">i</span><span class="orange">)</span></code>
-    </pre>    
+    <pre><code><span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">10</span><span class="white">,</span> <span class="purple">2</span><span class="orange">)</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="white">i</span><span class="orange">)</span></code></pre>    
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
       <label class="radio-label" for="q8-a1">1 2 3 4 5 6 7 8 9</label>

@@ -20,10 +20,10 @@
             Loops are a fundamental programming concept that allows a block of
             code to be executed repeatedly based on a condition.
           </p>
+          Python has two primitive loop commands:
           <ul>
-            Python has two primitive loop commands:
-            <li><code>while</code> loops</li>
-            <li><code>for</code> loops</li>
+            <li><span class="keyword">while</span> loops</li>
+            <li><span class="keyword">for</span> loops</li>
           </ul>
           <h4>for loop:</h4>
           <p>
@@ -113,39 +113,39 @@
           </p>
           <ul>
             <li>
-              <code>for</code> - Used to iterate over a sequence (like a list,
+              <span class="keyword">for</span> - Used to iterate over a sequence (like a list,
               tuple, dictionary, set, or string).
             </li>
             <li>
-              <code>while</code> - Repeats a block of code as long as a
+              <span class="keyword">while</span> - Repeats a block of code as long as a
               condition is true.
             </li>
             <li>
-              <code>break</code> - Exits the loop immediately, regardless of the
+              <span class="keyword">break</span> - Exits the loop immediately, regardless of the
               iteration condition.
             </li>
             <li>
-              <code>continue</code> - Skips the current iteration of the loop
+              <span class="keyword">continue</span> - Skips the current iteration of the loop
               and moves to the next iteration.
             </li>
             <li>
-              <code>else</code> - Optionally used after a loop to execute a
+              <span class="keyword">else</span> - Optionally used after a loop to execute a
               block of code once when the loop condition is no longer true.
             </li>
             <li>
-              <code>range()</code> - Often used with for loops to generate a
+              <span class="keyword">range()</span> - Often used with for loops to generate a
               sequence of numbers.
             </li>
             <li>
-              <code>enumerate()</code> - Used to loop through a sequence but it
+              <span class="keyword">enumerate()</span> - Used to loop through a sequence but it
               keeps track of both the index and the value.
             </li>
             <li>
-              <code>iter()</code> - Used to create an iterator object, and can
+              <span class="keyword">iter()</span> - Used to create an iterator object, and can
               be used with a loop to iterate through the elements.
             </li>
             <li>
-              <code>next()</code> - Used to get the next item from an iterator.
+              <span class="keyword">next()</span> - Used to get the next item from an iterator.
             </li>
           </ul>
         </section>
@@ -154,32 +154,25 @@
           <p>
             Understanding loops in Python can be greatly enhanced with practical
             examples. Here are some common examples of using both
-            <code>for</code> and <code>while</code> loops in Python:
+            <span class="keyword">for</span> and <span class="keyword">while</span> loops in Python:
           </p>
           <h3>Example 1: Using a for loop to iterate over a list</h3>
-          <pre>
-            <code>
-              <span class="white">fruits</span> <span class="pink">=</span> <span class="orange">[</span><span class="yellow">"apple"</span><span class="white">,</span> <span class="yellow">"banana"</span><span class="white">,</span> <span class="yellow">"cherry"</span><span class="orange">]</span>
-              <span class="pink">for</span> <span class="white">fruit</span> <span class="pink">in</span> <span class="white">fruits</span><span class="orange">:</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="yellow">"I like"</span><span class="white">,</span> <span class="white">fruit</span><span class="orange">)</span>
-              <span class="comment"># output:</span>
-              <span class="comment">'''
-              I like apple
-              I like banana
-              I like cherry
-              '''</span></code>
-          </pre>
-          
+          <pre><code><span class="white">fruits</span> <span class="pink">=</span> <span class="orange">[</span><span class="yellow">"apple"</span><span class="white">,</span> <span class="yellow">"banana"</span><span class="white">,</span> <span class="yellow">"cherry"</span><span class="orange">]</span>
+<span class="pink">for</span> <span class="white">fruit</span> <span class="pink">in</span> <span class="white">fruits</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"I like"</span><span class="white">,</span> <span class="white">fruit</span><span class="orange">)</span>
+<span class="comment"># output:</span>
+<span class="comment">'''
+I like apple
+I like banana
+I like cherry
+'''</span></code></pre>
           <h3>
             Example 2: Using a while loop to execute until a condition is met
           </h3>
-          <pre>
-            <code>
-              <span class="white">count</span> <span class="pink">=</span> <span class="purple">1</span>
-              <span class="pink">while</span> <span class="white">count</span> <span class="pink">&lt;=</span> <span class="purple">5</span><span class="orange">:</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Count is:"</span><span class="white">,</span> <span class="white">count</span><span class="orange">)</span>
-                <span class="white">count</span> <span class="pink">+=</span> <span class="purple">1</span></code>
-          </pre>
+          <pre><code><span class="white">count</span> <span class="pink">=</span> <span class="purple">1</span>
+<span class="pink">while</span> <span class="white">count</span> <span class="pink">&lt;=</span> <span class="purple">5</span><span class="orange">:</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Count is:"</span><span class="white">,</span> <span class="white">count</span><span class="orange">)</span>
+  <span class="white">count</span> <span class="pink">+=</span> <span class="purple">1</span></code></pre>
           
           <p>
             this loop will stay on until <strong>count</strong> is greater than
@@ -187,25 +180,19 @@
           </p>
 
           <h3>Example 3: Using a for loop with the range function</h3>
-          <pre>
-            <code>
-              <span class="pink">for</span> <span class="white">number</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">11</span><span class="orange">):</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Number is"</span><span class="white">,</span> <span class="white">number</span><span class="orange">)</span></code>
-          </pre>
+          <pre><code><span class="pink">for</span> <span class="white">number</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">11</span><span class="orange">):</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Number is"</span><span class="white">,</span> <span class="white">number</span><span class="orange">)</span></code></pre>
           
           <p>
-            this loop will iterate on the <code>print</code> function 10 times
+            this loop will iterate on the <span class="keyword">print</span> function 10 times
             and will print numbers from 1 to 10. Note that the first initial
             value is included white the final value is excluded
           </p>
 
           <h3>Example 4: Nested loops to create a pattern</h3>
-          <pre>
-            <code>
-              <span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">4</span><span class="orange">):</span>  <span class="comment"># Outer loop</span>
-                <span class="pink">for</span> <span class="white">j</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">4</span><span class="orange">):</span>  <span class="comment"># Inner loop</span>
-                  <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"i = {i}, j = {j}"</span><span class="orange">)</span></code>
-          </pre>
+          <pre><code><span class="pink">for</span> <span class="white">i</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">4</span><span class="orange">):</span>  <span class="comment"># Outer loop</span>
+  <span class="pink">for</span> <span class="white">j</span> <span class="pink">in</span> <span class="blue">range</span><span class="orange">(</span><span class="purple">1</span><span class="white">,</span> <span class="purple">4</span><span class="orange">):</span>  <span class="comment"># Inner loop</span>
+    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"i = {i}, j = {j}"</span><span class="orange">)</span></code></pre>
           
           <p>
             These examples showcase different ways to use loops in Python, from

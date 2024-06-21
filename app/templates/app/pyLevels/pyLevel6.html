@@ -45,22 +45,16 @@
           </ul>
           <h3>How to Define a Function</h3>
           <p>Here is how you can define a simple function in Python:</p>
-          <pre>
-            <code>
-              <span class="blue">def</span> <span class="white">greet_user</span><span class="orange">(</span><span class="white">username</span><span class="orange">):</span>
-                <span class="comment"># Display a simple greeting message.</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Hello, {username}!"</span><span class="orange">)</span></code>
-          </pre>
+          <pre><code><span class="blue">def</span> <span class="white">greet_user</span><span class="orange">(</span><span class="white">username</span><span class="orange">):</span>
+  <span class="comment"># Display a simple greeting message.</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Hello, {username}!"</span><span class="orange">)</span></code></pre>
           <h3>Calling a Function</h3>
           <p>
             Once a function is defined, you can 'call' it by using its name
             followed by parentheses (including any necessary arguments). Here's
-            how you can call the <code>greet_user</code> function:
+            how you can call the <span class="keyword">greet_user</span> function:
           </p>
-          <pre>
-            <code>
-              <span class="white">greet_user</span><span class="orange">(</span><span class="yellow">'Alice'</span><span class="orange">)</span></code>
-          </pre>
+          <pre><code><span class="white">greet_user</span><span class="orange">(</span><span class="yellow">'Alice'</span><span class="orange">)</span></code></pre>
           <p>
             This function call results in the output: <em>Hello, Alice!</em>
           </p>
@@ -97,7 +91,7 @@
             <li>
               <strong>async:</strong> Declares an asynchronous function, which
               allows it to perform asynchronous operations using
-              <code>await</code>.
+              <span class="keyword">await</span>.
             </li>
           </ul>
         </section>
@@ -149,18 +143,15 @@
             Here's an example of defining and calling a simple function in
             Python:
           </p>
-          <pre>
-            <code>
-              <span class="blue">def</span> <span class="white">calculate_area</span><span class="orange">(</span><span class="white">width</span><span class="white">,</span> <span class="white">height</span><span class="orange">):</span>
-                <span class="comment"># Calculate the area of a rectangle.</span>
-                <span class="blue">return</span> <span class="white">width</span> <span class="pink">*</span> <span class="white">height</span>
-          
-              <span class="comment"># Call the function with width=5 and height=10</span>
-              <span class="white">area</span> <span class="pink">=</span> <span class="white">calculate_area</span><span class="orange">(</span><span class="purple">5</span><span class="white">,</span> <span class="purple">10</span><span class="orange">)</span>
-              <span class="blue">print</span><span class="orange">(</span><span class="yellow">"Area of the rectangle:"</span><span class="white">,</span> <span class="white">area</span><span class="orange">)</span></code>
-          </pre>
+          <pre><code><span class="blue">def</span> <span class="white">calculate_area</span><span class="orange">(</span><span class="white">width</span><span class="white">,</span> <span class="white">height</span><span class="orange">):</span>
+  <span class="comment"># Calculate the area of a rectangle.</span>
+  <span class="blue">return</span> <span class="white">width</span> <span class="pink">*</span> <span class="white">height</span>
+
+<span class="comment"># Call the function with width=5 and height=10</span>
+<span class="white">area</span> <span class="pink">=</span> <span class="white">calculate_area</span><span class="orange">(</span><span class="purple">5</span><span class="white">,</span> <span class="purple">10</span><span class="orange">)</span>
+<span class="blue">print</span><span class="orange">(</span><span class="yellow">"Area of the rectangle:"</span><span class="white">,</span> <span class="white">area</span><span class="orange">)</span></code></pre>
           <p>
-            This function, <code>calculate_area</code>, calculates the area of a
+            This function, <span class="keyword">calculate_area</span>, calculates the area of a
             rectangle, demonstrating the practical use of functions to perform
             specific tasks.
           </p>
@@ -206,19 +197,16 @@
         <section>
           <h2>Examples of Using Functions in Python</h2>
           <p>
-            Functions in Python are defined using the <code>def</code> keyword
+            Functions in Python are defined using the <span class="keyword">def</span> keyword
             followed by the function name and parentheses. Here are some
             practical examples to illustrate their use:
           </p>
           <ul>
             <li>
               <strong>Basic Function:</strong>
-              <pre>
-                <code>
-                  <span class="blue">def</span> <span class="white">greet</span><span class="orange">(</span><span class="white">name</span><span class="orange">):</span>
-                    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Hello, {name}!"</span><span class="orange">)</span>
-                  <span class="white">greet</span><span class="orange">(</span><span class="yellow">'Alice'</span><span class="orange">)</span></code>
-              </pre>
+              <pre><code><span class="blue">def</span> <span class="white">greet</span><span class="orange">(</span><span class="white">name</span><span class="orange">):</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Hello, {name}!"</span><span class="orange">)</span>
+<span class="white">greet</span><span class="orange">(</span><span class="yellow">'Alice'</span><span class="orange">)</span></code></pre>
 
               <p>
                 This function takes a name as a parameter and prints a greeting
@@ -228,24 +216,19 @@
             <li>
               <strong>Function with Return Value:</strong>
               <pre>
-                <code>
-                  <span class="blue">def</span> <span class="white">add</span><span class="orange">(</span><span class="white">a</span><span class="white">,</span> <span class="white">b</span><span class="orange">):</span>
-                    <span class="blue">return</span> <span class="white">a</span> <span class="pink">+</span> <span class="white">b</span>
-                  <span class="white">result</span> <span class="pink">=</span> <span class="white">add</span><span class="orange">(</span><span class="purple">5</span><span class="white">,</span> <span class="purple">3</span><span class="orange">)</span>
-                  <span class="blue">print</span><span class="orange">(</span><span class="white">result</span><span class="orange">)</span></code>
-              </pre>
+                <code><span class="blue">def</span> <span class="white">add</span><span class="orange">(</span><span class="white">a</span><span class="white">,</span> <span class="white">b</span><span class="orange">):</span>
+  <span class="blue">return</span> <span class="white">a</span> <span class="pink">+</span> <span class="white">b</span>
+<span class="white">result</span> <span class="pink">=</span> <span class="white">add</span><span class="orange">(</span><span class="purple">5</span><span class="white">,</span> <span class="purple">3</span><span class="orange">)</span>
+<span class="blue">print</span><span class="orange">(</span><span class="white">result</span><span class="orange">)</span></code></pre>
               
               <p>This function adds two numbers and returns the result.</p>
             </li>
             <li>
               <strong>Function with Default Parameters:</strong>
-              <pre>
-                <code>
-                  <span class="blue">def</span> <span class="white">info</span><span class="orange">(</span><span class="white">article</span><span class="white">,</span> <span class="white">price</span><span class="pink">=</span><span class="purple">50</span><span class="orange">):</span>
-                    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Article: {article}, Price: {price}"</span><span class="orange">)</span>
-                  <span class="white">info</span><span class="orange">(</span><span class="yellow">'Notebook'</span><span class="orange">)</span>
-                  <span class="white">info</span><span class="orange">(</span><span class="yellow">'Pen'</span><span class="white">,</span> <span class="purple">10</span><span class="orange">)</span></code>
-              </pre>
+              <pre><code><span class="blue">def</span> <span class="white">info</span><span class="orange">(</span><span class="white">article</span><span class="white">,</span> <span class="white">price</span><span class="pink">=</span><span class="purple">50</span><span class="orange">):</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Article: {article}, Price: {price}"</span><span class="orange">)</span>
+<span class="white">info</span><span class="orange">(</span><span class="yellow">'Notebook'</span><span class="orange">)</span>
+<span class="white">info</span><span class="orange">(</span><span class="yellow">'Pen'</span><span class="white">,</span> <span class="purple">10</span><span class="orange">)</span></code></pre>
               
               <p>
                 This function has a default parameter for price. If no price is
@@ -254,14 +237,12 @@
             </li>
             <li>
               <strong>Function with Variable-length Arguments:</strong>
-              <pre>
-                <code>
-                  <span class="blue">def</span> <span class="white">print_scores</span><span class="orange">(</span><span class="white">student</span><span class="white">,</span> <span class="pink">*</span><span class="white">scores</span><span class="orange">):</span>
-                    <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Scores for {student}:"</span><span class="orange">)</span>
-                    <span class="pink">for</span> <span class="white">score</span> <span class="pink">in</span> <span class="white">scores</span><span class="orange">:</span>
-                      <span class="blue">print</span><span class="orange">(</span><span class="white">score</span><span class="orange">)</span>
-                  <span class="white">print_scores</span><span class="orange">(</span><span class="yellow">'John'</span><span class="white">,</span> <span class="purple">92</span><span class="white">,</span> <span class="purple">85</span><span class="white">,</span> <span class="purple">88</span><span class="orange">)</span></code>
-              </pre>
+              <pre><code>
+<span class="blue">def</span> <span class="white">print_scores</span><span class="orange">(</span><span class="white">student</span><span class="white">,</span> <span class="pink">*</span><span class="white">scores</span><span class="orange">):</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="blue">f</span><span class="yellow">"Scores for {student}:"</span><span class="orange">)</span>
+  <span class="pink">for</span> <span class="white">score</span> <span class="pink">in</span> <span class="white">scores</span><span class="orange">:</span>
+    <span class="blue">print</span><span class="orange">(</span><span class="white">score</span><span class="orange">)</span>
+<span class="white">print_scores</span><span class="orange">(</span><span class="yellow">'John'</span><span class="white">,</span> <span class="purple">92</span><span class="white">,</span> <span class="purple">85</span><span class="white">,</span> <span class="purple">88</span><span class="orange">)</span></code></pre>
               
               <p>
                 This function accepts a variable number of scores and prints
@@ -299,20 +280,16 @@
             The factorial of a non-negative integer n is the product of all
             positive integers less than or equal to n. It is denoted by n!.
           </p>
-          <pre>
-            <code>
-              <span class="blue">def</span> <span class="white">factorial</span><span class="orange">(</span><span class="white">n</span><span class="orange">):</span>
-                <span class="comment"># Base case: if n is 0 or 1</span>
-                <span class="pink">if</span> <span class="white">n</span> <span class="pink">in</span> <span class="orange">(</span><span class="purple">0</span><span class="white">,</span> <span class="purple">1</span><span class="orange">):</span>
-                  <span class="blue">return</span> <span class="purple">1</span>
-                <span class="comment"># Recursive case: n times the factorial of n-1</span>
-                <span class="pink">else</span><span class="orange">:</span>
-                  <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">factorial</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">)</span>
-              
-                <span class="comment"># Example usage</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="white">factorial</span><span class="orange">(</span><span class="purple">5</span><span class="orange">))</span>  <span class="comment"># Outputs: 120</span></code>
-          </pre>
-          
+          <pre><code><span class="blue">def</span> <span class="white">factorial</span><span class="orange">(</span><span class="white">n</span><span class="orange">):</span>
+  <span class="comment"># Base case: if n is 0 or 1</span>
+  <span class="pink">if</span> <span class="white">n</span> <span class="pink">in</span> <span class="orange">(</span><span class="purple">0</span><span class="white">,</span> <span class="purple">1</span><span class="orange">):</span>
+    <span class="blue">return</span> <span class="purple">1</span>
+  <span class="comment"># Recursive case: n times the factorial of n-1</span>
+  <span class="pink">else</span><span class="orange">:</span>
+    <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">factorial</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">)</span>
+
+  <span class="comment"># Example usage</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="white">factorial</span><span class="orange">(</span><span class="purple">5</span><span class="orange">))</span>  <span class="comment"># Outputs: 120</span></code></pre>
 
           <h3>Example: Fibonacci Sequence Using Recursion</h3>
           <p>
@@ -320,19 +297,16 @@
             is found by adding up the two numbers before it. The sequence
             commonly starts with 0 and 1.
           </p>
-          <pre>
-            <code>
-              <span class="blue">def</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span><span class="orange">):</span>
-                <span class="comment"># Base cases: if n is 0 or 1</span>
-                <span class="pink">if</span> <span class="white">n</span> <span class="pink">in</span> <span class="orange">(</span><span class="purple">0</span><span class="white">,</span> <span class="purple">1</span><span class="orange">):</span>
-                  <span class="blue">return</span> <span class="white">n</span>
-                <span class="comment"># Recursive case: sum of the two preceding numbers</span>
-                <span class="pink">else</span><span class="orange">:</span>
-                  <span class="blue">return</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">)</span> <span class="pink">+</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">2</span><span class="orange">)</span>
-              
-                <span class="comment"># Example usage</span>
-                <span class="blue">print</span><span class="orange">(</span><span class="white">fibonacci</span><span class="orange">(</span><span class="purple">6</span><span class="orange">))</span>  <span class="comment"># Outputs: 8</span></code>
-          </pre>
+          <pre><code><span class="blue">def</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span><span class="orange">):</span>
+  <span class="comment"># Base cases: if n is 0 or 1</span>
+  <span class="pink">if</span> <span class="white">n</span> <span class="pink">in</span> <span class="orange">(</span><span class="purple">0</span><span class="white">,</span> <span class="purple">1</span><span class="orange">):</span>
+    <span class="blue">return</span> <span class="white">n</span>
+  <span class="comment"># Recursive case: sum of the two preceding numbers</span>
+  <span class="pink">else</span><span class="orange">:</span>
+    <span class="blue">return</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">)</span> <span class="pink">+</span> <span class="white">fibonacci</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">2</span><span class="orange">)</span>
+
+  <span class="comment"># Example usage</span>
+  <span class="blue">print</span><span class="orange">(</span><span class="white">fibonacci</span><span class="orange">(</span><span class="purple">6</span><span class="orange">))</span>  <span class="comment"># Outputs: 8</span></code></pre>
           
         </section>
       </main>
