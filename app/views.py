@@ -215,7 +215,7 @@ def pyVideos(request):
 
 @login_required
 def pyBooks(request):
-  return render(request, 'app/pyBooks/pyBooks.html')
+  return render(request, 'app/pyBooks.html')
 
 @login_required
 def pyInvalid(request):
@@ -347,7 +347,7 @@ def javaVideos(request):
 
 @login_required
 def javaBooks(request):
-  return render(request, 'app/javaBooks/javaBooks.html')
+  return render(request, 'app/javaBooks.html')
 
 @login_required
 def javaInvalid(request):
@@ -479,7 +479,7 @@ def jsVideos(request):
 
 @login_required
 def jsBooks(request):
-  return render(request, 'app/jsBooks/jsBooks.html')
+  return render(request, 'app/jsBooks.html')
   
 @login_required
 def jsInvalid(request):
