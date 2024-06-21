@@ -7,14 +7,11 @@
   {% csrf_token %}
   <hr><div class="question">
     <h2>1. What will the following Java code output?</h2>
-    <pre>
-      <code>
-        <span class="blue">ArrayList</span><<span class="blue">Integer</span>> <span class="white">numbers</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
-        <span class="white">numbers</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
-        <span class="white">numbers</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">2</span><span class="orange">);</span>
-        <span class="white">numbers</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">3</span><span class="orange">);</span>
-        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">numbers</span><span class="purple">.</span><span class="white">size</span><span class="orange">());</span></code>
-    </pre>
+    <pre><code><span class="blue">ArrayList</span><<span class="blue">Integer</span>> <span class="white">numbers</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
+<span class="white">numbers</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
+<span class="white">numbers</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">2</span><span class="orange">);</span>
+<span class="white">numbers</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">3</span><span class="orange">);</span>
+<span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">numbers</span><span class="purple">.</span><span class="white">size</span><span class="orange">());</span></code></pre>
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
       <label class="radio-label" for="q1-a1">2</label>
@@ -56,15 +53,12 @@
     <h2>
       3. What will the following code output?
     </h2>
-    <pre>
-      <code>
-        <span class="blue">ArrayList</span><<span class="blue">String</span>> <span class="white">colors</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
-        <span class="white">colors</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"red"</span><span class="orange">);</span>
-        <span class="white">colors</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"green"</span><span class="orange">);</span>
-        <span class="white">colors</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"blue"</span><span class="orange">);</span>
-        <span class="white">colors</span><span class="purple">.</span><span class="blue">remove</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
-        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">colors</span><span class="orange">);</span></code>
-    </pre>
+    <pre><code><span class="blue">ArrayList</span><<span class="blue">String</span>> <span class="white">colors</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
+<span class="white">colors</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"red"</span><span class="orange">);</span>
+<span class="white">colors</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"green"</span><span class="orange">);</span>
+<span class="white">colors</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"blue"</span><span class="orange">);</span>
+<span class="white">colors</span><span class="purple">.</span><span class="blue">remove</span><span class="orange">(</span><span class="purple">1</span><span class="orange">);</span>
+<span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">colors</span><span class="orange">);</span></code></pre>
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
       <label class="radio-label" for="q3-a1">[1, 2, 3]</label>
@@ -82,13 +76,10 @@
     <h2>
       4. What does the following HashMap operation do and what will it output?
     </h2>
-    <pre>
-      <code>
-        <span class="blue">HashMap</span><<span class="blue">String</span><span class="white">,</span> <span class="blue">Integer</span>> <span class="white">map</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashMap</span><><span class="orange">();</span>
-        <span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"key1"</span><span class="white">,</span> <span class="purple">100</span><span class="orange">);</span>
-        <span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"key2"</span><span class="white">,</span> <span class="purple">200</span><span class="orange">);</span>
-        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">map</span><span class="purple">.</span><span class="white">get</span><span class="orange">(</span><span class="yellow">"key2"</span><span class="orange">));</span></code>
-    </pre>
+    <pre><code><span class="blue">HashMap</span><<span class="blue">String</span><span class="white">,</span> <span class="blue">Integer</span>> <span class="white">map</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashMap</span><><span class="orange">();</span>
+<span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"key1"</span><span class="white">,</span> <span class="purple">100</span><span class="orange">);</span>
+<span class="white">map</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"key2"</span><span class="white">,</span> <span class="purple">200</span><span class="orange">);</span>
+<span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">map</span><span class="purple">.</span><span class="white">get</span><span class="orange">(</span><span class="yellow">"key2"</span><span class="orange">));</span></code></pre>
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
       <label class="radio-label" for="q4-a1">Outputs 100</label>
@@ -104,14 +95,11 @@
   </div>
   <hr><div class="question">
     <h2>5. What will the following HashSet operations result in?</h2>
-    <pre>
-      <code>
-        <span class="blue">HashSet</span><<span class="blue">String</span>> <span class="white">set</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashSet</span><><span class="orange">();</span>
-        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Apple"</span><span class="orange">);</span>
-        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">);</span>
-        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Cherry"</span><span class="orange">);</span>
-        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">set</span><span class="purple">.</span><span class="white">contains</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">));</span></code>
-    </pre>
+    <pre><code><span class="blue">HashSet</span><<span class="blue">String</span>> <span class="white">set</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashSet</span><><span class="orange">();</span>
+<span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Apple"</span><span class="orange">);</span>
+<span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">);</span>
+<span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Cherry"</span><span class="orange">);</span>
+<span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">set</span><span class="purple">.</span><span class="white">contains</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">));</span></code></pre>
     <div class="pad">
       <input type="radio" id="q5-a1" name="q5" value="1" />
       <label class="radio-label" for="q5-a1">true</label>
@@ -130,14 +118,11 @@
       6. Consider using a TreeMap. After the following operations, what will be the
       printed?
     </h2>
-    <pre>
-      <code>
-        <span class="blue">HashSet</span><<span class="blue">String</span>> <span class="white">set</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashSet</span><><span class="orange">();</span>
-        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Apple"</span><span class="orange">);</span>
-        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">);</span>
-        <span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Cherry"</span><span class="orange">);</span>
-        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">set</span><span class="purple">.</span><span class="white">contains</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">));</span></code>
-    </pre>
+    <pre><code><span class="blue">HashSet</span><<span class="blue">String</span>> <span class="white">set</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashSet</span><><span class="orange">();</span>
+<span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Apple"</span><span class="orange">);</span>
+<span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">);</span>
+<span class="white">set</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="yellow">"Cherry"</span><span class="orange">);</span>
+<span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">set</span><span class="purple">.</span><span class="white">contains</span><span class="orange">(</span><span class="yellow">"Banana"</span><span class="orange">));</span></code></pre>
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
       <label class="radio-label" for="q6-a1">1=One</label>
@@ -155,13 +140,10 @@
     <h2>
       7. What value does the 'firstElement' variable contain
     </h2>
-    <pre>
-      <code>
-        <span class="blue">LinkedList</span><<span class="blue">Integer</span>> <span class="white">list</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">LinkedList</span><><span class="orange">();</span>
-        <span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">10</span><span class="orange">);</span>
-        <span class="white">list</span><span class="purple">.</span><span class="blue">addFirst</span><span class="orange">(</span><span class="purple">5</span><span class="orange">);</span>
-        <span class="blue">int</span> <span class="white">firstElement</span> <span class="pink">=</span> <span class="white">list</span><span class="purple">.</span><span class="white">getFirst</span><span class="orange">();</span></code>
-    </pre>
+    <pre><code><span class="blue">LinkedList</span><<span class="blue">Integer</span>> <span class="white">list</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">LinkedList</span><><span class="orange">();</span>
+<span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">10</span><span class="orange">);</span>
+<span class="white">list</span><span class="purple">.</span><span class="blue">addFirst</span><span class="orange">(</span><span class="purple">5</span><span class="orange">);</span>
+<span class="blue">int</span> <span class="white">firstElement</span> <span class="pink">=</span> <span class="white">list</span><span class="purple">.</span><span class="white">getFirst</span><span class="orange">();</span></code></pre>
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
       <label class="radio-label" for="q7-a1">1</label>
@@ -177,14 +159,11 @@
   </div>
   <hr><div class="question">
     <h2>8. What will the following output?</h2>
-    <pre>
-      <code>
-        <span class="blue">HashMap</span><<span class="blue">String</span><span class="white">,</span> <span class="blue">String</span>> <span class="white">capitals</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashMap</span><><span class="orange">();</span>
-        <span class="white">capitals</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"USA"</span><span class="white">,</span> <span class="yellow">"Washington D.C."</span><span class="orange">);</span>
-        <span class="white">capitals</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"Japan"</span><span class="white">,</span> <span class="yellow">"Tokyo"</span><span class="orange">);</span>
-        <span class="white">capitals</span><span class="purple">.</span><span class="blue">remove</span><span class="orange">(</span><span class="yellow">"Japan"</span><span class="orange">);</span>
-        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">capitals</span><span class="purple">.</span><span class="white">containsKey</span><span class="orange">(</span><span class="yellow">"Japan"</span><span class="orange">));</span></code>
-    </pre>
+    <pre><code><span class="blue">HashMap</span><<span class="blue">String</span><span class="white">,</span> <span class="blue">String</span>> <span class="white">capitals</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">HashMap</span><><span class="orange">();</span>
+<span class="white">capitals</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"USA"</span><span class="white">,</span> <span class="yellow">"Washington D.C."</span><span class="orange">);</span>
+<span class="white">capitals</span><span class="purple">.</span><span class="blue">put</span><span class="orange">(</span><span class="yellow">"Japan"</span><span class="white">,</span> <span class="yellow">"Tokyo"</span><span class="orange">);</span>
+<span class="white">capitals</span><span class="purple">.</span><span class="blue">remove</span><span class="orange">(</span><span class="yellow">"Japan"</span><span class="orange">);</span>
+<span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">capitals</span><span class="purple">.</span><span class="white">containsKey</span><span class="orange">(</span><span class="yellow">"Japan"</span><span class="orange">));</span></code></pre>
     <div class="pad">
       <input type="radio" id="q8-a1" name="q8" value="1" />
       <label class="radio-label" for="q8-a1">true</label>
@@ -202,14 +181,11 @@
     <h2>
       9. What is the output of the next code snippet?
     </h2>
-    <pre>
-      <code>
-        <span class="blue">ArrayList</span><<span class="blue">Integer</span>> <span class="white">list</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
-        <span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">10</span><span class="orange">);</span>
-        <span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">20</span><span class="orange">);</span>
-        <span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">30</span><span class="orange">);</span>
-        <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">list</span><span class="orange">);</span></code>
-    </pre>
+    <pre><code><span class="blue">ArrayList</span><<span class="blue">Integer</span>> <span class="white">list</span> <span class="pink">=</span> <span class="blue">new</span> <span class="blue">ArrayList</span><><span class="orange">();</span>
+<span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">10</span><span class="orange">);</span>
+<span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">20</span><span class="orange">);</span>
+<span class="white">list</span><span class="purple">.</span><span class="blue">add</span><span class="orange">(</span><span class="purple">30</span><span class="orange">);</span>
+<span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="white">list</span><span class="orange">);</span></code></pre>
     <div class="pad">
       <input type="radio" id="q9-a1" name="q9" value="1" />
       <label class="radio-label" for="q9-a1">[10, 20, 30]</label>

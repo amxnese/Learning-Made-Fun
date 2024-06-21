@@ -7,15 +7,12 @@
         {% csrf_token %}
         <hr><div class="question">
           <h2>1. What will the following Java code output?</h2>
-          <pre>
-            <code>
-              <span class="blue">int</span> <span class="white">a</span> <span class="pink">=</span> <span class="purple">10</span><span class="orange">;</span>
-              <span class="pink">if</span> <span class="orange">(</span><span class="white">a</span> <span class="white">&gt;</span> <span class="purple">5</span><span class="orange">)</span> <span class="orange">{</span>
-                <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Greater than five."</span><span class="orange">);</span>
-              <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-                <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Five or less."</span><span class="orange">);</span>
-              <span class="orange">}</span></code>
-          </pre>          
+          <pre><code><span class="blue">int</span> <span class="white">a</span> <span class="pink">=</span> <span class="purple">10</span><span class="orange">;</span>
+<span class="pink">if</span> <span class="orange">(</span><span class="white">a</span> <span class="white">&gt;</span> <span class="purple">5</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Greater than five."</span><span class="orange">);</span>
+<span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Five or less."</span><span class="orange">);</span>
+<span class="orange">}</span></code></pre>          
           <div class="pad">
             <input type="radio" id="q1-a1" name="q1" value="1" />
             <label class="radio-label" for="q1-a1">Greater than five.</label>
@@ -51,17 +48,14 @@
             3. Consider the following else-if ladder. What is its output if score
             is 75?
           </h2>
-          <pre>
-            <code>
-              <span class="blue">int</span> <span class="white">score</span> <span class="pink">=</span> <span class="purple">75</span><span class="orange">;</span>
-              <span class="pink">if</span> <span class="orange">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">90</span><span class="orange">)</span> <span class="orange">{</span>
-                <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade A"</span><span class="orange">);</span>
-              <span class="orange">}</span> <span class="pink">else if</span> <span class="orange">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">75</span><span class="orange">)</span> <span class="orange">{</span>
-                <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade B"</span><span class="orange">);</span>
-              <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-                <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade C"</span><span class="orange">);</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="blue">int</span> <span class="white">score</span> <span class="pink">=</span> <span class="purple">75</span><span class="orange">;</span>
+<span class="pink">if</span> <span class="orange">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">90</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade A"</span><span class="orange">);</span>
+<span class="orange">}</span> <span class="pink">else if</span> <span class="orange">(</span><span class="white">score</span> <span class="white">&gt;=</span> <span class="purple">75</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade B"</span><span class="orange">);</span>
+<span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Grade C"</span><span class="orange">);</span>
+<span class="orange">}</span></code></pre>
           <div class="pad">
             <input type="radio" id="q3-a1" name="q3" value="1" />
             <label class="radio-label" for="q3-a1">Grade A</label>
@@ -77,20 +71,17 @@
         </div>
         <hr><div class="question">
           <h2>4. What will the following switch statement output?</h2>
-          <pre>
-            <code>
-              <span class="blue">int</span> <span class="white">number</span> <span class="pink">=</span> <span class="purple">2</span><span class="orange">;</span>
-              <span class="pink">switch</span> <span class="orange">(</span><span class="white">number</span><span class="orange">)</span> <span class="orange">{</span>
-                <span class="pink">case</span> <span class="purple">1</span><span class="orange">:</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello"</span><span class="orange">);</span>
-                  <span class="pink">break</span><span class="orange">;</span>
-                <span class="pink">case</span> <span class="purple">2</span><span class="orange">:</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"World"</span><span class="orange">);</span>
-                  <span class="pink">break</span><span class="orange">;</span>
-                <span class="pink">default</span><span class="orange">:</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Invalid number"</span><span class="orange">);</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="blue">int</span> <span class="white">number</span> <span class="pink">=</span> <span class="purple">2</span><span class="orange">;</span>
+<span class="pink">switch</span> <span class="orange">(</span><span class="white">number</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="pink">case</span> <span class="purple">1</span><span class="orange">:</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello"</span><span class="orange">);</span>
+    <span class="pink">break</span><span class="orange">;</span>
+  <span class="pink">case</span> <span class="purple">2</span><span class="orange">:</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"World"</span><span class="orange">);</span>
+    <span class="pink">break</span><span class="orange">;</span>
+  <span class="pink">default</span><span class="orange">:</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Invalid number"</span><span class="orange">);</span>
+<span class="orange">}</span></code></pre>
           <div class="pad">
             <input type="radio" id="q4-a1" name="q4" value="1" />
             <label class="radio-label" for="q4-a1">Hello</label>
@@ -124,19 +115,16 @@
         </div>
         <hr><div class="question">
           <h2>6. How does Java handle the following nested if statement?</h2>
-          <pre>
-            <code>
-              <span class="blue">int</span> <span class="white">temp</span> <span class="pink">=</span> <span class="purple">25</span><span class="orange">;</span>
-              <span class="pink">if</span> <span class="orange">(</span><span class="white">temp</span> <span class="white">&gt;</span> <span class="purple">20</span><span class="orange">)</span> <span class="orange">{</span>
-                <span class="pink">if</span> <span class="orange">(</span><span class="white">temp</span> <span class="white">&lt;</span> <span class="purple">30</span><span class="orange">)</span> <span class="orange">{</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Comfortable"</span><span class="orange">);</span>
-                <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hot"</span><span class="orange">);</span>
-                <span class="orange">}</span>
-              <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-                <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Cold"</span><span class="orange">);</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="blue">int</span> <span class="white">temp</span> <span class="pink">=</span> <span class="purple">25</span><span class="orange">;</span>
+<span class="pink">if</span> <span class="orange">(</span><span class="white">temp</span> <span class="white">&gt;</span> <span class="purple">20</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="pink">if</span> <span class="orange">(</span><span class="white">temp</span> <span class="white">&lt;</span> <span class="purple">30</span><span class="orange">)</span> <span class="orange">{</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Comfortable"</span><span class="orange">);</span>
+  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hot"</span><span class="orange">);</span>
+  <span class="orange">}</span>
+<span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Cold"</span><span class="orange">);</span>
+<span class="orange">}</span></code></pre>
           <div class="pad">
             <input type="radio" id="q6-a1" name="q6" value="1" />
             <label class="radio-label" for="q6-a1">Comfortable</label>
@@ -154,20 +142,17 @@
           <h2>
             7. What will be the output of this switch statement?
           </h2>
-          <pre>
-            <code>
-              <span class="blue">String</span> <span class="white">day</span> <span class="pink">=</span> <span class="yellow">"MONDAY"</span><span class="orange">;</span>
-              <span class="pink">switch</span> <span class="orange">(</span><span class="white">day</span><span class="orange">)</span> <span class="orange">{</span>
-                <span class="pink">case</span> <span class="yellow">"MONDAY"</span><span class="orange">:</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Start of the work week"</span><span class="orange">);</span>
-                  <span class="pink">break</span><span class="orange">;</span>
-                <span class="pink">case</span> <span class="yellow">"FRIDAY"</span><span class="orange">:</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Almost the weekend"</span><span class="orange">);</span>
-                  <span class="pink">break</span><span class="orange">;</span>
-                <span class="pink">default</span><span class="orange">:</span>
-                  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Midweek days"</span><span class="orange">);</span>
-              <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="blue">String</span> <span class="white">day</span> <span class="pink">=</span> <span class="yellow">"MONDAY"</span><span class="orange">;</span>
+<span class="pink">switch</span> <span class="orange">(</span><span class="white">day</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="pink">case</span> <span class="yellow">"MONDAY"</span><span class="orange">:</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Start of the work week"</span><span class="orange">);</span>
+    <span class="pink">break</span><span class="orange">;</span>
+  <span class="pink">case</span> <span class="yellow">"FRIDAY"</span><span class="orange">:</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Almost the weekend"</span><span class="orange">);</span>
+    <span class="pink">break</span><span class="orange">;</span>
+  <span class="pink">default</span><span class="orange">:</span>
+    <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Midweek days"</span><span class="orange">);</span>
+<span class="orange">}</span></code></pre>
           <div class="pad">
             <input type="radio" id="q7-a1" name="q7" value="1" />
             <label class="radio-label" for="q7-a1">Start of the work week</label>

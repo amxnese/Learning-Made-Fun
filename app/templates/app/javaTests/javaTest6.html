@@ -7,12 +7,9 @@
   {% csrf_token %}
   <hr><div class="question">
     <h2>1. What will the following Java function do?</h2>
-    <pre>
-      <code>
-        <span class="blue">public static void</span> <span class="white">printHello</span><span class="orange">()</span> <span class="orange">{</span>
-          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello, world!"</span><span class="orange">);</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">public static void</span> <span class="white">printHello</span><span class="orange">()</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello, world!"</span><span class="orange">);</span>
+<span class="orange">}</span></code></pre>
     <div class="pad">
       <input type="radio" id="q1-a1" name="q1" value="1" />
       <label class="radio-label" for="q1-a1">Prints "Hello, world!" to the console</label>
@@ -52,12 +49,9 @@
   </div>
   <hr><div class="question">
     <h2>3. What does the following Java method return?</h2>
-    <pre>
-      <code>
-        <span class="blue">public static int</span> <span class="white">addNumbers</span><span class="orange">(</span><span class="blue">int</span> <span class="white">a</span><span class="white">,</span> <span class="blue">int</span> <span class="white">b</span><span class="orange">)</span> <span class="orange">{</span>
-          <span class="blue">return</span> <span class="white">a</span> <span class="pink">+</span> <span class="white">b</span><span class="orange">;</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">public static int</span> <span class="white">addNumbers</span><span class="orange">(</span><span class="blue">int</span> <span class="white">a</span><span class="white">,</span> <span class="blue">int</span> <span class="white">b</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="blue">return</span> <span class="white">a</span> <span class="pink">+</span> <span class="white">b</span><span class="orange">;</span>
+<span class="orange">}</span></code></pre>
     <div class="pad">
       <input type="radio" id="q3-a1" name="q3" value="1" />
       <label class="radio-label" for="q3-a1">The sum of a and b</label>
@@ -73,12 +67,9 @@
   </div>
   <hr><div class="question">
     <h2>4. How do you define a function in Java that takes a parameter?</h2>
-    <pre>
-      <code>
-        <span class="blue">public static void</span> <span class="white">greet</span><span class="orange">(</span><span class="blue">String</span> <span class="white">name</span><span class="orange">)</span> <span class="orange">{</span>
-          <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello, "</span> <span class="pink">+</span> <span class="white">name</span><span class="orange">);</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">public static void</span> <span class="white">greet</span><span class="orange">(</span><span class="blue">String</span> <span class="white">name</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="white">System</span><span class="purple">.</span><span class="white">out</span><span class="purple">.</span><span class="white">println</span><span class="orange">(</span><span class="yellow">"Hello, "</span> <span class="pink">+</span> <span class="white">name</span><span class="orange">);</span>
+<span class="orange">}</span></code></pre>
     <div class="pad">
       <input type="radio" id="q4-a1" name="q4" value="1" />
       <label class="radio-label" for="q4-a1"
@@ -124,16 +115,13 @@
     <h2>
       6. Consider the following recursive function. What does it do?
     </h2>
-    <pre>
-      <code>
-        <span class="blue">public static int</span> <span class="white">func</span><span class="orange">(</span><span class="blue">int</span> <span class="white">n</span><span class="orange">)</span> <span class="orange">{</span>
-          <span class="pink">if</span> <span class="orange">(</span><span class="white">n</span> <span class="white">==</span> <span class="purple">0</span><span class="orange">)</span> <span class="orange">{</span>
-            <span class="blue">return</span> <span class="purple">1</span><span class="orange">;</span>
-          <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-            <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">func</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">);</span>
-          <span class="orange">}</span>
-        <span class="orange">}</span></code>
-    </pre>
+    <pre><code><span class="blue">public static int</span> <span class="white">func</span><span class="orange">(</span><span class="blue">int</span> <span class="white">n</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="pink">if</span> <span class="orange">(</span><span class="white">n</span> <span class="white">==</span> <span class="purple">0</span><span class="orange">)</span> <span class="orange">{</span>
+    <span class="blue">return</span> <span class="purple">1</span><span class="orange">;</span>
+  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+    <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">func</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">);</span>
+  <span class="orange">}</span>
+<span class="orange">}</span></code></pre>
     <div class="pad">
       <input type="radio" id="q6-a1" name="q6" value="1" />
       <label class="radio-label" for="q6-a1">Calculates the factorial of n.</label>
@@ -151,16 +139,13 @@
     <h2>
       7. What is the output of the following function when called as func(5)?
     </h2>
-    <pre>
-      <code>
-        <span class="blue">public static int</span> <span class="white">func</span><span class="orange">(</span><span class="blue">int</span> <span class="white">n</span><span class="orange">)</span> <span class="orange">{</span>
-          <span class="pink">if</span> <span class="orange">(</span><span class="white">n</span> <span class="white">==</span> <span class="purple">1</span><span class="orange">)</span> <span class="orange">{</span>
-            <span class="blue">return</span> <span class="purple">1</span><span class="orange">;</span>
-          <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
-            <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">func</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">);</span>
-          <span class="orange">}</span>
-        <span class="orange">}</span></code>
-    </pre>    
+    <pre><code><span class="blue">public static int</span> <span class="white">func</span><span class="orange">(</span><span class="blue">int</span> <span class="white">n</span><span class="orange">)</span> <span class="orange">{</span>
+  <span class="pink">if</span> <span class="orange">(</span><span class="white">n</span> <span class="white">==</span> <span class="purple">1</span><span class="orange">)</span> <span class="orange">{</span>
+    <span class="blue">return</span> <span class="purple">1</span><span class="orange">;</span>
+  <span class="orange">}</span> <span class="pink">else</span> <span class="orange">{</span>
+    <span class="blue">return</span> <span class="white">n</span> <span class="pink">*</span> <span class="white">func</span><span class="orange">(</span><span class="white">n</span> <span class="pink">-</span> <span class="purple">1</span><span class="orange">);</span>
+  <span class="orange">}</span>
+<span class="orange">}</span></code></pre>    
     <div class="pad">
       <input type="radio" id="q7-a1" name="q7" value="1" />
       <label class="radio-label" for="q7-a1">120</label>

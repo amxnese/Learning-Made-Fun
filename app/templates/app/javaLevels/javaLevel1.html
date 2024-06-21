@@ -30,11 +30,8 @@
             comments are not executed as part of the program and are mainly used
             for making the code easier to understand for humans.
           </p>
-          <pre style="height: 107px">
-          <code>
-        <span class="comment">// This is a single-line comment.</span>
-        <span class="blue">int</span> <span class="white">number</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span><span class="comment">// This comment follows a code statement.</span></code>
-          </pre>
+          <pre><code><span class="comment">// This is a single-line comment.</span>
+<span class="blue">int</span> <span class="white">number</span> <span class="pink">=</span> <span class="purple">10</span><span class="white">;</span><span class="comment">// This comment follows a code statement.</span></code></pre>
         </section>
         <section id="structure">
           <h2>Basic Structure</h2>
@@ -43,14 +40,11 @@
             communicate via invoking each other's methods. Here's how a simple
             Java program looks:
           </p>
-          <pre style="height: 178px">
-            <code>
-        <span class="pink">public class</span> <span style="color: #a6e22e;">Main</span> <span class="orange">{</span>
-          <span class="pink">public static</span> <span class="blue">void</span> <span class="green">main</span><span class="purple">(</span><span class="green">String</span><span class="blue">[]</span> <span class="orange">args</span><span class="purple">){</span>
-            <span class="green">System</span><span class="white">.out.</span><span class="green">println</span><span class="blue">(</span><span class="yellow">"Hello, world!"</span><span class="blue">)</span><span class="white">;</span>
-          <span class="purple">}</span>
-        <span class="orange">}</span></code>
-          </pre>
+          <pre><code><span class="pink">public class</span> <span style="color: #a6e22e;">Main</span> <span class="orange">{</span>
+  <span class="pink">public static</span> <span class="blue">void</span> <span class="green">main</span><span class="purple">(</span><span class="green">String</span><span class="blue">[]</span> <span class="orange">args</span><span class="purple">){</span>
+    <span class="green">System</span><span class="white">.out.</span><span class="green">println</span><span class="blue">(</span><span class="yellow">"Hello, world!"</span><span class="blue">)</span><span class="white">;</span>
+  <span class="purple">}</span>
+<span class="orange">}</span></code></pre>
           <ul>
             <li>
               <strong>Class Declaration:</strong>The public class Main line
@@ -59,12 +53,12 @@
             <li>
               <strong>Method Declaration:</strong>Inside the class, we can
               define methods. Here,
-              <code>public static void main(String[] args)</code> is the main
+              <span class="keyword">public static void main(String[] args)</span> is the main
               method, which is the entry point of any Java program.
             </li>
             <li>
               <strong>Statements:</strong> Inside the method, we write our
-              logic. <code>System.out.println("Hello, world!");</code> is a
+              logic. <span class="keyword">System.out.println("Hello, world!");</span> is a
               statement that prints the string "Hello, world!" to the console.
             </li>
           </ul>
@@ -85,26 +79,20 @@
               <strong>Type:</strong> Java is a statically typed language,
               meaning that every variable must be declared with a type before it
               can be used. The type can be a primitive type like
-              <code>int</code>, <code>double</code>, <code>char</code>, or
-              <code>boolean</code>, or it can be an object type (including
-              <code>arrays</code> and <code>strings</code>).
+              <span class="keyword">int</span>, <span class="keyword">double</span>, <span class="keyword">char</span>, or
+              <span class="keyword">boolean</span>, or it can be an object type (including
+              <span class="keyword">arrays</span> and <span class="keyword">strings</span>).
             </li>
             <li>
               <strong>Declaration:</strong> Declaring a variable involves
               specifying the type and giving the variable a name. For example:
-              <pre>
-                <code>
-        <span class="blue">int</span> <span class="white">age;</span>
-        <span class="green">String</span> <span class="white">name;</span></code>
-              </pre>
+              <pre><code><span class="blue">int</span> <span class="white">age;</span>
+<span class="green">String</span> <span class="white">name;</span></code></pre>
             </li>
             <li>
               <strong>Initialization:</strong> You can initialize a variable at
               the time of declaration by assigning it a value:
-              <pre>
-                <code>
-        <span class="blue">int</span> <span class="white">age</span> <span class="pink">=</span> <span class="purple">30</span><span class="white">;</span></code>
-              </pre>
+              <pre><code><span class="blue">int</span> <span class="white">age</span> <span class="pink">=</span> <span class="purple">30</span><span class="white">;</span></code></pre>
             </li>
           </ul>
         </section>
@@ -125,63 +113,48 @@
           <ul>
             <li>Integer Types</li>
             <ul>
-              <li><code>byte:</code> 8-bit signed integer (-128 to 127)</li>
+              <li><span class="keyword">byte:</span> 8-bit signed integer (-128 to 127)</li>
               <li>
-                <code>short:</code> 16-bit signed integer (-32,768 to 32,767)
+                <span class="keyword">short:</span> 16-bit signed integer (-32,768 to 32,767)
               </li>
-              <li><code>int:</code> 32-bit signed integer (-2^31 to 2^31-1)</li>
+              <li><span class="keyword">int:</span> 32-bit signed integer (-2^31 to 2^31-1)</li>
               <li>
-                <code>long:</code> 64-bit signed integer (-2^63 to 2^63-1)
+                <span class="keyword">long:</span> 64-bit signed integer (-2^63 to 2^63-1)
               </li>
-              <pre>
-                <code>
-        <span class="blue">byte</span> <span class="white">my_byte</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
-        <span class="blue">short</span> <span class="white">my_short</span> <span class="pink">=</span> <span class="purple">120</span><span class="white">;</span>
-        <span class="blue">int</span> <span class="white">my_int</span> <span class="pink">=</span> <span class="purple">5500</span><span class="white">;</span>
-        <span class="blue">long</span> <span class="white">my_long</span> <span class="pink">=</span> <span class="purple">12000</span><span class="white">;</span></code>
-              </pre>
+              <pre><code><span class="blue">byte</span> <span class="white">my_byte</span> <span class="pink">=</span> <span class="purple">20</span><span class="white">;</span>
+<span class="blue">short</span> <span class="white">my_short</span> <span class="pink">=</span> <span class="purple">120</span><span class="white">;</span>
+<span class="blue">int</span> <span class="white">my_int</span> <span class="pink">=</span> <span class="purple">5500</span><span class="white">;</span>
+<span class="blue">long</span> <span class="white">my_long</span> <span class="pink">=</span> <span class="purple">12000</span><span class="white">;</span></code></pre>
             </ul>
             <li>Floating Point Types</li>
             <ul>
               <li>
-                <code>float:</code> 32-bit floating-point (single precision)
+                <span class="keyword">float:</span> 32-bit floating-point (single precision)
               </li>
               <li>
-                <code>double:</code> 64-bit floating-point (double precision)
+                <span class="keyword">double:</span> 64-bit floating-point (double precision)
               </li>
-              <pre>
-                <code>
-        <span class="blue">float</span> <span class="white">my_float</span> <span class="pink">=</span> <span class="purple">2.71</span><span class="white">;</span>
-        <span class="blue">double</span> <span class="white">my_double</span> <span class="pink">=</span> <span class="purple">3.14</span><span class="white">;</span></code>
-              </pre>
+              <pre><code><span class="blue">float</span> <span class="white">my_float</span> <span class="pink">=</span> <span class="purple">2.71</span><span class="white">;</span>
+<span class="blue">double</span> <span class="white">my_double</span> <span class="pink">=</span> <span class="purple">3.14</span><span class="white">;</span></code></pre>
             </ul>
           </ul>
           <h4>Character Type</h4>
           <ul>
-            <li><code>char:</code> 16-bit Unicode character (0 to 65,535)</li>
-            <pre>
-              <code>
-        <span class="blue">char</span> <span class="white">my_char</span> <span class="pink">=</span> <span class="yellow">'A'</span><span class="white">;</span></code>
-            </pre>
+            <li><span class="keyword">char:</span> 16-bit Unicode character (0 to 65,535)</li>
+            <pre><code><span class="blue">char</span> <span class="white">my_char</span> <span class="pink">=</span> <span class="yellow">'A'</span><span class="white">;</span></code></pre>
           </ul>
           <h4>Boolean Type</h4>
           <ul>
-            <li><code>boolean:</code> Represents true/false values</li>
-            <pre>
-              <code>
-              <span class="blue">boolean</span> <span class="white">myBoolean</span> <span class="pink">=</span> <span class="purple">false</span><span class="white">;</span></code>
-            </pre>
+            <li><span class="keyword">boolean:</span> Represents true/false values</li>
+            <pre><code><span class="blue">boolean</span> <span class="white">myBoolean</span> <span class="pink">=</span> <span class="purple">false</span><span class="white">;</span></code></pre>
           </ul>
           <h3>Special Mention: String</h3>
           <ul>
             <li>
-              <code>String:</code> Although String is technically a class, it
+              <span class="keyword">String:</span> Although String is technically a class, it
               has some characteristics that make it unique in Java, such as
               being immutable and having operators like + for concatenation.
-              <pre>
-                <code>
-        <span class="green">String</span> <span class="white"></span> <span class="pink">=</span> <span class="yellow">"Hello world!"</span><span class="white">;</span></code>
-              </pre>
+              <pre><code><span class="green">String</span> <span class="white"></span> <span class="pink">=</span> <span class="yellow">"Hello world!"</span><span class="white">;</span></code></pre>
             </li>
           </ul>
         </section>
