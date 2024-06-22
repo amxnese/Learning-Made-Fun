@@ -32,10 +32,10 @@
     <div class="bar">
       <h1 onclick="location.href='/'" class="pf home">Learning Made Fun</h1>
       <div class="nav">
-        <a href="../">Main</a>
-        <a href="../#available">Courses</a>
-        <a href="../../#contact">Contact</a>
-        <a href="/logout">Logout</a>
+        <a class="main" href="../">Main</a>
+        <a class="courses" href="../#available">Courses</a>
+        <a class="contact" href="../../#contact">Contact</a>
+        <a class="logout" href="/logout">Logout</a>
       </div>
     </div>
     <div class="midlle">
@@ -124,7 +124,7 @@
       <h1 class="h1M">Let's Start</h1>
       <p class="pm1">lessons and tests</p>
       <div class="carts1">
-        <div class="cart1">
+        <div class="cart1 lessons">
           <a class="pm1" href="{% url 'app-javaLevel1' %}"> Lesson 1</a>
           {% if levels.lvl2 == 'primary' %}
           <a class="pm1" href="{% url 'app-javaLevel2' %}"> Lesson 2</a>
@@ -175,14 +175,14 @@
       </div>
       <div class="btns">
         <button
-          class="btn"
+          class="btn vids"
           role="button"
           onclick="location.href='videos/'"
         >
           Related videos <br><i class="ri-youtube-line"></i>
         </button>
         <button
-          class="btn"
+          class="btn books"
           role="button"
           onclick="location.href='books/'"
         >
