@@ -10,7 +10,7 @@
   <body>
     {% if messages %} {% for message in messages %}
     <script src="{% static 'users/usersHide.js' %}"></script>
-    <div class="alert">
+    <div class="alert" id="errorMessage">
       {{ message }}
       <button class="close-button" onclick="closeMe()">&times;</button>
     </div>
