@@ -170,7 +170,9 @@
       </div>
     </div>
     <div class="footer">
-      <p class="pf">© 2024 Programming Courses. All rights reserved.</p>
+      <div class="pfcnt">
+        <p class="pf">© 2024 Programming Courses. All rights reserved.</p>
+      </div>
       <div class="nav">
         <a href="{% url 'app-home' %}">Home</a>
         {% if not user.is_authenticated %}
