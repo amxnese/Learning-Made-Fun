@@ -99,23 +99,40 @@ h2 {
   background-color: #111827;
   display: flex;
   align-items: center;
-  padding: 0 70px;
-}
-
-.nav {
-  justify-content: space-between;
-  position: absolute;
-  right: 13%;
-}
-a {
-  text-decoration: none;
-  color: silver;
-  font-size: 20px;
+  /* padding: 0 70px; */
 }
 .pf {
   color: silver;
   font-size: 20px;
 }
+.pfcnt {
+  justify-content: space-between;
+  position: fixed;
+  left: 2vw;
+}
+@media screen and (max-width: 775px) {
+  .pf {
+      display: none;
+  }
+}
+@media screen and (max-width: 1020px){
+  .pipe {
+    visibility: hidden;
+  }
+}
+
+.nav {
+  justify-content: space-between;
+  position: fixed;
+  right: 2vw;
+}
+
+a {
+  text-decoration: none;
+  color: silver;
+  font-size: 20px;
+}
+
 .nav > * {
   margin: 15px;
 }
@@ -365,9 +382,11 @@ html {
   transition: opacity 1s;
 }
 .message {
+  width: 50vw;
+  padding: 20px 20px;
   top: 50px;
   background-color: #ffffff;
-  padding: 20px 140px;
+  /* padding: 20px 140px; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -526,4 +545,16 @@ html {
 }
 .mails{
   word-break: break-word;
+}
+@media screen and (max-width: 750px) {
+  .message {
+    width: 90vw;
+  }
+  .comment-form {
+    width: 61.5vw;
+    padding-bottom: 17px;
+  }
+  .comment-form .form-group {
+    margin-bottom: 0;
+}
 }

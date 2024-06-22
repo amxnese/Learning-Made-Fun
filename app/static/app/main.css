@@ -34,8 +34,8 @@
 input {
   width: 50vw;
   height: 50px;
-	font-size: 25px;
-	padding: 0px 20px;
+  font-size: 25px;
+  padding: 0px 20px;
   border-radius: 10px;
   margin-right: 10px;
 }
@@ -191,6 +191,20 @@ img:hover {
   align-items: center;
   /* padding: 0 70px; */
 }
+.pf {
+  color: silver;
+  font-size: 20px;
+}
+.pfcnt {
+  justify-content: space-between;
+  position: fixed;
+  left: 2vw;
+}
+@media screen and (max-width: 850px) {
+  .pf {
+    display: none;
+  }
+}
 
 .nav {
   justify-content: space-between;
@@ -202,11 +216,6 @@ a {
   color: silver;
   font-size: 20px;
 }
-.pf {
-  color: silver;
-  font-size: 20px;
-  margin-left: 1vw;
-}
 .nav > * {
   margin: 15px;
 }
@@ -215,7 +224,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.alert{
+.alert {
   opacity: 1;
   transition: opacity 1s;
   z-index: 1000;
@@ -245,26 +254,27 @@ html {
   justify-content: center;
 }
 
-.success h1 , .info h1{
+.success h1,
+.info h1 {
   color: #28a745;
-  
 }
-.success, .info{
+.success,
+.info {
   border: 2px solid #28a745;
 }
 .error {
   border: 2px solid #dc3545;
 }
-.error h1{
+.error h1 {
   color: #dc3545;
 }
-.warning{
+.warning {
   border: 2px solid #ffc107;
 }
-.warning h1{
+.warning h1 {
   color: #ffc107;
 }
-.cnt{
+.cnt {
   display: block;
 }
 
@@ -285,70 +295,75 @@ html {
     } */
 
 .cart {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background-color: white;
-      /* margin: 30px 15px; */
-      border-radius: 20px;
-      /* padding: 20px; */
-      box-shadow: 0px 8px 12px rgba(174, 178, 183, 0.5);
-      position: relative;
-      height: 450px;
-      width: 350px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  /* margin: 30px 15px; */
+  border-radius: 20px;
+  /* padding: 20px; */
+  box-shadow: 0px 8px 12px rgba(174, 178, 183, 0.5);
+  position: relative;
+  height: 450px;
+  width: 350px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-    .cart:hover {
-      transform: translateY(-10px);
-      box-shadow: 0px 12px 16px rgba(79, 70, 229, 0.5);
-    }
+.cart:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 16px rgba(79, 70, 229, 0.5);
+}
 
-    .cart h2 {
-      color: #4f46e5;
-      margin-bottom: 10px;
-    }
+.cart h2 {
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
 
-    .p-cart {
-      color: #606366;
-      line-height: 1.5;
-      margin: 15px 0;
-    }
+.p-cart {
+  color: #606366;
+  line-height: 1.5;
+  margin: 15px 0;
+}
 
-    .p-cart strong {
-      color: #4f46e5;
-    }
+.p-cart strong {
+  color: #4f46e5;
+}
 
-    .cart::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #4f46e5, #6b63ff, #4f46e5);
-      background-size: 400% 400%;
-      z-index: -1;
-      border-radius: 20px;
-      opacity: 0;
-      transition: opacity 0.5s, transform 0.5s;
-    }
+.cart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #4f46e5, #6b63ff, #4f46e5);
+  background-size: 400% 400%;
+  z-index: -1;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
 
-    .cart:hover::before {
-      opacity: 0.1;
-      transform: scale(1.1);
-    }
+.cart:hover::before {
+  opacity: 0.1;
+  transform: scale(1.1);
+}
 
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message {
+    width: 90vw;
+  }
+}
