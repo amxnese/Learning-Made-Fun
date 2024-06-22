@@ -155,7 +155,7 @@
         <form action="{% url 'app-home' %}" method="POST">
           {% csrf_token %}
           <div class="form-group">
-            <label for="comment">Comment:</label>
+            <!-- <label for="comment">Comment:</label> -->
             <textarea id="comment" name="comment" required></textarea>
           </div>
           <div class="form-group submit">
@@ -189,8 +189,8 @@
           >aminesdrt42@gmail.com</a
         >
         <br /><br />
-        <hr class="line" />
-        <div class="crew">
+        <!-- <hr class="line" /> -->
+        <!-- <div class="crew">
           <h2 class="h2crew">learning made fun crew</h2>
           <div class="mails">
             <a class="maillink" href="mailto:akramgati40@gmail.com"
@@ -203,7 +203,7 @@
               >terghini.zaa@gmail.com</a
             >
           </div>
-        </div>
+        </div> -->
         <div class="gitdiv">
           <a
             href="https://github.com/amxnese/Learning-Made-Fun"
@@ -221,7 +221,9 @@
       </div>
     </div>
     <div class="footer">
-      <p class="pf">© 2024 Programming Courses. All rights reserved.</p>
+      <div class="pfcnt">
+        <p class="pf">© 2024 Programming Courses. All rights reserved.</p>
+      </div>
       <div class="nav">
         {% if not user.is_authenticated %}
         <a href="{% url 'user-login' %}">Login</a>
