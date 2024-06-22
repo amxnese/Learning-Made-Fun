@@ -367,3 +367,8 @@ html {
     width: 90vw;
   }
 }
+@media screen and (max-width: 410px) {
+  .nav {
+    right: -1vw;
+  }
+}
