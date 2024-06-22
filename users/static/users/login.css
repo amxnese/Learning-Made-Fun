@@ -18,11 +18,11 @@ body {
 
 /* Container styling */
 .container {
-  width: 1050px;
+  width: 72vw;
   display: flex; 
   margin: auto; /* Center the container horizontally */
-  padding: 20px; /* Padding inside the container */
-  height: 573px; 
+  /* padding: 20px;  */
+  height: 90vh; 
 }
 
 .reg-container {
@@ -39,28 +39,30 @@ body {
 /* Style for login and register sections */
 .login,
 .register {
-  width: 531px;
+  width: 36vw;
 }
 
 /* Start Login Style */
 .login {
-  float: left; /* Float left */
+  /* float: left;  */
   background-color: #fafafa; /* Background color */
-  height: 460px; 
+  height: 90vh; 
+  display: flex;
   border-radius: 10px 0 0 10px; /* Rounded corners */
   text-align: center; /* Center text */
-  padding-top: 100px; 
+  align-items: center;
+  /* padding-top: 100px;  */
 }
 
 .login h1 {
-  margin-bottom: 40px; /* Bottom margin */
+  margin-bottom: 40px; 
   font-size: 2.5em; /* Font size */
 }
 
 /* Input field styling */
 input[type="text"],
 input[type="password"] {
-  width: 100%; /* Full width */
+  width: 90%; /* Full width */
   padding: 10px; /* Padding */
   margin-bottom: 30px; /* Bottom margin */
   border: none; /* No border */
@@ -68,7 +70,7 @@ input[type="password"] {
 }
 
 .login span {
-  float: left; /* Float left */
+  float: left; 
 }
 
 .login a {
@@ -85,7 +87,7 @@ input[type="password"] {
 
 /* Button styling */
 .submit {
-  width: 100%; /* Full width */
+  width: 90%; /* Full width */
   margin: 30px 0; /* Margin */
   padding: 10px; /* Padding */
   border: none; /* No border */
@@ -97,7 +99,7 @@ input[type="password"] {
 }
 
 .login button:hover {
-  width: 97%; /* Slightly reduced width on hover */
+  width: 93%; /* Slightly reduced width on hover */
   font-size: 22px; /* Increased font size on hover */
   border-radius: 5px; /* Rounded corners */
 }
@@ -119,14 +121,16 @@ input[type="password"] {
 
 /* Start Register Style */
 .register {
-  float: right; /* Float right */
+  /* float: right */
   /* background-image: linear-gradient(135deg, #4fb3cf, #50b96f); */
   background-image: linear-gradient(179deg, #4F47FF, #4F469E);
-  height: 360px; /* Full height */
+  height: 90vh; 
   color: #fff; /* Text color */
   border-radius: 0 10px 10px 0; /* Rounded corners */
   text-align: center; /* Center text */
-  padding: 100px 0; /* Padding */
+  display: flex;
+  align-items: center;
+  /* padding: 100px 0;  */
 }
 
 .register h2 {
@@ -213,7 +217,7 @@ input[type="password"] {
   margin-right: auto; /* Center the alert */
   z-index: 1000;
   position: fixed;
-  top: 99px;
+  top: 10%;
 }
 .close-button {
   position: absolute;
@@ -227,4 +231,45 @@ input[type="password"] {
   cursor: pointer;
   padding: 10px 20px;
   margin-top: 20px; /* Space between the button and the alert */
+}
+@media screen and (max-width: 750px){
+  .container {
+    display: block;
+    width: 90vw;
+  }
+  .login {
+    width: 90vw;
+    height: 53vh;
+    border-radius: 10px 10px 0 0;
+  }
+  .register {
+    width: 90vw;
+    height: 37vh;
+    border-radius: 0 0 10px 10px;
+  }
+  .register h2 {
+    margin: 35px 0;
+    font-size: 35px;
+  }
+  .register p {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 740px) {
+  .login, .register {
+    height: 45vh;
+  }
+  .login h1 {
+    margin-bottom: 15px;
+  }
+  input[type="text"], input[type="password"] {
+    margin-bottom: 20px;
+  }
+  .submit {
+    margin: 10px 0;
+  }
+  .register h2 {
+    margin: 35px 0;
+    font-size: 30px;
+  }
 }
