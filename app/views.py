@@ -119,22 +119,32 @@ def pyLevel1(request):
 
 @login_required
 def pyLevel2(request):
+  if request.user.python < 1:
+    return pyInvalid(request)
   return render(request, 'app/pyLevels/pyLevel2.html')
 
 @login_required
 def pyLevel3(request):
+  if request.user.python < 2:
+    return pyInvalid(request)
   return render(request, 'app/pyLevels/pyLevel3.html')
 
 @login_required
 def pyLevel4(request):
+  if request.user.python < 3:
+    return pyInvalid(request)
   return render(request, 'app/pyLevels/pyLevel4.html')
 
 @login_required
 def pyLevel5(request):
+  if request.user.python < 4:
+    return pyInvalid(request)
   return render(request, 'app/pyLevels/pyLevel5.html')
 
 @login_required
 def pyLevel6(request):
+  if request.user.python < 5:
+    return pyInvalid(request)
   return render(request, 'app/pyLevels/pyLevel6.html')
 
 @login_required
@@ -151,6 +161,8 @@ def pyTest1(request):
   
 @login_required
 def pyTest2(request):
+  if request.user.python < 1:
+    return pyInvalid(request)
   if request.method == "POST":
     answers = ['2', '1', '2', '2', '1', '2', '1', '3', '3', '1', '2', '1', '1', '2', '2', '1', '1', '1']
     to_check = fetch(request, len(answers))
@@ -163,6 +175,8 @@ def pyTest2(request):
 
 @login_required
 def pyTest3(request):
+  if request.user.python < 2:
+    return pyInvalid(request)
   if request.method == "POST":
     answers = ['2', '2', '1', '2', '3', '1', '1', '2', '2', '1', '1', '2']
     to_check = fetch(request, len(answers))
@@ -175,6 +189,8 @@ def pyTest3(request):
 
 @login_required
 def pyTest4(request):
+  if request.user.python < 3:
+    return pyInvalid(request)
   if request.method == "POST":
     answers = ['1', '2', '2', '2', '3', '2', '3', '3']
     to_check = fetch(request, len(answers))
@@ -187,6 +203,8 @@ def pyTest4(request):
 
 @login_required
 def pyTest5(request):
+  if request.user.python < 4:
+    return pyInvalid(request)
   if request.method == "POST":
     answers = ['1', '1', '1', '2', '3', '2', '1', '2']
     to_check = fetch(request, len(answers))
@@ -199,6 +217,8 @@ def pyTest5(request):
 
 @login_required
 def pyTest6(request):
+  if request.user.python < 5:
+    return pyInvalid(request)
   if request.method == "POST":
     answers = ['1', '2', '1', '1', '2', '2', '2', '1']
     to_check = fetch(request, len(answers))
@@ -219,6 +239,7 @@ def pyBooks(request):
 
 @login_required
 def pyInvalid(request):
+  print('hello')
   messages.info(request, "Oops! It seems like you haven't unlocked this level yet. Keep exploring and learning to unlock more exciting content! 🚀")
   return redirect('../')
 
@@ -251,22 +272,32 @@ def javaLevel1(request):
 
 @login_required
 def javaLevel2(request):
+  if request.user.java < 1:
+    return javaInvalid(request)
   return render(request, 'app/javaLevels/javaLevel2.html')
 
 @login_required
 def javaLevel3(request):
+  if request.user.java < 2:
+    return javaInvalid(request)
   return render(request, 'app/javaLevels/javaLevel3.html')
 
 @login_required
 def javaLevel4(request):
+  if request.user.java < 3:
+    return javaInvalid(request)
   return render(request, 'app/javaLevels/javaLevel4.html')
 
 @login_required
 def javaLevel5(request):
+  if request.user.java < 4:
+    return javaInvalid(request)
   return render(request, 'app/javaLevels/javaLevel5.html')
 
 @login_required
 def javaLevel6(request):
+  if request.user.java < 5:
+    return javaInvalid(request)
   return render(request, 'app/javaLevels/javaLevel6.html')
 
 @login_required
@@ -283,6 +314,8 @@ def javaTest1(request):
 
 @login_required
 def javaTest2(request):
+  if request.user.java < 1:
+    return javaInvalid(request)
   if request.method == "POST":
     answers = ['2', '1', '3', '1', '2', '2', '1', '2', '2', '1']
     to_check = fetch(request, len(answers))
@@ -295,6 +328,8 @@ def javaTest2(request):
 
 @login_required
 def javaTest3(request):
+  if request.user.java < 2:
+    return javaInvalid(request)
   if request.method == "POST":
     answers = ['2', '1', '2', '2', '1', '1', '2', '2', '1', '3']
     to_check = fetch(request, len(answers))
@@ -307,6 +342,8 @@ def javaTest3(request):
 
 @login_required
 def javaTest4(request):
+  if request.user.java < 3:
+    return javaInvalid(request)
   if request.method == "POST":
     answers = ['1', '2', '2', '2', '2', '1', '1', '2']
     to_check = fetch(request, len(answers))
@@ -319,6 +356,8 @@ def javaTest4(request):
 
 @login_required
 def javaTest5(request):
+  if request.user.java < 4:
+    return javaInvalid(request)
   if request.method == "POST":
     answers = ['1', '1', '1', '1', '1', '2', '2', '1']
     to_check = fetch(request, len(answers))
@@ -331,6 +370,8 @@ def javaTest5(request):
 
 @login_required
 def javaTest6(request):
+  if request.user.java < 5:
+    return javaInvalid(request)
   if request.method == "POST":
     answers = ['1', '2', '1', '2', '2', '1', '1', '1']
     to_check = fetch(request, len(answers))
@@ -383,22 +424,32 @@ def jsLevel1(request):
 
 @login_required
 def jsLevel2(request):
+  if request.user.js < 1:
+    return jsInvalid(request)
   return render(request, 'app/jsLevels/jsLevel2.html')
 
 @login_required
 def jsLevel3(request):
+  if request.user.js < 2:
+    return jsInvalid(request)
   return render(request, 'app/jsLevels/jsLevel3.html')
 
 @login_required
 def jsLevel4(request):
+  if request.user.js < 3:
+    return jsInvalid(request)
   return render(request, 'app/jsLevels/jsLevel4.html')
 
 @login_required
 def jsLevel5(request):
+  if request.user.js < 4:
+    return jsInvalid(request)
   return render(request, 'app/jsLevels/jsLevel5.html')
 
 @login_required
 def jsLevel6(request):
+  if request.user.js < 5:
+    return jsInvalid(request)
   return render(request, 'app/jsLevels/jsLevel6.html')
 
 @login_required
@@ -415,6 +466,8 @@ def jsTest1(request):
 
 @login_required
 def jsTest2(request):
+  if request.user.js < 1:
+    return jsInvalid(request)
   if request.method == "POST":
     answers = ['2', '2', '3', '2', '1', '2', '2', '1', '2', '2']
     to_check = fetch(request, len(answers))
@@ -427,6 +480,8 @@ def jsTest2(request):
 
 @login_required
 def jsTest3(request):
+  if request.user.js < 2:
+    return jsInvalid(request)
   if request.method == "POST":
     answers = ['2', '1', '1', '2', '3', '2', '2', '1', '2', '2']
     to_check = fetch(request, len(answers))
@@ -439,6 +494,8 @@ def jsTest3(request):
 
 @login_required
 def jsTest4(request):
+  if request.user.js < 3:
+    return jsInvalid(request)
   if request.method == "POST":
     answers = ['1', '2', '2', '1', '2', '3', '3', '2']
     to_check = fetch(request, len(answers))
@@ -451,6 +508,8 @@ def jsTest4(request):
 
 @login_required
 def jsTest5(request):
+  if request.user.js < 4:
+    return jsInvalid(request)
   if request.method == "POST":
     answers = ['1', '3', '1', '1', '2', '1', '2', '1']
     to_check = fetch(request, len(answers))
@@ -463,6 +522,8 @@ def jsTest5(request):
 
 @login_required
 def jsTest6(request):
+  if request.user.js < 5:
+    return jsInvalid(request)
   if request.method == "POST":
     answers = ['1', '2', '2', '2', '3', '2', '2', '1']
     to_check = fetch(request, len(answers))
