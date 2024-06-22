@@ -203,3 +203,11 @@ ul {
 li {
   padding-left: 2vw; /* Example padding value */
 }
+@media screen and (max-width: 740px) {
+  code {
+    font-size: 95%;
+  }
+  section {
+    width: 87vw;
+  }
+}

@@ -22,7 +22,7 @@ h1 {
   color: #4f46e5;
   text-align: center;
 }
-.question{
+.question {
   padding: 0 0 30px 0;
 }
 .question h2 {
@@ -36,9 +36,9 @@ h1 {
   font-size: 16px;
   color: #666;
 } */
-label{
+label {
   padding: 3px;
-  background-color: #E7E9EB;
+  background-color: #e7e9eb;
   display: block;
   position: relative;
   padding: 10px 10px 10px 50px;
@@ -66,11 +66,11 @@ input[type="radio"] {
   font-size: 16px;
 }
 .take-test:hover {
-  background-color: #4F46A0;
+  background-color: #4f46a0;
 }
 
 .radio-label {
-  background-color: #E7E9EB;
+  background-color: #e7e9eb;
   display: block;
   position: relative;
   padding: 10px 20px 10px 25px;
@@ -81,8 +81,7 @@ input[type="radio"] {
   word-wrap: break-word;
   margin: 2px;
   border: 1px solid #ccc;
-} 
-
+}
 
 /* Default style */
 .radio-label:not(.selected) {
@@ -92,39 +91,47 @@ input[type="radio"] {
 
 /* Change label color when the corresponding radio input is checked */
 input[type="radio"]:checked + .radio-label {
-  background-color: #4f46e5; 
+  background-color: #4f46e5;
   color: #fff;
 }
-  .radio-label:hover{
-    background-color: #dcdbdb;
-  }
+.radio-label:hover {
+  background-color: #dcdbdb;
+}
 pre {
-    font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
-    background-color: #2e2e2e;
-    border: 1px solid #999;
-    overflow: auto;
-    width: auto;
-    border-radius: 10px;
+  font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+  background-color: #2e2e2e;
+  border: 1px solid #999;
+  overflow: auto;
+  width: auto;
+  border-radius: 10px;
 }
 code {
-    display: inline-block;
-    font-size: 105%;
-    color: crimson;
-    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
-    padding: 20px 4vw;
-  }
+  display: inline-block;
+  font-size: 105%;
+  color: crimson;
+  font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+  padding: 20px 4vw;
+}
 .keyword {
-    display: inline;
-    font-size: 105%;
-    color: crimson;
-    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
-  }
+  display: inline;
+  font-size: 105%;
+  color: crimson;
+  font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+}
 ul {
-    padding-left: 0; /* Remove default padding */
-    margin-left: 0;  /* Remove default margin */
-    list-style-type: none; /* Remove bullets */
-  }
-  /* Apply custom padding to li elements */
+  padding-left: 0; /* Remove default padding */
+  margin-left: 0; /* Remove default margin */
+  list-style-type: none; /* Remove bullets */
+}
+/* Apply custom padding to li elements */
 li {
-    padding-left: 2vw; /* Example padding value */
+  padding-left: 2vw; /* Example padding value */
+}
+@media screen and (max-width: 740px) {
+  code {
+    font-size: 95%;
   }
+  #quiz-container {
+    width: 90vw;
+  }
+}
