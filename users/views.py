@@ -35,6 +35,9 @@ def register(request):
     if password != confirm:
       messages.error(request, "passwords don't match")
       return redirect('./')
+    if len(password) < 8:
+      messages.error(request, "password must have at least 8 characters")
+      return redirect('./')
     if CustomUser.objects.filter(username=username):
       messages.warning(request, "username already taken")
       return redirect('./')
