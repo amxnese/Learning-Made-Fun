@@ -15,7 +15,9 @@ body {
 }
 
 .container {
-  width: 960px; 
+  display: flex;
+  align-items: center;
+  width: 70vw; 
   margin: auto; /* Center container horizontally */
   padding: 20px; /* Padding */
   height: 100%; 
@@ -33,7 +35,7 @@ body {
 input[type="text"],
 input[type="password"] {
   font-size: 17px;
-  width: 50%; /* Input width */
+  width: 60%; /* Input width */
   padding: 10px; /* Padding */
   margin-bottom: 10px; /* Bottom margin */
   margin-top: 10px; /* Top margin */
@@ -73,6 +75,7 @@ button {
 
 label{
   font-weight: bold;
+  letter-spacing: 2px;
 }
 
 /* fading out messages */
@@ -180,4 +183,28 @@ button{
 
 .passdiv{
   padding: 15px;
+}
+@media screen and (max-width: 650px){
+  .container {
+    width: 100vw;
+    height: 80vh;
+  }
+  .editProfile {
+    height: 75vh;
+  }
+  input[type='text'],
+  input[type='password'] {
+    width: 90%;
+  }
+  .see {
+    padding: 0 5px;
+  }
+  input[type='password'] {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-height: 740px) {
+  .editProfile {
+    height: 92vh;
+  }
 }
