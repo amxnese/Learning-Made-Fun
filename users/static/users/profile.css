@@ -15,10 +15,10 @@ body{
 
 /* Container styles */
 .container{
-  width: 1150px; /* Width of container */
-  margin: auto; /* Center container horizontally */
+  width: 80vw; /* Width of container */
+  /* height: 95vh; */
+  /* margin: auto;
   padding: 20px; /* Padding */
-  height:610px; /* Full height */
 }
 
 
@@ -28,11 +28,11 @@ body{
   /* background-image: linear-gradient(135deg, #4fb3cf, #50b96f);  */
   /* background-image: linear-gradient(135deg, #4F46F6, #4F468B); */
   background-image: linear-gradient(179deg, #4F47FF, #4F469E);
-  height: 511px; 
+  /* height: 511px;  */
   color:#fff; /* Text color */
-  text-align: center; /* Center text */
-  padding: 55px 20px; 
-  width: 331px;
+  text-align: center; 
+  /* padding: 55px 20px;  */
+  width: 25vw;
   border-bottom-left-radius: 15px;
   /* border-radius: 20px 0 0 20px;  */
 }
@@ -40,17 +40,22 @@ body{
 .left p{
   /* margin-bottom: 3px; Bottom margin for paragraphs */
   /* font-size: 20px;  */
-  margin: 22px 1px; /* Margin */
+  margin: 14px 1px; 
 }
 
 .right{
   float:right; /* Float right for right column */
   background-color: #fafafa; /* Background color */
-  height: 511px; /* Full height */
+  /* height: 511px; Full height */
   text-align: center; /* Center text */
   padding-top: 10px; /* Padding top */
-  width: 778px; 
+  width: 55vw; 
   border-bottom-right-radius: 15px;
+  position: relative;
+}
+
+.info {
+  margin-bottom: 29px;
 }
 
 /* Shared styles */
@@ -67,10 +72,11 @@ h3{
 
 .flexed{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .skill{
-  width: 630px; /* Width of skill element */
+  width: 45vw; /* Width of skill element */
   margin: auto; /* Center horizontally */
   color: #4F46F6; /* Text color */
   padding: 22px; /* Padding */
@@ -121,11 +127,6 @@ h3{
 .total{
   animation: total 3s;
 }
-
-.right {
-  position: relative; 
-}
-
 /* Profile picture styles */
 .profile-pic {
   text-align: center;
@@ -192,15 +193,17 @@ h3{
 .see{
   border-block: 1px white solid;
   font-size: 20px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   text-align: center;
   padding: 9px;
+  font-weight: bold;
 }
 
 .thick{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
   letter-spacing: 2px;
+  color: #b0b0b0;
 }
 
 #file-input,
@@ -220,6 +223,7 @@ h3{
 .buttons button{
   padding: 27px;
   margin: 0 10px;
+  width: 13vw;
 }
 
 
@@ -250,9 +254,11 @@ h3{
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 1.4vw;
 }
-
+form {
+  margin-top: 55px;
+}
 
 .button-29:hover {
   transform: translateY(-2px);
@@ -293,7 +299,7 @@ h3{
   background-color: #f8d7da; /* Light red background */
   color: #721c24; /* Dark red text color */
   border-radius: 8px;
-  width: 600px;
+  width: 50vw;
   height: 220px;
   text-align: center;
   position: fixed;
@@ -384,4 +390,89 @@ h3{
   background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black */
   display: none; /* Hidden by default */
   z-index: 1; /* Ensure it's below the modal */
+}
+.res {
+  display: none;
+}
+@media screen and (max-width: 828px){
+  .right{
+    width: 100vw;
+    height: 60vh;
+    border-bottom-left-radius: 15px;
+
+  }
+  .left{
+    width: 100vw;
+    height: calc(30vh - 60px);
+    border-bottom-left-radius: 0px;
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  .see {
+    border: none;
+  }
+  .res {
+    display: block;
+  }
+  .modal {
+    width: 96vw;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .profile-pic {
+    position: absolute;
+    justify-content: center;
+    top: 31vh;
+    z-index: 999;
+  }
+  .skill {
+    width: 90vw;
+    margin-top: 10vh;
+    height: 35vh;
+    overflow: hidden;
+  }
+  .buttons {
+    padding: 32px 0;
+  }
+  .info, .left p{
+    margin: 0
+  }
+  .infos {
+    margin-top: 10px;
+  }
+  .info {
+    padding: 1vh;
+  }
+  .buttons button {
+    /* padding: 0 9px; */
+    margin: 0;
+    width: 32vw;
+    font-size: 15px;
+  }
+  .info {
+    display: ruby-text;
+  }
+  .skill li {
+    margin: 0;
+  }
+  .container {
+    height: 90vh;
+    width: 100vw;
+  }
+  .arrow {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) and  (max-height: 740px) {
+  .infos {
+    margin: 0;
+  }
+  .info {
+    padding: 0;
+  }
 }
