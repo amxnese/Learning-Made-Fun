@@ -21,50 +21,49 @@ body {
 }
 
 .container {
-  width: 1100px; /* Width of the  */
+  width: 72vw; /* Width of the  */
+  height: 90vh;
   margin: auto; /* Center the  horizontally */
-  padding: 19px; /* Padding inside the  */
+  /* padding: 19px; */
 }
 
 .inner {
-  width: 450px; /* Width of the  */
+  /* width: 45vw;  */
   margin: auto; /* Center the  horizontally */
   padding: 19px; /* Padding inside the  */
 }
 
 .login,
 .register {
-  width: 620px; /* Each takes half of the container width */
+  width: 36vw; /* Each takes half of the container width */
+  height: 90vh;
+  display: flex;
 }
 
 /* Start Login Style */
 .register {
-  float: left; /* Float the register section to the left */
+  /* float: left;  */
   background-color: #fafafa; /* Background color */
-  height: 573px; /* Full height */
+  /* height: 573px;  */
   border-radius: 10px 0 0 10px; /* Rounded corners */
   text-align: center; /* Center text */
-  padding-top: 11px; /* Padding at the top */
+  align-items: center;
+  /* padding-top: 11px;  */
 }
 
 .register h1 {
-  margin-bottom: 40px; /* Bottom margin for the heading */
+  margin-bottom: 31px;
   font-size: 2.5em; /* Font size for the heading */
 }
 
 /* Input field styling */
 input[type="text"],
 input[type="password"] {
-  width: 100%; /* Full width */
+  width: 90%; /* Full width */
   padding: 10px; /* Padding */
   margin-bottom: 30px; /* Bottom margin */
   border: none; /* No border */
   background-color: #eeeeef; /* Background color */
-}
-
-input[type="checkbox"] {
-  float: left; /* Float left */
-  margin-right: 5px; /* Right margin */
 }
 
 .register span {
@@ -85,11 +84,11 @@ input[type="checkbox"] {
 
 /* Button styling */
 .register button {
-  width: 100%; /* Full width */
-  margin: 30px 0; /* Margin */
+  width: 90%; /* Full width */
+  margin: 15px 0; /* Margin */
   padding: 10px; /* Padding */
   border: none; /* No border */
-  background-color: #4F47FF; /* Background color */
+  background-color: #4f47ff; /* Background color */
   color: #fff; /* Text color */
   font-size: 20px; /* Font size */
   cursor: pointer; /* Cursor style */
@@ -97,14 +96,14 @@ input[type="checkbox"] {
 }
 
 .register button:hover {
-  width: 97%; /* Slightly reduced width on hover */
+  width: 93%; /* Slightly reduced width on hover */
   font-size: 22px; /* Increased font size on hover */
   border-radius: 5px; /* Rounded corners */
 }
 
 .register hr {
   width: 30%; /* Width */
-  display: inline-block; /* Display as inline-block */
+  display: inline-block;
 }
 
 .register p {
@@ -119,17 +118,17 @@ input[type="checkbox"] {
 
 /* Start Register Style */
 .login {
-  float: right; /* Float the login section to the right */
-  background-image: linear-gradient(179deg, #4F47FF, #4F469E);
-  height: 573px; /* Full height */
+  /* float: right;  */
+  background-image: linear-gradient(179deg, #4f47ff, #4f469e);
+  /* height: 573px;  */
   color: #fff; /* Text color */
   border-radius: 0 10px 10px 0; /* Rounded corners */
   text-align: center; /* Center text */
-  padding: 100px 0; /* Padding */
+  /* padding: 100px 0;  */
 }
 
 .login h2 {
-  margin: 59px 0; /* Margin */
+  /* margin: 59px 0;  */
   font-size: 45px; /* Font size */
   letter-spacing: 3px; /* Letter spacing */
 }
@@ -137,9 +136,13 @@ input[type="checkbox"] {
 .login p {
   font-size: 20px; /* Font size */
   letter-spacing: 1px;
-  margin-bottom: 70px; /* Bottom margin */
+  /* margin-bottom: 70px;  */
 }
-
+.login h2,
+.login p,
+.button-29 {
+  margin: 40px 0;
+}
 
 .button-29 {
   letter-spacing: 2px;
@@ -218,7 +221,7 @@ input[type="checkbox"] {
   margin-right: auto; /* Center the alert */
   z-index: 1000;
   position: fixed;
-  top: 99px;
+  top: 10%;
 }
 .close-button {
   position: absolute;
@@ -232,4 +235,68 @@ input[type="checkbox"] {
   cursor: pointer;
   padding: 10px 20px;
   margin-top: 20px; /* Space between the button and the alert */
+}
+@media screen and (max-width: 685px) {
+  .flexed {
+    display: block;
+    width: 90vw;
+  }
+  .container {
+    width: 90vw;
+  }
+  .inner {
+    width: 90vw;
+    padding: 8px;
+    /* border-radius: 10px 10px 0 0; */
+  }
+  .login h2 {
+    /* margin: 35px 0; */
+    font-size: 35px;
+  }
+  .login,
+  .register {
+    width: 90vw;
+    display: flex;
+  }
+  .register {
+    border-radius: 10px 10px 0 0;
+    height: 56vh;
+  }
+  .login {
+    border-radius: 0 0 10px 10px;
+    height: 34vh;
+  }
+  .register h1 {
+    margin-bottom: 30px;
+  }
+  input[type="text"], input[type="password"] {
+    margin-bottom: 20px;
+  }
+  .login h2, .login p, .button-29 {
+    margin: 17px 0;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 740px) {
+  .register h1 {
+    margin-bottom: 13px;
+  }
+  input[type="text"], input[type="password"] {
+    margin-bottom: 13px;
+  }
+  .login h2 {
+    /* margin: 35px 0; */
+    font-size: 25px;
+  }
+  .register button {
+    margin: 13px 0;
+  }
+  .login h2, .login p, .button-29 {
+    margin: 13px 0;
+  }
+  .register {
+    height: 60vh;
+  }
+  .login {
+    height: 30vh;
+  }
 }
