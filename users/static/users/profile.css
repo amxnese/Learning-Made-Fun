@@ -247,13 +247,13 @@ h3{
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  text-align: left;
+  /* text-align: left; */
   text-decoration: none;
   transition: box-shadow .15s,transform .15s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   will-change: box-shadow,transform;
   font-size: 1.4vw;
 }
@@ -469,6 +469,14 @@ form {
     display: none;
   }
 }
+@media screen and (max-width: 825px) and (max-height: 875px){
+  .progress, .hr, .br {
+    display: none;
+  }
+  .skill {
+    padding: 1vh;
+  }
+}
 @media screen and (max-width: 400px) and  (max-height: 820px) {
   .infos {
     margin: 5px;
@@ -491,7 +499,10 @@ form {
   }
 }
 @media screen and (max-width: 400px) and  (max-height: 860px) {
-  .progress, .hr {
+  .progress, .hr, .br{
     display: none;
+  }
+  .skill {
+    padding: 1vh;
   }
 }
