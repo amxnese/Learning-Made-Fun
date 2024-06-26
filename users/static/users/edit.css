@@ -206,7 +206,7 @@ button{
 }
 @media screen and (max-width: 650px){
   .container {
-    /* width: 100vw; */
+    width: 95vw;
     /* height: 80vh; */
   }
   .editProfile {
