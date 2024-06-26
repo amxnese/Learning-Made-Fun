@@ -15,7 +15,7 @@
         </div>
         <form method="post" action="{% url 'user-edit' %}">
           {% csrf_token %}
-          <div>
+          <div class="formdiv">
             <label for="username">Username</label><br>
             <input
               type="text"
@@ -26,7 +26,7 @@
             />
           </div>
 
-          <div>
+          <div class="formdiv">
             <label for="firstName">First Name</label><br>
           <input
             type="text"
@@ -37,7 +37,7 @@
           />
           </div>
 
-          <div>
+          <div class="formdiv">
             <label for="lastName">Last Name</label><br>
           <input
             type="text"
@@ -61,8 +61,10 @@
             required
           />
           </div>
-          <button class="button-30" role="button" type="button" onclick="window.location.href = '../'">Cancel</button>
-          <button class="button-29" role="button" type="submit">Save Changes</button>
+          <div class="buttons">
+            <button class="button-30" role="button" type="button" onclick="window.location.href = '../'">Cancel</button>
+            <button class="button-29" role="button" type="submit">Save Changes</button>
+          </div>
         </form>
       </div>
     </div>

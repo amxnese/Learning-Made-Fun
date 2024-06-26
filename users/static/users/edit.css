@@ -17,19 +17,28 @@ body {
 .container {
   display: flex;
   align-items: center;
-  width: 70vw; 
+  width: 80%; 
   margin: auto; /* Center container horizontally */
-  padding: 20px; /* Padding */
+  /* padding: 20px;  */
   height: 100%; 
 }
 
 .editProfile, .changePasswd{
   width: 100%; /* Full width */
+  height: 90%;
   background-image: linear-gradient(179deg, #4F47FF, #4F469E);
   color: #fff; /* Text color */
   border-radius: 20px; /* Border radius */
   text-align: center; /* Center align text */
-  padding: 30px 0; /* Padding */
+  overflow: auto;
+  /* padding: 30px 0; */
+}
+
+form {
+  height: calc(100% - 71px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 input[type="text"],
@@ -37,21 +46,21 @@ input[type="password"] {
   font-size: 17px;
   width: 60%; /* Input width */
   padding: 10px; /* Padding */
-  margin-bottom: 10px; /* Bottom margin */
-  margin-top: 10px; /* Top margin */
+  /* margin-bottom: 10px; 
+  margin-top: 10px;  */
   border: none; /* Remove border */
   background-color: #eeeeef; /* Background color */
   border-radius: 20px; /* Border radius */
 }
 
 p {
-  margin-top: 15px; /* Top margin */
-  margin-bottom: 15px; /* Bottom margin */
+  /* margin-top: 15px; 
+  margin-bottom: 15px;  */
 }
 
 .see {
-  margin-bottom: 25px; /* Bottom margin */
-  margin-top: 25px; /* Top margin */
+  /* margin-bottom: 25px;  */
+  /* margin-top: 25px;  */
   font-family: "Open Sans", sans-serif; /* Font family */
 }
 
@@ -66,14 +75,19 @@ button {
   transition: 0.2s all ease-in-out; /* Transition effect */
 }
 
+h1 {
+  padding: 10px;
+}
+
 .header{
   position:relative;
-  bottom: 20px;
-  height: 60px;
-  padding: 14px;
+  /* bottom: 20px; */
+  /* height: 60px; */
+  /* padding: 14px; */
 }
 
 label{
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -86,7 +100,7 @@ label{
 
 /* Buttons Style */
 button{
-  top: 8px;
+  /* top: 8px; */
   margin-right: 9px;
   margin-left: 9px;
 }
@@ -182,29 +196,35 @@ button{
 }
 
 .passdiv{
-  padding: 15px;
+  /* padding: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formdiv input {
+  margin-top: 5px;
 }
 @media screen and (max-width: 650px){
   .container {
-    width: 100vw;
-    height: 80vh;
+    /* width: 100vw; */
+    /* height: 80vh; */
   }
   .editProfile {
-    height: 75vh;
+    /* height: 75vh; */
   }
   input[type='text'],
   input[type='password'] {
     width: 90%;
   }
   .see {
-    padding: 0 5px;
+    /* padding: 0 5px; */
   }
   input[type='password'] {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 }
 @media screen and (max-height: 740px) {
   .editProfile {
-    height: 92vh;
+    /* height: 92vh; */
   }
 }

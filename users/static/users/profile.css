@@ -33,7 +33,7 @@ body {
   background-image: linear-gradient(179deg, #4f47ff, #4f469e);
   color: #fff;
   text-align: center;
-  width: 25vw;
+  width: 32%;
   border-bottom-left-radius: 15px;
 }
 
@@ -51,7 +51,7 @@ body {
   /* height: 511px; Full height */
   text-align: center; /* Center text */
   /* padding: 5px;  */
-  width: 55vw;
+  width: 68%;
   border-bottom-right-radius: 15px;
   position: relative;
 }
@@ -198,7 +198,7 @@ ul {
   height: calc(100% - 150px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
 }
