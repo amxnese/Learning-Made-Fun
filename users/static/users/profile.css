@@ -37,13 +37,9 @@ body {
   border-bottom-left-radius: 15px;
 }
 
-.left p {
-  /* margin-bottom: 3px; Bottom margin for paragraphs */
-  /* font-size: 20px;  */
-  /* margin: 14px 1px;  */
-}
-
 .right {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   overflow: hidden;
   /* float:right;  */
@@ -99,16 +95,24 @@ h3 {
   margin: 3.4vh 0; 
   padding: 1.5vh; 
 } */
-ul {
+.bars {
   height: 95%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+.bardiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
 .bar {
   background: #353b48; /* Background color */
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 20px;
+  flex-grow: 0.1;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   overflow: hidden;
@@ -116,18 +120,20 @@ ul {
   transition: all 0.3s cubic-bezier(0.25, 8, 0.25, 1);
 }
 
+
+
 .bar:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0, 0, 0.25),
     0 0 10px 10px 10px 10px rgba(0, 0, 0, 0, 0, 0.22);
 }
 
 .bar span {
-  height: 20px;
-  float: left;
+  height: inherit;
   background: linear-gradient(135deg, #4fb3cf, #50b96f);
   background-image: linear-gradient(135deg, #4f46f6, #4f468b);
   background-image: linear-gradient(179deg, #4f47ff, #4f469e);
   background-image: linear-gradient(179deg, #4a42ff, #8884b3);
+  flex-grow: 1;
 }
 
 /* Animation keyframes */
@@ -139,9 +145,6 @@ ul {
 }
 .javascript {
   animation: javascript 3s;
-}
-.total {
-  animation: total 3s;
 }
 /* Profile picture styles */
 .profile-pic {
@@ -466,12 +469,6 @@ form {
     width: 130px;
     height: 130px;
   }
-  .profile-pic {
-    /* position: absolute; */
-    /* justify-content: center; */
-    /* top: 31%; */
-    /* z-index: 999; */
-  }
   .skill {
     width: 90%;
     /* margin-top: 10vh; */
@@ -483,30 +480,14 @@ form {
     /* padding: 32px 0; */
     width: 90%;
   }
-  .info,
-  .left p {
-    /* margin: 0 */
-  }
-  .infos {
-    /* margin-top: 10px; */
-  }
-  .info {
-    /* padding: 1vh; */
-  }
   .buttons button {
     /* margin: 0;
     width: 32vw;*/
     font-size: 18px;
   }
-  .info {
-    /* display: ruby-text; */
-  }
   .container {
     height: 88vh;
     width: 100vw;
-  }
-  .arrow {
-    /* display: none; */
   }
   .see {
     padding: 0;
