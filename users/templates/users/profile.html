@@ -34,15 +34,6 @@
           width: {{ info.javaScript }}%;
         }
       }
-
-      @keyframes total {
-        0% {
-          width: 0%;
-        }
-        100% {
-          width: {{ info.total }}%;
-        }
-      }
     </style>
     <img class="arrow" src="{% static 'users/arrow-left.svg' %}" alt="">
     <div class="container">
@@ -103,20 +94,20 @@
             </div>
             <!-- <br class="br"/> -->
             <hr class="hr"/>
-            <ul>
-              <li>
+            <div class="bars">
+              <div class="bardiv">
                 <h3>Python</h3>
                 <span class="bar"
                   ><span class="python" style="width: {{info.python}}%"></span
                 ></span>
-              </li>
-              <li>
+              </div>
+              <div class="bardiv">
                 <h3>Java</h3>
                 <span class="bar"
                   ><span class="java" style="width: {{info.java}}%"></span
                 ></span>
-              </li>
-              <li>
+              </div>
+              <div class="bardiv">
                 <h3>JavaScript</h3>
                 <span class="bar"
                   ><span
@@ -124,8 +115,8 @@
                     style="width: {{info.javaScript}}%"
                   ></span
                 ></span>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
           <div class="buttons">
             <button
