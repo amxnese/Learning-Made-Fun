@@ -83,7 +83,7 @@ img:hover {
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: 81px;
   justify-content: center;
   align-items: center;
@@ -92,16 +92,11 @@ img:hover {
 .lessons {
   margin: 0;
 }
-@media screen and (max-width: 806px){
-  .carts1 {
-    display: block;
-  }
-}
 .cart1 {
   height: auto;
   width: 294px;
   background-color: white;
-  margin: 35px 0;
+  margin-top: 35px;
   border-radius: 20px;
   padding: 30px 30px;
   box-shadow: 0px 8px 12px rgba(174, 178, 183, 0.5);
@@ -138,14 +133,15 @@ img:hover {
   padding-left: 1vw;
 }
 .carts {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
-  display: flex;
-  flex-wrap: wrap;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* display: flex;
+  flex-wrap: wrap; */
   gap: 35px;
   justify-content: center;
-  align-items: center;
-  margin: 10px 30px;
+  /* align-items: center;
+  margin: 10px 30px; */
 }
 .cart {
   display: flex;
@@ -155,11 +151,11 @@ img:hover {
   background-color: white;
   /* margin: 30px 15px; */
   border-radius: 20px;
-  /* padding: 20px; */
+  padding: 20px;
   box-shadow: 0px 8px 12px rgba(174, 178, 183, 0.5);
   position: relative;
-  height: 320px;
-  width: 350px;
+  /* height: 320px; */
+  /* width: 350px; */
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -282,7 +278,7 @@ img:hover {
   height: 65px;
   width: 13.7rem;
   align-items: center;
-  margin: 0rem 6rem 5rem 6rem;
+  margin: 2rem 6rem 3rem 6rem;
   /* appearance: none; */
   background-image: radial-gradient(
     100% 100% at 100% 0,
@@ -334,6 +330,15 @@ img:hover {
 i{
   font-size: 2rem;
 }
+@media screen and (max-width: 788px){
+  .carts1 {
+    width: 80%;
+  }
+  .cart1 {
+    width: 80%;
+    margin: 0;
+  }
+}
 @media screen and (max-width: 580px) {
   .courses {
     display: none;
@@ -349,11 +354,11 @@ i{
     width: 90vw;
   }
 }
-@media screen and (max-width: 650px) {
-  .vids {
+@media screen and (max-width: 826px) {
+  /* .vids {
     margin: 0rem 5rem 5rem 5rem;
-  }
+  } */
   .books {
-    margin: 0rem 5rem 5rem 5rem;
+    margin-top: 0rem;
   }
 }
