@@ -39,7 +39,7 @@ SECRET_KEY = os.environ.get('secret_key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = ['lmf-4e64cccfc309.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['lmf-4e64cccfc309.herokuapp.com','https://learningMadeFun.onrender.com' 'localhost']
 
 
 # Application definition
