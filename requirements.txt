@@ -13,3 +13,4 @@ sqlparse==0.4.4
 whitenoise==6.6.0
 cloudinary==1.40.0
 django-cloudinary-storage==0.3.0
+uvicorn==0.30.1
