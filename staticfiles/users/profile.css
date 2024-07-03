@@ -253,6 +253,7 @@ h3 {
   justify-content: space-around;
   margin: auto;
   height: 15%;
+  width: 100%;
 }
 .buttons button {
   padding: 5px;
